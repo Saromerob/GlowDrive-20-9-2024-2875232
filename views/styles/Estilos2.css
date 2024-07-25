@@ -1,0 +1,32 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    background-size: cover;
+    background-position: center;
+}
+
+.Logo .titulo {
+    color: white;
+    background-color: #23343E;
+    height: 40px;
+    text-align: center;
+    width: 270px;
+    border-radius: 20px;
+    font-family: arial black;
+    font-size: 31px;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+}

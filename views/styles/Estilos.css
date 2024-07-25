@@ -1,0 +1,84 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../../img/fondo.jpg');
+    background-size: cover;
+}
+
+.registro {
+    width: 400px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 20px;
+    font-family: 'calibri';
+    margin-bottom: 100px;
+    box-shadow: 7px 13px 37px #000;
+    color: #fff;
+}
+
+.LogoRegistro {
+    height: 120px;
+    border-radius: 50%;
+}
+
+.registro h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+    border: 1px;
+    font-family: 'calibri';
+    font-size: 18px;
+}
+
+.registro p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.registro a {
+    text-decoration: underline;
+}
+
+.registro a:hover {
+    text-decoration: underline;
+}
+
+.registro .button {
+    width: 100%;
+    border: none;
+    padding: 12px;
+    background: #99c9bd;
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius: 50px;
+}
+
+.registro .button:hover {
+    cursor: pointer;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.aceptar {
+    position: relative;
+    top: 22px;
+    left: 15px;
+}

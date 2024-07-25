@@ -1,0 +1,98 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../../img/fondo.jpg');
+}
+
+.navbar {
+    background-color: #e0e1dd;
+}
+
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid #0d1b2a;
+}
+
+.navbar .navbar-brand .titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0d1b2a;
+}
+
+.navbar .nav-link {
+    font-size: 1.1rem;
+    color: #0d1b2a;
+    font-weight: bold;
+}
+
+.navbar .nav-link:hover {
+    color: #a9b0ba;
+}
+
+.navbar .navbar-nav .nav-item .dropdown-menu {
+    background-color: rgba(13, 27, 42, 0.8);
+}
+
+.navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+    font-size: 1rem;
+    color: #e0e1dd;
+}
+
+.navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(13, 27, 42, 0.9);
+    color: #a9b0ba;
+}
+
+.navbar .nav-item .nav-link img {
+    border-radius: 50%;
+}
+
+.navbar .navbar-toggler {
+    border-color: #e0e1dd;
+}
+
+.navbar .navbar-toggler:hover {
+    background-color: #a9b0ba;
+}
+
+.navbar .navbar-toggler-icon {
+    color: #e0e1dd;
+}
+
+.user {
+    position: relative;
+    right: 40px;
+    top: 45px;
+}
+
+.sesion {
+    background-color: #0d1b2a;
+    border-radius: 20px;
+    width: 190px;
+}
+
+.ini {
+    color: #ffffff;
+    position: relative;
+    top: 7px;
+    text-align: center;
+}
+
+.user1 {
+    height: 35px;
+    position: relative;
+    right: 6px;
+}
