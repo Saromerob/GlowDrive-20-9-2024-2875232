@@ -23,7 +23,7 @@
                 <input type="password" placeholder="Contraseña" name="contraseña" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
-            <div class="Recuerdameeee">
+            <div class="Recuerdame">
                 <label>
                     <input type="checkbox">Recuerdame la clave
                 </label><br><br>
