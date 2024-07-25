@@ -21,9 +21,11 @@ $filas = mysqli_num_rows($resultado);
 
 if($filas>0) {
     header("location:../views/pag_inicio.php");//header lo que sirve es para saber como si fuera un ELSE.
+    exit();
 }else {
-    include("../index.php");
-    echo '<h1 class="bad">ERROR EN LA AUTENTICACION</h1>';
+    $_SESSION['error_message'] = 'ERROR EN LA AUTENTICACION';
+    header("Location: ../index.php");
+    exit();
 }
 
 mysqli_free_result($resultado);

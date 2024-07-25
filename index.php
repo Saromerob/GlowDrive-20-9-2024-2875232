@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -23,6 +26,12 @@
                 <input type="password" placeholder="Contraseña" name="contraseña" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
+            <?php
+                if (isset($_SESSION['error_message'])) {
+                    echo '<h1 class="bad">' . $_SESSION['error_message'] . '</h1>';
+                    unset($_SESSION['error_message']); 
+                }
+            ?>
             <div class="Recuerdame">
                 <label>
                     <input type="checkbox">Recuerdame la clave
