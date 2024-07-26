@@ -31,7 +31,7 @@ session_start();//Para poder utilizar las variables de "$_SESSION" debo iniciar 
         }
     ?>
     <div class="wrapper">
-        <form action="usecase/validar.php" method="POST">
+        <form action="repository/validar.php" method="POST">
             <center><img src="img/logo.jpeg" class="LogoRegistro">
             </center>
             <h1>INICIO DE SESION</h1>
