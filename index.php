@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start();//Para poder utilizar las variables de "$_SESSION" debo iniciar la sesion. "session_start();"
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,6 +13,23 @@ session_start();
 </head>
 
 <body>
+    <div>
+        <p id="successMessage" style="color: black;"></p>
+        <!-- Todo: HACER modal para mostrar el mensaje del registro exitoso. tener en cuenta que el modal debe ir arriba del php en donde se esta trayendo la $_SESSION
+        toca que tener tambien muy en cuenta que la etiqueta que se vya a mostrar en este caso ' id="successMessage" ' porque es el que esta trayendo el mensaje desde
+        el script de PHP -->
+    </div>
+    <?php
+        if (isset($_SESSION['success'])) {
+            echo '<script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        document.getElementById("successMessage").innerText = "' . $_SESSION['success'] . '";
+                        $("#successModal").modal("show");
+                    });
+                </script>';
+            unset($_SESSION['success']); 
+        }
+    ?>
     <div class="wrapper">
         <form action="usecase/validar.php" method="POST">
             <center><img src="img/logo.jpeg" class="LogoRegistro">
@@ -45,4 +62,5 @@ session_start();
         </form>
     </div>
 </body>
+
 </html>
