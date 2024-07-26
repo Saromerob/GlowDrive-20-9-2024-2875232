@@ -36,7 +36,7 @@ session_start();//Para poder utilizar las variables de "$_SESSION" debo iniciar 
             </center>
             <h1>INICIO DE SESION</h1>
             <div class="input-box">
-                <input type="text" placeholder="Nombre de usuarios" name="usuario" required>
+                <input type="text" placeholder="Nombre de usuario pez" name="usuario" required>
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
