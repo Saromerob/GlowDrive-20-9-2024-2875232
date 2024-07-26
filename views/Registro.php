@@ -1,69 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro de Usuarios</title>
     <link rel="stylesheet" href="styles/Estilos.css">
 </head>
 
 <body>
     <section class="registro">
-        <center><img src="../img/logo.jpeg" class="LogoRegistro"></center>
-        <br>
-        <h1>REGISTRO CLIENTES</h1><br>
-        <form>
-            Nombres: <input class="controls" type="text" name="nombres" pattern="[A-Za-z\s]+"
-                placeholder="Ingrese nombres" required>
-            Apellidos: <input class="controls" type="text" name="apellidos" pattern="[A-Za-z\s]+"
-                placeholder="Ingrese Apellidos" required>
-            Tipo de documento:
-            <select class="controls" required>
-                <option value=""></option>
-                <option>Cédula de ciudadanía C.C</option>
-                <option>Tarjeta de identidad T.I</option>
-                <option>Cédula de Extranjería C.E</option>
-                <option>Pasaporte P.S</option>
+        <center><img src="../img/logo.jpeg" class="LogoRegistro"></center> <br>
+        <h2>REGISTRO DE USUARIOS</h2>
+        <form action="../repository/registro_usuario.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input class="controls" type="text" id="nombre" name="nombre" required><br><br>
+            <label for="apellido">Apellido:</label>
+            <input class="controls" type="text" id="apellido" name="apellido" required><br><br>
+            <label for="tipo_documento_id">Tipo de Documento:</label>
+            <select class="controls" name="tipo_documento_id" id="tipo_documento_id" required><br><br>
+                <option value="1">Cedula de Ciudadanía C.C</option>
+                <option value="2">Cedula de Extranjería C.E</option>
+                <option value="3">Pasaporte </option>
+                <option value="4">NIT</option>
+                <option value="5">Tarjeta de Identidad</option>
             </select>
-            Número Documento: <input class="controls" type="text" name="numdoc" id="numdoc" pattern="[0-9]+"
-                minlength="7" maxlength="18" placeholder="Número Documento" required>
-            Teléfono: <input class="controls" type="text" name="Telefono" id="Telefono" pattern="[0-9]+" minlength="7"
-                maxlength="10" placeholder="Ingrese Telefono" required>
-            Correo: <input class="controls" type="email" name="Correo" id="Correo" placeholder="Ingrese Correo"
-                required>
-            Contraseña: <input class="controls" type="password" name="contraseña" id="contraseña" minlength="8"
-                maxlength="15" placeholder="Ingrese Contraseña" required>
-            Fecha nacimiento: <input class="controls" type="" name="fechaNacimiento" required>
-            Dirección<input class="controls" type="text" minlength="5" placeholder="Dirección" required>
-            <form>
-                Localidad
-                <select class="controls" required>
-                    <option></option>
-                    <option>Antonio Nariño</option>
-                    <option>Barrios Unidos</option>
-                    <option>Bosa</option>
-                    <option>Chapinero</option>
-                    <option>Engativá</option>
-                    <option>Fontibón</option>
-                    <option>Kennedy</option>
-                    <option>La Candelaria</option>
-                    <option>Puente Aranda</option>
-                    <option>San Cristóbal</option>
-                    <option>Santa Fe</option>
-                    <option>Suba</option>
-                    <option>Sumapaz</option>
-                    <option>Teusaquillo</option>
-                    <option>Tunjuelito</option>
-                    <option>Usaquén</option>
-                </select>
-                <div class="register-link">
-                    <input type="checkbox" class="aceptar" required>
-                    <p>Estoy de acuerdo con los <a href="#">Términos y condiciones</a></p>
-                    <input class="button" type="submit" name="registro" id="registro" value="Registrarse">
-                    <p>Si ya tienes cuenta <a href="../index.php">Inicia Sesión</a></p>
-                </div>
-            </form>
+            <label for="num_documento"><br>Numero de Documento:</label>
+            <input class="controls" type="text" id="num_documento" name="num_documento" required><br><br>
+            <label for="telefono">Telefono:</label>
+            <input class="controls" type="text" id="telefono" name="telefono" required><br><br>
+            <label for="correo">Correo:</label>
+            <input class="controls" type="email" id="correo" name="correo" required><br><br>
+            <label for="contrasena">Contraseña:</label>
+            <input class="controls" type="password" id="contrasena" name="contrasena" required><br><br>
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input class="controls" type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
+            <label for="localidad_id">Localidad:</label>
+            <select class="controls" name="localidad_id" id="localidad_id">
+                <option value="1">Usaquén</option>
+                <option value="2">Chapinero</option>
+                <option value="3">Santa Fe</option>
+                <option value="4">San Cristóbal</option>
+                <option value="5">Usme</option>
+                <option value="6">Tunjuelito</option>
+                <option value="7">Bosa</option>
+                <option value="8">Kennedy</option>
+                <option value="9">Fontibón</option>
+                <option value="10">Engativá</option>
+                <option value="11">Suba</option>
+                <option value="12">Barrios Unidos</option>
+                <option value="13">Teusaquillo</option>
+                <option value="14">Los Mártires</option>
+                <option value="15">Antonio Nariño</option>
+                <option value="16">Puente Aranda</option>
+                <option value="17">La Candelaria</option>
+                <option value="18">Rafael Uribe Uribe</option>
+                <option value="19">Ciudad Bolívar</option>
+                <option value="20">Sumapaz</option>
+            </select><br><br>
+            <input class="controls" type="checkbox" required>Estoy de acuerdo con los <a href="#"> Términos y
+                condiciones</a>
+            <input class="button" type="submit" name="registro" id="registro" value="Registrarse">
+            <p>Si ya tienes cuenta <a href="../index.php">Inicia Sesion</a></p>
+        </form><br>
     </section>
 </body>
 
