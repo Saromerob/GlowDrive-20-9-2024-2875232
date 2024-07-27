@@ -18,6 +18,12 @@
         } else {
             $localidades = array();
         }
+
+        if (isset($_SESSION['tipo_documento'])) {
+            $tipe_document = $_SESSION['tipo_documento'];
+        } else {
+            $tipe_document = array();
+        }
     ?>
     <section class="registro">
         <center><img src="../img/logo.jpeg" class="LogoRegistro"></center> <br>
@@ -29,11 +35,11 @@
             <input class="controls" type="text" id="apellido" name="apellido" required><br><br>
             <label for="tipo_documento_id">Tipo de Documento:</label>
             <select class="controls" name="tipo_documento_id" id="tipo_documento_id" required><br><br>
-                <option value="1">Cedula de Ciudadanía C.C</option>
-                <option value="2">Cedula de Extranjería C.E</option>
-                <option value="3">Pasaporte </option>
-                <option value="4">NIT</option>
-                <option value="5">Tarjeta de Identidad</option>
+                <?php foreach ($tipe_document as $tipe_document): ?>
+                <option value="<?php echo $tipe_document['id']; ?>"><?php echo $tipe_document['nombre'];?>
+                </option>
+                <?php endforeach; ?>
+            </select><br><br>
             </select>
             <label for="num_documento"><br>Numero de Documento:</label>
             <input class="controls" type="text" id="num_documento" name="num_documento" required><br><br>
