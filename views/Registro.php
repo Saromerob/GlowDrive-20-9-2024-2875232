@@ -9,6 +9,16 @@
 </head>
 
 <body>
+    <?php
+        session_start();
+
+        // Verifica si la variable de sesión 'localidades' está definida
+        if (isset($_SESSION['localidades'])) {
+            $localidades = $_SESSION['localidades'];
+        } else {
+            $localidades = array();
+        }
+    ?>
     <section class="registro">
         <center><img src="../img/logo.jpeg" class="LogoRegistro"></center> <br>
         <h2>REGISTRO DE USUARIOS</h2>
@@ -37,26 +47,9 @@
             <input class="controls" type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
             <label for="localidad_id">Localidad:</label>
             <select class="controls" name="localidad_id" id="localidad_id">
-                <option value="1">Usaquén</option>
-                <option value="2">Chapinero</option>
-                <option value="3">Santa Fe</option>
-                <option value="4">San Cristóbal</option>
-                <option value="5">Usme</option>
-                <option value="6">Tunjuelito</option>
-                <option value="7">Bosa</option>
-                <option value="8">Kennedy</option>
-                <option value="9">Fontibón</option>
-                <option value="10">Engativá</option>
-                <option value="11">Suba</option>
-                <option value="12">Barrios Unidos</option>
-                <option value="13">Teusaquillo</option>
-                <option value="14">Los Mártires</option>
-                <option value="15">Antonio Nariño</option>
-                <option value="16">Puente Aranda</option>
-                <option value="17">La Candelaria</option>
-                <option value="18">Rafael Uribe Uribe</option>
-                <option value="19">Ciudad Bolívar</option>
-                <option value="20">Sumapaz</option>
+                <?php foreach ($localidades as $localidad): ?>
+                <option value="<?php echo $localidad['id']; ?>"><?php echo $localidad['nombre']; ?></option>
+                <?php endforeach; ?>
             </select><br><br>
             <input class="controls" type="checkbox" required>Estoy de acuerdo con los <a href="#"> Términos y
                 condiciones</a>
