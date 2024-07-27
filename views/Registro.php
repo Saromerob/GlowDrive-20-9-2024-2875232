@@ -13,16 +13,12 @@
         session_start();
 
         // Verifica si la variable de sesión 'localidades' está definida
-        if (isset($_SESSION['localidades'])) {
+        if (isset($_SESSION['localidades']) || isset($_SESSION['tipo_documento'])) {
             $localidades = $_SESSION['localidades'];
+            $typeDocuments = $_SESSION['tipo_documento'];
         } else {
             $localidades = array();
-        }
-
-        if (isset($_SESSION['tipo_documento'])) {
-            $tipe_document = $_SESSION['tipo_documento'];
-        } else {
-            $tipe_document = array();
+            $typeDocuments = array();
         }
     ?>
     <section class="registro">
@@ -35,11 +31,10 @@
             <input class="controls" type="text" id="apellido" name="apellido" required><br><br>
             <label for="tipo_documento_id">Tipo de Documento:</label>
             <select class="controls" name="tipo_documento_id" id="tipo_documento_id" required><br><br>
-                <?php foreach ($tipe_document as $tipe_document): ?>
-                <option value="<?php echo $tipe_document['id']; ?>"><?php echo $tipe_document['nombre'];?>
-                </option>
+                <?php foreach ($typeDocuments as $typeDocument): ?>
+                <option value="<?php echo $typeDocument['id']; ?>"><?php echo $typeDocument['tipo']; ?></option>
                 <?php endforeach; ?>
-            </select><br><br>
+            </select><br>
             </select>
             <label for="num_documento"><br>Numero de Documento:</label>
             <input class="controls" type="text" id="num_documento" name="num_documento" required><br><br>

@@ -3,7 +3,7 @@ include '../config/db.php';
 session_start();
 
 // Define una consulta SQL para seleccionar todas las columnas de la tabla 'localidades'.
-$consulta="SELECT*FROM localidades";
+$consulta="SELECT * FROM localidades";
 
 // Ejecuta la consulta en la base de datos y almacena el resultado en la variable $resultado.
 $resultado=mysqli_query($conn,$consulta);
