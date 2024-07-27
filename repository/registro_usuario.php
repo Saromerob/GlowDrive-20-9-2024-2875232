@@ -3,7 +3,7 @@ include '../config/db.php';
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    
+    //todos estos datos se estan enviando a la base de datos.
     $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
     $apellido = isset($_POST['apellido']) ? $_POST['apellido'] : '';
     $num_documento = isset($_POST['num_documento']) ? $_POST['num_documento'] : '';
