@@ -1,6 +1,4 @@
 <?php
-include '../config/db.php';
-session_start();
 
 // Define una consulta SQL para seleccionar todas las columnas de la tabla 'localidades'.
 $consulta="SELECT * FROM localidades";
@@ -25,6 +23,4 @@ while ($fila = mysqli_fetch_assoc($resultado)) {
 // Guarda el array de resultados en una variable de sesión.
 $_SESSION['localidades'] = $localidades;
 
-// Cierra la conexión a la base de datos.
-mysqli_close($conn);
 ?>

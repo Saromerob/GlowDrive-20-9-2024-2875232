@@ -1,5 +1,9 @@
 <?php
-session_start();//Para poder utilizar las variables de "$_SESSION" debo iniciar la sesion. "session_start();"
+    session_start();//Para poder utilizar las variables de "$_SESSION" debo iniciar la sesion. "session_start();"
+    include 'config/db.php';
+    include 'repository/localidad.php';
+    include 'repository/tipo_documento.php';
+    mysqli_close($conn);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -22,7 +26,7 @@ session_start();//Para poder utilizar las variables de "$_SESSION" debo iniciar 
     <?php
         if (isset($_SESSION['success'])) {
             echo '<script>
-                    document.addEventListener("DOMContentLoaded", function() {
+                        document.addEventListener("DOMContentLoaded", function() {
                         document.getElementById("successMessage").innerText = "' . $_SESSION['success'] . '";
                         $("#successModal").modal("show");
                     });

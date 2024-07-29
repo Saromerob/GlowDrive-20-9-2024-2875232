@@ -1,9 +1,7 @@
-<?php 
-include '../config/db.php';
-session_start();
+<?php
 
-$consulta="SELECT * FROM tipo_documento";
-$resultado=mysqli_query($conn,$consulta);
+$consulta = "SELECT * FROM tipo_documento";
+$resultado = mysqli_query($conn,$consulta);
 if (!$resultado) {
     die("Error en la consulta: ".mysqli_error($conn));
 }
@@ -14,5 +12,5 @@ while ( $fila = mysqli_fetch_assoc($resultado)) {
 }
 
 $_SESSION['tipo_documento'] = $typeDocument;
-mysqli_close($conn)
+
 ?>

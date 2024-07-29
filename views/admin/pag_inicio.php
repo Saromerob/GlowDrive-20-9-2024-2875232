@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Inicio</title>
+    <title>Página de Inicio Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/Estilos3.css">
+    <link rel="stylesheet" href="../styles/Estilos3.css">
 
 </head>
 
@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="pag_inicio.php">
-                <img src="../img/logo.jpeg" alt="Logo" id="logo">
+                <img src="../../img/logo.jpeg" alt="Logo" id="logo">
                 <div class="titulo">AUTO-SPLASH</div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -39,19 +39,17 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Nosotros.php">Conócenos</a>
+                        <a class="nav-link" href="../Nosotros.php">Conócenos</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="navbar-brand ms-auto" href="../index.php">
+                        <a class="navbar-brand ms-auto" href="../../index.php">
                         </a>
                         <div class="sesion">
-
-                            <a class="nav-link" href="../index.php">
-                                <p class="ini"> <img src="../img/user.png" class="user1">Cerrar Sesión</p>
+                            <a class="nav-link" href="../../index.php">
+                                <p class="ini"> <img src="../../img/user.png" class="user1">Cerrar Sesión</p>
                             </a>
-
                         </div>
                         </a>
                     </li>

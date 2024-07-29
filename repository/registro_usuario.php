@@ -13,12 +13,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] : '';
     $fecha_nacimiento = isset($_POST['fecha_nacimiento']) ? $_POST['fecha_nacimiento'] : '';
     $localidad_id = isset($_POST['localidad_id']) ? $_POST['localidad_id'] : '';
+    //Rol quemado: Explicito en una variable creada por uno mismo
+    $id_rol = 2;
+    $status = true;
 
     // Verificar si todos los campos requeridos tienen valores
     if ($nombre && $apellido && $num_documento && $tipo_documento_id && $telefono && $correo && $contrasena && $fecha_nacimiento && $localidad_id) {
         //  insertar los datos
-        $sql = "INSERT INTO usuarios (nombre, apellido, correo, contrasena, telefono, num_documento, tipo_documento_id, localidad_id, fecha_nacimiento)
-                VALUES ('$nombre', '$apellido', '$correo', '$contrasena', '$telefono', '$num_documento', '$tipo_documento_id', '$localidad_id', '$fecha_nacimiento')";
+        $sql = "INSERT INTO usuarios (nombre, apellido, correo, contrasena, telefono, num_documento, tipo_documento_id, localidad_id, fecha_nacimiento, role_id, estado)
+                VALUES ('$nombre', '$apellido', '$correo', '$contrasena', '$telefono', '$num_documento', '$tipo_documento_id', '$localidad_id', '$fecha_nacimiento','$id_rol', '$status')";
 
         // Ejecutar la consulta
         if ($conn->query($sql) === TRUE) {
