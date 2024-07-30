@@ -1,9 +1,9 @@
 <?php
-    session_start();//Para poder utilizar las variables de "$_SESSION" debo iniciar la sesion. "session_start();"
-    include 'config/db.php';
-    include 'repository/localidad.php';
-    include 'repository/tipo_documento.php';
-    mysqli_close($conn);
+   session_start();//Para poder utilizar las variables de "$_SESSION" debo iniciar la sesion. "session_start();"
+   require 'config/db.php';
+   include 'repository/localidad.php';
+   include 'repository/tipo_documento.php';
+   //mysqli_close($conn);
 ?>
 <!DOCTYPE html>
 <html lang="es">
