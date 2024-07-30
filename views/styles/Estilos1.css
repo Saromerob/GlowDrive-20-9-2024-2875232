@@ -3,17 +3,16 @@
     padding: 0%;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    
 }
 
 body {
     display: flex;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
     background: url('../../img/fondo.jpg');
     background-size: cover;
     background-position: center;
-
 }
 
 .wrapper {
@@ -24,7 +23,7 @@ body {
     box-shadow: 7px 13px 37px #000;
     color: #fff;
     border-radius: 20px;
-
+    padding: 30px 40px;
 }
 
 .wrapper h1 {
