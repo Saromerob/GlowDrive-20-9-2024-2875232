@@ -1,16 +1,20 @@
 <?php
+//include_once '../config/db.php';
+$db = new Database();//Llamada
+$conn = $db->conectar();
 
-$consulta = "SELECT * FROM tipo_documento";
-$resultado = mysqli_query($conn,$consulta);
-if (!$resultado) {
-    die("Error en la consulta: ".mysqli_error($conn));
+if ($conn) {
+    $consulta = "SELECT * FROM tipo_documento";
+    $resultado = $conn->query($consulta);
+    if (!$resultado) {
+        die("Error en la consulta: ".$conn->errorInfo()[2]);
+    }
+
+    $typeDocument = array();
+    while ( $fila = $resultado->fetch(PDO::FETCH_ASSOC)) {
+        $typeDocument[] = $fila;
+    }
+
+    $_SESSION['tipo_documento'] = $typeDocument;
 }
-
-$typeDocument = array();
-while ( $fila = mysqli_fetch_assoc($resultado)) {
-    $typeDocument[] = $fila;
-}
-
-$_SESSION['tipo_documento'] = $typeDocument;
-
 ?>
