@@ -47,7 +47,7 @@
                         <a class="navbar-brand ms-auto" href="../../index.php">
                         </a>
                         <div class="sesion">
-                            <a class="nav-link" href="../../index.php">
+                            <a class="nav-link" href="../../useCase/logOut.php">
                                 <p class="ini"> <img src="../../img/user.png" class="user1">Cerrar Sesión</p>
                             </a>
                         </div>
