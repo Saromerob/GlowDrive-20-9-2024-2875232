@@ -322,7 +322,8 @@ if(isset($_GET['borrar']))
 
 
 <?php
-//codigo limpio sin comentariosy estilos
+// codigo de arriba es el original el cualcontiene todo los comentarios para entender la funcionabilidad.
+//codigo limpio sin comentarios y estilos, en cuanto a la funcionabilidad, ya esta correcto todo para el usuo.
 
 include_once '../../config/db.php';
 session_start();
