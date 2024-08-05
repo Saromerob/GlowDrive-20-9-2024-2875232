@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuarios</title>
-    <link rel="stylesheet" href="styles/Estilos.css">
+    <link rel="stylesheet" href="../styles/Estilos.css">
 </head>
 
 <body>
@@ -22,9 +22,9 @@
         }
     ?>
     <section class="registro">
-        <center><img src="../img/logo.jpeg" class="LogoRegistro"></center> <br>
+        <center><img src="../../img/logo.jpeg" class="LogoRegistro"></center> <br>
         <h2>REGISTRO DE USUARIOS</h2>
-        <form action="../repository/registro_usuario.php" method="post">
+        <form action="../../repository/registro_usuario.php" method="post">
             <label for="nombre">Nombre:</label>
             <input class="controls" type="text" id="nombre" name="nombre" required><br><br>
             <label for="apellido">Apellido:</label>
@@ -55,7 +55,7 @@
             <input class="controls" type="checkbox" required>Estoy de acuerdo con los <a href="#"> Términos y
                 condiciones</a>
             <input class="button" type="submit" name="registro" id="registro" value="Registrarse">
-            <p>Si ya tienes cuenta <a href="../index.php">Inicia Sesion</a></p>
+            <p>Si ya tienes cuenta <a href="sesion.php">Inicia Sesion</a></p>
         </form><br>
     </section>
 </body>
