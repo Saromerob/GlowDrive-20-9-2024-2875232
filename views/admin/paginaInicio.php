@@ -7,15 +7,22 @@
     <title>Página de Inicio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/Estilos3.css">
+    <link rel="stylesheet" href="../styles/Estilos3.css">
 
 </head>
+<?php
+session_start();
+if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
+    header('location: ../../useCase/logOut.php');
+    die();
+}
+?>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="pag_inicio.php">
-                <img src="../img/logo.jpeg" alt="Logo" id="logo">
+            <a class="navbar-brand" href="paginaInicio.php">
+                <img src="../../img/logo.jpeg" alt="Logo" id="logo">
                 <div class="titulo">AUTO-SPLASH</div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -28,27 +35,17 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Agendar Citas</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="pag_inicio.php" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Ubicaciones
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Calle 13 #45-65</a></li>
-                            <li><a class="dropdown-item" href="#">Av Boyacá- Calle 44B Sur</a></li>
-                        </ul>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Nosotros.php">Conócenos</a>
+                        <a class="nav-link active" aria-current="page" href="crearUsuario.php">Administrar Usuarios</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="navbar-brand ms-auto" href="../index.php">
+                        <a class="navbar-brand ms-auto" href="../../index.php">
                         </a>
                         <div class="sesion">
-                            <a class="nav-link" href="../useCase/logOut.php">
-                                <p class="ini"> <img src="../img/user.png" class="user1">Cerrar Sesión</p>
+                            <a class="nav-link" href="../../useCase/logOut.php">
+                                <p class="ini"> <img src="../../img/user.png" class="user1">Cerrar Sesión</p>
                             </a>
                         </div>
                         </a>

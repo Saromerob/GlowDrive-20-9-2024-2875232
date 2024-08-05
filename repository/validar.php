@@ -27,11 +27,11 @@ if ($conn) {
         $_SESSION['nombre'] = $userData['nombre'];
         switch ($userData['role_id']) {
             case 1:
-                header("Location: ../views/admin/pag_inicio.php");
+                header("Location: ../views/admin/paginaInicio.php");
                 exit();
                 break;
             case 2:
-                header("Location: ../views/pag_inicio.php");
+                header("Location: ../views/cliente/paginaInicio.php");
                 break;
             default:
                 $_SESSION['error_message'] = 'ERROR EN LA AUTENTICACION';
@@ -40,7 +40,7 @@ if ($conn) {
         }
     } else {
         $_SESSION['error_message'] = 'Usuario o contraseña incorrectos';
-        header("Location: ../index.php");
+        header("Location: ../views/sesion.php");
         exit();
     }
 }

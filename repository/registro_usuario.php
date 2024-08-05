@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Ejecutar la consulta.
             if ($stmt->execute()) {
                 $_SESSION['success'] = 'Usuario Registrado Exitosamente';
-                header("Location: ../index.php");
+                header("Location: ../views/inicioSesion.php");
                 exit();
             } else {
                 echo "Error: No se pudo registrar el usuario.";

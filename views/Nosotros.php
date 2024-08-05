@@ -18,15 +18,7 @@
                 <p> Somos un grupo de aprendices del SENA que se encuentran estudiando programación de Software y se nos
                     ocurrió la idea
                     de hacer un aplicativo sencillo para aquellas personas </p><br><br>
-                <button type="button"><a href="
-                <?php
-					session_start();
-                    if ($_SESSION['role_id'] == 1) {
-                        echo 'admin/pag_inicio.php';
-                    } else {
-                        echo 'pag_inicio.php';
-                    }
-                ?>">Volver a inicio</a></button>
+                <button type="button"><a href="../index.php">Volver a inicio</a></button>
             </div>
         </div>
     </section>

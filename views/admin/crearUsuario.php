@@ -18,36 +18,45 @@ else
 			}
 	}
 ?>
-<html><head></head>
+<html>
+
+<head></head>
+
 <body style="background-color:#328DC9;">
-<div align="center">
-<?php
+    <div align="center">
+        <?php
 	$db = new Database(); // Crea una instancia de la clase Database
     $conexion = $db->conectar(); // Obtiene la conexión PDO
 	$usuario = $_SESSION['nombre'];
 	//$fotosesion = $_SESSION['foto'];//echo $fotosesion;
 echo "<font face= impact size= 6> Bienvenid@ <br>Administrador  <br>".$usuario."</font><br>";
 ?>
-</div >
-<table border="6" align="center">
-	<tr>
-		<td>	
-		<div align="center">
-			<form method="POST" action="#">
-            	IDROL  			<input type="number"   	name="idrol"   required="" placeholder="Ingrese Rol" min="1" max="4"><br>
-				NOMBRE 			<input type="text"    	name="usuario" required="" placeholder="Ingrese Nombre" pattern="[a-z]{4,8}"><br>
-                APELLIDO 		<input type="text"     	name="apellido" required="" placeholder="Ingrese Apellido" pattern="[a-z]{4,8}"><br>
-                NUMERO DOCUMENTO<input type="number" 	name="numeroDoc"   required="" placeholder="Ingrese numero de documento"><br>
-                TIPO DOCUMENTO  <input type="number" 	name="documento"   required="" placeholder="Ingrese tipo de documento"><br>
-                TELEFONO  		<input type="number" 	name="telefono"   required="" placeholder="Ingrese Telefono"><br>
-                EMAIL  			<input type="email"    	name="email"   required="" placeholder="Ingrese Email"><br>
-                CLAVE  			<input type="password" 	name="clave"   required="" placeholder="Ingrese Contraseña"><br>
-				LOCALIDAD <input type="number" 		name="localidad"   required="" placeholder="Ingrese localidad"><br>
-                FECHANACIMIENTO <input type="date" 		name="nacimiento"   required="" placeholder="Ingrese fecha de nacimiento"><br>
-				ENVIAR <input type="submit"   name="insertar" value="Insertar Datos">
-			</form>
-		</div>
-<?php
+    </div>
+    <table border="6" align="center">
+        <tr>
+            <td>
+                <div align="center">
+                    <form method="POST" action="#">
+                        IDROL <input type="number" name="idrol" required="" placeholder="Ingrese Rol" min="1"
+                            max="4"><br>
+                        NOMBRE <input type="text" name="usuario" required="" placeholder="Ingrese Nombre"
+                            pattern="[a-z]{4,8}"><br>
+                        APELLIDO <input type="text" name="apellido" required="" placeholder="Ingrese Apellido"
+                            pattern="[a-z]{4,8}"><br>
+                        NUMERO DOCUMENTO<input type="number" name="numeroDoc" required=""
+                            placeholder="Ingrese numero de documento"><br>
+                        TIPO DOCUMENTO <input type="number" name="documento" required=""
+                            placeholder="Ingrese tipo de documento"><br>
+                        TELEFONO <input type="number" name="telefono" required="" placeholder="Ingrese Telefono"><br>
+                        EMAIL <input type="email" name="email" required="" placeholder="Ingrese Email"><br>
+                        CLAVE <input type="password" name="clave" required="" placeholder="Ingrese Contraseña"><br>
+                        LOCALIDAD <input type="number" name="localidad" required="" placeholder="Ingrese localidad"><br>
+                        FECHANACIMIENTO <input type="date" name="nacimiento" required=""
+                            placeholder="Ingrese fecha de nacimiento"><br>
+                        ENVIAR <input type="submit" name="insertar" value="Insertar Datos">
+                    </form>
+                </div>
+                <?php
 if (isset($_POST['insertar'])) 
 	{
     $idrol 		= $_POST['idrol'];
@@ -104,9 +113,9 @@ if (isset($_POST['insertar']))
 	}
 	unset($_POST['insertar']);
 		?>
-		</td>
-</table>
-<?php
+            </td>
+    </table>
+    <?php
 try {
     $db = new Database(); // Crea una instancia de la clase Database
     $conexion = $db->conectar(); // Obtiene la conexión PDO
@@ -172,7 +181,7 @@ catch (PDOException $e)
 	}
 ?>
 
-<?php
+    <?php
 if(isset($_GET['editar']))
 	{
 	try 
@@ -210,32 +219,33 @@ if(isset($_GET['editar']))
 		{  die("Error en conexión a la base de datos: " . $e->getMessage());
 		}
 ?>
-<table border="6" align="center">
-	<tr>
-		<td>
-<div align="center">
-	<form method="POST" action="#" enctype="multipart/form-data">
-		NOMBRE 					<input type="text"     name="usuario" value="<?php echo $usuario  ?>"> <br>
-		APELLIDO				<input type="text"     name="apellido" value="<?php echo $apellidoo  ?>"> <br>
-		NUMERO DOCUMENTO		<input type="number"     name="numdocumento" value="<?php echo $docnum  ?>"> <br>
-		TIPO DE DOCUMENTO		<input type="number"     name="tipdocument" value="<?php echo $doctip  ?>"> <br>
-		TELEFONO 				<input type="number"     name="celular" value="<?php echo $usuario  ?>"> <br>
-		EMAIL  					<input type="email"    name="correo"   value="<?php echo $correo    ?>"><br>
-		CLAVE  					<input type="password" name="clave"   value="<?php echo $contrasena ?>"><br>
-		FECHA NACIMIENTO  		<input type="date"    name="fechnacimiento"   value="<?php echo $nacimfech    ?>"><br>
-		LOCALIDAD  				<input type="number"   name="localidad"   value="<?php echo $local    ?>"><br>
-		ROL  					<input type="number"    name="rol"   value="<?php echo $idrole    ?>"><br>
-		
-			   <input type="submit"   name="actualizame" value="Actualizar Datos" style="cursor: pointer;"><br>
-	</form>
-</div>
+    <table border="6" align="center">
+        <tr>
+            <td>
+                <div align="center">
+                    <form method="POST" action="#" enctype="multipart/form-data">
+                        NOMBRE <input type="text" name="usuario" value="<?php echo $usuario  ?>"> <br>
+                        APELLIDO <input type="text" name="apellido" value="<?php echo $apellidoo  ?>"> <br>
+                        NUMERO DOCUMENTO <input type="number" name="numdocumento" value="<?php echo $docnum  ?>"> <br>
+                        TIPO DE DOCUMENTO <input type="number" name="tipdocument" value="<?php echo $doctip  ?>"> <br>
+                        TELEFONO <input type="number" name="celular" value="<?php echo $usuario  ?>"> <br>
+                        EMAIL <input type="email" name="correo" value="<?php echo $correo    ?>"><br>
+                        CLAVE <input type="password" name="clave" value="<?php echo $contrasena ?>"><br>
+                        FECHA NACIMIENTO <input type="date" name="fechnacimiento"
+                            value="<?php echo $nacimfech    ?>"><br>
+                        LOCALIDAD <input type="number" name="localidad" value="<?php echo $local    ?>"><br>
+                        ROL <input type="number" name="rol" value="<?php echo $idrole    ?>"><br>
 
-</table>
-<?php
+                        <input type="submit" name="actualizame" value="Actualizar Datos" style="cursor: pointer;"><br>
+                    </form>
+                </div>
+
+    </table>
+    <?php
 unset($_POST['editar']);//no es necesario usar unset($_POST['editar']); Los datos POST se enviarán solo cuando el formulario se envía, por lo que no necesitas eliminarlos manualmente.
   }
 ?>
-<?php
+    <?php
 if(isset($_POST['actualizame']))
 	{
 	$actualizausuario		= $_POST['usuario'];
@@ -280,7 +290,7 @@ if(isset($_POST['actualizame']))
 		}
 	}			
 ?>
-<?php
+    <?php
 if(isset($_GET['borrar']))
 	{
 	try 
@@ -306,16 +316,17 @@ if(isset($_GET['borrar']))
 	}
 	unset($_POST['borrar']);
 ?>
-<div align="center">
-	<form action="../../../app-autosplash/index.php" method="POST">
-		<button style = "background: red; height:40px; width: 150px" name="cerrar_sesion">
-			Cerrar Sesion
-		</button>
-<!-- 
+    <div align="center">
+        <form action="../../../app-autosplash/index.php" method="POST">
+            <button style="background: red; height:40px; width: 150px" name="cerrar_sesion">
+                Cerrar Sesion
+            </button>
+            <!-- 
 		<input type="submit" name="cerrar_sesion" value="Cerrar Sesion"> -->
-	</form>
-</div>
+        </form>
+    </div>
 </body>
+
 </html>*/
 ?>
 
@@ -329,127 +340,148 @@ include_once '../../config/db.php';
 session_start();
 
 if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
-    header('location: ../../../app-autosplash/index.php');
+    header('location: ../../useCase/logOut.php');
     die();
 }
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Administrador</title>
     <style>
-        body {
-            background-color: #1a1a2e;
-            color: #eaeaea;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            text-align: center;
-            padding: 50px;
-        }
-        .welcome {
-            font-size: 2.5em;
-            margin-bottom: 30px;
-        }
-        .form-container {
-            background-color: #162447;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            margin-bottom: 50px;
-            display: inline-block;
-        }
-        .form-container input[type="text"],
-        .form-container input[type="number"],
-        .form-container input[type="email"],
-        .form-container input[type="password"],
-        .form-container input[type="date"] {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .form-container input[type="submit"] {
-            background-color: #1f4068;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        .form-container input[type="submit"]:hover {
-            background-color: #1b1b2f;
-        }
-        table {
-            width: 80%;
-            margin: 0 auto;
-            border-collapse: collapse;
-            margin-bottom: 50px;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: #0f3460;
-        }
-        td {
-            background-color: #162447;
-        }
-        .btn {
-            background-color: #1f4068;
-            color: white;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background-color: #1b1b2f;
-        }
-        .logout-btn {
-            background-color: #e94560;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        .logout-btn:hover {
-            background-color: #b0003a;
-        }
+    body {
+        background-color: #1a1a2e;
+        color: #eaeaea;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        text-align: center;
+        padding: 50px;
+    }
+
+    .welcome {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+
+    .form-container {
+        background-color: #162447;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        margin-bottom: 50px;
+        display: inline-block;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="number"],
+    .form-container input[type="email"],
+    .form-container input[type="password"],
+    .form-container input[type="date"] {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .form-container input[type="submit"] {
+        background-color: #1f4068;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+    .form-container input[type="submit"]:hover {
+        background-color: #1b1b2f;
+    }
+
+    table {
+        width: 80%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        margin-bottom: 50px;
+    }
+
+    th,
+    td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #0f3460;
+    }
+
+    td {
+        background-color: #162447;
+    }
+
+    .btn {
+        background-color: #1f4068;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #1b1b2f;
+    }
+
+    .logout-btn {
+        background-color: #e94560;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+    .logout-btn:hover {
+        background-color: #b0003a;
+    }
     </style>
 </head>
+
 <body>
-<div class="container">
-    <div class="welcome">
-        <?php
+    <div class="container">
+        <div class="welcome">
+            <?php
         $db = new Database();
         $conexion = $db->conectar();
         $usuario = $_SESSION['nombre'];
         echo "Bienvenid@ <br>Administrador <br>" . $usuario;
         ?>
-    </div>
-    <div class="form-container">
-        <form method="POST" action="#">
-            IDROL <input type="number" name="idrol" required placeholder="Ingrese Rol" min="1" max="4"><br>
-            NOMBRE <input type="text" name="usuario" required placeholder="Ingrese Nombre" pattern="[a-z]{4,8}"><br>
-            APELLIDO <input type="text" name="apellido" required placeholder="Ingrese Apellido" pattern="[a-z]{4,8}"><br>
-            NUMERO DOCUMENTO <input type="number" name="numeroDoc" required placeholder="Ingrese numero de documento"><br>
-            TIPO DOCUMENTO <input type="number" name="documento" required placeholder="Ingrese tipo de documento"><br>
-            TELEFONO <input type="number" name="telefono" required placeholder="Ingrese Telefono"><br>
-            EMAIL<br> <input type="email" name="email" required placeholder="Ingrese Email"><br>
-            CLAVE <input type="password" name="clave" required placeholder="Ingrese Contraseña"><br>
-            LOCALIDAD <input type="number" name="localidad" required placeholder="Ingrese localidad"><br>
-            FECHA NACIMIENTO <input type="date" name="nacimiento" required placeholder="Ingrese fecha de nacimiento"><br>
-            <input type="submit" name="insertar" value="Insertar Datos">
-        </form>
-    </div>
-    <?php
+        </div>
+        <div class="form-container">
+            <form method="POST" action="#">
+                IDROL <input type="number" name="idrol" required placeholder="Ingrese Rol" min="1" max="4"><br>
+                NOMBRE <input type="text" name="usuario" required placeholder="Ingrese Nombre" pattern="[a-z]{4,8}"><br>
+                APELLIDO <input type="text" name="apellido" required placeholder="Ingrese Apellido"
+                    pattern="[a-z]{4,8}"><br>
+                NUMERO DOCUMENTO <input type="number" name="numeroDoc" required
+                    placeholder="Ingrese numero de documento"><br>
+                TIPO DOCUMENTO <input type="number" name="documento" required
+                    placeholder="Ingrese tipo de documento"><br>
+                TELEFONO <input type="number" name="telefono" required placeholder="Ingrese Telefono"><br>
+                EMAIL<br> <input type="email" name="email" required placeholder="Ingrese Email"><br>
+                CLAVE <input type="password" name="clave" required placeholder="Ingrese Contraseña"><br>
+                LOCALIDAD <input type="number" name="localidad" required placeholder="Ingrese localidad"><br>
+                FECHA NACIMIENTO <input type="date" name="nacimiento" required
+                    placeholder="Ingrese fecha de nacimiento"><br>
+                <input type="submit" name="insertar" value="Insertar Datos">
+            </form>
+        </div>
+        <?php
     if (isset($_POST['insertar'])) {
         $idrol = $_POST['idrol'];
         $usuario = $_POST['usuario'];
@@ -481,7 +513,7 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
 
             if ($stmt->rowCount() > 0) {
                 echo "Registro insertado exitosamente.";
-                echo "<script> window.open('pag_inicio.php') </script>";
+                echo "<script> window.open('crearUsuario.php') </script>";
             } else {
                 echo "No se pudo insertar el registro.";
             }
@@ -492,7 +524,7 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
         unset($_POST['insertar']);
     }
     ?>
-    <?php
+        <?php
     try {
         $db = new Database();
         $conexion = $db->conectar();
@@ -542,8 +574,8 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
                         <td>' . $fnacimiento . '</td>
                         <td>' . $local . '</td>
                         <td>' . $iderol . '</td>
-                        <td><a class="btn" href="pag_inicio.php?editar=' . $id . '">Editar</a></td>
-                        <td><button class="btn"><a href="pag_inicio.php?borrar=' . $id . '">Borrar</a></button></td>
+                        <td><a class="btn" href="crearUsuario.php?editar=' . $id . '">Editar</a></td>
+                        <td><button class="btn"><a href="crearUsuario.php?borrar=' . $id . '">Borrar</a></button></td>
                     </tr>';
             }
             echo '</table>';
@@ -554,7 +586,7 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
         die("Error en conexión a la base de datos: " . $e->getMessage());
     }
     ?>
-    <?php
+        <?php
     if (isset($_GET['editar'])) {
         try {
             $editar_id = $_GET['editar'];
@@ -596,10 +628,12 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
                             TELEFONO <input type="number" name="celular" value="<?php echo $telf ?>"><br>
                             EMAIL <input type="email" name="correo" value="<?php echo $correo ?>"><br>
                             CLAVE <input type="password" name="clave" value="<?php echo $contrasena ?>"><br>
-                            FECHA NACIMIENTO <input type="date" name="fechnacimiento" value="<?php echo $nacimfech ?>"><br>
+                            FECHA NACIMIENTO <input type="date" name="fechnacimiento"
+                                value="<?php echo $nacimfech ?>"><br>
                             LOCALIDAD <input type="number" name="localidad" value="<?php echo $local ?>"><br>
                             ROL <input type="number" name="rol" value="<?php echo $idrole ?>"><br>
-                            <input type="submit" name="actualizame" value="Actualizar Datos" style="cursor: pointer;"><br>
+                            <input type="submit" name="actualizame" value="Actualizar Datos"
+                                style="cursor: pointer;"><br>
                         </form>
                     </div>
                 </td>
@@ -609,7 +643,7 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
         unset($_POST['editar']);
     }
     ?>
-    <?php
+        <?php
     if (isset($_POST['actualizame'])) {
         $actualizausuario = $_POST['usuario'];
         $actualizaapellido = $_POST['apellido'];
@@ -629,7 +663,7 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
             $ejecutar = $conexion->query($observar);
 
             if ($ejecutar) {
-                echo "<script>window.open('pag_inicio.php')</script> ";
+                echo "<script>window.open('crearUsuario.php')</script> ";
             } else {
                 echo "<script>alert ('no se pudo EDITAR')</script> ";
             }
@@ -638,7 +672,7 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
         }
     }
     ?>
-    <?php
+        <?php
     if (isset($_GET['borrar'])) {
         try {
             $borrar_id = $_GET['borrar'];
@@ -648,7 +682,7 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
             $ejecutar = $conexion->query($borrar);
 
             if ($ejecutar) {
-                echo "<script>window.open('pag_inicio.php')</script> ";
+                echo "<script>window.open('crearUsuario.php')</script> ";
             } else {
                 echo "<script>alert ('no se logro eliminar')</script> ";
             }
@@ -658,11 +692,12 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
         unset($_POST['borrar']);
     }
     ?>
-    <div align="center">
-        <form action="../../../app-autosplash/index.php" method="POST">
-            <button class="logout-btn" name="cerrar_sesion">Cerrar Sesión</button>
-        </form>
+        <div align="center">
+            <form action="../../useCase/logOut.php" method="POST">
+                <button class="logout-btn" name="cerrar_sesion">Cerrar Sesión</button>
+            </form>
+        </div>
     </div>
-</div>
 </body>
+
 </html>
