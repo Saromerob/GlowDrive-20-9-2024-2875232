@@ -1,0 +1,99 @@
+body {
+    background-color: #1a1a2e;
+    color: #eaeaea;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+.welcome {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.form-container {
+    background-color: #162447;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="date"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container input[type="submit"] {
+    background-color: #1f4068;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #1b1b2f;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #0f3460;
+}
+
+td {
+    background-color: #162447;
+}
+
+.btn {
+    background-color: #1f4068;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #1b1b2f;
+}
+
+.logout-btn {
+    background-color: #e94560;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.logout-btn:hover {
+    background-color: #b0003a;
+}
