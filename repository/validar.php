@@ -40,7 +40,7 @@ if ($conn) {
         }
     } else {
         $_SESSION['error_message'] = 'Usuario o contraseña incorrectos';
-        header("Location: ../views/sesion.php");
+        header("Location: ../views/session/sesion.php");
         exit();
     }
 }

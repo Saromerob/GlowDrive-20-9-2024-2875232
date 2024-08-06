@@ -4,6 +4,18 @@
    include '../../repository/localidad.php';
    include '../../repository/tipo_documento.php';
    //mysqli_close($conn);
+   if (isset($_SESSION['nombre'])) {
+    switch ($_SESSION['role_id']) {
+        case 1:
+            header("Location: ../admin/paginaInicio.php");
+            exit();
+            break;
+        case 2:
+            header("Location: ../cliente/paginaInicio.php");
+            break;  
+        default:
+    }
+   }
 ?>
 <!DOCTYPE html>
 <html lang="es">

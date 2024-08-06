@@ -11,6 +11,14 @@
 
 </head>
 
+<?php
+session_start();
+if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 2) {
+    header('location: ../../useCase/logOut.php');
+    die();
+}
+?>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -31,8 +39,6 @@
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="navbar-brand ms-auto" href="../../index.php">
-                        </a>
                         <div class="sesion">
                             <a class="nav-link" href="../../useCase/logOut.php">
                                 <p class="ini"> <img src="../../img/user.png" class="user1">Cerrar Sesión</p>

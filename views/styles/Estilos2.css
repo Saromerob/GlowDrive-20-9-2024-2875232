@@ -9,6 +9,7 @@ body {
     padding: 0%;
     background-size: cover;
     background-position: center;
+    background: url('Img/Fondo.jpg');
 }
 
 .Logo .titulo {
@@ -26,7 +27,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('/img/fondo.jpg');
     background-size: cover;
     background-position: center;
 }
