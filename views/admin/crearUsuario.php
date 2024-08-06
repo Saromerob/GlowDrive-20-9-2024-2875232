@@ -697,6 +697,11 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
                 <button class="logout-btn" name="cerrar_sesion">Cerrar Sesión</button>
             </form>
         </div>
+        <div align="center">
+            <form action="paginaInicio.php" method="POST">
+                <button class="logout-btn" name="cerrar_sesion">Volver al inicio</button>
+            </form>
+        </div>
     </div>
 </body>
 

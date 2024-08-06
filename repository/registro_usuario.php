@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Ejecutar la consulta.
             if ($stmt->execute()) {
                 $_SESSION['success'] = 'Usuario Registrado Exitosamente';
-                header("Location: ../views/inicioSesion.php");
+                header("Location: ../views/session/sesion.php");
                 exit();
             } else {
                 echo "Error: No se pudo registrar el usuario.";
@@ -69,7 +69,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Error: Todos los campos son requeridos.";
         exit();
     }
-} else {
-    echo "Error: No se recibieron datos.";
 }
 ?>
