@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Agendar Citas</a>
+                        <a class="nav-link active" aria-current="page" href="views/session/sesion.php">Agendar Citas</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="sesion.php" id="navbarDropdown" role="button"

@@ -284,8 +284,8 @@ h2{
     <div class="contenedor-principal">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="pag_inicioCliente.html">
-                    <img src="../../img/LogoRegistro.jpeg" alt="Logo" id="logo" class="logo">
+                <a class="navbar-brand" href="agendar_cita.php">
+                    <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
                     <div class="titulo">AUTO-SPLASH</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -294,7 +294,7 @@ h2{
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
                     <li class="nav-item conos">
-                        <button type="button" class="btn btn-outline-light" onclick="window.location.href='Mapa.html';">
+                        <button type="button" class="btn btn-outline-light" onclick="window.location.href='Mapa.php';">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
                                 <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
                                 <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
@@ -302,16 +302,6 @@ h2{
                             Mapa
                         </button>
                     </li>
-                    <li class="nav-item conos">
-                        <button type="button" class="btn btn-outline-light" onclick="window.location.href='Nosotros.html';">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-arms-up" viewBox="0 0 16 16">
-                                <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
-                                <path d="m5.93 6.704-.846 8.451a.768.768 0 0 0 1.523.203l.81-4.865a.59.59 0 0 1 1.165 0l.81 4.865a.768.768 0 0 0 1.523-.203l-.845-8.451A1.5 1.5 0 0 1 10.5 5.5L13 2.284a.796.796 0 0 0-1.239-.998L9.634 3.84a.7.7 0 0 1-.33.235c-.23.074-.665.176-1.304.176-.64 0-1.074-.102-1.305-.176a.7.7 0 0 1-.329-.235L4.239 1.286a.796.796 0 0 0-1.24.998l2.5 3.216c.317.316.475.758.43 1.204Z"/>
-                            </svg>
-                            Conócenos
-                        </button>
-                    </li>
-
                     </ul>
                     <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -335,7 +325,7 @@ h2{
 
         <div class="wrapper">
             <form action="enviar_cita.php" method="post">
-                <img src="../../img/LogoRegistro.jpeg" class="LogoRegistro" alt="Logo">
+                <img src="../../img/logo.jpeg" class="LogoRegistro" alt="Logo">
                 <h1>INGRESE DATOS PARA RESERVACIÓN</h1>
 
                 <!-- Campo oculto para ID del usuario -->
