@@ -76,7 +76,7 @@
         <div class="grupo-1">
             <div class="BOX">
             <figure>
-            <a href="pag_inicioCliente.html">
+            <a href="paginaInicio.php">
                 <img src="../../img/logo.jpeg" alt="Logo AutoSplash" class="logo-pie">
             </a>
             </figure>
