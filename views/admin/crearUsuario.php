@@ -360,14 +360,17 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
         $db = new Database();
         $conexion = $db->conectar();
         $usuario = $_SESSION['nombre'];
-        echo "Bienvenid@ <br>Administrador <br>" . $usuario;
+        echo "Bienvenid@ Administrador <br>" . $usuario;
         ?>
+        
         </div>
+        
         <div class="form-container">
             <form method="POST" action="#">
-                IDROL <input type="number" name="idrol" required placeholder="Ingrese Rol" min="1" max="4"><br>
-                NOMBRE <input type="text" name="usuario" required placeholder="Ingrese Nombre" pattern="[a-z]{4,8}"><br>
-                APELLIDO <input type="text" name="apellido" required placeholder="Ingrese Apellido"
+            <center><img src="../../img/logo.jpeg" class="LogoRegistro"></center> <br>
+                IDROL <br><input type="number" name="idrol" required placeholder="Ingrese Rol" min="1" max="4"><br>
+                NOMBRE <br><input type="text" name="usuario" required placeholder="Ingrese Nombre" pattern="[a-z]{4,8}"><br>
+                APELLIDO <br><input type="text" name="apellido" required placeholder="Ingrese Apellido"
                     pattern="[a-z]{4,8}"><br>
                 NUMERO DOCUMENTO <input type="number" name="numeroDoc" required
                     placeholder="Ingrese numero de documento"><br>
@@ -375,11 +378,11 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
                     placeholder="Ingrese tipo de documento"><br>
                 TELEFONO <input type="number" name="telefono" required placeholder="Ingrese Telefono"><br>
                 EMAIL<br> <input type="email" name="email" required placeholder="Ingrese Email"><br>
-                CLAVE <input type="password" name="clave" required placeholder="Ingrese Contraseña"><br>
+                CLAVE <br><input type="password" name="clave" required placeholder="Ingrese Contraseña"><br>
                 LOCALIDAD <input type="number" name="localidad" required placeholder="Ingrese localidad"><br>
                 FECHA NACIMIENTO <input type="date" name="nacimiento" required
                     placeholder="Ingrese fecha de nacimiento"><br>
-                <input type="submit" name="insertar" value="Insertar Datos">
+                <br><input type="submit" name="insertar" value="Insertar Datos">
             </form>
         </div>
         <?php
@@ -574,6 +577,7 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
     }
     ?>
         <?php
+    
     if (isset($_GET['borrar'])) {
         try {
             $borrar_id = $_GET['borrar'];
@@ -600,7 +604,7 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
         </div>
         <div align="center">
             <form action="paginaInicio.php" method="POST">
-                <button class="logout-btn" name="cerrar_sesion">Volver al inicio</button>
+               <br> <button class="logout-btn" name="cerrar_sesion">Volver al inicio</button>
             </form>
         </div>
     </div>
