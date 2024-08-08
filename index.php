@@ -12,7 +12,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="contenedor-principal">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php">
                 <img src="img/logo.jpeg" alt="Logo" id="logo">
@@ -25,9 +26,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="views/session/sesion.php">Agendar Citas</a>
-                    </li>
+                    <div class="marcos">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Agendar Citas</a>
+                        </li>
+                    </div>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="sesion.php" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -60,6 +63,46 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
+    </div>
+
+
+
+    <!--ESTE ES EL PIE DE PAGINA DE PARA ARRIBA VA TODA INFORMACIÓN DE CUALQUIER TIPO EN LA PAGINA DE INICIO-->
+    <footer class="pie-pagina">
+        <div class="grupo-1"> 
+            <div class="BOX">
+                <FIGUre>
+                    <a href="pag_inicioCliente.html">
+                        <img src="../app-autosplash/img/logo.jpeg" alt="Logo AutoSplash" height="200px">
+                    </a>
+                </FIGUre>
+            </div>
+            <div class="BOX">
+                <h2>SOBRE NOSOTROS</h2>
+                <p> TEXTO EJEMPLO</p>
+                <p> </p>
+            </div>
+            <div class="BOX">
+            <h2> Siguenos: </h2>
+            <div class="red-social">
+                <center>
+                <a href="www.instagram.com" class="instagram">
+                    <img src="Img/instagram.jpg" height="50px" class="insta">
+                </a>
+                <a href="#" class="tik-tok">
+                    <img src="Img/tiktok.png" height="50px" class="tito">
+                </a>
+                <a href="#" class="whatsapp">
+                    <img src="Img/whatsapp.png" height="55px" class="wha">
+                </a>
+            </center>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2024<b>AutoSplash</b>-Todos Los Derechos Reservados.</small>
+
+        </div>
+    </footer>
 </body>
 
 </html>
