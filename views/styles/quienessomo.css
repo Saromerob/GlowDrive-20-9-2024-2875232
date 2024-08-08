@@ -1,28 +1,30 @@
-* {
+*{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
-
-body {
+body
+{
     background-color: rgb(100, 108, 117);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
-
-.about img {
+.nosotros
+{
+    color: #fff;
+    text-decoration: none;
+}
+.about img{
     height: auto;
     width: 420px;
 
 }
-
-.about-text {
+.about-text{
     width: 550px;
 }
-
-.main {
+.main{
     width: 1130px;
     max-width: 95%;
     margin: 0 auto;
@@ -30,37 +32,32 @@ body {
     align-items: center;
     justify-content: space-around;
 }
-
-.about-text h1 {
+.about-text h1{
     color: white;
     font-size: 60px;
     text-transform: capitalize;
     margin-bottom: 20px;
 }
-
-.about-text h5 {
+.about-text h5{
     color: white;
     font-size: 20px;
     text-transform: capitalize;
     margin-bottom: 20px;
     letter-spacing: 2px;
 }
-
-span {
+span{
     color: rgb(255, 193, 112);
 }
-
-.about-text p {
+.about-text p{
     color: rgb(205, 212, 241);
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 18px;
     margin-bottom: 45px;
-
+    
 }
-
-button {
-    background: rgb(86, 83, 90);
+button{
+    background: rgb(86, 83, 90) ;
     color: white;
     text-decoration: none;
     border: 2px solid transparent;
@@ -68,41 +65,38 @@ button {
     padding: 13px 30px;
     border-radius: 30px;
 }
-
-button:hover {
+button:hover{
     background: transparent;
     border: 2px solid rgb(86, 83, 90);
     cursor: pointer;
-
+    
 }
-
-.logo {
+.logo
+{
     border-radius: 50%;
     position: relative;
     right: 20px;
 }
-
-a {
+a{
     text-decoration: underline;
     color: #fff;
 }
 
 
-.contenedor-principal {
-    /* Nombre del contenedor principal */
+.contenedor-principal { /* Nombre del contenedor principal */
     position: relative;
-    min-height: 100%;
-    /* Para asegurar que el contenido empuje al footer */
+    min-height: 100%; /* Para asegurar que el contenido empuje al footer */
     bottom: 100%;
 }
 
 
-.pie-pagina {
+.pie-pagina
+{
     width: 100%;
     background-color: rgb(55, 84, 107);
 }
-
-.pie-pagina .grupo-1 {
+.pie-pagina .grupo-1 
+{
     width: 100%;
     max-width: 1200px;
     margin: auto;
@@ -111,34 +105,34 @@ a {
     grid-gap: 50px;
     padding: 45px 0px;
 }
-
-.pie-pagina .grupo-1 figure {
+.pie-pagina .grupo-1  figure
+{
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
 }
-
-.pie-pagina .grupo-1 .BOX figure img {
+.pie-pagina .grupo-1 .BOX figure img
+{
     width: 250px;
 }
-
-.pie-pagina .grupo-1 .BOX h2 {
+.pie-pagina .grupo-1 .BOX h2
+{
     color: #fff;
     margin-bottom: 25px;
     font-size: 20px;
     text-align: center;
 
 }
-
-.pie-pagina .grupo-1 .BOX p {
+.pie-pagina .grupo-1 .BOX p
+{
     color: #fdfdfd;
     margin-bottom: 10px;
 }
-
-.pie-pagina .grupo-1 .red-social a {
+.pie-pagina .grupo-1 .red-social a
+{
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -147,54 +141,53 @@ a {
     color: #fff;
     margin-right: 10px;
     background-color: black;
-    text-align: center;
-    transition: all 300ms ease;
+    text-align: center; 
+    transition: all 300ms ease;  
 }
-
-.pie-pagina .grupo-1 .BOX .red-social a:hover {
-    color: aqua
+.pie-pagina .grupo-1 .BOX .red-social a:hover
+{
+color: aqua
 }
-
-.pie-pagina .grupo-2 {
-    background-color: rgb(55, 84, 107);
+.pie-pagina .grupo-2{
+    background-color:rgb(55, 84, 107);
     padding: 15px 10px;
     text-align: center;
     color: rgb(255, 255, 255);
 }
-
-.pie-pagina .grupo-2 small {
+.pie-pagina .grupo-2 small{
     font-size: 15px;
 }
-
-@media screen and (max-width: 800px) {
-    .pie-pagina .grupo-1 {
-        width: 100% grid-template-columns repeat
+@media screen and (max-width: 800px) 
+{
+    .pie-pagina .grupo-1{
+        width: 100%
+        grid-template-columns repeat
     }
 }
-
-a {
+a{
     border-radius: 50%;
     text-align: center;
     align-items: center;
 }
-
-img {
+img
+{
     border-radius: 50%;
 }
 
-.tito {
+.tito
+{
     position: relative;
-    bottom: 3px;
+    bottom:3px;
     right: 3px;
 }
 
-.wha {
+.wha
+{
     position: relative;
     bottom: 5px;
     right: 5px;
 }
-
-* {
+*{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
@@ -208,8 +201,7 @@ body {
 }
 
 .main-container {
-    flex-grow: 1;
-    /* Ocupa todo el espacio disponible antes del footer */
+    flex-grow: 1; /* Ocupa todo el espacio disponible antes del footer */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -227,7 +219,7 @@ body {
     align-items: center;
 }
 
-/* ... otros estilos ... */
+  /* ... otros estilos ... */
 
 .btn {
     background: rgb(86, 83, 90);
@@ -245,4 +237,4 @@ body {
     border: 2px solid rgb(86, 83, 90);
 }
 
-/* ... estilos del footer ... */
+  /* ... estilos del footer ... */
