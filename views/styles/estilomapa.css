@@ -1,8 +1,10 @@
-body
-{
-    background: url('Img/Fondo.jpg');
+
+body {
+    background: url('../../img/fondomap.jpeg') no-repeat center center fixed;
+    background-size: cover;
     font-family: 'Gill Sans';
 }
+
 
 .navbar {
     background-color: transparent;
@@ -242,3 +244,4 @@ img
     bottom: 5px;
     right: 5px;
 }
+
