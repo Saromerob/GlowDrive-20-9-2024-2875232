@@ -201,7 +201,7 @@ $stmt_tipo_vehiculo = $conn->query($sql_tipo_vehiculo);
             font-size: 15px;
         }
         .LogoRegistro{
-            radius: 50px;
+           border-radius: 50px;
         }
 
         /* Responsividad */
