@@ -7,12 +7,16 @@
    if (isset($_SESSION['nombre'])) {
     switch ($_SESSION['role_id']) {
         case 1:
-            header("Location: ../admin/paginaInicio.php");
+            header("Location: ../gerente/paginaInicio.php");
             exit();
             break;
         case 2:
             header("Location: ../cliente/paginaInicio.php");
-            break;  
+            break;
+        case 3:
+            header("Location: ../admin/paginaInicio.php");
+            exit();
+            break;
         default:
     }
    }
