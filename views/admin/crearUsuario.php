@@ -339,7 +339,7 @@ if(isset($_GET['borrar']))
 include_once '../../config/db.php';
 session_start();
 
-if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
+if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
     header('location: ../../useCase/logOut.php');
     die();
 }
@@ -362,14 +362,15 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
         $usuario = $_SESSION['nombre'];
         echo "Bienvenid@ Administrador <br>" . $usuario;
         ?>
-        
+
         </div>
-        
+
         <div class="form-container">
             <form method="POST" action="#">
-            <center><img src="../../img/logo.jpeg" class="LogoRegistro"></center> <br>
+                <center><img src="../../img/logo.jpeg" class="LogoRegistro"></center> <br>
                 IDROL <br><input type="number" name="idrol" required placeholder="Ingrese Rol" min="1" max="4"><br>
-                NOMBRE <br><input type="text" name="usuario" required placeholder="Ingrese Nombre" pattern="[a-z]{4,8}"><br>
+                NOMBRE <br><input type="text" name="usuario" required placeholder="Ingrese Nombre"
+                    pattern="[a-z]{4,8}"><br>
                 APELLIDO <br><input type="text" name="apellido" required placeholder="Ingrese Apellido"
                     pattern="[a-z]{4,8}"><br>
                 NUMERO DOCUMENTO <input type="number" name="numeroDoc" required
@@ -604,7 +605,7 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
         </div>
         <div align="center">
             <form action="paginaInicio.php" method="POST">
-               <br> <button class="logout-btn" name="cerrar_sesion">Volver al inicio</button>
+                <br> <button class="logout-btn" name="cerrar_sesion">Volver al inicio</button>
             </form>
         </div>
     </div>
