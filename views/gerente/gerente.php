@@ -47,7 +47,7 @@
         <div class="wrapper">
             <form action="enviar_cita.php" method="post">
                 <img src="../../img/logo.jpeg" class="LogoRegistro" alt="Logo">
-                <h1>INGRESE DATOS PARA REGISTRO</h1>
+                <h1>INGRESE DATOS PARA REGISTRO DEL AUTOLAVADO</h1>
 
                 <!-- Campo oculto para ID del usuario -->
                 <input type="hidden" name="usuario_id" value="<!-- ID del usuario actual -->">
