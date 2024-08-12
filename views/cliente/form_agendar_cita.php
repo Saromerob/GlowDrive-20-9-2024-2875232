@@ -53,7 +53,7 @@ if (!empty($result)) {
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="pag_inicioCliente.html">
-                    <img src="../../img/LogoRegistro.jpeg" alt="Logo" id="logo" class="logo">
+                    <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
                     <div class="titulo">AUTO-SPLASH</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -100,9 +100,9 @@ if (!empty($result)) {
                 </div>
             </div>
         </nav>
-
+<br>
         <div class="wrapper">
-            
+        
         <form action="agendar_cita.php" method="POST">
     
 
@@ -144,22 +144,23 @@ if (!empty($result)) {
                 </select>
         
         <label for="fecha">Fecha (YYYY-MM-DD):</label><br>
-        <input type="date" id="fecha" name="fecha" required><br>
+        <input class= "controls" type="date" id="fecha" name="fecha" required><br>
         
         <label for="hora">Hora (HH:MM):</label><br>
-        <input type="time" id="hora" name="hora" required><br>
+        <input class= "controls" type="time" id="hora" name="hora" required><br>
         
         <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required><br>
+        <input class= "controls" type="text" id="nombre" name="nombre" placeholder="Nombre" ><br>
         
         <label for="apellido">Apellido:</label><br>
-        <input type="text" id="apellido" name="apellido" required><br>
+        <input class= "controls" type="text" id="apellido" name="apellido"placeholder="Apellido" required><br>
         
         <label for="placa">Placa:</label><br>
-        <input type="text" id="placa" name="placa"><br>
+        <input class= "controls" type="text" id="placa" name="placa" placeholder="Placa"><br>
         
         <label for="telefono">Teléfono:</label><br>
-        <input type="text" id="telefono" name="telefono"><br>
+        <input class= "controls" type="text" id="telefono" name="telefono" placeholder="Teléfono"><br>
+        <br>
         
         <select name="tipo_vehiculo" class="controls" required>
                     <option value="">Seleccione un tipo de vehículo</option>
@@ -175,14 +176,17 @@ if (!empty($result)) {
                     }
                     ?>
                 </select>
-        
+                
         <label for="comentarios">Comentarios:</label><br>
-        <textarea id="comentarios" name="comentarios"></textarea><br><br>
+        <textarea class= "controls" id="comentarios" name="comentarios" placeholder="Ingresa Comentarios"></textarea><br><br>
         
-        <input type="submit" value="Agendar Cita">
+        <input type="submit" class="btn" value="Agendar Cita">
+        <br>
     </form>
+    
 
         </div>
+        <br>
     </div>
 
     <!-- Footer -->
