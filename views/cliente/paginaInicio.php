@@ -28,7 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item citas">
-                            <a class="nav-link active" aria-current="page" href="agendar_cita.php">Agendar Citas</a>
+                            <a class="nav-link active" aria-current="page" href="form_agendar_cita.php">Agendar Citas</a>
                         </li>
                         <li class="nav-item ubi">
                             <a class="nav-link active" aria-current="page" href="Mapa.php">Mapa</a>

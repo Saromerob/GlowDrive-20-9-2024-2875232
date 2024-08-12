@@ -23,8 +23,19 @@ $stmt_servicios = $conn->query($sql_servicios);
 $sql_tipo_vehiculo = "SELECT id, tipo FROM tipo_vehiculo";
 $stmt_tipo_vehiculo = $conn->query($sql_tipo_vehiculo);
 
-//consultar en la base de datos el numero de documento
+//consultar en la base de datos el ID del que esta en SESION
+$query = "SELECT id FROM usuarios WHERE nombre = '" . $_SESSION['nombre'] . "'";
+$stmt = $conn->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+if (!empty($result)) {
+    foreach ($result as $row) {
+        $userId = $row["id"];
+    }
+} else {
+    // No se encontró ningún usuario con ese nombre de usuario
+}
 
 ?>
 <!DOCTYPE html>
@@ -93,18 +104,11 @@ $stmt_tipo_vehiculo = $conn->query($sql_tipo_vehiculo);
         <div class="wrapper">
             
         <form action="agendar_cita.php" method="POST">
-        <label for="id_usuario">Numero de documento</label><br>
-        <?php
-        
+    
 
-        // Mostrar el ID de la sesión en el formulario
-        echo "ID de la sesión: " . session_id() . "<br>";
+        <input type="hidden" name="usuario_id" value="<?php echo $userId; ?>">
 
-        // Resto del código del formulario
-        ?>
-        
-        <label for="usuario_id">ID Usuario:</label><br>
-        <input type="text" id="usuario_id" name="usuario_id" required><br>
+    <p class="controls">ID del usuario logueado: <?php echo $userId; ?></p>
         
         <label for="autolavado">Autolavado:</label>
                 <select name="autolavado_id" class="controls" required>
@@ -150,9 +154,6 @@ $stmt_tipo_vehiculo = $conn->query($sql_tipo_vehiculo);
         
         <label for="apellido">Apellido:</label><br>
         <input type="text" id="apellido" name="apellido" required><br>
-
-        <label for="numero_documento">Documento</label><br>
-        <input type="number" id="documento" name="numero_document" required><br>
         
         <label for="placa">Placa:</label><br>
         <input type="text" id="placa" name="placa"><br>
