@@ -126,6 +126,9 @@
             font-weight: 600;
             margin-top: 20px;
         }
+        .btn:hover{
+            background-color:  rgb(71, 130, 155);
+        }
         .wrapper .controls{
             width: 100%;
             height: 50%;
