@@ -1,171 +1,176 @@
-/* Estilos Generales */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    .logo-pie 
-    {
-    width: 100px; /* Ajusta el tamaño según sea necesario */
-    height: 100px; /* Asegúrate de que el ancho y la altura sean iguales */
+*
+{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    background: url('/../app-autosplash/img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.logo
+{
     border-radius: 50%;
-    object-fit: cover; /* Para que la imagen se ajuste bien al contenedor redondo */
-    }
-    img
-    {
-        border-radius: 50%;
-    }
-    .nosotros
-    {
-        color: #fff;
-        text-decoration: none;
-    }
-    body {
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
-        background-image: url('../../img/fondo.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-    h1{
-        color: #fff;
-    }
-    .pie-pagina {
-        margin-top: auto; /* Pushes the footer to the bottom */
-    }
-    .navbar {
-        background-color: transparent;
-        backdrop-filter: blur(500px);
-        box-shadow: 5px 10px 12px #000;
-    }
-    
-    .navbar .navbar-brand {
-        display: flex;
-        align-items: center;
-    }
-    
-    .navbar .navbar-brand img {
-        height: 90px;
-        margin-right: 10px;
-        border-radius: 50%;
-    }
-    
-    .titulo 
-    {
-        width: 200px;
-        text-align: center;
-        background-color: rgba(219, 219, 217);
-    }
-    .navbar .navbar-brand .titulo {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #0d1b2a;
-        border: 2px solid white;
-        border-radius: 20px;
-    
-    }
-    
-    .navbar .nav-link {
-        font-size: 1.1rem;
-        color: #0d1b2a;
-        font-weight: bold;
-    }
-    
-    .navbar .nav-link:hover {
-        color: gray;
-    }
-    
-    .navbar .navbar-nav .nav-item .dropdown-menu {
-        background-color: rgba(13, 27, 42, 0.8);
-    }
-    
-    .navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item {
-        font-size: 1rem;
-        color: gray;
-    }
-    
-    .navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
-        background-color: rgba(13, 27, 42, 0.9);
-        color: gray;
-    }
-    
-    .navbar .nav-item .nav-link img {
-        border-radius: 50%;
-    }
-    
-    .navbar .navbar-toggler {
-        border-color: gray;
-    }
-    
-    .navbar .navbar-toggler:hover {
-        background-color: #a9b0ba;
-    }
-    
-    .navbar .navbar-toggler-icon {
-        color: #e0e1dd;
-    }
-
-    /* Banner */
-    .banner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        background-color: transparent;
-        backdrop-filter: blur(80px);
-        border-radius: 50px;
-        margin: 20px;
-    }
-
-    .banner-info {
-        text-align: center;
-        margin-right: 20px;
-    }
-
-    
-/* aca es css para imagen responsiv*/
-
-
-@media (max-width: 768px) {
-.container {
-flex-direction: column;
-align-items: center;
+    border: 2px solid black;
+}
+.controls
+{
+    border-radius: 20px;
+    border: 2px solid #000;
+    width: 340px;
+    height: 50px;
 }
 
-.text-content {
-order: 1;
-margin-right: 0;
+.navbar {
+    background-color: transparent;
+    backdrop-filter: blur(500px);
+    box-shadow: 5px 10px 12px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
 }
 
-.banner-img {
-order: 2;
-margin-top: 20px; /* Espacio entre el texto y la imagen */
-}
-}
-/* Estilos para pantallas pequeñas */
-.container {
-display: flex;
-flex-wrap: wrap;
-align-items: center;
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
 }
 
-.text-content {
-flex: 1 1 50%;
-margin-right: 20px; /* Espacio entre el texto y la imagen en pantallas grandes */
+.navbar .navbar-brand img {
+    height: 90px;
+    margin-right: 10px;
+    border-radius: 50%;
 }
 
-.banner-img {
-flex: 1 1 50%;
-text-align: center;
+.titulo 
+{
+    width: 200px;
+    text-align: center;
+    background-color: rgba(219, 219, 217);
+}
+.navbar .navbar-brand .titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0d1b2a;
+    border: 2px solid white;
+    border-radius: 20px;
+
 }
 
+.navbar .nav-link {
+    font-size: 1.1rem;
+    color: #0d1b2a;
+    font-weight: bold;
+}
 
+.navbar .nav-link:hover {
+    color: gray;
+}
 
-.contenedor-principal { /* Nombre del contenedor principal */
+.navbar .navbar-nav .nav-item .dropdown-menu {
+    background-color: rgba(13, 27, 42, 0.8);
+}
+
+.navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+    font-size: 1rem;
+    color: gray;
+}
+
+.navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(13, 27, 42, 0.9);
+    color: gray;
+}
+
+.navbar .nav-item .nav-link img {
+    border-radius: 50%;
+}
+
+.navbar .navbar-toggler {
+    border-color: gray;
+}
+
+.navbar .navbar-toggler:hover {
+    background-color: #a9b0ba;
+}
+
+.navbar .navbar-toggler-icon {
+    color: b;
+}
+
+.user
+{
     position: relative;
-    min-height: 100%; /* Para asegurar que el contenido empuje al footer */
+    right: 40px;
+    top: 45px;
+}
+
+.sesion
+{
+    background-color: #0d1b2a;
+    border-radius: 20px;
+    width: 190px;
+    border: 2px solid white;
+}
+.ini
+{
+    color: white;
+    position: relative;
+    top: 7px;
+    text-align: center;
+}
+.user1
+{
+    height: 35px;
+    position: relative;
+    right: 6px;
+}
+
+
+.ubi
+{
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 20px;
+    margin: 10px ;
+    background-color: #ffffff;
+    width: 200px;
+}
+
+.citas
+{
+    text-align: center;
+    border-radius: 20px;
+    margin: 10px;
+    background-color: #ffffff;    
+    width: 200px;
+}
+
+
+.conocenos
+{
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 20px;
+    left: 5px;
+    margin: 10px ;
+    background-color: #ffffff;    
+    width: 200px;
+}
+
+.contenedor-principal 
+{
+    min-height: 100vh; /* Asegurar que el contenido empuje al footer */
     bottom: 100%;
 }
 
@@ -185,7 +190,6 @@ text-align: center;
     grid-gap: 50px;
     padding: 45px 0px;
 }
-
 .pie-pagina .grupo-1  figure
 {
     width: 100%;
@@ -195,9 +199,18 @@ text-align: center;
     align-items: center;
     
 }
+.nosotros
+{
+    text-decoration: none;
+    color: #fff;
+}
+.pie-pagina .grupo-1 .BOX figure img
+{
+    width: 250px;
+}
 .pie-pagina .grupo-1 .BOX h2
 {
-    color: #fff;
+    color: white;
     margin-bottom: 25px;
     font-size: 20px;
     text-align: center;
@@ -205,7 +218,7 @@ text-align: center;
 }
 .pie-pagina .grupo-1 .BOX p
 {
-    color: #fdfdfd;
+    color: white;
     margin-bottom: 10px;
 }
 .pie-pagina .grupo-1 .red-social a
@@ -263,27 +276,32 @@ a{
 
 
 
-.banner
-{
-    display: flex;
-}
-.banner-info
-{
-    background-color: transparent;
-    backdrop-filter: blur(80px);
-    border-radius: 50px;
+.wrapper {
+    background: transparent;
+    border: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 7px 13px 37px #000;
+    border-radius: 20px;
+    padding: 30px 40px;
+    margin: 30px auto; /* Centrar con margen */
     text-align: center;
-    height: 250px;
+    width: 1200px;
+}
+.wrapper h1
+{
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box
+{
     position: relative;
-    top: 150px;
-}
-.banner-img
-{
-    width: 600px;
+    width: 100%;
+    height: 50px;
 }
 
-.info
+.Carro
 {
-    color: black;
-
+    height: 300px;
+    border-radius: 20px;
 }

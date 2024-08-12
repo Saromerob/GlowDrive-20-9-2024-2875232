@@ -12,7 +12,7 @@
 <main class="main-container">
         <section class="about">
         <div class="container">
-            <a href="pag_inicio.html">
+            <a href="../../app-autosplash/index.php">
                 <img src="../img/logo.jpeg" class="logo">
             </a>
             <div class="about-text">
@@ -30,7 +30,7 @@
         <div class="grupo-1"> 
             <div class="BOX">
                 <FIGUre>
-                    <a href="pag_inicioCliente.html">
+                    <a href="../../app-autosplash/index.php">
                         <img src="../img/logo.jpeg" alt="Logo AutoSplash" >
                     </a>
                 </FIGUre>

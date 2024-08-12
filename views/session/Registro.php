@@ -22,7 +22,7 @@
         }
     ?>
     <section class="registro">
-        <center><img src="../../img/logo.jpeg" class="LogoRegistro"></center> <br>
+        <center><a href="../../index.php"><img src="../../img/logo.jpeg" class="LogoRegistro"></a></center> <br>
         <h2>REGISTRO DE CLIENTES</h2>
         <form action="../../repository/registro_usuario.php" method="post">
             Nombres: <input class="controls" type="text" name="nombres" pattern="[A-Za-z\s]+"
@@ -50,8 +50,11 @@
                 <option value="<?php echo $localidad['id']; ?>"><?php echo $localidad['nombre']; ?></option>
                 <?php endforeach; ?>
             </select><br><br>
-            <input class="controls" type="checkbox" required>Estoy de acuerdo con los <a href="#"> Términos y
-                condiciones</a>
+            <div class="Recuerdame">
+                <label>
+                    <input type="checkbox">Estoy de acuerdo con los términos y condiciones
+                </label><br><br>
+            </div>
             <input class="button" type="submit" name="registro" id="registro" value="Registrarse">
             <p>Si ya tienes cuenta <a href="sesion.php">Inicia Sesion</a></p>
         </form><br>
@@ -60,14 +63,14 @@
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="BOX">
-                <FIGUre>
+                <figure>
                     <a href="#">
                         <img src="../../img/logo.jpeg" alt="Logo AutoSplash">
                     </a>
-                </FIGUre>
+                </figure>
             </div>
             <div class="BOX">
-                <h2><a href="Nosotros.html" class="nosotros"><a href="../../views/Nosotros.php">SOBRE
+                <h2><a href="Nosotros.html"><a href="../../views/Nosotros.php" class="nosotros">SOBRE
                             NOSOTROS</a></h2>
                 <div class="grupo-2">
                     <small>&copy; 2024<b>AutoSplash<br>-Todos Los Derechos Reservados.</small>
