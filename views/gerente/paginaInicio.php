@@ -36,7 +36,7 @@
                             <a class="nav-link active" aria-current="page" href="citas_pendientes.php">Citas Pendientes</a>
                         </li>
                         <li class="nav-item ubi">
-                            <a class="nav-link active" aria-current="page" href="Mapa.php">Mapa</a>
+                            <a class="nav-link active" aria-current="page" href="../cliente/Mapa.php">Mapa</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
