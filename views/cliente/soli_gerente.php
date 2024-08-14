@@ -27,8 +27,9 @@ if (!empty($result)) {
 
 
 
-<form method="POST" action="proseso_cam_rol.php">
+<form action="https://formsubmit.co/,ichaelestivenrojastacum@gmail.com" method="POST" >
     <input type="hidden" name="user_id" value="<?php echo $userId; ?>">
-    <input type="hidden" name="requested_role_id" value="1"> <!-- Suponiendo que '2' es el ID del rol 'gerente' -->
+    <input type="hidden" name="requested_role_id" value="1">
+    <input type="email" name="email">
     <button type="submit">Solicitar cambio a Gerente</button>
 </form>
