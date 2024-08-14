@@ -15,7 +15,7 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 2) {
     exit();
 }
 
-// Continuar con el resto de tu código...
+
 
 
 
