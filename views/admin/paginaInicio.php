@@ -16,7 +16,6 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
     header('location: ../../useCase/logOut.php');
     die();
 }
-
 ?>
 
 <body>
