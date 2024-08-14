@@ -1,10 +1,8 @@
 <?php
 // Incluir el archivo autoload de Composer
-require_once '../../vendor';
 
-// Importar las clases necesarias
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+require_once '../../vendor/autoload.php';
+include_once '../../config/db.php';
 
 // Conectar a la base de datos
 try {
@@ -49,19 +47,8 @@ if ($stmt->rowCount() > 0) {
     $stmt = $pdo->prepare("INSERT INTO role_requests (user_id, requested_role_id) VALUES (?, ?)");
     $stmt->execute([$userId, $requested_role_id]);
 
-    // Código para enviar correo
-    $mail = new PHPMailer(true);
-
-    try {
-        // Configuración del servidor
-        $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'michaelestivenrojastacuma@gmail.com';
-        $mail->Password   = 'tu_contraseña_aquí'; // Coloca la contraseña adecuada o una "contraseña de aplicaciones"
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port       = 587;
-
+    
+    
         // Destinatarios
         $mail->setFrom('michaelestivenrojastacuma@gmail.com', 'AutoSplash');
         $mail->addAddress('michaelestivenrojastacuma@gmail.com');
@@ -74,9 +61,7 @@ if ($stmt->rowCount() > 0) {
         // Enviar el correo
         $mail->send();
         echo 'Solicitud enviada con éxito.';
-    } catch (Exception $e) {
-        echo "Error: No se pudo enviar el correo. Mailer Error: {$mail->ErrorInfo}";
-    }
+   
 }
 ?>
 
