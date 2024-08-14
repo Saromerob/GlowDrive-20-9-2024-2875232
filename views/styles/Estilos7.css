@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}body {
+    background: url('../img/fondo.jpg') ;
+    font-family: 'calibri';
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+h1 {
+    color: #000000;    
+}
+.contenedor-principal {
+    flex: 1;
+}
+.pie-pagina {
+    margin-top: auto;
+}
+
+/* Navbar */
+.navbar {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 10px 12px #000;
+}
+
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-brand img {
+    height: 90px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0d1b2a;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: rgba(219, 219, 217);
+    padding: 0 10px;
+}
+
+.navbar .nav-link {
+    font-size: 1.1rem;
+    color: #0d1b2a;
+    font-weight: bold;
+}
+
+.navbar .nav-link:hover {
+    color: gray;
+}
+
+/* Banner */
+.wrapper {
+    width: 420px;
+    background: transparent;
+    border: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 7px 13px 37px #000;
+    border-radius: 20px;
+    padding: 30px 40px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+}
+
+.controls {
+    border-radius: 20px;
+    box-shadow: 7px 13px 37px #000;
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 15px 0;
+}
+
+.input-box,
+.input-box {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: 7px 13px 37px #616161;
+    border-radius: 20px;
+    padding: 10px;
+    color: #fff;
+}
+.wrapper .controls{
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    border: none;
+    outline: none;
+    box-shadow: 7px 13px 37px #000000;
+    border-radius: 20px;
+    padding: 10px;
+    color: #000000;
+}
+
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+    color: #000;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #99c9bd;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 7px 13px 37px #000;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer.pie-pagina {
+    background-color: rgb(55, 84, 107);
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer.pie-pagina .grupo-1 {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+footer.pie-pagina .grupo-1 .BOX {
+    text-align: center;
+}
+
+footer.pie-pagina .grupo-1 .BOX h2 {
+    margin-bottom: 15px;
+}
+
+footer.pie-pagina .red-social a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+footer.pie-pagina .red-social a:hover {
+    color: aqua;
+}
+
+footer.pie-pagina .grupo-2 {
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+.LogoRegistro{
+   border-radius: 50px;
+}
+
+/* Responsividad */
+@media (max-width: 800px) {
+    .pie-pagina .grupo-1 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .navbar .navbar-brand .titulo {
+        font-size: 1.2rem;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+}
+/* General */
+body {
+margin: 0;
+padding: 0;
+background: url('../img/fondo.jpg' );
+font-family: 'calibri';
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+/* Wrapper del formulario */
+.wrapper {
+width: 420px;
+background: transparent;
+border: rgba(255, 255, 255, .2);
+backdrop-filter: blur(20px);
+box-shadow: 7px 13px 37px #000;
+border-radius: 20px;
+padding: 30px 40px;
+margin: auto;
+text-align: center;
+color: #fff;
+}
+
+/* Imagen dentro del formulario */
+.wrapper img.LogoRegistro {
+height: 80px; /* Tamaño pequeño */
+width: 80px; /* Mantiene la forma circular */
+border-radius: 50%; /* Hace la imagen redonda */
+margin-bottom: 20px;
+}
+
+/* Imagen adicional debajo del formulario */
+.extra-img {
+display: block;
+margin: 20px auto;
+height: 50px; /* Tamaño pequeño */
+width: 50px; /* Mantiene la forma circular */
+border-radius: 50%; /* Hace la imagen redonda */
+object-fit: cover; /* Asegura que la imagen se ajuste bien */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 800px) {
+.wrapper {
+width: 90%;
+}
+}
+h2{
+color: black;
+}
+

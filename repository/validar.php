@@ -27,11 +27,15 @@ if ($conn) {
         $_SESSION['nombre'] = $userData['nombre'];
         switch ($userData['role_id']) {
             case 1:
-                header("Location: ../views/admin/paginaInicio.php");
+                header("Location: ../views/gerente/paginaInicio.php");
                 exit();
                 break;
             case 2:
                 header("Location: ../views/cliente/paginaInicio.php");
+                break;
+            case 3:
+                header("Location: ../views/admin/paginaInicio.php");
+                exit();
                 break;
             default:
                 $_SESSION['error_message'] = 'ERROR EN LA AUTENTICACION';

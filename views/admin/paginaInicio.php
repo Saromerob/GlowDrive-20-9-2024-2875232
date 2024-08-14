@@ -12,11 +12,10 @@
 </head>
 <?php
 session_start();
-if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
+if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
     header('location: ../../useCase/logOut.php');
     die();
 }
-$_SESSION['usuario_id'];
 ?>
 
 <body>

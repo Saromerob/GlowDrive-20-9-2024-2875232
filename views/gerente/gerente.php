@@ -3,22 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Inicio</title>
+    <title>Registro Gerente</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/Estilos3.css">
-    <?php
-    session_start();
-    if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 2) {
-        header('location: ../../useCase/logOut.php');
-        die();
-    }
-    ?>
+    <link rel="stylesheet" href="../styles/Estilos5.css">
 </head>
 <body>
     <div class="contenedor-principal">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="gerente.php">
                     <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
                     <div class="titulo">AUTO-SPLASH</div>
                 </a>
@@ -27,63 +20,74 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item citas">
-                            <a class="nav-link active" aria-current="page" href="agendar_cita.php">Agendar Citas</a>
-                        </li>
-                        <li class="nav-item ubi">
-                            <a class="nav-link active" aria-current="page" href="Mapa.php">Mapa</a>
-                        </li>
-                        <li class="nav-item ubi">
-                            <a class="nav-link active" aria-current="page" href="soli_gerente.php">Solicitar rol "Gerente"</a>
-                        </li>
+                    <li class="nav-item conos">
+
+                    </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <div class="sesion">
-                                <a class="nav-link" href="../../useCase/logOut.php">
-                                    <p class="ini"><img src="../../img/user.png" class="user1">Cerrar Sesión</p>
-                                </a>
-                            </div>
-                        </li>
+                    <li class="nav-item">
+                        <div>
+                            <p class="ini">
+                                <button type="button" class="btn btn-outline-light" onclick="window.location.href='paginaInicio.php';">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
+                                        <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+                                    </svg>
+                                    Volver
+                                </button>
+                            </p>
+                        </div>
+                    </li>
+
                     </ul>
                 </div>
             </div>
         </nav>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<br>
+        <div class="wrapper">
+            <form action="enviar_cita.php" method="post">
+                <img src="../../img/logo.jpeg" class="LogoRegistro" alt="Logo">
+                <h1>INGRESE DATOS PARA REGISTRO</h1>
 
-        <br><br>
+                <!-- Campo oculto para ID del usuario -->
+                <input type="hidden" name="usuario_id" value="<!-- ID del usuario actual -->">
 
-        <section class="banner container">
-            <div class="row">
-                <div class="text-content">
-                    <h2 class="info">¿Que es este aplicativo?</h2>
-                    <p class="info">Como equipo de desarrollo del SENA, hemos diseñado una aplicación móvil 
-                        que conecta a usuarios con servicios de lavado de automóviles cercanos. 
-                        Hemos creado una solución escalable y eficiente que permite a los usuarios 
-                        encontrar y reservar lavados de manera rápida y sencilla, a la vez que ofrece 
-                        a los negocios una mayor visibilidad. A través de un proceso de desarrollo ágil, 
-                        hemos priorizado la experiencia del usuario y la integración de funcionalidades 
-                        como geolocalización y pagos en línea. Esta aplicación representa una solución 
-                        innovadora para la industria del lavado de automóviles, facilitando la interacción 
-                        entre usuarios y negocios locales.
-                    </p>
-                </div>
-                <div class="banner-img">
-                <img src="../../img/Carro.jpg" >
-                </div>
-            </div>
-        </section>
+                <!-- Nombre -->
+                <label for="nombre">Nombre Autolavado:</label>
+                <input name="nombre" id="nombre" class="controls" placeholder="Ingrese nombre" required>
+                <!-- Dirección -->
+                <label for="direccion">Dirección:</label>
+                <input name="direccion" id="direccion" class="controls" placeholder="Ingrese Dirección" required >
+                <!-- Número Teléfono -->
+                <label for="telefono">Número de Teléfono:</label>
+                <input name="telefono" id="telefono" class="controls" placeholder="Número de Teléfono" required>
+                <!-- Horarios -->
+                <label for="horario">Horarios:</label>
+                <input name="horario" class="controls" placeholder="Horarios" required>
+
+                <!-- Datos personales -->
+                <label for="descripcion">Desripción</label>
+                <textarea class="controls" type="text" id="descripcion"  name="descripcion" required placeholder="Desripción del Autolavado"></textarea>
+                <label for="dueño">Dueño:</label>
+                <input class="controls" type="text" id="dueño_id" name="dueño_id" required placeholder="Nombre Dueño">
+                <label for="placa">Localidad:</label>
+                <select class="controls" id="localidad_id" name="localidad_id" required>
+                    <option value="">Seleccione localidad</option>
+                </select>
+                <!-- Botón de envío -->
+                <button type="submit" class="btn">Registrar</button>
+            </form>
+        </div>
     </div>
-
+<br>
+    <!-- Footer -->
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="BOX">
-            <figure>
-            <a href="paginaInicio.php">
-                <img src="../../img/logo.jpeg" alt="Logo AutoSplash" class="logo-pie">
-            </a>
-            </figure>
-
+            <div class="contenedor-principal">
+    <!-- ... contenido del formulario ... -->
+    <img src="../../img/logo.jpeg" class="extra-img" alt="Imagen Redonda Pequeña">
+</div>
             </div>
             <div class="BOX">
                 <h2>SOBRE NOSOTROS</h2>
@@ -115,5 +119,6 @@
             <small>&copy; 2024 <b>AutoSplash</b> - Todos Los Derechos Reservados.</small>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
