@@ -35,8 +35,14 @@
                         <li class="nav-item citas">
                             <a class="nav-link active" aria-current="page" href="citas_pendientes.php">CITAS PENDIENTES</a>
                         </li>
+                        <li class="nav-item citas">
+                            <a class="nav-link active" aria-current="page" href="registro_autolavado.php">REGISTRA TU AUTOLAVADO</a>
+                        </li>
                         <li class="nav-item ubi">
                             <a class="nav-link active" aria-current="page" href="Mapa.php">Mapa</a>
+                        </li>
+                        <li class="nav-item ubi">
+                            <a class="nav-link active" aria-current="page" href="agg_servicios.php">AGREGA SERVICIOS</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">

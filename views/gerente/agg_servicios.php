@@ -1,3 +1,33 @@
+<?php 
+
+include_once '../../config/db.php';
+
+// Iniciar la sesión y verificar el rol del usuario
+session_start();
+if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
+    header('location: ../../useCase/logOut.php');
+    die();
+}
+
+// Conectar a la base de datos
+$database = new Database();
+$conn = $database->conectar();
+
+//consultar en la base de datos el ID del que esta en SESION
+$query = "SELECT id FROM usuarios WHERE nombre = '" . $_SESSION['nombre'] . "'";
+$stmt = $conn->prepare($query);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+if (!empty($result)) {
+    foreach ($result as $row) {
+        $userId = $row["id"];
+    }
+} else {
+    // No se encontró ningún usuario con ese nombre de usuario
+}
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,7 +35,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/Estilos6.css">
+    <link rel="stylesheet" href="../styles/Estilos8.css">
 </head>
 <body>
     <div class="contenedor-principal">
@@ -21,7 +51,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
                     <li class="nav-item conos">
-
+                        <h5>AGREGA TU SERVICIO</h5>
                     </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
@@ -50,7 +80,9 @@
                 <h1>AGREGAR SERVICIOS</h1>
 
                 <!-- Campo oculto para ID del usuario -->
-                <input type="hidden" name="usuario_id" value="<!-- ID del usuario actual -->">
+                <input type="hidden" name="usuario_id" value="<?php echo $userId; ?>">
+
+                <p class="controls">ID del usuario logueado: <?php echo $userId; ?></p>
 
                 <!-- Nombre -->
                 <label for="nombre">Nombre Servicio:</label>
@@ -73,7 +105,7 @@
             <div class="BOX">
             <div class="contenedor-principal">
     <!-- ... contenido del formulario ... -->
-    <img src="../img/logo.jpeg" class="extra-img" alt="Imagen Redonda Pequeña"> 
+    <img src="../../img/logo.jpeg" class="extra-img" alt="Imagen Redonda Pequeña">
 </div>
             </div>
             <div class="BOX">

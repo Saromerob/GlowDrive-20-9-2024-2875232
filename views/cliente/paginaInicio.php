@@ -33,6 +33,9 @@
                         <li class="nav-item ubi">
                             <a class="nav-link active" aria-current="page" href="Mapa.php">Mapa</a>
                         </li>
+                        <li class="nav-item ubi">
+                            <a class="nav-link active" aria-current="page" href="soli_gerente.php">Solicitar rol "Gerente"</a>
+                        </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
