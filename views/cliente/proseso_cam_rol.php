@@ -1,13 +1,10 @@
-<?php
-// Incluir el archivo autoload de Composer
-
-require_once '../../vendor/autoload.php';
+<?php/*
 include_once '../../config/db.php';
 
 // Conectar a la base de datos
 try {
     $pdo = new PDO("mysql:host=localhost;dbname=autosplash;charset=utf8", "root", "");
-    echo "Conexión exitosa.";
+    echo "Conexión exitosa.<br>";
 } catch (PDOException $e) {
     die("Error: " . $e->getMessage());
 }
@@ -25,15 +22,18 @@ $requested_role_id = $_POST['requested_role_id'] ?? null;
 
 // Verificar si los valores han sido proporcionados
 if (is_null($userId) || is_null($requested_role_id)) {
-    die("Error: Los datos del formulario son inválidos.");
+    die("Error: Los datos del formulario son inválidos.<br>");
 }
+
+echo "User ID: $userId<br>";
+echo "Requested Role ID: $requested_role_id<br>";
 
 // Verificar si el user_id existe en la tabla usuarios
 $stmt = $pdo->prepare("SELECT id FROM usuarios WHERE id = ?");
 $stmt->execute([$userId]);
 
 if ($stmt->rowCount() == 0) {
-    die("Error: El ID de usuario no existe en la base de datos.");
+    die("Error: El ID de usuario no existe en la base de datos.<br>");
 }
 
 // Verificar si ya existe una solicitud pendiente
@@ -41,29 +41,20 @@ $stmt = $pdo->prepare("SELECT * FROM role_requests WHERE user_id = ? AND status 
 $stmt->execute([$userId]);
 
 if ($stmt->rowCount() > 0) {
-    echo "Ya tienes una solicitud pendiente.";
+    echo "Ya tienes una solicitud pendiente.<br>";
 } else {
-    // Insertar nueva solicitud
-    $stmt = $pdo->prepare("INSERT INTO role_requests (user_id, requested_role_id) VALUES (?, ?)");
-    $stmt->execute([$userId, $requested_role_id]);
-
-    
-    
-        // Destinatarios
-        $mail->setFrom('michaelestivenrojastacuma@gmail.com', 'AutoSplash');
-        $mail->addAddress('michaelestivenrojastacuma@gmail.com');
-
-        // Contenido del correo
-        $mail->isHTML(true);
-        $mail->Subject = 'Nueva solicitud de cambio de rol';
-        $mail->Body    = 'El usuario con ID ' . htmlspecialchars($userId, ENT_QUOTES, 'UTF-8') . ' ha solicitado cambiar su rol.';
-
-        // Enviar el correo
-        $mail->send();
-        echo 'Solicitud enviada con éxito.';
-   
+    // Insertar nueva solicitud en la tabla role_requests
+    $stmt = $pdo->prepare("INSERT INTO role_requests (user_id, requested_role_id, status) VALUES (?, ?, 'pendiente')");
+    if ($stmt->execute([$userId, $requested_role_id])) {
+        echo 'Solicitud enviada con éxito.<br>';
+    } else {
+        $errorInfo = $stmt->errorInfo();
+        echo "Error al enviar la solicitud: " . $errorInfo[2] . "<br>";
+    }
 }
 ?>
+
+
 
 
 
