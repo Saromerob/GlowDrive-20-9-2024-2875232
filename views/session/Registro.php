@@ -25,9 +25,9 @@
         <center><img src="../../img/logo.jpeg" class="LogoRegistro"></center> <br>
         <h2>REGISTRO DE CLIENTES</h2>
         <form action="../../repository/registro_usuario.php" method="post">
-            Nombres: <input class="controls" type="text" name="nombres" pattern="[A-Za-z\s]+"
+            Nombres: <input class="controls" type="text" name="nombre" pattern="[A-Za-z\s]+"
                 placeholder="Ingrese nombres" required>
-            Apellidos: <input class="controls" type="text" name="apellidos" pattern="[A-Za-z\s]+"
+            Apellidos: <input class="controls" type="text" name="apellido" pattern="[A-Za-z\s]+"
                 placeholder="Ingrese Apellidos" required>
             <label for="tipo_documento_id">Tipo de Documento:</label>
             <select class="controls" name="tipo_documento_id" id="tipo_documento_id" required><br><br>
@@ -35,15 +35,15 @@
                 <option value="<?php echo $typeDocument['id']; ?>"><?php echo $typeDocument['tipo']; ?></option>
                 <?php endforeach; ?>
             </select><br>
-            Número Documento: <input class="controls" type="text" name="numdoc" id="numdoc" pattern="[0-9]+"
+            Número Documento: <input class="controls" type="text" name="num_documento" id="numdoc" pattern="[0-9]+"
                 minlength="7" maxlength="18" placeholder="Número Documento" required>
-            Teléfono: <input class="controls" type="text" name="Telefono" id="Telefono" pattern="[0-9]+" minlength="7"
+            Teléfono: <input class="controls" type="text" name="telefono" id="Telefono" pattern="[0-9]+" minlength="7"
                 maxlength="10" placeholder="Ingrese Telefono" required>
-            Correo: <input class="controls" type="email" name="Correo" id="Correo" placeholder="Ingrese Correo"
+            Correo: <input class="controls" type="email" name="correo" id="Correo" placeholder="Ingrese Correo"
                 required>
-            Contraseña: <input class="controls" type="password" name="contraseña" id="contraseña" minlength="8"
+            Contraseña: <input class="controls" type="password" name="contrasena" id="contraseña" minlength="8"
                 maxlength="15" placeholder="Ingrese Contraseña" required>
-            Fecha nacimiento: <input class="controls" type="date" name="fechaNacimiento" required>
+            Fecha nacimiento: <input class="controls" type="date" name="fecha_nacimiento" required>
             <label for="localidad_id">Localidad:</label>
             <select class="controls" name="localidad_id" id="localidad_id">
                 <?php foreach ($localidades as $localidad): ?>
@@ -67,8 +67,6 @@
                 </FIGUre>
             </div>
             <div class="BOX">
-                <h2><a href="Nosotros.html" class="nosotros"><a href="../../views/Nosotros.php">SOBRE
-                            NOSOTROS</a></h2>
                 <div class="grupo-2">
                     <small>&copy; 2024<b>AutoSplash<br>-Todos Los Derechos Reservados.</small>
 

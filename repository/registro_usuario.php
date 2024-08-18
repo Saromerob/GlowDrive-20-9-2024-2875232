@@ -53,6 +53,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt->bindParam(':estado', $status, PDO::PARAM_BOOL);
 
             // Ejecutar la consulta.
+            if ($stmt->execute()) {
+                $_SESSION['success'] = 'Usuario Registrado Exitosamente';
+                header("Location:../views/session/sesion.php");
+                exit();
+            } else {
+                echo "Error: No se pudo registrar el usuario.";
+                exit();
+            }
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
             exit();
