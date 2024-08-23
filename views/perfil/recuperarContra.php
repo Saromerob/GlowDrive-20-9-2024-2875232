@@ -4,22 +4,6 @@
    include '../../repository/localidad.php';
    include '../../repository/tipo_documento.php';
    //mysqli_close($conn);
-   if (isset($_SESSION['nombre'])) {
-    switch ($_SESSION['role_id']) {
-        case 1:
-            header("Location: ../gerente/paginaInicio.php");
-            exit();
-            break;
-        case 2:
-            header("Location: ../cliente/paginaInicio.php");
-            break;
-        case 3:
-            header("Location: ../admin/paginaInicio.php");
-            exit();
-            break;
-        default:
-    }
-   }
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -33,12 +17,6 @@
 </head>
 
 <body>
-    <div>
-        <p id="successMessage" style="color: black;"></p>
-        <!-- Todo: HACER modal para mostrar el mensaje del registro exitoso. tener en cuenta que el modal debe ir arriba del php en donde se esta trayendo la $_SESSION
-        toca que tener tambien muy en cuenta que la etiqueta que se vya a mostrar en este caso ' id="successMessage" ' porque es el que esta trayendo el mensaje desde
-        el script de PHP -->
-    </div>
     <?php
     //include_once 'conexionPDO.php';
     if(isset($_POST['cerrar_sesion']))
@@ -59,17 +37,13 @@
         }
     ?>
     <div class="wrapper">
-        <form action="../../repository/validar.php" method="POST">
+        <form action="../../repository/contra.php" method="POST">
             <center><img src="../../img/logo.jpeg" class="LogoRegistro">
             </center>
-            <h1>INICIO DE SESION</h1>
+            <h1>RECUPERAR CONTRASEÑA</h1>
             <div class="input-box">
-                <input type="text" placeholder="Nombre de usuario" name="usuario" required>
+                <input type="text" placeholder="Email" name="correo" required>
                 <i class='bx bxs-user'></i>
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="Contraseña" name="contraseña" required>
-                <i class='bx bxs-lock-alt'></i>
             </div>
             <?php
                 if (isset($_SESSION['error_message'])) {
@@ -77,15 +51,9 @@
                     unset($_SESSION['error_message']); 
                 }
             ?>
-            <div class="Recuerdame">
-                <label>
-                    <input type="checkbox">Recuerdame la clave
-                </label><br><br>
-                <a href="../perfil/recuperarContra.php" class="link">¿Olvide mi Contraseña?</a>
-            </div>
-            <button type="submit" class="btn">Ingresar</button>
+            <button type="submit" class="btn">Enviar Contraseña</button>
             <div class="register-link">
-                <p>¿No tienes una cuenta? <a href="Registro.php">Registrate</a></p>
+                <p>¿Ya tienes una cuenta? <a href="../session/sesion.php">Inicia Sesion</a></p>
             </div>
         </form>
     </div>
