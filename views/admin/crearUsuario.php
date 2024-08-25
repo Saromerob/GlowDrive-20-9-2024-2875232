@@ -364,7 +364,99 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
         ?>
 
         </div>
+        <div class="form-container">
+            <!-- Formulario de búsqueda -->
+            <form method="POST" action="#">
+                <label for="buscarCorreo">Buscar por correo electrónico:</label>
+                <input type="email" name="buscarCorreo" placeholder="Ingrese el correo">
+                <input type="submit" name="buscar" value="Buscar">
+            </form>
 
+            <!-- Formulario de inserción de usuario -->
+        </div>
+        <?php
+        if (isset($_POST['insertar'])) {
+            // Lógica para insertar datos (sin cambios)
+            // ...
+        }
+
+        if (isset($_POST['buscar'])) {
+            // Obtener el correo electrónico ingresado para la búsqueda
+            $correoBusqueda = $_POST['buscarCorreo'];
+            try {
+                $db = new Database();
+                $conexion = $db->conectar();
+                $observar = "SELECT * FROM usuarios WHERE correo = :correo";
+                $statement = $conexion->prepare($observar);
+                $statement->bindParam(':correo', $correoBusqueda);
+                $statement->execute();
+            } catch (PDOException $e) {
+                die("Error en conexión a la base de datos: " . $e->getMessage());
+            }
+        } else {
+            try {
+                $db = new Database();
+                $conexion = $db->conectar();
+                $observar = "SELECT * FROM usuarios";
+                $statement = $conexion->query($observar);
+            } catch (PDOException $e) {
+                die("Error en conexión a la base de datos: " . $e->getMessage());
+            }
+        }
+
+        if ($statement) {
+            echo '<table>
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>APELLIDO</th>
+                    <th>NUMERO DE DOCUMENTO</th>
+                    <th>TIPO DE DOCUMENTO</th>
+                    <th>TELEFONO</th>
+                    <th>EMAIL</th>
+                    <th>CONTRASEÑA</th>
+                    <th>FECHA DE NACIMIENTO</th>
+                    <th>LOCALIDAD</th>
+                    <th>ROL</th>
+                    <th>EDITAR</th>
+                    <th>BORRAR</th>
+                </tr>';
+
+            while ($filas = $statement->fetch(PDO::FETCH_ASSOC)) {
+                $id = $filas['id'];
+                $usuario = $filas['nombre'];
+                $lastname = $filas['apellido'];
+                $ndoc = $filas['num_documento'];
+                $tdoc = $filas['tipo_documento_id'];
+                $celular = $filas['telefono'];
+                $password = $filas['contrasena'];
+                $email = $filas['correo'];
+                $iderol = $filas['role_id'];
+                $local = $filas['localidad_id'];
+                $fnacimiento = $filas['fecha_nacimiento'];
+
+                echo '<tr>
+                        <td>' . $id . '</td>
+                        <td>' . $usuario . '</td>
+                        <td>' . $lastname . '</td>
+                        <td>' . $ndoc . '</td>
+                        <td>' . $tdoc . '</td>
+                        <td>' . $celular . '</td>
+                        <td>' . $email . '</td>
+                        <td>' . $password . '</td>
+                        <td>' . $fnacimiento . '</td>
+                        <td>' . $local . '</td>
+                        <td>' . $iderol . '</td>
+                        <td><a class="btn" href="crearUsuario.php?editar=' . $id . '">Editar</a></td>
+                        <td><button class="btn"><a href="crearUsuario.php?borrar=' . $id . '">Borrar</a></button></td>
+                    </tr>';
+            }
+            echo '</table>';
+        } else {
+            echo 'No se encontraron resultados.';
+        }
+        ?>
+        <!-- Formulario de inserción de usuario -->
         <div class="form-container">
             <form method="POST" action="#">
                 <center><img src="../../img/logo.jpeg" class="LogoRegistro"></center> <br>
