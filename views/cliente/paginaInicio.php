@@ -13,6 +13,52 @@
         die();
     }
     ?>
+        <style>
+        .wrapper
+    {
+        border: 2px solid black;
+        background: transparent;
+        border: rgba(255, 255, 255, .2);
+        backdrop-filter: blur(20px);
+        box-shadow: 7px 13px 37px #000;
+        border-radius: 20px;
+        width: 160vh;
+    }
+    .carro
+    {
+        border-radius: 20px;
+        width: 600px;
+        height: 420px;
+        margin: 20px
+    }
+    .Que
+    {
+        color: black;
+    }
+    .info
+    {
+        font-size: 19px;
+    }
+    .marcos
+    {
+        border: 2px solid black;
+        margin: 5px;
+        border-radius: 20px;
+        background-color: white;
+    }
+    .sesion
+    {
+        border: 2px solid black;
+        margin: 5px;
+        height: 45px;
+        border-radius: 20px;
+        background-color: aquamarine;
+    }
+    .nosotros
+    {
+        text-decoration: none;
+    }
+    </style>
 </head>
 <body>
     <div class="contenedor-principal">
@@ -27,21 +73,27 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
+                        <div class="marcos">
                         <li class="nav-item citas">
                             <a class="nav-link active" aria-current="page" href="agendar_cita.php">Agendar Citas</a>
                         </li>
+                        </div>
+                        <div class="marcos">
                         <li class="nav-item ubi">
                             <a class="nav-link active" aria-current="page" href="Mapa.php">Mapa</a>
                         </li>
+                        </div>
+                        <div class="marcos">
                         <li class="nav-item ubi">
                             <a class="nav-link active" aria-current="page" href="soli_gerente.php">Solicitar rol "Gerente"</a>
                         </li>
+                        </div>
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <div class="sesion">
                                 <a class="nav-link" href="../../useCase/logOut.php">
-                                    <p class="ini"><img src="../../img/user.png" class="user1">Cerrar Sesión</p>
+                                    <p class="ini">Cerrar Sesión</p>
                                 </a>
                             </div>
                         </li>
@@ -54,9 +106,10 @@
         <br><br>
 
         <section class="banner container">
-            <div class="row">
+            <div class="wrapper">
+                <center>
                 <div class="text-content">
-                    <h2 class="info">¿Que es este aplicativo?</h2>
+                    <h1 class="Que">¿Que es este aplicativo?</h1>
                     <p class="info">Como equipo de desarrollo del SENA, hemos diseñado una aplicación móvil 
                         que conecta a usuarios con servicios de lavado de automóviles cercanos. 
                         Hemos creado una solución escalable y eficiente que permite a los usuarios 
@@ -69,7 +122,8 @@
                     </p>
                 </div>
                 <div class="banner-img">
-                <img src="../../img/Carro.jpg" >
+                    <img src="../../img/Carro.jpg" class="carro">
+                </center>
                 </div>
             </div>
         </section>
@@ -80,14 +134,13 @@
             <div class="BOX">
             <figure>
             <a href="paginaInicio.php">
-                <img src="../../img/logo.jpeg" alt="Logo AutoSplash" class="logo-pie">
+                <img src="../../img/logo.jpeg" alt="Logo AutoSplash" height="200px">
             </a>
             </figure>
 
             </div>
             <div class="BOX">
                 <h2>SOBRE NOSOTROS</h2>
-                <p>TEXTO EJEMPLO</p>
             </div>
             <div class="BOX">
                 <h2>Síguenos:</h2>
