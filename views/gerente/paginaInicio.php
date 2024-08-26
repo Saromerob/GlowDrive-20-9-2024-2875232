@@ -21,7 +21,7 @@
     <div class="contenedor-principal">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="paginaInicio.php">
                     <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
                     <div class="titulo">AUTO-SPLASH</div>
                 </a>
@@ -33,10 +33,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item citas">
-                            <a class="nav-link active" aria-current="page" href="citas_pendientes.php">CITAS PENDIENTES</a>
+                            <a class="nav-link active" aria-current="page" href="citas_pendientes.php">CITAS
+                                PENDIENTES</a>
                         </li>
                         <li class="nav-item citas">
+<<<<<<< HEAD
                             <a class="nav-link active" aria-current="page" href="registro_autolavado.php">REGISTRA TU AUTOLAVADO</a>
+=======
+                            <a class="nav-link active" aria-current="page" href="registro_autolavado.php">REGISTRA TU
+                                AUTOLAVADO</a>
+>>>>>>> 10ac382 (Correccion en algunas carpetas agregue vendor, aun no sirve el gmail pero ya casi esta)
                         </li>
                         <li class="nav-item ubi">
                             <a class="nav-link active" aria-current="page" href="agg_servicios.php">AGREGA SERVICIOS</a>
