@@ -18,8 +18,7 @@ class Database {
                 $urlConexion = "mysql:host=".$this->servername.";dbname=".$this->dbname.";charset=".$this->caracteres;
                 $opciones = [
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-                    PDO::ATTR_EMULATE_PREPARES  => false
-                  ];
+                    PDO::ATTR_EMULATE_PREPARES  => false];
                 $conn = new PDO($urlConexion, $this->username, $this->password, $opciones);
                 return $conn;
             } catch(PDOException $error) {
