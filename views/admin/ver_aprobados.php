@@ -28,6 +28,85 @@ $requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>Todos los aprobados</title>
 </head>
 <body>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 2px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button.reject {
+            background-color: #f44336;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button.reject:hover {
+            background-color: #d32f2f;
+        }
+
+        .footer-buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .footer-buttons form {
+            display: inline-block;
+            margin: 0 10px;
+        }
+    </style>
     <h6>ESTÁS VIENDO TODOS LOS APROBADOS</h6>
     <table border="1">
         <tr>
