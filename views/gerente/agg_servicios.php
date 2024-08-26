@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 include_once '../../config/db.php';
 
 // Iniciar la sesión y verificar el rol del usuario
@@ -13,21 +12,35 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
 $database = new Database();
 $conn = $database->conectar();
 
-//consultar en la base de datos el ID del que esta en SESION
-$query = "SELECT id FROM usuarios WHERE nombre = '" . $_SESSION['nombre'] . "'";
+// Consultar el ID del usuario que está en sesión
+$query = "SELECT id FROM usuarios WHERE nombre = :nombre";
 $stmt = $conn->prepare($query);
+$stmt->bindParam(':nombre', $_SESSION['nombre'], PDO::PARAM_STR);
 $stmt->execute();
-$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-if (!empty($result)) {
-    foreach ($result as $row) {
-        $userId = $row["id"];
-    }
+if ($result) {
+    $userId = $result["id"];
 } else {
-    // No se encontró ningún usuario con ese nombre de usuario
+    echo "No se encontró un usuario con ese nombre.";
+    exit();
 }
 
+// Consultar el ID del autolavado del dueño (usuario logueado)
+$query = "SELECT id FROM autolavados WHERE dueno_id = :dueno_id";
+$stmt = $conn->prepare($query);
+$stmt->bindParam(':dueno_id', $userId, PDO::PARAM_INT);
+$stmt->execute();
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if ($result) {
+    $autolavadoId = $result["id"];
+} else {
+    echo "No se encontró un autolavado para el usuario actual.";
+    exit();
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -50,13 +63,12 @@ if (!empty($result)) {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
-                    <li class="nav-item conos">
-                        <h5>AGREGA TU SERVICIO</h5>
-                    </li>
+                        <li class="nav-item conos">
+                            <h5>AGREGA TU SERVICIO</h5>
+                        </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <div>
+                        <li class="nav-item">
                             <p class="ini">
                                 <button type="button" class="btn btn-outline-light" onclick="window.location.href='paginaInicio.php';">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
@@ -66,33 +78,38 @@ if (!empty($result)) {
                                     Volver
                                 </button>
                             </p>
-                        </div>
-                    </li>
-
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-<br>
+        <br>
         <div class="wrapper">
-            <form action="enviar_cita.php" method="post">
+            <form action="insertar_servicios.php" method="post">
                 <img src="../../img/logo.jpeg" class="LogoRegistro" alt="Logo">
                 <h1>AGREGAR SERVICIOS</h1>
 
                 <!-- Campo oculto para ID del usuario -->
-                <input type="hidden" name="usuario_id" value="<?php echo $userId; ?>">
+                <input type="hidden" name="usuario_id" value="<?php echo htmlspecialchars($userId); ?>">
 
-                <p class="controls">ID del usuario logueado: <?php echo $userId; ?></p>
+                <p class="controls">ID del usuario logueado: <?php echo htmlspecialchars($userId); ?></p>
 
                 <!-- Nombre -->
                 <label for="nombre">Nombre Servicio:</label>
                 <input name="nombre" id="nombre" class="controls" placeholder="Ingrese Servicio" required>
-                <!-- Dirección -->
+                
+                <!-- Descripción -->
                 <label for="descripcion">Descripción:</label>
-                <input name="descripcion" id="descripcion" class="controls" placeholder="Descripción del Servicio" required >
-                <!-- Número Teléfono -->
+                <input name="descripcion" id="descripcion" class="controls" placeholder="Descripción del Servicio" required>
+                
+                <!-- Precio -->
                 <label for="precio">Precio:</label>
                 <input name="precio" id="precio" class="controls" placeholder="Ingrese precio" required>
+                
+                <!-- Campo oculto para ID autolavado -->
+                <input type="hidden" name="autolavado_id" value="<?php echo htmlspecialchars($autolavadoId); ?>">
+                <p class="controls">ID del autolavado: <?php echo htmlspecialchars($autolavadoId); ?></p>
+
                 <!-- Botón de envío -->
                 <button type="submit" class="btn">AGREGAR</button>
             </form>
