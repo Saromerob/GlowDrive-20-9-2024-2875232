@@ -37,12 +37,8 @@
                                 PENDIENTES</a>
                         </li>
                         <li class="nav-item citas">
-<<<<<<< HEAD
-                            <a class="nav-link active" aria-current="page" href="registro_autolavado.php">REGISTRA TU AUTOLAVADO</a>
-=======
                             <a class="nav-link active" aria-current="page" href="registro_autolavado.php">REGISTRA TU
                                 AUTOLAVADO</a>
->>>>>>> 10ac382 (Correccion en algunas carpetas agregue vendor, aun no sirve el gmail pero ya casi esta)
                         </li>
                         <li class="nav-item ubi">
                             <a class="nav-link active" aria-current="page" href="agg_servicios.php">AGREGA SERVICIOS</a>
