@@ -17,25 +17,6 @@
 </head>
 
 <body>
-    <?php
-    //include_once 'conexionPDO.php';
-    if(isset($_POST['cerrar_sesion']))
-        {
-            include_once 'useCase/logOut.php';
-            /*session_unset();
-            session_destroy();*/
-            /*header("Location: ../index.php");*/ // Redirige al usuario a la página de inicio de sesión
-        }
-        if (isset($_SESSION['success'])) {
-            echo '<script>
-                        document.addEventListener("DOMContentLoaded", function() {
-                        document.getElementById("successMessage").innerText = "' . $_SESSION['success'] . '";
-                        $("#successModal").modal("show");
-                    });
-                </script>';
-            unset($_SESSION['success']); 
-        }
-    ?>
     <div class="wrapper">
         <form action="../../repository/contra.php" method="POST">
             <center><img src="../../img/logo.jpeg" class="LogoRegistro">

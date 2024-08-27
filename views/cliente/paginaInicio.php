@@ -15,51 +15,6 @@
         die();
     }
     ?>
-    <style>
-    .wrapper {
-        border: 2px solid black;
-        background: transparent;
-        border: rgba(255, 255, 255, .2);
-        backdrop-filter: blur(20px);
-        box-shadow: 7px 13px 37px #000;
-        border-radius: 20px;
-        width: 160vh;
-    }
-
-    .carro {
-        border-radius: 20px;
-        width: 600px;
-        height: 420px;
-        margin: 20px
-    }
-
-    .Que {
-        color: black;
-    }
-
-    .info {
-        font-size: 19px;
-    }
-
-    .marcos {
-        border: 2px solid black;
-        margin: 5px;
-        border-radius: 20px;
-        background-color: white;
-    }
-
-    .sesion {
-        border: 2px solid black;
-        margin: 5px;
-        height: 45px;
-        border-radius: 20px;
-        background-color: aquamarine;
-    }
-
-    .nosotros {
-        text-decoration: none;
-    }
-    </style>
 </head>
 
 <body>
