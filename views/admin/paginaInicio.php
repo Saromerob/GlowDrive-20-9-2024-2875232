@@ -38,6 +38,12 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="crearUsuario.php">Administrar Usuarios</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="admin_autolavados.php">Administrar Autolavados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="public_map.php">Ver Autolavados aprobados en el mapa</a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">

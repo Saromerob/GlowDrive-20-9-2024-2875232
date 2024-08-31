@@ -3,14 +3,25 @@ body {
     background: url('../../img/fondomap.jpeg') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Gill Sans';
+    margin: 0;
+    padding: 0;
 }
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+    z-index: 1; /* Asegura que el mapa esté en el frente */
+    position: relative; /* Establece una posición para evitar superposiciones no deseadas */
+}
+
 
 
 .navbar {
     background-color: transparent;
-    backdrop-filter: blur(500px);
+    backdrop-filter: blur(10px); /* Cambia el desenfoque a un nivel menor */
     box-shadow: 5px 10px 12px #000;
 }
+
 
 .navbar .navbar-brand {
     display: flex;
@@ -221,15 +232,24 @@ color: aqua
         grid-template-columns repeat
     }
 }
-a{
-    border-radius: 50%;
+a {
     text-align: center;
     align-items: center;
 }
-img
-{
+
+.social-icon a { /* Especifica la regla solo para íconos de redes sociales */
     border-radius: 50%;
 }
+
+
+img {
+    border-radius: 50%;
+}
+
+#map img { /* Añade una excepción para las imágenes dentro del mapa */
+    border-radius: 0;
+}
+
 
 .tito
 {
