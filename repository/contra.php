@@ -32,7 +32,7 @@ if (!empty($correo)) {
 
             // Guardar el rol en la sesión
             $nombreUsuario = $userData['nombre'];
-            $numeroRandom = random_int(1,200);
+            $numeroRandom = random_int(1,1000);
             
             //Contraseña random
             $haseada = $nombreUsuario.$numeroRandom;
@@ -44,30 +44,32 @@ if (!empty($correo)) {
 
             // Correo ingresado
             
-            $mail = new PHPMailer(true);
+            $mail = new PHPMailer();
 
             try {
+                $mail->SMTPDebug = 0;
                 // Configuración del servidor
                 $mail->isSMTP();
                 $mail->Host       = 'smtp.gmail.com';
                 $mail->SMTPAuth   = true;
-                $mail->Username   = 'santiagoromero2105@gmail.com';  // Coloca tu correo de Gmail
-                $mail->Password   = 'Santiago2020*';        // Coloca tu contraseña de Gmail
+                $mail->Username   = 'santiagoromero2105@gmail.com';  // Coloca tu correo de Gmail colocar gmail de empresa
+                $mail->Password   = 'ucmv vkop nodc aeak';        // Coloca tu contraseña de Gmail
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port       = 587;
 
                 // Destinatarios
-                $mail->setFrom('noreply@tu-dominio.com', 'Soporte');
+                $mail->setFrom('santiagoromero2105@gmail.com', 'Soporte');
                 $mail->addAddress($correo);  // Añade el correo del usuario
-
+                
                 // Contenido
-                $mail->isHTML(true);
+                $mail->isHTML(false);
                 $mail->Subject = 'Recuperación de contraseña';
-                $mail->Body    = 'Hola ' . $nombreUsuario . ',<br><br>Tu nueva contraseña es: <strong>' . $haseada . '</strong><br>Por favor, cámbiala una vez inicies sesión.';
-//pendiente....
-                $mail->SMTPDebug = 4; // Puedes aumentar el nivel a 3 o 4 para más detalle.
-//pendiente....
-
+                $mail->Body    ="Hola";
+                //$mail->Body    = 'Hola ' . $nombreUsuario . ',<br><br>Tu nueva contraseña es: <strong>' . $haseada . '</strong><br>Por favor, cámbiala una vez inicies sesión.';
+                //pendiente....
+                //$mail->SMTPDebug = 4; // Puedes aumentar el nivel a 3 o 4 para más detalle.
+                //pendiente....
+                
                 // Envio correo
                 $mail->send();
                 $_SESSION['success'] = "Se ha enviado un correo con la nueva contraseña.";
