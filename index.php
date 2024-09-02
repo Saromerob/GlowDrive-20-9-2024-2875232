@@ -263,8 +263,7 @@
             </div>
             <div class="BOX">
                 <h2>SOBRE NOSOTROS</h2>
-                <p> TEXTO EJEMPLO</p>
-                <p> </p>
+                <p> </p> <br><br><br>
                 <h2> Siguenos: </h2>
                 <div class="red-social">
                     <center>

@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url('../../img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+
+}
+h1{
+    text-align: center;
+}
+
+.form-dk {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+    width: 300px;
+    display: inline-block;
+    backdrop-filter: blur(20px);
+    text-align: center;
+    
+    
+}
+.form-dk input[type="submit"] {
+    background-color: #1f4068;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    
+}
+button[type="submit"] {
+    background-color: #1f4068;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    
+}
