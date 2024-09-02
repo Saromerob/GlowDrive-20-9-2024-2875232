@@ -19,7 +19,8 @@ $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <title>Administrar Autolavados</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <link rel="stylesheet" href="../styles/adminatuolavados.css"/>
     <style>
         #map { height: 500px; width: 50%; }
         table { margin-top: 20px; }
@@ -27,17 +28,19 @@ $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
     <h1>Administrar Autolavados</h1>
-    <div id="map"></div>
+    <div id="map" align="center"></div><br><br>
+    <div class="form-dk">
     <form id="updateForm" method="POST" action="procesar_autolavado.php">
         <input type="hidden" name="id" id="autolavadoId">
-        <p>Nombre: <span id="nombre"></span></p>
-        <p>Dirección: <span id="direccion"></span></p>
-        <p>Localidad: <span id="localidad"></span></p>
+        <p>Nombre: <input type="text" name="nombre" id="nombre"></p>
+        <p>Dirección: <input type="text" name="direccion" id="direccion"></p>
+        <p>Localidad: <input type="text" name="localidad" id="localidad"></p>
         <label>Latitud: <input type="text" name="latitud" id="latitud"></label><br>
         <label>Longitud: <input type="text" name="longitud" id="longitud"></label><br>
         <label>Aprobar: <input type="checkbox" name="aprobado" id="aprobado"></label><br>
-        <button type="submit">Guardar</button>
+        <br> <input type="submit" name="guardar" value="Guardar">
     </form>
+    </div>
 
     <?php
     try {
@@ -141,7 +144,7 @@ $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
         }
     </script>
     <form action="paginaInicio.php" method="post" style="display:inline;">
-                    <button type="submit" name="volverinicio">Volver</button>
+                    <br>  <button type="submit" name="volverinicio">Volver</button>
                 </form>
 </body>
 </html>
