@@ -64,8 +64,7 @@ if (!empty($correo)) {
                 // Contenido
                 $mail->isHTML(false);
                 $mail->Subject = 'Recuperación de contraseña';
-                $mail->Body    ="Hola";
-                //$mail->Body    = 'Hola ' . $nombreUsuario . ',<br><br>Tu nueva contraseña es: <strong>' . $haseada . '</strong><br>Por favor, cámbiala una vez inicies sesión.';
+                $mail->Body    = 'Hola ' . $nombreUsuario . ',  Tu nueva contraseña es: ' . $haseada . ' Por favor, cámbiala una vez inicies sesión.';
                 //pendiente....
                 //$mail->SMTPDebug = 4; // Puedes aumentar el nivel a 3 o 4 para más detalle.
                 //pendiente....
