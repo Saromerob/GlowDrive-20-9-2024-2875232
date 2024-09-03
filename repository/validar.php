@@ -23,6 +23,7 @@ if ($conn) {
         // Obtener los datos del usuario
         $userData = $resultado->fetch(PDO::FETCH_ASSOC);
         // Guardar el rol en la sesión
+        $_SESSION['id'] = $userData['id'];
         $_SESSION['role_id'] = $userData['role_id'];
         $_SESSION['nombre'] = $userData['nombre'];
         switch ($userData['role_id']) {
@@ -42,7 +43,7 @@ if ($conn) {
                 header("Location: ../index.php");
                 exit();
         }
-    } else {
+    } else {$_SESSION['id'] = $userData['id'];
         $_SESSION['error_message'] = 'Usuario o contraseña incorrectos';
         header("Location: ../views/session/sesion.php");
         exit();

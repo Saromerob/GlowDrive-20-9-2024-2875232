@@ -1,15 +1,14 @@
 <?php
-session_start();
-if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 2) {
-    header('location: ../../useCase/logOut.php');
-    die();
-}
-
 include_once '../../config/db.php';
 
 $database = new Database();
 $conn = $database->conectar();
 
+session_start();
+if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 2) {
+    header('location: ../../useCase/logOut.php');
+    die();
+}
 // Consultar en la base de datos el ID del usuario en sesión
 $query = "SELECT id FROM usuarios WHERE nombre = :nombre";
 $stmt = $conn->prepare($query);

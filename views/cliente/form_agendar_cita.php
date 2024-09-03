@@ -57,7 +57,7 @@ if (!empty($result)) {
             <div class="container-fluid">
                 <a class="navbar-brand" href="agendar_cita.php">
                     <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
-                    <div class="titulo">AUTO-SPLASH</div>
+                    <div class="titulo">GLOW-DRIVE</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -234,7 +234,7 @@ if (!empty($result)) {
             </div>
         </div>
         <div class="grupo-2">
-            <small>&copy; 2024 <b>AutoSplash</b> - Todos Los Derechos Reservados.</small>
+            <small>&copy; 2024 <b>GlowDrive</b> - Todos Los Derechos Reservados.</small>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

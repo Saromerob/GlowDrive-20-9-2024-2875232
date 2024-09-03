@@ -1,4 +1,8 @@
 <?php
+include_once '../../config/db.php';
+$database = new Database();
+$conn = $database->conectar();
+
 session_start();
 
 // Verificar si el usuario ha iniciado sesión y si tiene el rol correcto
@@ -7,10 +11,9 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 2) {
     die();
 }
 
-include_once '../../config/db.php';
 
-$database = new Database();
-$conn = $database->conectar();
+
+
 
 // Consultar en la base de datos el ID del usuario que está en sesión
 $query = "SELECT id FROM usuarios WHERE nombre = :nombre";

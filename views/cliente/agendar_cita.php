@@ -1,7 +1,9 @@
 <?php
 include_once '../../config/db.php';
 include_once 'form_agendar_cita.php';
-
+// Conectar a la base de datos
+$database = new Database();
+$conn = $database->conectar();
 // Iniciar la sesión y verificar el rol del usuario
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -11,10 +13,6 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 2) {
     header('Location: ../../useCase/logOut.php');
     exit();
 }
-
-// Conectar a la base de datos
-$database = new Database();
-$conn = $database->conectar();
 
 // Obtener el ID del usuario logueado
 $query = "SELECT id FROM usuarios WHERE nombre = :nombre";
