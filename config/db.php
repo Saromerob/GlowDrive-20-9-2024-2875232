@@ -10,7 +10,7 @@ class Database {
         $this->servername = "localhost";
         $this->username = "root";
         $this->password = "";
-        $this->dbname = "autosplash";
+        $this->dbname = "glowdrive";
         $this->caracteres = 'utf8';
     }
     public function conectar() {
