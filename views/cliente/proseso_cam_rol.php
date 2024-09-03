@@ -1,4 +1,5 @@
-<?php/*
+<?php
+/*
 include_once '../../config/db.php';
 
 // Conectar a la base de datos
@@ -51,10 +52,5 @@ if ($stmt->rowCount() > 0) {
         $errorInfo = $stmt->errorInfo();
         echo "Error al enviar la solicitud: " . $errorInfo[2] . "<br>";
     }
-}
+}*/
 ?>
-
-
-
-
-
