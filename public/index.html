@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Socket.io Notification</title>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <h1>Socket.io Notifications</h1>
+  <button onclick="sendNotification()">Send Notification</button>
+
+  <script>
+    const socket = io();
+
+    socket.on('receiveNotification', (data) => {
+      alert(`Notification: ${data.message}`);
+    });
+
+    function sendNotification() {
+      socket.emit('sendNotification', { message: 'Hello from server!' });
+    }
+  </script>
+</body>
+</html>

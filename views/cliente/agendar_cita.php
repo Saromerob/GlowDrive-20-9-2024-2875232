@@ -3,21 +3,14 @@ include_once '../../config/db.php';
 include_once 'form_agendar_cita.php';
 
 // Iniciar la sesión y verificar el rol del usuario
-
-// Verificar si la sesión ya está activa
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Ahora puedes acceder a las variables de sesión
 if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 2) {
     header('Location: ../../useCase/logOut.php');
     exit();
 }
-
-
-
-
 
 // Conectar a la base de datos
 $database = new Database();
@@ -52,7 +45,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $telefono = $_POST['telefono'];
     $tipo_vehiculo = $_POST['tipo_vehiculo'];
     $comentarios = $_POST['comentarios'];
-    
 
     // Verificar si el ID del usuario enviado es igual al ID del usuario logueado
     if ($usuario_id != $loggedUserId) {
@@ -61,8 +53,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Preparar la consulta SQL de inserción
-    $sql = "INSERT INTO citas (usuario_id, autolavado_id, servicio_id, fecha, hora, nombre, apellido, placa, telefono, tipo_vehiculo, comentarios) 
-            VALUES (:usuario_id, :autolavado_id, :servicio_id, :fecha, :hora, :nombre, :apellido, :placa, :telefono, :tipo_vehiculo, :comentarios)";
+    $sql = "INSERT INTO citas (usuario_id, autolavado_id, servicio_id, fecha, hora, nombre, apellido, placa, telefono, tipo_vehiculo, comentarios, estado) 
+            VALUES (:usuario_id, :autolavado_id, :servicio_id, :fecha, :hora, :nombre, :apellido, :placa, :telefono, :tipo_vehiculo, :comentarios, 'pendiente')";
     
     $stmt = $conn->prepare($sql);
 
@@ -81,11 +73,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Ejecutar la consulta
     if ($stmt->execute()) {
-        // Redirigir al usuario a una página de éxito o mostrar un mensaje de éxito
+        // Aquí podrías enviar una notificación al dueño del autolavado para que revise la nueva cita
+        // Esto depende de cómo tengas configuradas las notificaciones o los correos electrónicos en tu aplicación
+        
         echo "AGENDAMIENTO EXITOSO";
         exit();
     } else {
-        // Manejar el error
         echo "Error al agendar la cita. Por favor, inténtalo de nuevo.";
     }
 }
