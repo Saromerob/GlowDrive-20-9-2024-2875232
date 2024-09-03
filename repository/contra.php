@@ -52,8 +52,8 @@ if (!empty($correo)) {
                 $mail->isSMTP();
                 $mail->Host       = 'smtp.gmail.com';
                 $mail->SMTPAuth   = true;
-                $mail->Username   = 'santiagoromero2105@gmail.com';  // Coloca tu correo de Gmail colocar gmail de empresa
-                $mail->Password   = 'ucmv vkop nodc aeak';        // Coloca tu contraseña de Gmail
+                $mail->Username   = 'glowdrivesoporte@gmail.com';  // Coloca tu correo de Gmail colocar gmail de empresa
+                $mail->Password   = 'o w s u j j a s j m a e a y n g';        // Coloca tu contraseña de Gmail
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port       = 587;
 
