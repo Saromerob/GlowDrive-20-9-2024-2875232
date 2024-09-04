@@ -66,6 +66,12 @@
                                     href="../perfil/cambiarcontraperfil.php">Cambiar contraseña</a>
                             </li>
                         </div>
+                        <div class="marcos">
+                            <li class="nav-item ubi">
+                                <a class="nav-link active" aria-current="page"
+                                    href="respuesta_citas.php">CItas enviadas</a>
+                            </li>
+                        </div>
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <div class="marcos">
