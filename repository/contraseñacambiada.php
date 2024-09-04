@@ -18,6 +18,7 @@ if(!isset($_POST['contrasena'])) {
 $usuario_id = isset($_SESSION['id']) ? $_SESSION['id'] :'';
 $contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] :'';
 
+<<<<<<< HEAD
 if (isset($_SESSION['nombre'])) {
     if ($contrasena && $usuario_id) {
         $sql = "UPDATE usuarios SET contrasena = :contrasena WHERE id = :id";
@@ -66,5 +67,26 @@ if (isset($_SESSION['nombre'])) {
             default:
         }
     }
+=======
+if ($contrasena && $usuario_id) {
+    $sql = "UPDATE usuarios SET contrasena = :contrasena WHERE id = :id";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindValue(':contrasena', $contrasena);
+    $stmt->bindValue(':id', $usuario_id);
+
+    // Ejecutar la consulta.
+    if ($stmt->execute()) {
+        $_SESSION['success'] = 'Contraseña Cambiada Exitosamente';
+        header("Location: ../views/cliente/paginaInicio.php");
+        exit();
+    } else {
+        echo "Error: No se pudo cambiar la contraseña";
+        header("Location: ../views/cliente/paginaInicio.php");
+        exit();
+    }
+} else {
+    echo "Error: Datos incompletos";
+    exit();
+>>>>>>> 75e788ccf38346510694a777c8c47891063474fe
 }
 ?>

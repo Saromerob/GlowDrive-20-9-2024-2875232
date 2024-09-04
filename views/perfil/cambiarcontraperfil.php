@@ -31,6 +31,7 @@
                 }
             ?>
             <button type="submit" class="btn">Cambiar Contraseña</button>
+<<<<<<< HEAD
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <div>
@@ -50,6 +51,8 @@
                     </div>
                 </li>
             </ul>
+=======
+>>>>>>> 75e788ccf38346510694a777c8c47891063474fe
         </form>
     </div>
     <footer class="pie-pagina">
