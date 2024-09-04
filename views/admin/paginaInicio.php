@@ -19,11 +19,11 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
 ?>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="paginaInicio.php">
                 <img src="../../img/logo.jpeg" alt="Logo" id="logo">
-                <div class="titulo">AUTO-SPLASH</div>
+                <div class="titulo">GLOW-DRIVE</div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -32,18 +32,38 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="admin_panel.php">Ver Solicitudes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="crearUsuario.php">Administrar Usuarios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="admin_autolavados.php">Administrar Autolavados</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="public_map.php">Ver Autolavados aprobados en el mapa</a>
-                    </li>
+                    <div class="marcos">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="admin_panel.php">Ver
+                                Solicitudes</a>
+                        </li>
+                    </div>
+                    <div class="marcos">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="crearUsuario.php">Administrar
+                                Usuarios</a>
+                        </li>
+                    </div>
+                    <div class="marcos">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="admin_autolavados.php">Administrar
+                                Autolavados</a>
+                        </li>
+                    </div>
+                    <div class="marcos">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="public_map.php">Ver Autolavados
+                                aprobados
+                                en el mapa</a>
+                        </li>
+                    </div>
+                    <div class="marcos">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="../perfil/cambiarcontraAdmin.php">Cambiar
+                                Contraseña</a>
+                        </li>
+                    </div>
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">

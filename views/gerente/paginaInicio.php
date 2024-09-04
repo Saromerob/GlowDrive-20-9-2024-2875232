@@ -23,7 +23,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="paginaInicio.php">
                     <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
-                    <div class="titulo">AUTO-SPLASH</div>
+                    <div class="titulo">GLOW-DRIVE</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -32,17 +32,31 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item citas">
-                            <a class="nav-link active" aria-current="page" href="citas_pendientes.php">CITAS
-                                PENDIENTES</a>
-                        </li>
-                        <li class="nav-item citas">
-                            <a class="nav-link active" aria-current="page" href="registro_autolavado.php">REGISTRA TU
-                                AUTOLAVADO</a>
-                        </li>
-                        <li class="nav-item ubi">
-                            <a class="nav-link active" aria-current="page" href="agg_servicios.php">AGREGA SERVICIOS</a>
-                        </li>
+                        <div class="marcos">
+                            <li class="nav-item citas">
+                                <a class="nav-link active" aria-current="page" href="citas_pendientes.php">Citas
+                                    Pendientes</a>
+                            </li>
+                        </div>
+                        <div class="marcos">
+                            <li class="nav-item citas">
+                                <a class="nav-link active" aria-current="page" href="registro_autolavado.php">Registra
+                                    tu
+                                    Autolavado</a>
+                            </li>
+                        </div>
+                        <div class="marcos">
+                            <li class="nav-item ubi">
+                                <a class="nav-link active" aria-current="page" href="agg_servicios.php">Agrega
+                                    Servicios</a>
+                            </li>
+                        </div>
+                        <div class="marcos">
+                            <li class="nav-item ubi">
+                                <a class="nav-link active" aria-current="page"
+                                    href="../perfil/cambiarcontragerente.php">Cambiar contraseña</a>
+                            </li>
+                        </div>
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
@@ -105,7 +119,7 @@
             </div>
         </div>
         <div class="grupo-2">
-            <small>&copy; 2024 <b>AutoSplash</b> - Todos Los Derechos Reservados.</small>
+            <small>&copy; 2024 <b>GlowDrive</b> - Todos Los Derechos Reservados.</small>
         </div>
     </footer>
 </body>

@@ -36,7 +36,7 @@
                     <div>
                         <p class="ini">
                             <button type="button" class="btn btn-outline-light"
-                                onclick="window.location.href='../cliente/paginaInicio.php';">
+                                onclick="window.location.href='../gerente/paginaInicio.php';">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-box-arrow-left" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"

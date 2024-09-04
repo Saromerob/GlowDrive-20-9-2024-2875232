@@ -50,6 +50,14 @@
                             </li>
                         </div>
                         <div class="marcos">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Nosotros.php">
+                                    <i class='bx bx-search-alt'></i>
+                                    Conócenos
+                                </a>
+                            </li>
+                        </div>
+                        <div class="marcos">
                             <li class="nav-item ubi">
                                 <a class="nav-link active" aria-current="page"
                                     href="../perfil/cambiarcontraperfil.php">Cambiar contraseña</a>
