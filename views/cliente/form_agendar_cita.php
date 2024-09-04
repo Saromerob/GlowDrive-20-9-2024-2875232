@@ -97,7 +97,6 @@ if (!empty($result)) {
                                 </p>
                             </div>
                         </li>
-
                     </ul>
                 </div>
             </div>
