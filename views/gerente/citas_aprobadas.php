@@ -51,7 +51,7 @@ $query = "SELECT
         JOIN 
             usuarios ON citas.usuario_id = usuarios.id
         WHERE 
-            citas.estado = 'pendiente' 
+            citas.estado = 'aceptada' 
             AND citas.autolavado_id = :autolavado_id";
 
 $stmt = $conn->prepare($query);
@@ -77,11 +77,10 @@ if (!$citas) {
 </head>
 <body>
     <div class="container">
-        <h1>Citas Pendientes</h1>
+        <h1>Citas Aprobadas</h1>
         <table class="table">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Cliente</th>
                     <th>Fecha</th>
                     <th>Hora</th>
@@ -92,42 +91,17 @@ if (!$citas) {
             <tbody>
                 <?php foreach ($citas as $cita): ?>
                 <tr id="cita-<?php echo htmlspecialchars($cita['id']); ?>">
-                    <td><?php echo htmlspecialchars($cita['id']); ?></td>
                     <td><?php echo htmlspecialchars($cita['nombre_cliente']) . " " . htmlspecialchars($cita['apellido_cliente']); ?></td>
                     <td><?php echo htmlspecialchars($cita['fecha']); ?></td>
                     <td><?php echo htmlspecialchars($cita['hora']); ?></td>
                     <td><?php echo htmlspecialchars($cita['estado']); ?></td>
                     <td>
-                        <button class="btn btn-success" onclick="actualizarEstado(<?php echo $cita['id']; ?>, 'aceptar')">Aceptar</button>
-                        <button class="btn btn-danger" onclick="actualizarEstado(<?php echo $cita['id']; ?>, 'rechazar')">Rechazar</button>
+                        <button class="btn btn-success" onclick="actualizarEstado(<?php echo $cita['id']; ?>, 'aceptar')">terminado</button>
                     </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
     </div>
-
-    <script>
-        function actualizarEstado(citaId, accion) {
-            $.ajax({
-                url: 'actualizar_estado.php',
-                type: 'POST',
-                data: {
-                    cita_id: citaId,
-                    accion: accion
-                },
-                success: function(response) {
-                    // Eliminar la fila de la tabla si la actualización fue exitosa
-                    $('#cita-' + citaId).remove();
-                },
-                error: function(xhr, status, error) {
-                    alert('Error al actualizar el estado de la cita.');
-                }
-            });
-        }
-    </script>
-    <form action="citas_aprobadas.php" method="post">
-            <button type="submit">Ver Aprobados</button>
-        </form>
 </body>
 </html>
