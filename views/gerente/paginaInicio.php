@@ -50,6 +50,11 @@
                                 <a class="nav-link active" aria-current="page" href="agg_servicios.php">Agrega
                                     Servicios</a>
                             </li>
+                    </ul>
+                    <div class="marcos">
+                            <li class="nav-item ubi">
+                                <a class="nav-link active" aria-current="page" href="perfil_autol.php">Perfil Autolavado</a>
+                            </li>
                         </div>
                         <div class="marcos">
                             <li class="nav-item ubi">
@@ -57,7 +62,6 @@
                                     href="../perfil/cambiarcontragerente.php">Cambiar contraseña</a>
                             </li>
                         </div>
-                    </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <div class="sesion">
