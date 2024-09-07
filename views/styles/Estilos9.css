@@ -28,7 +28,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; /* Hace que el fondo permanezca estático */
 }
+
 h1{
     color: #fff;
 }
