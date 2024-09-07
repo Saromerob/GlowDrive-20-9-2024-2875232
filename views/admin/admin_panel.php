@@ -28,11 +28,13 @@ $requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>Solicitudes Pendientes</title>
     <style>
         body {
+          
+            color: #000000;
+            background: url('../../img/fondo.jpg');
+            background-size: cover;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
         }
+        
 
         h1 {
             text-align: center;
@@ -43,7 +45,7 @@ $requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
-            background-color: #fff;
+            background-color: transparent;
         }
 
         table, th, td {
@@ -56,7 +58,7 @@ $requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
         th {
-            background-color: #4CAF50;
+            background-color: #1f4068;
             color: white;
         }
 
@@ -76,7 +78,7 @@ $requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
         button {
             padding: 8px 12px;
             margin: 2px;
-            background-color: #4CAF50;
+            background-color: #1f4068;
             color: white;
             border: none;
             cursor: pointer;
@@ -98,11 +100,13 @@ $requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
         .footer-buttons {
             margin-top: 20px;
             text-align: center;
+            
         }
 
         .footer-buttons form {
             display: inline-block;
             margin: 0 10px;
+      
         }
     </style>
 </head>
