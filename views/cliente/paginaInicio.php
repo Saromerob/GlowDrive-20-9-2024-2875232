@@ -22,10 +22,11 @@
 <div class="contenedor-principal">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="paginaInicio.php">
+            <div><a class="navbar-brand" href="paginaInicio.php">
                 <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
                 <div class="titulo">GLOW-DRIVE</div>
             </a>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -64,6 +65,19 @@
                         </li>
                     </div>
                     <div class="marcos">
+                        <!-- Dropdown Perfil -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Perfil
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#" id="btn-open-perfil">Ver Perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Configuración</a></li>
+                                <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div class="marcos">
                         <li class="nav-item ubi">
                             <a class="nav-link active" aria-current="page" href="respuesta_citas.php">Citas
                                 enviadas</a>
@@ -76,19 +90,6 @@
                             <a class="nav-link" href="../../useCase/logOut.php">
                                 <i class='bx bx-user-x'></i> Cerrar Sesión
                             </a>
-                        </li>
-                    </div>
-                    <div class="marcos">
-                        <!-- Dropdown Perfil -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Perfil
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#" id="btn-open-perfil">Ver Perfil</a></li>
-                                <li><a class="dropdown-item" href="#">Configuración</a></li>
-                                <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
-                            </ul>
                         </li>
                     </div>
                 </ul>
