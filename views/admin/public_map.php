@@ -24,11 +24,28 @@ $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         #map { height: 500px; width: 50%; }
+        body{
+            color: #000000;
+            background: url('../../img/fondo.jpg');
+            background-size: cover;
+            font-family: 'calibri';
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            align-items: center;
+        }
+        h1{
+            text-align: center;
+        }
+        button{
+            background-color: #1f4068;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <h1>AUTOLAVADOS DISPONIBLES</h1>
-    <div id="map"></div>
+    <div id="map"  align="center"></div>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
         var map = L.map('map').setView([4.60971, -74.08175], 6);
