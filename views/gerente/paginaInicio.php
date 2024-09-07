@@ -73,6 +73,59 @@
                     </ul>
                 </div>
             </div>
+            <!-- Dropdown Perfil -->
+            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Perfil
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#" id="btn-open-perfil">Ver Perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Configuración</a></li>
+                                <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ventana modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe src="perfil.php" style="width:100%; height: 80vh; border:none;"></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Obtener el modal
+        var modal = document.getElementById("myModal");
+
+        // Obtener el botón que abre el modal
+        var btn = document.getElementById("btn-open-perfil");
+
+        // Obtener el elemento <span> que cierra el modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // Cuando el usuario hace clic en el botón, abrir el modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // Cuando el usuario hace clic en <span> (x), cerrar el modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // Cuando el usuario hace clic fuera del contenido del modal, cerrar el modal
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</div>
         </nav>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">

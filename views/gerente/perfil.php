@@ -5,7 +5,7 @@ $conn = $database->conectar();
 session_start();
 
 // Verificar si el usuario ha iniciado sesión y si tiene el rol correcto
-if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 2) {
+if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
     echo "<script>alert('No tienes permiso para acceder a esta página.'); window.location.href='../../useCase/logOut.php';</script>";
     exit;
 }
@@ -107,5 +107,3 @@ if (!$usuario) {
 </center>
 
 </html>
-
-

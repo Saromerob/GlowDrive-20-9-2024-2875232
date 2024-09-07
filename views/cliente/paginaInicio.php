@@ -19,82 +19,92 @@
 </head>
 
 <body>
-    <div class="contenedor-principal">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="paginaInicio.php">
-                    <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
-                    <div class="titulo">GLOW-DRIVE</div>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto">
-                        <div class="marcos">
-                            <li class="nav-item citas">
-                                <a class="nav-link active" aria-current="page" href="agendar_cita.php">Agendar Citas</a>
-                            </li>
-                        </div>
-                        <div class="marcos">
-                            <li class="nav-item ubi">
-                                <a class="nav-link active" aria-current="page" href="Mapa.php">Mapa</a>
-                            </li>
-                        </div>
-                        <div class="marcos">
-                            <li class="nav-item ubi">
-                                <a class="nav-link active" aria-current="page" href="soli_gerente.php">Solicitar rol
-                                    "Gerente"</a>
-                            </li>
-                        </div>
-                        <div class="marcos">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../Nosotros.php">
-                                    <i class='bx bx-search-alt'></i>
-                                    Conócenos
-                                </a>
-                            </li>
-                        </div>
-                        <div class="marcos">
-                            <li class="nav-item ubi">
-                                <a class="nav-link active" aria-current="page"
-                                    href="../perfil/cambiarcontraperfil.php">Cambiar contraseña</a>
-                            </li>
-                        </div>
-                        <div class="marcos">
-                            <li class="nav-item ubi">
-                                <a class="nav-link active" aria-current="page" href="respuesta_citas.php">Citas
-                                    enviadas</a>
-                            </li>
-                        </div>
-                    </ul>
-                    <ul class="navbar-nav ms-auto">
-                        <div class="marcos">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../../useCase/logOut.php">
-                                    <i class='bx bx-user-x'></i> Cerrar Sesión
-                                </a>
-                            </li>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Botón para abrir la ventana modal -->
-        <a href="#" id="btn-open-perfil" class="btn-open-perfil">Perfil</a>
-
-        <!-- Ventana modal -->
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <iframe src="perfil.php" style="width:100%; height: 80vh; border:none;"></iframe>
+<div class="contenedor-principal">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="paginaInicio.php">
+                <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
+                <div class="titulo">GLOW-DRIVE</div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <div class="marcos">
+                        <li class="nav-item citas">
+                            <a class="nav-link active" aria-current="page" href="agendar_cita.php">Agendar Citas</a>
+                        </li>
+                    </div>
+                    <div class="marcos">
+                        <li class="nav-item ubi">
+                            <a class="nav-link active" aria-current="page" href="Mapa.php">Mapa</a>
+                        </li>
+                    </div>
+                    <div class="marcos">
+                        <li class="nav-item ubi">
+                            <a class="nav-link active" aria-current="page" href="soli_gerente.php">Solicitar rol
+                                "Gerente"</a>
+                        </li>
+                    </div>
+                    <div class="marcos">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Nosotros.php">
+                                <i class='bx bx-search-alt'></i>
+                                Conócenos
+                            </a>
+                        </li>
+                    </div>
+                    <div class="marcos">
+                        <li class="nav-item ubi">
+                            <a class="nav-link active" aria-current="page"
+                                href="../perfil/cambiarcontraperfil.php">Cambiar contraseña</a>
+                        </li>
+                    </div>
+                    <div class="marcos">
+                        <li class="nav-item ubi">
+                            <a class="nav-link active" aria-current="page" href="respuesta_citas.php">Citas
+                                enviadas</a>
+                        </li>
+                    </div>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <div class="marcos">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../useCase/logOut.php">
+                                <i class='bx bx-user-x'></i> Cerrar Sesión
+                            </a>
+                        </li>
+                    </div>
+                    <div class="marcos">
+                        <!-- Dropdown Perfil -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Perfil
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#" id="btn-open-perfil">Ver Perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Configuración</a></li>
+                                <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <script>
+    <!-- Ventana modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe src="perfil.php" style="width:100%; height: 80vh; border:none;"></iframe>
+        </div>
+    </div>
+
+    <script>
         // Obtener el modal
         var modal = document.getElementById("myModal");
 
@@ -105,22 +115,23 @@
         var span = document.getElementsByClassName("close")[0];
 
         // Cuando el usuario hace clic en el botón, abrir el modal 
-        btn.onclick = function() {
+        btn.onclick = function () {
             modal.style.display = "block";
         }
 
         // Cuando el usuario hace clic en <span> (x), cerrar el modal
-        span.onclick = function() {
+        span.onclick = function () {
             modal.style.display = "none";
         }
 
         // Cuando el usuario hace clic fuera del contenido del modal, cerrar el modal
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
-        </script>
+    </script>
+</div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
