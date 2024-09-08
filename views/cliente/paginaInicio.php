@@ -84,6 +84,12 @@
                         </li>
                     </div>
                 </ul>
+                <div class="marcos">
+                        <li class="nav-item ubi">
+                            <a class="nav-link active" aria-current="page" href="ver_recibos.php">Ver mis recibos</a>
+                        </li>
+                    </div>
+
                 <ul class="navbar-nav ms-auto">
                     <div class="marcos">
                         <li class="nav-item">

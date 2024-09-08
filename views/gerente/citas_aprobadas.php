@@ -2,13 +2,11 @@
 include_once '../../config/db.php';
 session_start();
 
-// Asegurarse de que el usuario es gerente o dueño
 if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) { 
     header('Location: ../../useCase/logOut.php');
     exit();
 }
 
-// Conectar a la base de datos
 $database = new Database();
 $conn = $database->conectar();
 
@@ -71,9 +69,20 @@ if (!$citas) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Citas Pendientes</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/Estilos3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function actualizarEstado(citaId, nuevoEstado) {
+    $.post("actualizar_terminado.php", { cita_id: citaId, estado: nuevoEstado }, function(response) {
+        if (response.success) {
+            alert("Recibo generado correctamente.");
+            window.location.href = "ver_recibo.php?reserva_id=" + response.reserva_id; // Redirigir a la página del recibo
+        } else {
+            alert("Hubo un problema al generar el recibo: " + response.message);
+        }
+    }, "json");
+}
+    </script>
 </head>
 <body>
     <div class="container">
@@ -91,12 +100,12 @@ if (!$citas) {
             <tbody>
                 <?php foreach ($citas as $cita): ?>
                 <tr id="cita-<?php echo htmlspecialchars($cita['id']); ?>">
-                    <td><?php echo htmlspecialchars($cita['nombre_cliente']) . " " . htmlspecialchars($cita['apellido_cliente']); ?></td>
+                <td><?php echo htmlspecialchars($cita['nombre_cliente']) . " " . htmlspecialchars($cita['apellido_cliente']); ?></td>
                     <td><?php echo htmlspecialchars($cita['fecha']); ?></td>
                     <td><?php echo htmlspecialchars($cita['hora']); ?></td>
                     <td><?php echo htmlspecialchars($cita['estado']); ?></td>
                     <td>
-                        <button class="btn btn-success" onclick="actualizarEstado(<?php echo $cita['id']; ?>, 'aceptar')">terminado</button>
+                        <button class="btn btn-success" onclick="actualizarEstado(<?php echo $cita['id']; ?>, 'terminado')">Terminado</button>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -105,3 +114,4 @@ if (!$citas) {
     </div>
 </body>
 </html>
+
