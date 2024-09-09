@@ -19,15 +19,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-<div class="contenedor-principal">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <div><a class="navbar-brand" href="paginaInicio.php">
-                <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
-                <div class="titulo">GLOW-DRIVE</div>
-            </a>
-=======
     <div class="contenedor-principal">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -68,8 +59,27 @@
                         </div>
                         <div class="marcos">
                             <li class="nav-item ubi">
+                                <a class="nav-link active" aria-current="page" href="resena.php">Reseñas</a>
+                            </li>
+                        </div>
+                        <div class="marcos">
+                            <li class="nav-item ubi">
                                 <a class="nav-link active" aria-current="page"
                                     href="../perfil/cambiarcontraperfil.php">Cambiar contraseña</a>
+                            </li>
+                        </div>
+                        <div class="marcos">
+                            <!-- Dropdown Perfil -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Perfil
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#" id="btn-open-perfil">Ver Perfil</a></li>
+                                    <li><a class="dropdown-item" href="#">Configuración</a></li>
+                                    <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                                </ul>
                             </li>
                         </div>
                         <div class="marcos">
@@ -78,12 +88,13 @@
                                     enviadas</a>
                             </li>
                         </div>
-                        <div class="marcos">
-                            <li class="nav-item ubi">
-                                <a class="nav-link active" aria-current="page" href="resena.php">Reseñas</a>
-                            </li>
-                        </div>
                     </ul>
+                    <div class="marcos">
+                        <li class="nav-item ubi">
+                            <a class="nav-link active" aria-current="page" href="ver_recibos.php">Ver mis recibos</a>
+                        </li>
+                    </div>
+
                     <ul class="navbar-nav ms-auto">
                         <div class="marcos">
                             <li class="nav-item">
@@ -94,93 +105,18 @@
                         </div>
                     </ul>
                 </div>
->>>>>>> 5c19d06 (Ya sirven las reseñas faltan arreglos pero ya funciona)
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto">
-                    <div class="marcos">
-                        <li class="nav-item citas">
-                            <a class="nav-link active" aria-current="page" href="agendar_cita.php">Agendar Citas</a>
-                        </li>
-                    </div>
-                    <div class="marcos">
-                        <li class="nav-item ubi">
-                            <a class="nav-link active" aria-current="page" href="Mapa.php">Mapa</a>
-                        </li>
-                    </div>
-                    <div class="marcos">
-                        <li class="nav-item ubi">
-                            <a class="nav-link active" aria-current="page" href="soli_gerente.php">Solicitar rol
-                                "Gerente"</a>
-                        </li>
-                    </div>
-                    <div class="marcos">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Nosotros.php">
-                                <i class='bx bx-search-alt'></i>
-                                Conócenos
-                            </a>
-                        </li>
-                    </div>
-                    <div class="marcos">
-                        <li class="nav-item ubi">
-                            <a class="nav-link active" aria-current="page"
-                                href="../perfil/cambiarcontraperfil.php">Cambiar contraseña</a>
-                        </li>
-                    </div>
-                    <div class="marcos">
-                        <!-- Dropdown Perfil -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Perfil
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#" id="btn-open-perfil">Ver Perfil</a></li>
-                                <li><a class="dropdown-item" href="#">Configuración</a></li>
-                                <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
-                            </ul>
-                        </li>
-                    </div>
-                    <div class="marcos">
-                        <li class="nav-item ubi">
-                            <a class="nav-link active" aria-current="page" href="respuesta_citas.php">Citas
-                                enviadas</a>
-                        </li>
-                    </div>
-                </ul>
-                <div class="marcos">
-                        <li class="nav-item ubi">
-                            <a class="nav-link active" aria-current="page" href="ver_recibos.php">Ver mis recibos</a>
-                        </li>
-                    </div>
+        </nav>
 
-                <ul class="navbar-nav ms-auto">
-                    <div class="marcos">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../useCase/logOut.php">
-                                <i class='bx bx-user-x'></i> Cerrar Sesión
-                            </a>
-                        </li>
-                    </div>
-                </ul>
+        <!-- Ventana modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe src="perfil.php" style="width:100%; height: 80vh; border:none;"></iframe>
             </div>
         </div>
-    </nav>
 
-    <!-- Ventana modal -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <iframe src="perfil.php" style="width:100%; height: 80vh; border:none;"></iframe>
-        </div>
-    </div>
-
-    <script>
+        <script>
         // Obtener el modal
         var modal = document.getElementById("myModal");
 
@@ -191,47 +127,47 @@
         var span = document.getElementsByClassName("close")[0];
 
         // Cuando el usuario hace clic en el botón, abrir el modal 
-        btn.onclick = function () {
+        btn.onclick = function() {
             modal.style.display = "block";
         }
 
         // Cuando el usuario hace clic en <span> (x), cerrar el modal
-        span.onclick = function () {
+        span.onclick = function() {
             modal.style.display = "none";
         }
 
         // Cuando el usuario hace clic fuera del contenido del modal, cerrar el modal
-        window.onclick = function (event) {
+        window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
-    </script>
-</div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
 
-        <br><br>
+    <br><br>
 
-        <center>
-            <div class="wrapper">
-                <h1 class="que">¿Qué es este aplicativo?</h1>
-                <p>Como equipo de desarrollo del SENA,hemos diseñado una aplicación móvil
-                    que conecta a usuarios con servicios de lavado de automóviles cercanos.
-                    Hemos creado una solución escalable y eficiente que permite a los usuarios
-                    encontrar y reservar lavados de manera rápida y sencilla, a la vez que ofrece a
-                    los negocios una mayor visibilidad. A través de un proceso de desarrollo ágil,
-                    hemos priorizado la experiencia del usuario y la integración de funcionalidades como geolocalización
-                    y pagos en línea. Esta aplicación representa una solución innovadora para la industria del lavado de
-                    automóviles,
-                    facilitando la interacción entre usuarios y negocios locales.</p>
-                <br>
-                <center><img src="../../img/Carro.jpg" height="400px" border-radius="20px" class="carro"></center>
-                <br>
-            </div>
-        </center>
-        <br>
+    <center>
+        <div class="wrapper">
+            <h1 class="que">¿Qué es este aplicativo?</h1>
+            <p>Como equipo de desarrollo del SENA,hemos diseñado una aplicación móvil
+                que conecta a usuarios con servicios de lavado de automóviles cercanos.
+                Hemos creado una solución escalable y eficiente que permite a los usuarios
+                encontrar y reservar lavados de manera rápida y sencilla, a la vez que ofrece a
+                los negocios una mayor visibilidad. A través de un proceso de desarrollo ágil,
+                hemos priorizado la experiencia del usuario y la integración de funcionalidades como geolocalización
+                y pagos en línea. Esta aplicación representa una solución innovadora para la industria del lavado de
+                automóviles,
+                facilitando la interacción entre usuarios y negocios locales.</p>
+            <br>
+            <center><img src="../../img/Carro.jpg" height="400px" border-radius="20px" class="carro"></center>
+            <br>
+        </div>
+    </center>
+    <br>
     </div>
 
     <footer class="pie-pagina">
