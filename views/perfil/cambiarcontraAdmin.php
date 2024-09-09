@@ -30,7 +30,7 @@
                     unset($_SESSION['error_message']); 
                 }
             ?>
-            <button type="submit" class="btn">Cambiar Contraseña</button>
+            <button type="submit" class="btn">Cambiar Contraseña</button><br><br>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <div>
