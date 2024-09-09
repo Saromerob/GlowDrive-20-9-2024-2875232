@@ -59,7 +59,7 @@ if ($result) {
             <div class="container-fluid">
                 <a class="navbar-brand" href="agg_servicios.php">
                     <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
-                    <div class="titulo">AUTO-SPLASH</div>
+                    <div class="titulo">GLOW-DRIVE</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -69,7 +69,7 @@ if ($result) {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item conos">
-                            <h5>AGREGA TU SERVICIO</h5>
+                            <h5></h5>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
@@ -114,7 +114,7 @@ if ($result) {
 
                 <!-- Precio -->
                 <label for="precio">Precio:</label>
-                <input name="precio" id="precio" class="controls" placeholder="Ingrese precio" required>
+                <input name="precio" id="precio" class="controls" placeholder="Ingrese precio" required><br><br>
 
                 <!-- Campo oculto para ID autolavado -->
                 <input type="hidden" name="autolavado_id" value="<?php echo htmlspecialchars($autolavadoId); ?>">
@@ -137,7 +137,6 @@ if ($result) {
             </div>
             <div class="BOX">
                 <h2>SOBRE NOSOTROS</h2>
-                <p>TEXTO EJEMPLO</p>
             </div>
             <div class="BOX">
                 <h2>Síguenos:</h2>

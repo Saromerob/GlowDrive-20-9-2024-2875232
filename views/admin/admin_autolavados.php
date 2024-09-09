@@ -32,11 +32,11 @@ $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
     <div class="form-dk">
     <form id="updateForm" method="POST" action="procesar_autolavado.php">
         <input type="hidden" name="id" id="autolavadoId">
-        <p>Nombre: <input type="text" name="nombre" id="nombre"></p>
-        <p>Dirección: <input type="text" name="direccion" id="direccion"></p>
-        <p>Localidad: <input type="text" name="localidad" id="localidad"></p>
-        <label>Latitud: <input type="text" name="latitud" id="latitud"></label><br>
-        <label>Longitud: <input type="text" name="longitud" id="longitud"></label><br>
+        <p>Nombre: <input type="text" name="nombre" id="nombre"></p><br>
+        <p>Dirección: <input type="text" name="direccion" id="direccion"></p><br>
+        <p>Localidad: <input type="text" name="localidad" id="localidad"></p><br>
+        <label>Latitud: <input type="text" name="latitud" id="latitud"></label><br><br>
+        <label>Longitud: <input type="text" name="longitud" id="longitud"></label><br><br>
         <label>Aprobar: <input type="checkbox" name="aprobado" id="aprobado"></label><br>
         <br> <input type="submit" name="guardar" value="Guardar">
     </form>
@@ -51,7 +51,7 @@ $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
 
         if ($statement) {
             echo '<table border="2">
-                <tr>
+                <tr >
                     <th>ID</th>
                     <th>NOMBRE</th>
                     <th>DIRECCION</th>

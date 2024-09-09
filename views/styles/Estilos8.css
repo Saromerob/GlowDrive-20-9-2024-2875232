@@ -155,6 +155,7 @@ footer.pie-pagina .grupo-1 .BOX {
 
 footer.pie-pagina .grupo-1 .BOX h2 {
     margin-bottom: 15px;
+    color: #FFF;
 }
 
 footer.pie-pagina .red-social a {
@@ -248,11 +249,11 @@ body {
 .extra-img {
     display: block;
     margin: 20px auto;
-    height: 50px;
+    height: 150px;
     /* Tamaño pequeño */
-    width: 50px;
+    width: 150px;
     /* Mantiene la forma circular */
-    border-radius: 50%;
+    border-radius: 150%;
     /* Hace la imagen redonda */
     object-fit: cover;
     /* Asegura que la imagen se ajuste bien */
