@@ -19,6 +19,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 <div class="contenedor-principal">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -26,6 +27,74 @@
                 <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
                 <div class="titulo">GLOW-DRIVE</div>
             </a>
+=======
+    <div class="contenedor-principal">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="paginaInicio.php">
+                    <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
+                    <div class="titulo">GLOW-DRIVE</div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <div class="marcos">
+                            <li class="nav-item citas">
+                                <a class="nav-link active" aria-current="page" href="agendar_cita.php">Agendar Citas</a>
+                            </li>
+                        </div>
+                        <div class="marcos">
+                            <li class="nav-item ubi">
+                                <a class="nav-link active" aria-current="page" href="Mapa.php">Mapa</a>
+                            </li>
+                        </div>
+                        <div class="marcos">
+                            <li class="nav-item ubi">
+                                <a class="nav-link active" aria-current="page" href="soli_gerente.php">Solicitar rol
+                                    "Gerente"</a>
+                            </li>
+                        </div>
+                        <div class="marcos">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Nosotros.php">
+                                    <i class='bx bx-search-alt'></i>
+                                    Conócenos
+                                </a>
+                            </li>
+                        </div>
+                        <div class="marcos">
+                            <li class="nav-item ubi">
+                                <a class="nav-link active" aria-current="page"
+                                    href="../perfil/cambiarcontraperfil.php">Cambiar contraseña</a>
+                            </li>
+                        </div>
+                        <div class="marcos">
+                            <li class="nav-item ubi">
+                                <a class="nav-link active" aria-current="page" href="respuesta_citas.php">Citas
+                                    enviadas</a>
+                            </li>
+                        </div>
+                        <div class="marcos">
+                            <li class="nav-item ubi">
+                                <a class="nav-link active" aria-current="page" href="resena.php">Reseñas</a>
+                            </li>
+                        </div>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <div class="marcos">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../../useCase/logOut.php">
+                                    <i class='bx bx-user-x'></i> Cerrar Sesión
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+>>>>>>> 5c19d06 (Ya sirven las reseñas faltan arreglos pero ya funciona)
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
