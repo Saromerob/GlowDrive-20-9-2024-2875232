@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Términos y Condiciones - Cambio de Rol a Gerente en GLOWDRIVER</title>
-    <style>
-
-    </style>
     <link rel="stylesheet" href="../styles/Estilos8.css">
     <link rel="stylesheet" href="../styles/terminos.css">
 </head>
