@@ -17,7 +17,6 @@ body {
 }
 
 
-
 .navbar {
     background-color: transparent;
     backdrop-filter: blur(10px);
@@ -38,9 +37,13 @@ body {
 }
 
 .titulo {
-    width: 200px;
-    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0d1b2a;
+    border: 2px solid white;
+    border-radius: 20px;
     background-color: rgba(219, 219, 217);
+    padding: 0 10px;
 }
 
 .navbar .navbar-brand .titulo {
@@ -127,27 +130,6 @@ body {
     background-color: #ffffff;
     width: 200px;
 }
-
-.citas {
-    text-align: center;
-    border-radius: 20px;
-    margin: 10px;
-    background-color: #ffffff;
-    width: 200px;
-}
-
-
-.conocenos {
-    border: 2px solid white;
-    text-align: center;
-    border-radius: 20px;
-    left: 5px;
-    margin: 10px;
-    background-color: #ffffff;
-    width: 200px;
-}
-
-
 
 .contenedor-principal {
     /* Nombre del contenedor principal */

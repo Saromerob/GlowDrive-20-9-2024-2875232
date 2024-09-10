@@ -1,217 +1,222 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background: url('../../img/fondo.jpg');
+    font-family: 'calibri';
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
+h1 {
+    color: #000000;
+}
 
-        /* Estilos Generales */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background: url('../../img/fondo.jpg');
-            font-family: 'calibri';
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        h1 {
-            color: #000000;
-        }
-        .contenedor-principal {
-            flex: 1;
-        }
-        .pie-pagina {
-            margin-top: auto;
-        }
+.contenedor-principal {
+    flex: 1;
+}
 
-        /* Navbar */
-        .navbar {
-            background-color: transparent;
-            backdrop-filter: blur(10px);
-            box-shadow: 5px 10px 12px #000;
-        }
+.pie-pagina {
+    margin-top: auto;
+}
 
-        .navbar .navbar-brand {
-            display: flex;
-            align-items: center;
-        }
+/* Navbar */
+.navbar {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 10px 12px #000;
+}
 
-        .navbar .navbar-brand img {
-            height: 90px;
-            margin-right: 10px;
-            border-radius: 50%;
-        }
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+}
 
-        .titulo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #0d1b2a;
-            border: 2px solid white;
-            border-radius: 20px;
-            background-color: rgba(219, 219, 217);
-            padding: 0 10px;
-        }
+.navbar .navbar-brand img {
+    height: 90px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
 
-        .navbar .nav-link {
-            font-size: 1.1rem;
-            color: #0d1b2a;
-            font-weight: bold;
-        }
+.titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0d1b2a;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: rgba(219, 219, 217);
+    padding: 0 10px;
+}
 
-        .navbar .nav-link:hover {
-            color: gray;
-        }
+.navbar .nav-link {
+    font-size: 1.1rem;
+    color: #0d1b2a;
+    font-weight: bold;
+}
 
-        /* Banner */
-        .wrapper {
-            width: 420px;
-            background: transparent;
-            border: rgba(255, 255, 255, .2);
-            backdrop-filter: blur(20px);
-            box-shadow: 7px 13px 37px #000;
-            border-radius: 20px;
-            padding: 30px 40px;
-            margin: auto;
-            text-align: center;
-            color: #fff;
-        }
+.navbar .nav-link:hover {
+    color: gray;
+}
 
-        .controls {
-            border-radius: 20px;
-            box-shadow: 7px 13px 37px #000;
-            width: 100%;
-            height: 50px;
-            margin: 5px 0;
-            text-align: center;
-            
-        }
+/* Banner */
+.wrapper {
+    width: 420px;
+    background: transparent;
+    border: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 7px 13px 37px #000;
+    border-radius: 20px;
+    padding: 30px 40px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+}
 
-        .input-box {
-            position: relative;
-            width: 100%;
-            height: 50px;
-            margin: 15px 0;
-            
-        }
+.controls {
+    border-radius: 20px;
+    box-shadow: 7px 13px 37px #000;
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    text-align: center;
 
-        .input-box,
-        .input-box{
-            width: 100%;
-            height: 50%;
-            background: #fff;
-            border: none;
-            outline: none;
-            box-shadow: 7px 13px 37px transparent;
-            border-radius: 20px;
-            padding: 10px;
-            color: #000000;
-            text-align: center;
-        }
+}
 
-        .input-box input::placeholder,
-        .input-box textarea::placeholder {
-            color: #000;
-        }
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 15px 0;
 
-        .btn {
-            width: 100%;
-            height: 45px;
-            background: #99c9bd;
-            border: none;
-            border-radius: 40px;
-            box-shadow: 7px 13px 37px #000;
-            cursor: pointer;
-            font-size: 16px;
-            color: #333;
-            font-weight: 600;
-            margin-top: 20px;
-        }
-        .btn:hover{
-            background-color:  rgb(71, 130, 155);
-        }
-        .wrapper .controls{
-            width: 100%;
-            height: 50%;
-            background: #fff;
-            border: none;
-            outline: none;
-            box-shadow: 7px 13px 37px rgb(129, 129, 129);
-            border-radius: 20px;
-            padding: 10px;
-            color: #000000;
-        }
+}
 
-        /* Footer */
-        footer.pie-pagina {
-            background-color: rgb(55, 84, 107);
-            color: #fff;
-            padding: 20px 0;
-        }
+.input-box,
+.input-box {
+    width: 100%;
+    height: 50%;
+    background: #fff;
+    border: none;
+    outline: none;
+    box-shadow: 7px 13px 37px transparent;
+    border-radius: 20px;
+    padding: 10px;
+    color: #000000;
+    text-align: center;
+}
 
-        footer.pie-pagina .grupo-1 {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px 0;
-        }
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+    color: #000;
+}
 
-        footer.pie-pagina .grupo-1 .BOX {
-            text-align: center;
-        }
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #99c9bd;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 7px 13px 37px #000;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 20px;
+}
 
-        footer.pie-pagina .grupo-1 .BOX h2 {
-            margin-bottom: 15px;
-        }
+.btn:hover {
+    background-color: rgb(71, 130, 155);
+}
 
-        footer.pie-pagina .red-social a {
-            display: inline-block;
-            width: 45px;
-            height: 45px;
-            line-height: 45px;
-            margin: 5px;
-            border-radius: 50%;
-            background-color: black;
-            color: #fff;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
+.wrapper .controls {
+    width: 100%;
+    height: 50%;
+    background: #fff;
+    border: none;
+    outline: none;
+    box-shadow: 7px 13px 37px rgb(129, 129, 129);
+    border-radius: 20px;
+    padding: 10px;
+    color: #000000;
+}
 
-        footer.pie-pagina .red-social a:hover {
-            color: aqua;
-        }
+/* Footer */
+footer.pie-pagina {
+    background-color: rgb(55, 84, 107);
+    color: #fff;
+    padding: 20px 0;
+}
 
-        footer.pie-pagina .grupo-2 {
-            text-align: center;
-            padding: 10px 0;
-        }
+footer.pie-pagina .grupo-1 {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
 
-        footer.pie-pagina .grupo-2 small {
-            font-size: 15px;
-        }
-        .LogoRegistro{
-           border-radius: 50px;
-        }
+footer.pie-pagina .grupo-1 .BOX {
+    text-align: center;
+}
 
-        /* Responsividad */
-        @media (max-width: 800px) {
-            .pie-pagina .grupo-1 {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
+footer.pie-pagina .grupo-1 .BOX h2 {
+    margin-bottom: 15px;
+}
 
-            .navbar .nav-link {
-                font-size: 0.9rem;
-            }
+footer.pie-pagina .red-social a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    transition: all 0.3s ease;
+}
 
-            .navbar .navbar-brand .titulo {
-                font-size: 1.2rem;
-            }
+footer.pie-pagina .red-social a:hover {
+    color: aqua;
+}
 
-            .wrapper {
-                width: 90%;
-            }
-        }
-        /* General */
+footer.pie-pagina .grupo-2 {
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+.LogoRegistro {
+    border-radius: 50px;
+}
+
+/* Responsividad */
+@media (max-width: 800px) {
+    .pie-pagina .grupo-1 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .navbar .navbar-brand .titulo {
+        font-size: 1.2rem;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+}
+
+/* General */
 body {
     margin: 0;
     padding: 0;
@@ -238,9 +243,12 @@ body {
 
 /* Imagen dentro del formulario */
 .wrapper img.LogoRegistro {
-    height: 80px; /* Tamaño pequeño */
-    width: 80px; /* Mantiene la forma circular */
-    border-radius: 50%; /* Hace la imagen redonda */
+    height: 80px;
+    /* Tamaño pequeño */
+    width: 80px;
+    /* Mantiene la forma circular */
+    border-radius: 50%;
+    /* Hace la imagen redonda */
     margin-bottom: 20px;
 }
 
@@ -248,10 +256,14 @@ body {
 .extra-img {
     display: block;
     margin: 20px auto;
-    height: 50px; /* Tamaño pequeño */
-    width: 50px; /* Mantiene la forma circular */
-    border-radius: 50%; /* Hace la imagen redonda */
-    object-fit: cover; /* Asegura que la imagen se ajuste bien */
+    height: 150px;
+    /* Tamaño pequeño */
+    width: 150px;
+    /* Mantiene la forma circular */
+    border-radius: 60%;
+    /* Hace la imagen redonda */
+    object-fit: cover;
+    /* Asegura que la imagen se ajuste bien */
 }
 
 /* Ajustes responsivos */
@@ -260,6 +272,7 @@ body {
         width: 90%;
     }
 }
-h2{
+
+h2 {
     color: black;
 }

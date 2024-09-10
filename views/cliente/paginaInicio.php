@@ -58,17 +58,6 @@
                             </li>
                         </div>
                         <div class="marcos">
-                            <li class="nav-item ubi">
-                                <a class="nav-link active" aria-current="page" href="resena.php">Reseñas</a>
-                            </li>
-                        </div>
-                        <div class="marcos">
-                            <li class="nav-item ubi">
-                                <a class="nav-link active" aria-current="page"
-                                    href="../perfil/cambiarcontraperfil.php">Cambiar contraseña</a>
-                            </li>
-                        </div>
-                        <div class="marcos">
                             <!-- Dropdown Perfil -->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -77,9 +66,15 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="#" id="btn-open-perfil">Ver Perfil</a></li>
-                                    <li><a class="dropdown-item" href="#">Configuración</a></li>
-                                    <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                                    <li><a class="dropdown-item" href="../perfil/cambiarcontraperfil.php">Cambiar
+                                            Contraseña</a></li>
+                                    <li><a class="dropdown-item" href="../../useCase/logOut.php">Cerrar Sesión</a></li>
                                 </ul>
+                            </li>
+                        </div>
+                        <div class="marcos">
+                            <li class="nav-item ubi">
+                                <a class="nav-link active" aria-current="page" href="resena.php">Reseñas</a>
                             </li>
                         </div>
                         <div class="marcos">
@@ -88,26 +83,16 @@
                                     enviadas</a>
                             </li>
                         </div>
-                    </ul>
-                    <div class="marcos">
-                        <li class="nav-item ubi">
-                            <a class="nav-link active" aria-current="page" href="ver_recibos.php">Ver mis recibos</a>
-                        </li>
-                    </div>
-
-                    <ul class="navbar-nav ms-auto">
                         <div class="marcos">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../../useCase/logOut.php">
-                                    <i class='bx bx-user-x'></i> Cerrar Sesión
-                                </a>
+                            <li class="nav-item ubi">
+                                <a class="nav-link active" aria-current="page" href="ver_recibos.php">Ver mis
+                                    recibos</a>
                             </li>
                         </div>
                     </ul>
                 </div>
             </div>
         </nav>
-
         <!-- Ventana modal -->
         <div id="myModal" class="modal">
             <div class="modal-content">
