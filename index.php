@@ -28,10 +28,13 @@ body, html {
 }
 
 .logo {
+    width: 70px;
+    height: 60px;
     border-radius: 50%;
 }
 
 .navbar-title {
+    margin: 0 20px; 
     font-size: 1.5rem;
     color: #fff;
 }
@@ -55,7 +58,7 @@ body, html {
 }
 
 .nav-item {
-    margin: 0 15px; /* Espaciado uniforme entre los elementos de navegación */
+    margin: 0 20px; /* Espaciado uniforme entre los elementos de navegación */
 }
 
 .nav-link {
@@ -106,13 +109,13 @@ body, html {
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
-    background-color: rgba(249, 249, 249, 0.5); 
+    background-color: rgba(249, 249, 249, 0.9); 
 }
 
 .content-wrapper {
     max-width: 800px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.5); 
+    background: rgba(255, 255, 255, 0.9); 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -158,7 +161,7 @@ body, html {
 }
 
     .footer {
-    background-color: #003366; /* Azul oscuro rey */
+    background-color: #003366; 
     color: #fff;
     padding: 40px 20px;
     text-align: center;
