@@ -34,7 +34,7 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <div>
-                        <p class="ini">
+                        <p class="ini"><br>
                             <button type="button" class="btn btn-outline-light"
                                 onclick="window.location.href='../cliente/paginaInicio.php';">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

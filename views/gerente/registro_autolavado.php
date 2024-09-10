@@ -98,135 +98,158 @@ if ($autolavado) {
     // El usuario ya tiene un autolavado registrado
     echo "<h1>Ya tienes un autolavado registrado.</h1>";
     ?>
-    <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Términos y Condiciones - GLOWDRIVER</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            margin: 0;
-            padding: 0;
-        }
+        <!DOCTYPE html>
+        <html lang="es">
 
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Términos y Condiciones - GLOWDRIVER</title>
+            <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f8ff;
+                margin: 0;
+                padding: 0;
+            }
 
-        .logo {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
+            .container {
+                width: 80%;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: white;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+            }
 
-        .logo img {
-            max-width: 200px;
-        }
+            .logo {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
 
-        .terminos-condiciones h2 {
-            color: #0077b6; /* Azul océano */
-            text-align: center;
-            font-size: 28px;
-        }
+            .logo img {
+                max-width: 200px;
+            }
 
-        .terminos-condiciones p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
-        }
+            .terminos-condiciones h2 {
+                color: #0077b6;
+                /* Azul océano */
+                text-align: center;
+                font-size: 28px;
+            }
 
-        .terminos-condiciones h3 {
-            color: #023e8a;
-            margin-top: 20px;
-        }
+            .terminos-condiciones p {
+                font-size: 16px;
+                line-height: 1.6;
+                color: #333;
+            }
 
-        .terminos-condiciones ul {
-            margin-left: 20px;
-            color: #333;
-        }
+            .terminos-condiciones h3 {
+                color: #023e8a;
+                margin-top: 20px;
+            }
 
-        .terminos-condiciones ul li {
-            margin-bottom: 10px;
-        }
+            .terminos-condiciones ul {
+                margin-left: 20px;
+                color: #333;
+            }
 
-        /* Botones y estilo de los enlaces */
-        .terminos-condiciones a {
-            color: #0077b6;
-            text-decoration: none;
-        }
+            .terminos-condiciones ul li {
+                margin-bottom: 10px;
+            }
 
-        .terminos-condiciones a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- Logo de GLOWDRIVER -->
-        <div class="logo">
-            <img src="../../img/logo.jpeg" alt="Logo de GLOWDRIVER">
-        </div>
+            /* Botones y estilo de los enlaces */
+            .terminos-condiciones a {
+                color: #0077b6;
+                text-decoration: none;
+            }
 
-        <!-- Términos y condiciones -->
-        <div class="terminos-condiciones">
-            <h2>Términos y Condiciones para Gerentes Aceptados en GLOWDRIVER</h2>
-            <p><strong>Última actualización:</strong> [Fecha]</p>
+            .terminos-condiciones a:hover {
+                text-decoration: underline;
+            }
+            </style>
+        </head>
 
-            <h3>1. Aceptación del rol</h3>
-            <p>
-                Al ser aceptado como gerente en GLOWDRIVER, el usuario adquiere el rol de administrador del autolavado registrado bajo su dirección. Esto implica la gestión directa de las citas, los servicios ofrecidos y la relación con los clientes dentro de la plataforma.
-            </p>
+        <body>
+            <div class="container">
+                <!-- Logo de GLOWDRIVER -->
+                <div class="logo">
+                    <img src="../../img/logo.jpeg" alt="Logo de GLOWDRIVER">
+                </div>
 
-            <h3>2. Uso de la plataforma</h3>
-            <p>
-                El gerente es responsable de utilizar la plataforma GLOWDRIVER de manera correcta y de acuerdo con las políticas establecidas. Esto incluye mantener actualizada la información del autolavado, gestionar de manera eficiente las citas y garantizar un servicio adecuado a los clientes.
-            </p>
+                <!-- Términos y condiciones -->
+                <div class="terminos-condiciones">
+                    <h2>Términos y Condiciones para Gerentes Aceptados en GLOWDRIVER</h2>
+                    <p><strong>Última actualización:</strong> [Fecha]</p>
 
-            <h3>3. Responsabilidades y obligaciones</h3>
-            <ul>
-                <li><strong>Gestión de citas:</strong> El gerente tiene la obligación de aceptar o rechazar las citas programadas de manera oportuna.</li>
-                <li><strong>Transparencia:</strong> Los datos de contacto y la dirección del autolavado deben ser correctos y estar actualizados.</li>
-                <li><strong>Calidad del servicio:</strong> El gerente debe garantizar que los servicios ofrecidos a través de GLOWDRIVER se realicen con el nivel de calidad descrito en la plataforma.</li>
-            </ul>
+                    <h3>1. Aceptación del rol</h3>
+                    <p>
+                        Al ser aceptado como gerente en GLOWDRIVER, el usuario adquiere el rol de administrador del
+                        autolavado registrado bajo su dirección. Esto implica la gestión directa de las citas, los
+                        servicios ofrecidos y la relación con los clientes dentro de la plataforma.
+                    </p>
 
-            <h3>4. Privacidad y protección de datos</h3>
-            <p>
-                El gerente debe tratar con confidencialidad toda la información relacionada con los clientes de su autolavado. GLOWDRIVER implementa medidas de seguridad para proteger los datos, pero el gerente también tiene la responsabilidad de no divulgar esta información a terceros no autorizados.
-            </p>
+                    <h3>2. Uso de la plataforma</h3>
+                    <p>
+                        El gerente es responsable de utilizar la plataforma GLOWDRIVER de manera correcta y de acuerdo
+                        con las políticas establecidas. Esto incluye mantener actualizada la información del autolavado,
+                        gestionar de manera eficiente las citas y garantizar un servicio adecuado a los clientes.
+                    </p>
 
-            <h3>5. Modificaciones en los términos</h3>
-            <p>
-                GLOWDRIVER se reserva el derecho de actualizar estos términos para reflejar cambios en la operación de la plataforma o en las regulaciones aplicables. El gerente será notificado de cualquier cambio importante y deberá aceptar las nuevas condiciones para seguir utilizando el sistema.
-            </p>
+                    <h3>3. Responsabilidades y obligaciones</h3>
+                    <ul>
+                        <li><strong>Gestión de citas:</strong> El gerente tiene la obligación de aceptar o rechazar las
+                            citas programadas de manera oportuna.</li>
+                        <li><strong>Transparencia:</strong> Los datos de contacto y la dirección del autolavado deben
+                            ser correctos y estar actualizados.</li>
+                        <li><strong>Calidad del servicio:</strong> El gerente debe garantizar que los servicios
+                            ofrecidos a través de GLOWDRIVER se realicen con el nivel de calidad descrito en la
+                            plataforma.</li>
+                    </ul>
 
-            <h3>6. Revocación del rol</h3>
-            <p>
-                GLOWDRIVER puede revocar el rol de gerente si se detectan infracciones a estos términos, incumplimientos graves de las responsabilidades o mal uso de la plataforma.
-            </p>
+                    <h3>4. Privacidad y protección de datos</h3>
+                    <p>
+                        El gerente debe tratar con confidencialidad toda la información relacionada con los clientes de
+                        su autolavado. GLOWDRIVER implementa medidas de seguridad para proteger los datos, pero el
+                        gerente también tiene la responsabilidad de no divulgar esta información a terceros no
+                        autorizados.
+                    </p>
 
-            <h3>7. Resolución de disputas</h3>
-            <p>
-                Cualquier disputa relacionada con el rol de gerente deberá ser notificada a GLOWDRIVER para su revisión. La plataforma se reserva el derecho de mediar y tomar decisiones para resolver el conflicto.
-            </p>
+                    <h3>5. Modificaciones en los términos</h3>
+                    <p>
+                        GLOWDRIVER se reserva el derecho de actualizar estos términos para reflejar cambios en la
+                        operación de la plataforma o en las regulaciones aplicables. El gerente será notificado de
+                        cualquier cambio importante y deberá aceptar las nuevas condiciones para seguir utilizando el
+                        sistema.
+                    </p>
 
-            <h3>8. Política de notificaciones</h3>
-            <p>
-                El gerente recibirá notificaciones de citas nuevas y respuestas de clientes a través de la plataforma. Es responsabilidad del gerente atender estas notificaciones y tomar las acciones necesarias.
-            </p>
-        </div>
-    </div>
-</body>
-</html>
+                    <h3>6. Revocación del rol</h3>
+                    <p>
+                        GLOWDRIVER puede revocar el rol de gerente si se detectan infracciones a estos términos,
+                        incumplimientos graves de las responsabilidades o mal uso de la plataforma.
+                    </p>
 
-<?php
+                    <h3>7. Resolución de disputas</h3>
+                    <p>
+                        Cualquier disputa relacionada con el rol de gerente deberá ser notificada a GLOWDRIVER para su
+                        revisión. La plataforma se reserva el derecho de mediar y tomar decisiones para resolver el
+                        conflicto.
+                    </p>
+
+                    <h3>8. Política de notificaciones</h3>
+                    <p>
+                        El gerente recibirá notificaciones de citas nuevas y respuestas de clientes a través de la
+                        plataforma. Es responsabilidad del gerente atender estas notificaciones y tomar las acciones
+                        necesarias.
+                    </p>
+                </div>
+            </div>
+        </body>
+
+        </html>
+
+        <?php
 } else { // Permitir el registro del autolavado
 ?>
         <div class="wrapper">
