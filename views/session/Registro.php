@@ -68,7 +68,7 @@
             </div>
             <div class="BOX">
                 <div class="grupo-2">
-                    <small>&copy; 2024<b>AutoSplash<br>-Todos Los Derechos Reservados.</small>
+                    <small>&copy; 2024<b>GlowDrive<br>-Todos Los Derechos Reservados.</small>
 
                 </div>
             </div>
