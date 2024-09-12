@@ -69,7 +69,9 @@ if (!$citas) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Citas Pendientes</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/citas_aprobadas.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       function actualizarEstado(citaId, nuevoEstado) {
@@ -83,101 +85,6 @@ if (!$citas) {
         }, "json");
     }
     </script>
-    <style>
-    body, html {
-        background-image: url('../../img/fondo.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Arial', sans-serif;
-    }
-
-    h1 {
-        text-align: center;
-        margin-bottom: 20px;
-        color: blue;
-    }
-
-    .tabla {
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-collapse: separate;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .tabla thead th {
-        background-color: #444;
-        color: white;
-        text-align: center;
-        padding: 15px;
-    }
-
-    .tabla tbody td {
-        text-align: center;
-        padding: 15px;
-    }
-
-    .tabla tbody tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-
-    .tabla tbody tr:hover {
-        background-color: #ddd;
-    }
-
-    .boton {
-        padding: 10px 20px;
-        font-size: 14px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-        border: none;
-        background-color: #007bff; /* Azul por defecto */
-        color: white;
-    }
-
-    .boton:hover {
-        background-color: #28a745; /* Verde al pasar el mouse */
-    }
-
-    /* Responsividad */
-    @media (max-width: 768px) {
-        .tabla thead {
-            display: none;
-        }
-
-        .tabla tbody tr {
-            display: block;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .tabla tbody td {
-            display: block;
-            text-align: center;
-            position: relative;
-        }
-
-        .tabla tbody td:before {
-            content: attr(data-label);
-            position: absolute;
-            left: 0;
-            width: 50%;
-            padding-left: 15px;
-            font-weight: bold;
-            text-align: center;
-            background-color: #eee;
-        }
-
-        .boton {
-            width: 100%;
-            margin: 10px 0;
-        }
-    }
-    </style>
 </head>
 <body>
     <div class="contenedor">
