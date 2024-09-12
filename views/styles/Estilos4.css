@@ -144,56 +144,6 @@ h1 {
     color: #000000;
 }
 
-/* Footer */
-footer.pie-pagina {
-    background-color: rgb(55, 84, 107);
-    color: #fff;
-    padding: 20px 0;
-}
-
-footer.pie-pagina .grupo-1 {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px 0;
-}
-
-footer.pie-pagina .grupo-1 .BOX {
-    text-align: center;
-}
-
-footer.pie-pagina .grupo-1 .BOX h2 {
-    margin-bottom: 15px;
-}
-
-footer.pie-pagina .red-social a {
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    margin: 5px;
-    border-radius: 50%;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-footer.pie-pagina .red-social a:hover {
-    color: aqua;
-}
-
-footer.pie-pagina .grupo-2 {
-    text-align: center;
-    padding: 10px 0;
-}
-
-footer.pie-pagina .grupo-2 small {
-    font-size: 15px;
-}
-
-.LogoRegistro {
-    border-radius: 50px;
-}
 
 /* Responsividad */
 @media (max-width: 800px) {

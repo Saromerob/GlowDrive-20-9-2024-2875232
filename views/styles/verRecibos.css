@@ -5,15 +5,7 @@
     box-sizing: border-box;
 }
 
-.logo-pie {
-    width: 100px;
-    /* Ajusta el tamaño según sea necesario */
-    height: 100px;
-    /* Asegúrate de que el ancho y la altura sean iguales */
-    border-radius: 50%;
-    object-fit: cover;
-    /* Para que la imagen se ajuste bien al contenedor redondo */
-}
+
 
 body {
     display: flex;
@@ -25,10 +17,6 @@ body {
     background-position: center;
 }
 
-.pie-pagina {
-    margin-top: auto;
-    /* Pushes the footer to the bottom */
-}
 
 
 @media (max-width: 768px) {
