@@ -1,47 +1,52 @@
 <?php
+// Verifica la ruta y el archivo db.php
+include_once '../config/db.php'; 
 
-include_once '../config/db.php';
-include_once '../views/cliente/reseña.php';
-// Conectar a la base de datos
-$database = new Database();
-$conn = $database->conectar();
-// Iniciar la sesión y verificar el rol del usuario
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
+// Verifica si la clase Database está definida
+if (!class_exists('Database')) {
+    die('La clase Database no está definida.');
 }
 
-if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 2) {
-    header('Location: ../../useCase/logOut.php');
-    exit();
-}
+session_start();
 
-// Verificar si el formulario ha sido enviado
+// Verificar si el formulario fue enviado correctamente
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Recibir los datos del formulario.
-    //intval() me ayuda a convertir el valor que llega en texto a un valor entero.
-    $usuario_id = intval($_SESSION['id']);
+    // Obtener los datos del formulario
+    $usuarioId = $_POST['usuario_id'];
+    $autolavadoId = $_POST['autolavado_id'];
     $puntuacion = $_POST['puntuacion'];
-    $fecha_creacion = $_POST['fecha_creacion'];
-    $comentarios = $_POST['comentario'];
+    $comentario = $_POST['comentario'];
+    $fechaCreacion = $_POST['fecha_creacion'];
     
-    // Preparar la consulta SQL de inserción
-    $sql = "INSERT INTO reseñas (usuario_id, puntuacion, fecha_creacion, comentario) 
-            VALUES (:usuario_id, :puntuacion, :fecha_creacion, :comentario)";
-    
-    $stmt = $conn->prepare($sql);
-
-    // Vincular los valores a los parámetros
-    $stmt->bindParam(':usuario_id', $usuario_id, PDO::PARAM_INT);
-    $stmt->bindParam(':puntuacion', $puntuacion, PDO::PARAM_INT);
-    $stmt->bindParam(':fecha_creacion', $fecha_creacion, PDO::PARAM_INT);
-    $stmt->bindParam(':comentario', $comentarios, PDO::PARAM_STR);
-    // Ejecutar la consulta
-    if ($stmt->execute()) {
-        header("Location: ../views/cliente/resena.php");
-        echo "RESEÑA COMPLETA";
-        exit();
-    } else {
-        echo "Error al ingresar reseña, intentalo nuevamente.";
+    // Validar que los campos necesarios no estén vacíos
+    if (empty($usuarioId) || empty($autolavadoId) || empty($puntuacion)) {
+        die('Faltan datos obligatorios para la reseña.');
     }
+
+    // Conectar a la base de datos
+    $database = new Database();
+    $conn = $database->conectar();
+    
+    // Insertar la reseña en la base de datos
+    $query = "
+        INSERT INTO reseñas (usuario_id, autolavado_id, puntuacion, comentario, fecha_creacion, fecha_actualizacion) 
+        VALUES (:usuario_id, :autolavado_id, :puntuacion, :comentario, :fecha_creacion, NOW())
+    ";
+    $stmt = $conn->prepare($query);
+    $stmt->bindParam(':usuario_id', $usuarioId, PDO::PARAM_INT);
+    $stmt->bindParam(':autolavado_id', $autolavadoId, PDO::PARAM_INT);
+    $stmt->bindParam(':puntuacion', $puntuacion, PDO::PARAM_INT);
+    $stmt->bindParam(':comentario', $comentario, PDO::PARAM_STR);
+    $stmt->bindParam(':fecha_creacion', $fechaCreacion, PDO::PARAM_STR);
+
+    if ($stmt->execute()) {
+        echo "Reseña insertada correctamente.";
+        // Puedes redirigir a una página de confirmación o mostrar un mensaje.
+    } else {
+        echo "Hubo un error al insertar la reseña.";
+    }
+} else {
+    die('Método de solicitud no válido.');
 }
 ?>
+

@@ -1,16 +1,43 @@
 <?php
 include_once '../../config/db.php';
 
-$database = new Database();
-$conn = $database->conectar();
 session_start();
 if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 2) {  
     header('location: ../../useCase/logOut.php');
     die();
 }
 
+// Conexión a la base de datos
+$database = new Database();
+$conn = $database->conectar();
+
+// Consulta para obtener autolavados aprobados
 $query = $conn->query("SELECT id, nombre, direccion, telefono, horario, latitud, longitud FROM autolavados WHERE aprobado = 1");
 $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
+
+// Consulta para obtener reseñas
+$sql = "
+SELECT 
+    r.id AS reseña_id,
+    u.nombre AS usuario_nombre,
+    r.puntuacion,
+    r.comentario,
+    r.fecha_creacion,
+    a.nombre AS autolavado_nombre
+FROM 
+    reseñas r
+JOIN 
+    usuarios u ON r.usuario_id = u.id
+JOIN 
+    autolavados a ON r.autolavado_id = a.id
+ORDER BY 
+    r.fecha_creacion DESC
+";
+
+// Preparar y ejecutar la consulta
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$reseñas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -134,7 +161,36 @@ body, html {
     .nav-item {
         margin: 10px 0; /* Espaciado vertical entre los elementos de navegación */
     }
-}            
+}  
+
+
+.reviews-section {
+            margin: 20px auto;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .review {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .review:last-child {
+            border-bottom: none;
+        }
+
+        h3 {
+            margin: 0;
+            color: #004080; /* Azul marino */
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
             
 .footer {
     background-color: #003366; 
@@ -269,6 +325,22 @@ body, html {
 
         <!-- Mapa Leaflet -->
         <div id="map"></div>
+    </div>
+    <div class="reviews-section">
+        <h2>Reseñas de Clientes</h2>
+        <?php if (count($reseñas) > 0): ?>
+            <?php foreach ($reseñas as $reseña): ?>
+                <div class="review">
+                    <h3>Autolavado: <?php echo htmlspecialchars($reseña['autolavado_nombre']); ?></h3>
+                    <p><strong>Cliente:</strong> <?php echo htmlspecialchars($reseña['usuario_nombre']); ?></p>
+                    <p><strong>Puntuación:</strong> <?php echo htmlspecialchars($reseña['puntuacion']); ?>/10</p>
+                    <p><strong>Fecha:</strong> <?php echo htmlspecialchars($reseña['fecha_creacion']); ?></p>
+                    <p><strong>Comentario:</strong> <?php echo htmlspecialchars($reseña['comentario']); ?></p>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p>No hay reseñas disponibles.</p>
+        <?php endif; ?>
     </div>
 
         <!-- Footer -->
