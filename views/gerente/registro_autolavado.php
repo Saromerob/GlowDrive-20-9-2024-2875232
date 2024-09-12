@@ -48,7 +48,7 @@ if ($result) {
             <div class="container-fluid">
                 <a class="navbar-brand" href="registro_autolavado.php">
                     <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
-                    <div class="titulo">AUTO-SPLASH</div>
+                    <div class="titulo">GLOW-DRIVE</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

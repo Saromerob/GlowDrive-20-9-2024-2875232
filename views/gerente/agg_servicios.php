@@ -50,88 +50,10 @@ if ($result) {
     <title>Servicios</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/Estilos8.css">
+    <link rel="stylesheet" href="../styles/Estilos4.css">
+    <link rel="stylesheet" href="../styles/agg_servicio.css">
     <style>
-            .footer {
-    background-color: #003366; 
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-}
 
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-logo img {
-    max-height: 60px; /* Tamaño reducido para las imágenes */
-    width: auto;
-    border-radius: 50%; /* Imágenes redondas */
-}
-
-.footer-about {
-    flex: 1;
-    margin: 20px;
-}
-
-.footer-about h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.footer-about p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.footer-social {
-    flex: 1;
-    margin: 20px;
-}
-
-.footer-social h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.social-icon img {
-    height: 40px; /* Tamaño reducido para las imágenes sociales */
-    width: 40px; /* Tamaño reducido para las imágenes sociales */
-    border-radius: 50%; /* Imágenes redondas */
-}
-
-.footer-bottom {
-    margin-top: 20px;
-    border-top: 1px solid #002244; /* Color de la línea superior */
-    padding-top: 10px;
-    font-size: 14px;
-}
-
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-    }
-
-    .footer-logo, .footer-about, .footer-social {
-        margin-bottom: 20px;
-    }
-
-    .footer-logo img, .social-icon img {
-        max-height: 50px; /* Ajuste en el tamaño para pantallas pequeñas */
-    }
-}
     </style>
 </head>
 
