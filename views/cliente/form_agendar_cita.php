@@ -47,7 +47,7 @@ if (!empty($result)) {
     <title>CitasCliente</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/Estilos4.css">
+    <link rel="stylesheet" href="../styles/Estilosform.css">
 <style>
         .footer {
     background-color: #003366; 
@@ -134,143 +134,143 @@ if (!empty($result)) {
 
 <body>
     <div class="contenedor-principal">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="agendar_cita.php">
-                    <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
-                    <div class="titulo">GLOW-DRIVE</div>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item conos">
-                            <button type="button" class="btn btn-outline-light"
-                                onclick="window.location.href='Mapa.php';">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-geo-alt" viewBox="0 0 16 16">
-                                    <path
-                                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
-                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                                </svg>
-                                Mapa
-                            </button>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <div>
-                                <p class="ini">
-                                    <button type="button" class="btn btn-outline-light"
-                                        onclick="window.location.href='paginaInicio.php';">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
-                                            <path fill-rule="evenodd"
-                                                d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
-                                        </svg>
-                                        Volver
-                                    </button>
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="agendar_cita.php">
+            <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
+            <div class="navbar-title">GLOW-DRIVE</div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="Mapa.php">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-geo-alt" viewBox="0 0 16 16">
+                            <path
+                                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                        </svg>
+                        Mapa
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="paginaInicio.php">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
+                            <path fill-rule="evenodd"
+                                d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
+                        </svg>
+                        Volver
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
         <br>
         <div class="wrapper">
+    <h1>Agendar Cita</h1>
+    <form action="agendar_cita.php" method="POST">
+        <input type="hidden" name="usuario_id" value="<?php echo $userId; ?>">
 
-            <form action="agendar_cita.php" method="POST">
-
-
-                <input type="hidden" name="usuario_id" value="<?php echo $userId; ?>">
-
-                <p class="controls">ID del usuario logueado: <?php echo $userId; ?></p>
-
-                <label for="autolavado">Autolavado:</label>
-                <select name="autolavado_id" class="controls" required>
-                    <option value="">Seleccione un autolavado</option>
-                    <?php
-                    // Verifica si hay resultados
-                    if ($stmt_autolavados->rowCount() > 0) {
-                        // Muestra cada autolavado como una opción
-                        while($row = $stmt_autolavados->fetch(PDO::FETCH_ASSOC)) {
-                            echo '<option value="' . $row['id'] . '">' . $row['nombre'] . '</option>';
-                        }
-                    } else {
-                        echo '<option value="">No hay autolavados disponibles</option>';
+        <div class="input-box">
+            <label for="autolavado">Autolavado:</label>
+            <select name="autolavado_id" class="controls" required>
+                <option value="">Seleccione un autolavado</option>
+                <?php
+                if ($stmt_autolavados->rowCount() > 0) {
+                    while($row = $stmt_autolavados->fetch(PDO::FETCH_ASSOC)) {
+                        echo '<option value="' . $row['id'] . '">' . $row['nombre'] . '</option>';
                     }
-                    ?>
-                </select>
-
-                <!-- Selección de servicio -->
-                <label for="servicio">Servicio:</label>
-                <select name="servicio_id" class="controls" required>
-                    <option value="">Seleccione un servicio</option>
-                    <?php
-                    // Verifica si hay resultados
-                    if ($stmt_servicios->rowCount() > 0) {
-                        // Muestra cada servicio como una opción
-                        while($row = $stmt_servicios->fetch(PDO::FETCH_ASSOC)) {
-                            echo '<option value="' . $row['id'] . '">' . $row['nombre'] . '</option>';
-                        }
-                    } else {
-                        echo '<option value="">No hay servicios disponibles</option>';
-                    }
-                    ?>
-                </select>
-
-                <label for="fecha">Fecha (YYYY-MM-DD):</label><br>
-                <input class="controls" type="date" id="fecha" name="fecha" required><br>
-
-                <label for="hora">Hora (HH:MM):</label><br>
-                <input class="controls" type="time" id="hora" name="hora" required><br>
-
-                <label for="nombre">Nombre:</label><br>
-                <input class="controls" type="text" id="nombre" name="nombre" placeholder="Nombre"><br>
-
-                <label for="apellido">Apellido:</label><br>
-                <input class="controls" type="text" id="apellido" name="apellido" placeholder="Apellido" required><br>
-
-                <label for="placa">Placa:</label><br>
-                <input class="controls" type="text" id="placa" name="placa" placeholder="Placa"><br>
-
-                <label for="telefono">Teléfono:</label><br>
-                <input class="controls" type="text" id="telefono" name="telefono" placeholder="Teléfono"><br>
-                <br>
-
-                <select name="tipo_vehiculo" class="controls" required>
-                    <option value="">Seleccione un tipo de vehículo</option>
-                    <?php
-                    // Verifica si hay resultados
-                    if ($stmt_tipo_vehiculo->rowCount() > 0) {
-                        // Muestra cada tipo de vehículo como una opción
-                        while($row = $stmt_tipo_vehiculo->fetch(PDO::FETCH_ASSOC)) {
-                            echo '<option value="' . $row['id'] . '">' . $row['tipo'] . '</option>';
-                        }
-                    } else {
-                        echo '<option value="">No hay tipos de vehículo disponibles</option>';
-                    }
-                    ?>
-                </select>
-
-                <label for="comentarios">Comentarios:</label><br>
-                <textarea class="controls" id="comentarios" name="comentarios"
-                    placeholder="Ingresa Comentarios"></textarea><br><br>
-
-                <input type="submit" class="btn" value="Agendar Cita">
-                <br>
-            </form>
-
-
+                } else {
+                    echo '<option value="">No hay autolavados disponibles</option>';
+                }
+                ?>
+            </select>
         </div>
-        <br>
-    </div>
+
+        <div class="input-box">
+            <label for="servicio">Servicio:</label>
+            <select name="servicio_id" class="controls" required>
+                <option value="">Seleccione un servicio</option>
+                <?php
+                if ($stmt_servicios->rowCount() > 0) {
+                    while($row = $stmt_servicios->fetch(PDO::FETCH_ASSOC)) {
+                        echo '<option value="' . $row['id'] . '">' . $row['nombre'] . '</option>';
+                    }
+                } else {
+                    echo '<option value="">No hay servicios disponibles</option>';
+                }
+                ?>
+            </select>
+        </div>
+
+        <div class="input-box">
+            <label for="fecha">Fecha (YYYY-MM-DD):</label>
+            <input class="controls" type="date" id="fecha" name="fecha" required>
+        </div>
+
+        <div class="input-box">
+            <label for="hora">Hora (HH:MM):</label>
+            <input class="controls" type="time" id="hora" name="hora" required>
+        </div>
+
+        <div class="input-box">
+            <label for="nombre">Nombre:</label>
+            <input class="controls" type="text" id="nombre" name="nombre" placeholder="Nombre">
+        </div>
+
+        <div class="input-box">
+            <label for="apellido">Apellido:</label>
+            <input class="controls" type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+        </div>
+
+        <div class="input-box">
+            <label for="placa">Placa:</label>
+            <input class="controls" type="text" id="placa" name="placa" placeholder="Placa">
+        </div>
+
+        <div class="input-box">
+            <label for="telefono">Teléfono:</label>
+            <input class="controls" type="text" id="telefono" name="telefono" placeholder="Teléfono">
+        </div>
+
+        <div class="input-box">
+            <label for="tipo_vehiculo">Tipo de Vehículo:</label>
+            <select name="tipo_vehiculo" class="controls" required>
+                <option value="">Seleccione un tipo de vehículo</option>
+                <?php
+                if ($stmt_tipo_vehiculo->rowCount() > 0) {
+                    while($row = $stmt_tipo_vehiculo->fetch(PDO::FETCH_ASSOC)) {
+                        echo '<option value="' . $row['id'] . '">' . $row['tipo'] . '</option>';
+                    }
+                } else {
+                    echo '<option value="">No hay tipos de vehículo disponibles</option>';
+                }
+                ?>
+            </select>
+        </div>
+
+        <div class="input-box">
+            <label for="comentarios">Comentarios:</label>
+            <textarea class="controls" id="comentarios" name="comentarios" placeholder="Ingresa Comentarios"></textarea>
+        </div>
+
+        <input type="submit" class="btn" value="Agendar Cita">
+    </form>
+</div>
+
+
 
     <footer class="footer">
     <div class="footer-container">

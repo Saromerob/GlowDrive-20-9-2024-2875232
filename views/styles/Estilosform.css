@@ -1,0 +1,177 @@
+/* Estilos generales del html y body */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background-image: url('../../img/fondo.jpg'); /* Ruta de tu imagen de fondo */
+    background-repeat: no-repeat;
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-attachment: fixed; /* Fija la imagen para que no se mueva al hacer scroll */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+/* Estilos del navbar */
+.custom-navbar {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad del 50% */
+    backdrop-filter: blur(80px); /* Desenfoque del fondo */
+    box-shadow: 0px 1px 2px black;
+    height: 90px;
+    padding: 10px 20px;
+    position: fixed; /* Fija el navbar en la parte superior */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 70px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #9faba7; 
+}
+
+.navbar-title {
+    border: 3px solid #9faba7;
+    font-weight: 700;
+    background-color: #f2f0d9;
+    border-radius: 20px;
+    margin: 0 20px;
+    font-size: 1rem;
+    color: #18282e;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: center; /* Centra las opciones de navegación */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 15px; /* Espaciado uniforme entre los elementos de navegación */
+}
+
+.nav-link {
+    border: 3px solid #f2f0d9;
+    color: #f2f0d9;
+    font-size: 1rem;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Evita el subrayado en los enlaces */
+    border-radius: 20px; /* Bordes redondeados para cada opción */
+    background-color: #18282ecc;
+}
+
+.nav-link i {
+    margin-right: 5px;
+}
+
+.nav-link:hover {
+    color: #041e2bbe;
+    background-color: rgba(10, 73, 125, 0.719);
+}
+
+/* Estilos del wrapper (formulario) */
+.wrapper {
+    max-width: 600px;
+    margin: 100px auto 0; /* Asegura un margen suficiente desde la parte superior para el navbar */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Fondo negro transparente */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    position: relative; /* Asegura que el formulario esté posicionado correctamente sobre la imagen de fondo */
+}
+
+/* Estilos del encabezado */
+.wrapper h1 {
+    margin-top: 0;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Estilos de los campos del formulario */
+.input-box {
+    margin-bottom: 15px; /* Ajustado para un mejor espaciado */
+}
+
+.input-box label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.controls {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background: #fff;
+    color: #333;
+}
+
+/* Estilos para el textarea */
+textarea.controls {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Estilos del botón */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #28a745;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #218838;
+}
+
+/* Estilos para que el formulario sea responsivo */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 15px;
+    }
+
+    .input-box {
+        margin-bottom: 12px;
+    }
+
+    .controls {
+        padding: 8px;
+    }
+
+    .btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
