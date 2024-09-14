@@ -15,7 +15,7 @@ html, body {
 
 
 .custom-navbar {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad del 50% */
+    background-color:rgba(0, 0, 0, 0.694); /* Fondo negro con opacidad del 50% */
     backdrop-filter: blur(80px); /* Desenfoque del fondo */
     box-shadow: 0px 1px 2px black;
     height: 90px;
@@ -36,18 +36,23 @@ html, body {
     width: 70px;
     height: 60px;
     border-radius: 50%;
-    border: 3px solid  #9faba7; 
+    border: 3px solid  #18282e; 
 }
 
 .navbar-title {
-    border: 3px solid  #9faba7 ;
-    font-weight: 700;
-    background-color: #f2f0d9 ;
-    border-radius: 20px;
-    margin: 0 20px; 
+    border: 4px solid #18282e; /* Reducir el grosor del borde */
+    font-weight: 200px; /* Hacer el texto aún más negrita */
+    background-color: #f2f0d9;
+    border-radius: 25px; /* Puedes ajustar el redondeo si lo deseas */
+    margin: 0 20px;
     font-size: 1rem;
-    color:#18282e ;
+    color: #18282e;
+    padding: 5px 10px; /* Reducir el padding para achicar el fondo */
 }
+h3{
+    font-weight: 700;
+}
+
 
 .navbar-toggler {
     border: none;
@@ -129,8 +134,9 @@ html, body {
 }
 
 
+
 .app-description-container {
-    text-decoration-color: black;
+    text-decoration-color: rgba(0, 0, 0, 0.961);
     font-weight: 700; /* Otras opciones: 100, 200, 300, 400 (normal), 500, 600, 700 (bold), 800, 900 */
     display: flex;
     justify-content: center;
@@ -168,6 +174,9 @@ html, body {
     display: flex;
     justify-content: center;
 }
+h6{
+    color:#f2f0d9;
+}
 
 .app-image {
     width: 100%;
@@ -190,8 +199,10 @@ html, body {
     }
 }
 
+
+
 .footer {
-    background-color: #003366; 
+    background-color: #003366;
     color: #fff;
     padding: 40px 20px;
     text-align: center;
@@ -208,11 +219,11 @@ html, body {
 }
 
 .footer-logo img {
-    width: 110px;
-    height: 110px; 
+    max-height: 60px;
+    /* Tamaño reducido para las imágenes */
     width: auto;
-    border-radius: 50%; /* Imágenes redondas */
-    border: 4px solid  #9faba7; 
+    border-radius: 50%;
+    /* Imágenes redondas */
 }
 
 .footer-about {
@@ -241,22 +252,24 @@ html, body {
 }
 
 .social-icons {
-    color: #f2f0d9;
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
 .social-icon img {
-    color: #f2f0d9;
-    height: 40px; /* Tamaño reducido para las imágenes sociales */
-    width: 40px; /* Tamaño reducido para las imágenes sociales */
-    border-radius: 50%; /* Imágenes redondas */
+    height: 40px;
+    /* Tamaño reducido para las imágenes sociales */
+    width: 40px;
+    /* Tamaño reducido para las imágenes sociales */
+    border-radius: 50%;
+    /* Imágenes redondas */
 }
 
 .footer-bottom {
     margin-top: 20px;
-    border-top: 1px solid #002244; /* Color de la línea superior */
+    border-top: 1px solid #002244;
+    /* Color de la línea superior */
     padding-top: 10px;
     font-size: 14px;
 }
@@ -266,12 +279,15 @@ html, body {
         flex-direction: column;
     }
 
-    .footer-logo, .footer-about, .footer-social {
+    .footer-logo,
+    .footer-about,
+    .footer-social {
         margin-bottom: 20px;
     }
 
-    .footer-logo img, .social-icon img {
-        max-height: 90px; /* Ajuste en el tamaño para pantallas pequeñas */
+    .footer-logo img,
+    .social-icon img {
+        max-height: 50px;
+        /* Ajuste en el tamaño para pantallas pequeñas */
     }
 }
-

@@ -18,7 +18,7 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
     <title>Página de Inicio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="../styles/administrador.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg custom-navbar">
@@ -41,25 +41,25 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
                 <!-- Menú centralizado -->
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="admin_panel.php">Ver
-                            Solicitudes</a>
+                        <a class="nav-link active" aria-current="page" href="admin_panel.php"><h6>Ver
+                            Solicitudes</h6></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="crearUsuario.php">Administrar
-                            Usuarios</a>
+                        <a class="nav-link active" aria-current="page" href="crearUsuario.php"><h6>Administrar
+                            Usuarios</h6></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="admin_autolavados.php">Administrar
-                            Autolavados</a>
+                        <a class="nav-link active" aria-current="page" href="admin_autolavados.php"><h6>Administrar
+                            Autolavados</h6></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="public_map.php">Ver Autolavados
+                        <a class="nav-link active" aria-current="page" href="public_map.php"><h6>Ver Autolavados
                             aprobados
-                            en el mapa</a>
+                            en el mapa</h6></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../perfil/cambiarcontraAdmin.php">Cambiar
-                            Contraseña</a>
+                        <a class="nav-link active" aria-current="page" href="../perfil/cambiarcontraAdmin.php"><h6>Cambiar
+                            Contraseña</h6></a>
                     </li>
                 </ul>
 
@@ -73,7 +73,6 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#" id="btn-open-perfil">Ver Perfil</a></li>
-                            <li><a class="dropdown-item" href="#">Configuración</a></li>
                             <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
                         </ul>
                     </li>
