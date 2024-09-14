@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../styles/paginaInicioGerente.css">
     <?php
     session_start();
-    if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1)/*rol gerente, cambiar*/ {
+    if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
         header('location: ../../useCase/logOut.php');
         die();
     }
@@ -64,7 +64,6 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#" id="btn-open-perfil">Ver Perfil</a></li>
-                                <li><a class="dropdown-item" href="#">Configuración</a></li>
                                 <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
                             </ul>
                         </li>
@@ -88,30 +87,33 @@
     </div>
 </div>
 
-    <script>
-        // Obtener el modal, el botón y el elemento para cerrar
-        const modal = document.getElementById("myModal");
-        const btn = document.getElementById("btn-open-perfil");
-        const closeBtn = document.querySelector(".close");
+<script>
+        // Obtener el modal
+        var modal = document.getElementById("myModal");
 
-        // Abrir el modal cuando se hace clic en el botón
-        btn.addEventListener("click", () => {
+        // Obtener el botón que abre el modal
+        var btn = document.getElementById("btn-open-perfil");
+
+        // Obtener el elemento <span> que cierra el modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // Cuando el usuario hace clic en el botón, abrir el modal 
+        btn.onclick = function() {
             modal.style.display = "block";
-        });
+        }
 
-        // Cerrar el modal cuando se hace clic en el botón "close"
-        closeBtn.addEventListener("click", () => {
+        // Cuando el usuario hace clic en <span> (x), cerrar el modal
+        span.onclick = function() {
             modal.style.display = "none";
-        });
+        }
 
-        // Cerrar el modal si el usuario hace clic fuera del contenido del modal
-        window.addEventListener("click", (event) => {
-            if (event.target === modal) {
+        // Cuando el usuario hace clic fuera del contenido del modal, cerrar el modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
                 modal.style.display = "none";
             }
-        });
-
-        </script>
+        }
+</script>
 </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
