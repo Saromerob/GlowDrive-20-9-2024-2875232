@@ -11,15 +11,16 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-
 <body>
     <div class="contenedor-principal">
-        <nav class="navbar navbar-expand-lg custom-navbar">
+        <nav class="navbar navbar-expand-lg bg-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.php">
-                    <img src="img/logo.jpeg" alt="Logo" class="logo">
-                    <span class="navbar-title">GLOW-DRIVE</span>
-                </a>
+                <div class="titulo">
+                    <a class="navbar-brand" href="index.php">
+                        <img src="img/logo.jpeg" alt="Logo" class="logo">
+                        <span class="navbar-title"><h3 class="glow">GLOW-DRIVE</h3></span>
+                    </a>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
                     aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,12 +32,12 @@
                                 <i class='bx bxs-car'></i> Agendar Citas
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item marcos" >
                             <a class="nav-link" href="../app-autosplash/views/session/sesion.php">
                                 <i class='bx bxs-location-plus'></i> Ubicaciones
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item marcos">
                             <a class="nav-link" href="../app-autosplash/views/session/sesion.php">
                                 <i class='bx bxs-user'></i> Iniciar Sesión
                             </a>
@@ -44,7 +45,7 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav><br><br>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">

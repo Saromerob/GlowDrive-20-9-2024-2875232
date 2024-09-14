@@ -144,7 +144,7 @@ html, body {
 .content-wrapper {
     max-width: 1000px;
     text-align: center;
-    background: #f2f0d9d3; 
+    background: rgba(255, 255, 255, 0.9); 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

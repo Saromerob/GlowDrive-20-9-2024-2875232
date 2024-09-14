@@ -59,7 +59,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             // Ejecutar la consulta.
             if ($stmt->execute()) {
-                $_SESSION['success'] = 'Usuario Registrado Exitosamente';
                 header("Location:../views/session/sesion.php");
                 exit();
             } else {
