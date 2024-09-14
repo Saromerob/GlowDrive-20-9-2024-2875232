@@ -7,7 +7,7 @@
     <title>Página de Inicio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/indexone.css">
+    <link rel="stylesheet" href="../styles/pagInicio.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <?php
     session_start();
@@ -16,353 +16,6 @@
         die();
     }
     ?>
-    <style>
-body, html {
-    background-image: url('../../img/fondo.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-.custom-navbar {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad del 50% */
-    padding: 10px 20px;
-}
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    width: 70px;
-    height: 60px;
-    border-radius: 50%;
-}
-
-.navbar-title {
-    margin: 0 20px; 
-    font-size: 1.5rem;
-    color: #fff;
-}
-
-.navbar-toggler {
-    border: none;
-}
-
-.navbar-collapse {
-    display: flex;
-    justify-content: center; /* Centra las opciones de navegación */
-}
-
-.navbar-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-item {
-    margin: 0 15px; /* Espaciado uniforme entre los elementos de navegación */
-}
-
-.nav-link {
-    color: #fff;
-    font-size: 1rem;
-    padding: 8px 10px;
-    display: flex;
-    align-items: center;
-    text-decoration: none; /* Evita el subrayado en los enlaces */
-}
-
-.nav-link i {
-    margin-right: 5px;
-}
-
-.nav-link:hover {
-    color: #ffcc00;
-}
-
-@media (max-width: 768px) {
-    .navbar-title {
-        font-size: 1.2rem;
-    }
-
-    .nav-link {
-        font-size: 0.9rem;
-        padding: 10px 0;
-    }
-
-    .navbar-collapse {
-        display: block;
-    }
-
-    .navbar-nav {
-        flex-direction: column; /* Ajusta la disposición para pantallas pequeñas */
-        align-items: center; 
-    }
-
-    .nav-item {
-        margin: 10px 0; /* Espaciado vertical entre los elementos de navegación */
-    }
-}
-
-
-
-.app-description-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
-    background-color: rgba(249, 249, 249, 0.9); 
-}
-
-.content-wrapper {
-    max-width: 800px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.9); 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.app-title {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.app-description {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.image-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.app-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-    .app-title {
-        font-size: 1.8rem;
-    }
-
-    .app-description {
-        font-size: 1rem;
-    }
-
-    .content-wrapper {
-        padding: 15px;
-    }
-}
-
-    .footer {
-    background-color: #003366; 
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-}
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-logo img {
-    max-height: 60px; /* Tamaño reducido para las imágenes */
-    width: auto;
-    border-radius: 50%; /* Imágenes redondas */
-}
-
-.footer-about {
-    flex: 1;
-    margin: 20px;
-}
-
-.footer-about h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.footer-about p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.footer-social {
-    flex: 1;
-    margin: 20px;
-}
-
-.footer-social h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.social-icon img {
-    height: 40px; /* Tamaño reducido para las imágenes sociales */
-    width: 40px; /* Tamaño reducido para las imágenes sociales */
-    border-radius: 50%; /* Imágenes redondas */
-}
-
-.footer-bottom {
-    margin-top: 20px;
-    border-top: 1px solid #002244; /* Color de la línea superior */
-    padding-top: 10px;
-    font-size: 14px;
-}
-
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-    }
-
-    .footer-logo, .footer-about, .footer-social {
-        margin-bottom: 20px;
-    }
-
-    .footer-logo img, .social-icon img {
-        max-height: 50px; /* Ajuste en el tamaño para pantallas pequeñas */
-    }
-}
-.app-description-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
-    background-color: rgba(249, 249, 249, 0.9); 
-}
-
-.content-wrapper {
-    max-width: 800px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.9); 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.app-title {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.app-description {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.image-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.app-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-    .app-title {
-        font-size: 1.8rem;
-    }
-
-    .app-description {
-        font-size: 1rem;
-    }
-
-    .content-wrapper {
-        padding: 15px;
-    }
-}
-
-
-
-
-<!-- Ventana modal -->
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <iframe src="perfil.php" class="modal-iframe"></iframe>
-    </div>
-</div>
-
-<style>
-/* Estilos del modal */
-.modal {
-    display: none; /* Ocultar modal por defecto */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente */
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: 15% auto; /* Centra el modal verticalmente */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 800px;
-    border-radius: 10px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-iframe {
-    width: 100%;
-    height: 80vh;
-    border: none;
-}
-</style>
-
-
-    </style>
 </head>
 
 <body>
@@ -381,15 +34,15 @@ body, html {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="agendar_cita.php">Agendar Cita</a>
+                    <a class="nav-link active" aria-current="page" href="agendar_cita.php"><h6>Agendar Cita</h6></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="Mapa.php">Mapa</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active" aria-current="page" href="Mapa.php"><h6>Mapa</h6></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="soli_gerente.php">Solicitar "Gerente"</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active" aria-current="page" href="soli_gerente.php"><h6>Solicitar "Gerente"</h6></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item dropdown ">
                     <a class="nav-link" href="../Nosotros.php">
                         <i class='bx bx-search-alt'></i>
                         Conócenos
@@ -403,18 +56,17 @@ body, html {
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#" id="btn-open-perfil">Ver Perfil</a></li>
-                        <li><a class="dropdown-item" href="../perfil/cambiarcontraperfil.php">Cambiar Contraseña</a></li>
                         <li><a class="dropdown-item" href="../../useCase/logOut.php">Cerrar Sesión</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="resena.php">Reseñas</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active" aria-current="page" href="resena.php"><h6>Reseñas</h6></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="respuesta_citas.php">Citas enviadas</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active" aria-current="page" href="respuesta_citas.php"><h6>Citas enviadas</h6></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="ver_recibos.php">Ver mis recibos</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active" aria-current="page" href="ver_recibos.php"><h6>Ver mis recibos</h6></a>
                 </li>
             </ul>
         </div>
@@ -522,7 +174,7 @@ body, html {
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2023 AutoSplash. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Glow Drive. Todos los derechos reservados.</p>
     </div>
 </footer>
 </body>

@@ -127,27 +127,31 @@ html, body {
         margin: 10px 0; /* Espaciado vertical entre los elementos de navegación */
     }
 }
-
-
+h6{
+    color: #f2f0d9;
+}
 .app-description-container {
     text-decoration-color: black;
-    font-weight: 700; /* Otras opciones: 100, 200, 300, 400 (normal), 500, 600, 700 (bold), 800, 900 */
+    font-weight: 700;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
-    background-color: rgba(0, 0, 0, 0.208); /* Negro con 34.9% de opacidad */
-    height: 100%; /* Asegura que el contenedor tenga al menos la altura de la ventana del navegador */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    align-items: flex-start; /* Cambiado a 'flex-start' para reducir la altura y evitar el centrado vertical completo */
+    padding: 20px; /* Reducido para disminuir la altura del contenedor */
+    background-color: rgba(0, 0, 0, 0.208);
+    height: auto; /* Permite que la altura se ajuste al contenido */
+    min-height: 50vh; /* Altura mínima del 50% de la ventana del navegador */
+    width: 100%;
 }
 
 .content-wrapper {
     max-width: 1000px;
+    height: auto; /* Permite que la altura sea flexible y se ajuste al contenido */
     text-align: center;
-    background: rgba(255, 255, 255, 0.9); 
+    background: #f2f0d9d3;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
 
 .app-title {
@@ -170,9 +174,8 @@ html, body {
 }
 
 .app-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
     border-radius: 10px;
 }
 
@@ -186,9 +189,14 @@ html, body {
     }
 
     .content-wrapper {
-        padding: 5px;
+        padding: 10px; /* Ajustado para pantallas más pequeñas */
+    }
+
+    .app-description-container {
+        padding: 10px; /* Ajustado para pantallas más pequeñas */
     }
 }
+
 
 .footer {
     background-color: #003366; 
@@ -274,4 +282,3 @@ html, body {
         max-height: 90px; /* Ajuste en el tamaño para pantallas pequeñas */
     }
 }
-
