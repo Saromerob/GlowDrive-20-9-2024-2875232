@@ -1,17 +1,30 @@
-body, html {
-    background-image: url('../../img/fondo.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
+    background-image: url('../../img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Fija la imagen para que no se mueva al hacer scroll */
+    background-position: center; /* Centra la imagen de fondo */
+    position: relative; /* Asegura que el pseudo-elemento se posicione correctamente */
 }
 
 
+
 .custom-navbar {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad del 50% */
+    background-color:rgba(0, 0, 0, 0.694); /* Fondo negro con opacidad del 50% */
+    backdrop-filter: blur(80px); /* Desenfoque del fondo */
+    box-shadow: 0px 1px 2px black;
+    height: 90px;
     padding: 10px 20px;
+    position: fixed; /* Fija el navbar en la parte superior */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
 }
 
 .navbar-brand {
@@ -23,12 +36,24 @@ body, html {
     width: 70px;
     height: 60px;
     border-radius: 50%;
+    border: 3px solid  #18282e; 
 }
 
 .navbar-title {
-    margin: 0 20px; 
-    font-size: 1.5rem;
-    color: #fff;
+    border: 4px solid #18282e; /* Reducir el grosor del borde */
+    font-weight: 200px; /* Hacer el texto aún más negrita */
+    background-color: #f2f0d9;
+    border-radius: 25px; /* Puedes ajustar el redondeo si lo deseas */
+    margin: 0 20px;
+    font-size: 1rem;
+    color: #18282e;
+    padding: 5px 10px; /* Reducir el padding para achicar el fondo */
+}
+h3{
+    font-weight: 700;
+}
+h6{
+    color: #f2f0d9;
 }
 
 .navbar-toggler {
@@ -50,16 +75,19 @@ body, html {
 }
 
 .nav-item {
-    margin: 0 20px; /* Espaciado uniforme entre los elementos de navegación */
+    margin: 0 15px; /* Espaciado uniforme entre los elementos de navegación */
 }
 
 .nav-link {
-    color: #fff;
+    border: 3px solid  #f2f0d9;
+    color:  #f2f0d9;
     font-size: 1rem;
     padding: 8px 10px;
     display: flex;
     align-items: center;
     text-decoration: none; /* Evita el subrayado en los enlaces */
+    border-radius: 20px; /* Bordes redondeados para cada opción */
+    background-color: #18282ecc; 
 }
 
 .nav-link i {
@@ -67,21 +95,34 @@ body, html {
 }
 
 .nav-link:hover {
-    color: #ffcc00;
+    color: #041e2bbe;
+    background-color: rgba(10, 73, 125, 0.719); 
 }
 
 @media (max-width: 768px) {
     .navbar-title {
         font-size: 1.2rem;
+        margin: 0 5px;
     }
 
     .nav-link {
         font-size: 0.9rem;
-        padding: 10px 0;
+        padding: 10px 15px; /* Aumenta el padding para hacer el fondo más largo */
     }
 
     .navbar-collapse {
-        display: block;
+        display: flex;
+        flex-direction: column; /* Muestra las opciones en columna en pantallas pequeñas */
+        background-color: rgba(0, 0, 0, 0.95); /* Fondo más oscuro y ligeramente transparente */
+        width: 100%;
+        border-radius: 10px; /* Bordes redondeados para el menú desplegable */
+        transition: max-height 0.3s ease; /* Animación suave para el despliegue y recogida */
+        overflow: -moz-hidden-unscrollable; /* Oculta el contenido desbordado durante la animación */
+        max-height: 0; /* Inicialmente colapsado */
+    }
+
+    .navbar-collapse.show {
+        max-height: 1000px; /* Ajusta el valor según la altura del contenido. Asegúrate de que sea lo suficientemente alto para todo el contenido */
     }
 
     .navbar-nav {

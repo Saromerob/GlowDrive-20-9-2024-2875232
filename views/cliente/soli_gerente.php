@@ -224,31 +224,32 @@ $userId = $result['id'];
         </nav>
 
         <!-- Formulario de solicitud -->
-        <form action="" method="POST">
-            <h1>Estás a punto de solicitar el cambio de rol a gerente. Confirma si deseas proceder.</h1>
+        <form action="proseso_cam_rol.php" method="POST">
+    <h1>Estás a punto de solicitar el cambio de rol a gerente. Confirma si deseas proceder.</h1>
 
-            <label for="email">Ingrese su correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
+    <label for="email">Ingrese su correo electrónico:</label>
+    <input type="email" id="email" name="email" required>
 
-            <label for="nombres">Nombres:</label>
-            <input type="text" id="nombres" name="nombres" required>
+    <label for="nombres">Nombres:</label>
+    <input type="text" id="nombres" name="nombres" required>
 
-            <label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" required>
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" required>
 
-            <label for="direccion">Dirección del autolavado:</label>
-            <input type="text" id="direccion" name="direccion" required>
+    <label for="direccion">Dirección del autolavado:</label>
+    <input type="text" id="direccion" name="direccion" required>
 
-            <!-- Checkbox para los términos y condiciones -->
-            <div>
-                <input type="checkbox" id="terms" name="terms" required>
-                <label for="terms">Acepto los <a href="terminos.php" target="_blank">términos y condiciones</a></label>
-            </div>
+    <!-- Checkbox para los términos y condiciones -->
+    <div>
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">Acepto los <a href="terminos.php" target="_blank">términos y condiciones</a></label>
+    </div>
 
-            <input type="hidden" name="user_id" value="<?php echo $userId; ?>">
-            <input type="hidden" name="requested_role_id" value="1">
-            <button type="submit" name="confirm">Confirmar Solicitud</button>
-        </form>
+    <input type="hidden" name="user_id" value="<?php echo htmlspecialchars($userId); ?>">
+    <input type="hidden" name="requested_role_id" value="1">
+    <button type="submit" name="confirm">Confirmar Solicitud</button>
+</form>
+
 
         <footer class="footer">
             <div class="footer-container">

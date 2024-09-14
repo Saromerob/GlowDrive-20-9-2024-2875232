@@ -7,7 +7,6 @@
     <title>Página de Inicio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/Estilos3.css">
     <link rel="stylesheet" href="../styles/paginaInicioGerente.css">
     <?php
     session_start();
@@ -39,19 +38,19 @@
                     <!-- Menú centralizado -->
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="citas_pendientes.php">Citas Pendientes</a>
+                            <a class="nav-link active" aria-current="page" href="citas_pendientes.php"><h6>Citas Pendientes</h6></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="registro_autolavado.php">Registra tu Autolavado</a>
+                            <a class="nav-link active" aria-current="page" href="registro_autolavado.php"><h6>Registra tu Autolavado</h6></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="agg_servicios.php">Agrega Servicios</a>
+                            <a class="nav-link active" aria-current="page" href="agg_servicios.php"><h6>Agrega Servicios</h6></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="perfil_autol.php">Perfil Autolavado</a>
+                            <a class="nav-link active" aria-current="page" href="perfil_autol.php"><h6>Perfil Autolavado</h6></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../perfil/cambiarcontragerente.php">Cambiar Contraseña</a>
+                            <a class="nav-link active" aria-current="page" href="../perfil/cambiarcontragerente.php"><h6>Cambiar Contraseña</h6></a>
                         </li>
                     </ul>
         
@@ -119,7 +118,8 @@
         </script>
         <br><br>
     </div>
-
+    <br><br>
+    <br><br>
     <!-- Footer -->
 <footer class="footer">
     <div class="footer-container">
