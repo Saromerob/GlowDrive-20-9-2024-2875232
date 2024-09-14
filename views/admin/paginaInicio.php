@@ -53,7 +53,7 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
                             Autolavados</h6></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="public_map.php"><h6>Ver Autolavados
+                        <a class="nav-link active" aria-current="page" href="public_map.php"><h6>
                             aprobados
                             en el mapa</h6></a>
                     </li>
@@ -106,8 +106,7 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
     </div>
 </div>
 
-<br>
-</div>
+
 
 
 

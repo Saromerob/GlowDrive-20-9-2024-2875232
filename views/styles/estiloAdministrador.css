@@ -1,0 +1,288 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background-image: url('../../img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.custom-navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(80px);
+    box-shadow: 0px 1px 2px black;
+    height: 90px;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 70px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #18282e;
+}
+
+.navbar-title {
+    border: 4px solid #18282e;
+    font-weight: bold;
+    background-color: #f2f0d9;
+    border-radius: 25px;
+    margin: 0 20px;
+    font-size: 1rem;
+    color: #18282e;
+    padding: 5px 10px;
+}
+
+/* Botón de Cerrar Sesión */
+.logout-button {
+    background-color: #18282e;
+    color: #f2f0d9;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: rgba(10, 73, 125, 0.8);
+    color: #fff;
+}
+
+.user-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+/* Alinea el botón a la derecha */
+.navbar-nav {
+    margin-left: auto;
+}
+
+
+
+
+.welcome {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.form-container {
+    background-color: #18282e; /* Color de fondo del formulario */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    margin-bottom: 50px;
+    display: inline-block;
+    backdrop-filter: blur(20px);
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="date"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #18282e; /* Border color */
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #f2f0d9; /* Background input */
+    color: #18282e; /* Text color */
+}
+
+.form-container input[type="submit"] {
+    background-color: #6c8487; /* Botón color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #9faba7;
+}
+
+/* Tabla */
+table {
+    width: 100%; /* Responsive width */
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+    color: #f2f0d9;
+    font-size: 0.9em; /* Tamaño de texto ajustable */
+}
+
+th, td {
+    border: 1px solid #74746b; /* Color de borde */
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #18282e; /* Header color */
+}
+
+td {
+    background-color: #858e86; /* Celda color */
+}
+
+.btn {
+    background-color: #c1cac3;
+    color: #071a31;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #9faba7;
+}
+
+.logout-btn {
+    background-color: #6c8487;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.logout-btn:hover {
+    background-color: #9faba7;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .form-container input[type="text"],
+    .form-container input[type="number"],
+    .form-container input[type="email"],
+    .form-container input[type="password"],
+    .form-container input[type="date"] {
+        width: 100%; /* Aumenta el ancho en pantallas pequeñas */
+    }
+    
+    table {
+        font-size: 0.8em; /* Reducir el tamaño de texto en pantallas pequeñas */
+    }
+
+    .container {
+        padding: 20px; /* Reduce el padding para pantallas pequeñas */
+    }
+
+    .welcome {
+        font-size: 2em;
+    }
+}
+
+
+.footer {
+    background-color: #003366; 
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    width: 110px;
+    height: 110px; 
+    width: auto;
+    border-radius: 50%; /* Imágenes redondas */
+    border: 4px solid  #9faba7; 
+}
+
+.footer-about {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-about h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-about p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.footer-social {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-social h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    color: #f2f0d9;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icon img {
+    color: #f2f0d9;
+    height: 40px; /* Tamaño reducido para las imágenes sociales */
+    width: 40px; /* Tamaño reducido para las imágenes sociales */
+    border-radius: 50%; /* Imágenes redondas */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #002244; /* Color de la línea superior */
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-logo, .footer-about, .footer-social {
+        margin-bottom: 20px;
+    }
+
+    .footer-logo img, .social-icon img {
+        max-height: 90px; /* Ajuste en el tamaño para pantallas pequeñas */
+    }
+}
+
