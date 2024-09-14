@@ -2,160 +2,91 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     background: url('../../img/fondo.jpg') no-repeat center center fixed;
     background-size: cover;
+    font-family: 'Poppins', sans-serif;
 }
-
-
-
-
-.alert {
-    padding: 15px;
-    margin: 10px 0;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    opacity: 1;
-    transition: opacity 3s ease-out;
-}
-
-/* Estilo para el mensaje de éxito */
-.alert-success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-}
-
-/* Estilo para el mensaje de error */
-.alert-danger {
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-}
-
-/* Animación para desvanecer el mensaje */
-.fade-out {
-    animation: fadeOut 3s ease-out forwards;
-}
-
-/* Definición de la animación */
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-.wrapper {
-    width: 90%;
-    max-width: 420px;
-    backdrop-filter: blur(80px);
-    box-shadow: 7px 13px 37px #000;
-    border-radius: 20px;
-    padding: 20px;
-    margin: 20px auto;
-}
-
-.wrapper h1 {
-    font-size: 2rem; /* Ajusta el tamaño de fuente para que sea proporcional */
+.contenedor
+{
+    align-items: center;
     text-align: center;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
 }
+img
+{
+    border-radius: 50%;
+    height: 200px;
+}
+a
+{
+    text-decoration: none;
+}
+.wrapper
+{
+    width: 420px;
+    background: transparent;
+    backdrop-filter: blur(80px);
+    border-radius: 20px;
+    padding: 30px 40px;
 
-.wrapper .input-box {
-    position: relative;
+}
+.wrapper h1
+{
+    font-size: 36px;
+    text-align: center;
+}
+.wrapper .input-box
+{
     width: 100%;
     height: 50px;
-    margin: 20px 0;
+    margin: 30px 0;
 }
-
-.input-box input {
+.input-box input
+{
     width: 100%;
     height: 100%;
+    border: none;
     background: transparent;
     border: 2px solid black;
-    border-radius: 40px;
-    font-size: 1rem;
-    padding: 10px 20px;
     outline: none;
+    border-radius: 40px;
+    padding: 20px 45px 20px 45px;
+    font-size: 16px;
 }
-
-.input-box input::placeholder {
+.input-box input::placeholder
+{
     color: black;
 }
 
 .input-box i {
     position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.25rem;
+    font-size: 20px;
+    top: 68%;
+    left: 12px;
 }
 
-.wrapper .Recuerdame {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    margin: 10px 0;
-}
-
-.Recuerdame label input {
-    accent-color: black;
-    margin-right: 3px;
-}
-
-.Recuerdame a {
-    text-decoration: underline;
-}
-
-.wrapper .btn {
+.wrapper .btn
+{
     width: 100%;
     height: 45px;
-    background: #b3c5bf;
+    background-color: white;
     border: none;
+    outline: none;
     border-radius: 40px;
-    box-shadow: 7px 13px 37px #000;
+    box-shadow: 0 0 10px black;
     cursor: pointer;
-    font-size: 1rem;
-    color: #333;
-    font-weight: 600;
-    text-align: center;
-}
-
-.wrapper .register-link {
-    font-size: 0.9rem;
-    text-align: center;
-    margin: 20px 0;
-}
-
-.register-link p a {
+    font-size: 16px;
     color: black;
-    text-decoration: none;
     font-weight: 600;
 }
 
-.register-link p a:hover {
-    text-decoration: underline;
-}
 
-.LogoRegistro {
-    height: 120px;
-    border-radius: 50%;
-    border: 3px solid #18282e;
-    display: block;
-    margin: 0 auto; /* Asegura que la imagen esté centrada */
-}
 
-.contenedor-principal {
-    flex: 1; /* Permite que el contenedor principal expanda para empujar el footer hacia abajo */
-}
 
 /* Media Query para pantallas pequeñas */
 @media (max-width: 650px) {
