@@ -39,31 +39,19 @@ if ($result) {
     <title>Registro Gerente</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/Estilos7.css">
 </head>
 
 <body>
     <div class="contenedor-principal">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="registro_autolavado.php">
-                    <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
-                    <div class="titulo">GLOW-DRIVE</div>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item conos">
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+        <!-- Logo y Título -->
+        <a class="navbar-brand" href="paginaInicio.php">
+            <img src="../../img/logo.jpeg" alt="Logo" class="logot">
+            <span class="navbar-title">GLOW-DRIVE</span>
+        </a>
+    </div>
+</nav>
         <br>
 
         <?php 
@@ -85,167 +73,16 @@ if ($autolavado) {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Términos y Condiciones - GLOWDRIVER</title>
-            <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #f0f8ff;
-                margin: 0;
-                padding: 0;
-            }
-
-            .container {
-                width: 80%;
-                margin: 20px auto;
-                padding: 20px;
-                background-color: white;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                border-radius: 10px;
-            }
-
-    .logo {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    border-radius: 50%; /* Hace que el borde sea circular */
-    border: 5px solid grey; /* Borde gris de 5px */
-}
-
-    .logo img {
-    max-width: 200px; /* Tamaño máximo de la imagen */
-    border-radius: 50%; /* Hace que el borde sea circular */
-    border: 5px solid grey; /* Borde gris de 5px */
-}
-
-
-            .terminos-condiciones h2 {
-                color: #0077b6;
-                /* Azul océano */
-                text-align: center;
-                font-size: 28px;
-            }
-
-            .terminos-condiciones p {
-                font-size: 16px;
-                line-height: 1.6;
-                color: #333;
-            }
-
-            .terminos-condiciones h3 {
-                color: #023e8a;
-                margin-top: 20px;
-            }
-
-            .terminos-condiciones ul {
-                margin-left: 20px;
-                color: #333;
-            }
-
-            .terminos-condiciones ul li {
-                margin-bottom: 10px;
-            }
-
-            /* Botones y estilo de los enlaces */
-            .terminos-condiciones a {
-                color: #0077b6;
-                text-decoration: none;
-            }
-
-            .terminos-condiciones a:hover {
-                text-decoration: underline;
-            }
-
-
-
-            .footer {
-    background-color: #003366; 
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-}
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-logo img {
-    max-height: 60px; /* Tamaño reducido para las imágenes */
-    width: auto;
-    border-radius: 50%; /* Imágenes redondas */
-}
-
-.footer-about {
-    flex: 1;
-    margin: 20px;
-}
-
-.footer-about h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.footer-about p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.footer-social {
-    flex: 1;
-    margin: 20px;
-}
-
-.footer-social h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.social-icon img {
-    height: 40px; /* Tamaño reducido para las imágenes sociales */
-    width: 40px; /* Tamaño reducido para las imágenes sociales */
-    border-radius: 50%; /* Imágenes redondas */
-}
-
-.footer-bottom {
-    margin-top: 20px;
-    border-top: 1px solid #002244; /* Color de la línea superior */
-    padding-top: 10px;
-    font-size: 14px;
-}
-
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-    }
-
-    .footer-logo, .footer-about, .footer-social {
-        margin-bottom: 20px;
-    }
-
-    .footer-logo img, .social-icon img {
-        max-height: 50px; /* Ajuste en el tamaño para pantallas pequeñas */
-    }
-}
-            </style>
+            <link rel="stylesheet" href="../styles/regist_auto.css">
         </head>
 
         <body>
             <div class="container">
+            <center><h1>Ya tienes un autolavado registrado.</h1></center>
                 <!-- Logo de GLOWDRIVER -->
                 <div class="logo">
                     <img src="../../img/logo.jpeg" alt="Logo de GLOWDRIVER">
                 </div>
-
                 <!-- Términos y condiciones -->
                 <div class="terminos-condiciones">
                     <h2>Términos y Condiciones para Gerentes Aceptados en GLOWDRIVER</h2>
@@ -311,28 +148,24 @@ if ($autolavado) {
                         plataforma. Es responsabilidad del gerente atender estas notificaciones y tomar las acciones
                         necesarias.
                     </p>
-                    <ul class="navbar-nav ms-auto">
+                </div>
+            </div>
+            <center><ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <div>
                                 <p class="ini">
-                                    <button type="button" class="btn btn-outline-light"
+                                    <button type="button" class="btn btn-outline-light btn-custom"
                                         onclick="window.location.href='paginaInicio.php';">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
-                                            <path fill-rule="evenodd"
-                                                d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
+                                            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
                                         </svg>
                                         Volver
                                     </button>
                                 </p>
                             </div>
                         </li>
-
-                    </ul>
-                </div>
-            </div>
+                    </ul></center>
         </body>
 
         </html>
@@ -391,7 +224,7 @@ if ($autolavado) {
         <footer class="footer">
     <div class="footer-container">
         <div class="footer-logo">
-            <a href="index.php">
+            <a href="paginaInicio.php">
                 <img src="../../img/logo.jpeg" alt="Logo AutoSplash">
             </a>
         </div>

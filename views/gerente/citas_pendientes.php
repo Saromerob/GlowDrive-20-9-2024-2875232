@@ -108,6 +108,10 @@ if (!$citas) {
         <form action="citas_aprobadas.php" method="post">
             <button type="submit" class="btn btn-primary mt-3">Ver Aprobados</button>
         </form>
+        <form action="paginaInicio.php">
+            <button type="submit" class="btn btn-primary mt-3">Volver</button>
+        </form>
+
     </div>
 
     <script>

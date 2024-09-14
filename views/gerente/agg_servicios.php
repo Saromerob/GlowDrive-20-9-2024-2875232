@@ -105,8 +105,6 @@ if ($result) {
                 <!-- Campo oculto para ID del usuario -->
                 <input type="hidden" name="usuario_id" value="<?php echo htmlspecialchars($userId); ?>">
 
-                <p class="controls">ID del usuario logueado: <?php echo htmlspecialchars($userId); ?></p>
-
                 <!-- Nombre -->
                 <label for="nombre">Nombre Servicio:</label>
                 <input name="nombre" id="nombre" class="controls" placeholder="Ingrese Servicio" required>
@@ -122,7 +120,6 @@ if ($result) {
 
                 <!-- Campo oculto para ID autolavado -->
                 <input type="hidden" name="autolavado_id" value="<?php echo htmlspecialchars($autolavadoId); ?>">
-                <p class="controls">ID del autolavado: <?php echo htmlspecialchars($autolavadoId); ?></p>
 
                 <!-- Botón de envío -->
                 <button type="submit" class="btn">AGREGAR</button>
