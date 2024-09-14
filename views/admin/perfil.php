@@ -5,7 +5,7 @@ $conn = $database->conectar();
 session_start();
 
 // Verificar si el usuario ha iniciado sesión y si tiene el rol correcto
-if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
+if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
     echo "<script>alert('No tienes permiso para acceder a esta página.'); window.location.href='../../useCase/logOut.php';</script>";
     exit;
 }
@@ -58,7 +58,7 @@ if (!$usuario) {
             <button onclick="location.href='../perfil/cambiarcontraperfil.php'">Cambiar Contraseña</button>
 
             <button onclick="location.href='../../useCase/logOut.php'">Cerrar Sesión</button>
-            <form action="fto_perfil.php" method="post" enctype="multipart/form-data" style="display: flex; flex-direction: column; align-items: center; margin-top: 20px;">
+            <form action="fto_admin.php" method="post" enctype="multipart/form-data" style="display: flex; flex-direction: column; align-items: center; margin-top: 20px;">
     <label for="foto" style="font-size: 16px; color: #0277bd; margin-bottom: 10px;">Subir nueva foto de perfil:</label>
     
     <!-- Contenedor personalizado -->
