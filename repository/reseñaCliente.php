@@ -40,13 +40,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bindParam(':fecha_creacion', $fechaCreacion, PDO::PARAM_STR);
 
     if ($stmt->execute()) {
-        echo "Reseña insertada correctamente.";
+        $_SESSION['success'] = "Reseña insertada correctamente.";
+        header('Location: ../views/cliente/resena.php');
+        exit();
         // Puedes redirigir a una página de confirmación o mostrar un mensaje.
     } else {
-        echo "Hubo un error al insertar la reseña.";
+        $_SESSION['error'] = "Hubo un error al insertar la reseña.";
+        header('Location: ../views/cliente/resena.php');
+        exit();
     }
 } else {
     die('Método de solicitud no válido.');
 }
 ?>
-

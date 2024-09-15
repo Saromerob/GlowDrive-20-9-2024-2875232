@@ -40,12 +40,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Ejecutar la consulta
         if ($stmt->execute()) {
-            echo "Servicio agregado exitosamente.";
+            $_SESSION['success'] = "Servicio agregado exitosamente.";
         } else {
-            echo "Error al agregar el servicio.";
+            $_SESSION['error'] = "Error al agregar el servicio.";
         }
     } else {
         echo "Por favor, complete todos los campos.";
     }
+    header('Location: agg_servicios.php');
+    exit();
 }
 ?>

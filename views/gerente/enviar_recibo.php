@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($resultado['total'] > 0) {
         // Si ya existe un recibo, no permitas enviar otro
-        echo "Ya se ha enviado un recibo para esta reserva.";
+        $_SESSION['error'] = "Ya se ha enviado un recibo para esta reserva.";
     } else {
         // Obtener los datos de la reserva, cita asociada y detalles del servicio
         $query = "SELECT reservas.*, usuarios.nombre AS nombre_usuario, usuarios.apellido AS apellido_usuario, 
@@ -66,9 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmtInsert->bindParam(':contenido', $reciboContenido, PDO::PARAM_STR);
         $stmtInsert->execute();
 
-        echo "Recibo enviado y guardado en la base de datos.";
+        $_SESSION['success'] = "Recibo enviado y guardado en la base de datos.";
     }
 }
 ?>
-
-
