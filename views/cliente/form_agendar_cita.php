@@ -128,24 +128,16 @@ if (!empty($result)) {
                     echo '<option value="">No hay autolavados disponibles</option>';
                 }
                 ?>
-                    </select>
-                </div>
+            </select>
+        </div>
 
-                <div class="input-box">
-                    <label for="servicio">Servicio:</label>
-                    <select name="servicio_id" class="controls" required>
-                        <option value="">Seleccione un servicio</option>
-                        <?php
-                if ($stmt_servicios->rowCount() > 0) {
-                    while($row = $stmt_servicios->fetch(PDO::FETCH_ASSOC)) {
-                        echo '<option value="' . $row['id'] . '">' . $row['nombre'] . '</option>';
-                    }
-                } else {
-                    echo '<option value="">No hay servicios disponibles</option>';
-                }
-                ?>
-                    </select>
-                </div>
+        <div class="input-box">
+            <label for="servicio">Servicio:</label>
+            <select name="servicio_id" id="servicio" class="controls" required>
+                <option value="">Seleccione un servicio</option>
+                <!-- Opciones de servicios se actualizarán aquí -->
+            </select>
+        </div>
 
                 <div class="input-box">
                     <label for="fecha">Fecha (YYYY-MM-DD):</label>
@@ -202,13 +194,6 @@ if (!empty($result)) {
                 <input type="submit" class="btn" value="Agendar Cita">
             </form>
         </div>
-
-        <div class="input-box">
-            <label for="comentarios">Comentarios:</label>
-            <textarea class="controls" id="comentarios" name="comentarios" placeholder="Ingresa Comentarios"></textarea>
-        </div>
-
-        <input type="submit" class="btn" value="Agendar Cita">
     </form>
     <script>
 // Capturar el cambio en el select de autolavado
