@@ -179,13 +179,13 @@ if (!empty($result)) {
 
         <br>
         <div class="wrapper">
-    <h1>Agendar Cita</h1>
+        <h1>Agendar Cita</h1>
     <form action="agendar_cita.php" method="POST">
         <input type="hidden" name="usuario_id" value="<?php echo $userId; ?>">
 
         <div class="input-box">
             <label for="autolavado">Autolavado:</label>
-            <select name="autolavado_id" class="controls" required>
+            <select name="autolavado_id" id="autolavado" class="controls" required>
                 <option value="">Seleccione un autolavado</option>
                 <?php
                 if ($stmt_autolavados->rowCount() > 0) {
@@ -201,17 +201,9 @@ if (!empty($result)) {
 
         <div class="input-box">
             <label for="servicio">Servicio:</label>
-            <select name="servicio_id" class="controls" required>
+            <select name="servicio_id" id="servicio" class="controls" required>
                 <option value="">Seleccione un servicio</option>
-                <?php
-                if ($stmt_servicios->rowCount() > 0) {
-                    while($row = $stmt_servicios->fetch(PDO::FETCH_ASSOC)) {
-                        echo '<option value="' . $row['id'] . '">' . $row['nombre'] . '</option>';
-                    }
-                } else {
-                    echo '<option value="">No hay servicios disponibles</option>';
-                }
-                ?>
+                <!-- Opciones de servicios se actualizarán aquí -->
             </select>
         </div>
 
@@ -268,6 +260,38 @@ if (!empty($result)) {
 
         <input type="submit" class="btn" value="Agendar Cita">
     </form>
+    <script>
+// Capturar el cambio en el select de autolavado
+document.getElementById('autolavado').addEventListener('change', function() {
+    var autolavadoId = this.value;
+
+    if (autolavadoId) {
+        // Hacer la llamada AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'obtener_servicios.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                var servicios = JSON.parse(xhr.responseText);
+                var servicioSelect = document.getElementById('servicio');
+                servicioSelect.innerHTML = '<option value="">Seleccione un servicio</option>';
+
+                // Agregar las nuevas opciones al select de servicios con nombre y precio
+                servicios.forEach(function(servicio) {
+                    var option = document.createElement('option');
+                    option.value = servicio.id;
+                    option.textContent = servicio.nombre + ' - $' + servicio.precio; // Mostrar nombre y precio
+                    servicioSelect.appendChild(option);
+                });
+            }
+        };
+        xhr.send('autolavado_id=' + autolavadoId);
+    } else {
+        // Si no se selecciona ningún autolavado, limpiar el select de servicios
+        document.getElementById('servicio').innerHTML = '<option value="">Seleccione un servicio</option>';
+    }
+});
+</script>
 </div>
 
 

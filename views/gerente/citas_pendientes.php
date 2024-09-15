@@ -45,14 +45,19 @@ $query = "SELECT
             usuarios.apellido AS apellido_cliente,
             citas.fecha, 
             citas.hora, 
-            citas.estado
+            citas.estado,
+            servicios.nombre AS nombre_servicio,
+            servicios.precio AS precio_servicio
         FROM 
             citas
         JOIN 
             usuarios ON citas.usuario_id = usuarios.id
+        JOIN 
+            servicios ON citas.servicio_id = servicios.id
         WHERE 
             citas.estado = 'pendiente' 
             AND citas.autolavado_id = :autolavado_id";
+
 $stmt = $conn->prepare($query);
 $stmt->bindParam(':autolavado_id', $autolavadoId, PDO::PARAM_INT);
 $stmt->execute();
@@ -81,7 +86,7 @@ if (!$citas) {
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>Servicio</th> <!-- Cambio: En lugar de "ID", ahora es "Servicio" -->
                     <th>Cliente</th>
                     <th>Fecha</th>
                     <th>Hora</th>
@@ -92,7 +97,7 @@ if (!$citas) {
             <tbody>
                 <?php foreach ($citas as $cita): ?>
                 <tr id="cita-<?php echo htmlspecialchars($cita['id']); ?>">
-                    <td><?php echo htmlspecialchars($cita['id']); ?></td>
+                    <td><?php echo htmlspecialchars($cita['nombre_servicio']) . ' - $' . htmlspecialchars($cita['precio_servicio']); ?></td> <!-- Mostrar nombre y precio del servicio -->
                     <td><?php echo htmlspecialchars($cita['nombre_cliente']) . " " . htmlspecialchars($cita['apellido_cliente']); ?></td>
                     <td><?php echo htmlspecialchars($cita['fecha']); ?></td>
                     <td><?php echo htmlspecialchars($cita['hora']); ?></td>
@@ -111,7 +116,6 @@ if (!$citas) {
         <form action="paginaInicio.php">
             <button type="submit" class="btn btn-primary mt-3">Volver</button>
         </form>
-
     </div>
 
     <script>
