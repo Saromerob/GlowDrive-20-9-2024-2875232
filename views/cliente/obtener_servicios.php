@@ -1,4 +1,3 @@
-
 <?php /*
 include_once '../../config/db.php';
 
@@ -73,6 +72,4 @@ if (isset($_POST['autolavado_id'])) {
 
 
 
-
 ?>
-
