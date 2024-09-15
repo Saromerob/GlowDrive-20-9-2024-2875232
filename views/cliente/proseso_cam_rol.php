@@ -96,15 +96,22 @@ $stmt = $pdo->prepare("SELECT id FROM role_requests WHERE user_id = ? AND status
 $stmt->execute([$userId]);
 
 if ($stmt->rowCount() > 0) {
-    echo "Ya tienes una solicitud pendiente.<br>";
+    $_SESSION['pendiente'] = "Ya tienes una solicitud pendiente.<br>";
+    header('Location: soli_gerente.php');
+    return 0; // No es un error, pero la solicitud ya está pendiente
 } else {
     // Insertar nueva solicitud en la tabla role_requests
     $stmt = $pdo->prepare("INSERT INTO role_requests (user_id, requested_role_id, status) VALUES (?, ?, 'pendiente')");
     if ($stmt->execute([$userId, $requested_role_id])) {
-        echo 'Solicitud enviada con éxito.<br>';
+        $_SESSION['success'] = 'Solicitud enviada con éxito.<br>';
+        header('Location: soli_gerente.php');
+        return 1; // Éxito
     } else {
         $errorInfo = $stmt->errorInfo();
-        echo "Error al enviar la solicitud: " . htmlspecialchars($errorInfo[2]) . "<br>";
+        $_SESSION['error'] = "Error al enviar la solicitud: " . htmlspecialchars($errorInfo[2]) . "<br>";
+        header('Location: soli_gerente.php');
+        return -5; // Código de error para fallo en la inserción
     }
+    exit();
 }
 ?>

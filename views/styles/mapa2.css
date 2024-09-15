@@ -1,0 +1,237 @@
+ body,
+ html {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Arial', sans-serif;
+ }
+
+ .custom-navbar {
+     background-color: rgba(0, 0, 0, 0.5);
+     /* Fondo negro con opacidad del 50% */
+     padding: 10px 20px;
+ }
+
+ .navbar-brand {
+     display: flex;
+     align-items: center;
+ }
+
+ .logo {
+     width: 70px;
+     height: 60px;
+     border-radius: 50%;
+ }
+
+ .navbar-title {
+     margin: 0 20px;
+     font-size: 1.5rem;
+     color: #fff;
+ }
+
+ .navbar-toggler {
+     border: none;
+ }
+
+ .navbar-collapse {
+     display: flex;
+     justify-content: center;
+     /* Centra las opciones de navegación */
+ }
+
+ .navbar-nav {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     margin: 0;
+     padding: 0;
+ }
+
+ .nav-item {
+
+     margin: 0 20px;
+     /* Espaciado uniforme entre los elementos de navegación */
+ }
+
+ .nav-link {
+     color: #fff;
+     font-size: 1rem;
+     padding: 8px 10px;
+     display: flex;
+     align-items: center;
+     text-decoration: none;
+     /* Evita el subrayado en los enlaces */
+ }
+
+ .nav-link i {
+     margin-right: 5px;
+ }
+
+ .nav-link:hover {
+     color: #ffcc00;
+ }
+
+ /* CSS para el comportamiento del menú desplegable */
+ .navbar-toggler {
+     border: none;
+ }
+
+ .navbar-collapse {
+     display: flex;
+     justify-content: center;
+ }
+
+ @media (max-width: 992px) {
+     .navbar-nav {
+         text-align: center;
+     }
+ }
+
+
+ @media (max-width: 768px) {
+     .navbar-title {
+         font-size: 1.2rem;
+     }
+
+     .nav-link {
+         font-size: 0.9rem;
+         padding: 10px 0;
+     }
+
+     .navbar-collapse {
+         display: block;
+     }
+
+     .navbar-nav {
+         flex-direction: column;
+         /* Ajusta la disposición para pantallas pequeñas */
+         align-items: center;
+     }
+
+     .nav-item {
+         margin: 10px 0;
+         /* Espaciado vertical entre los elementos de navegación */
+     }
+ }
+
+
+ .reviews-section {
+     margin: 20px auto;
+     max-width: 800px;
+     background: rgba(255, 255, 255, 0.9);
+     border-radius: 10px;
+     padding: 20px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+
+ .review {
+     border-bottom: 1px solid #ddd;
+     padding: 10px 0;
+ }
+
+ .review:last-child {
+     border-bottom: none;
+ }
+
+ h3 {
+     margin: 0;
+     color: #004080;
+     /* Azul marino */
+ }
+
+ p {
+     margin: 5px 0;
+ }
+
+
+ .footer {
+     background-color: #003366;
+     color: #fff;
+     padding: 40px 20px;
+     text-align: center;
+     font-family: 'Arial', sans-serif;
+ }
+
+ .footer-container {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     align-items: center;
+     max-width: 1200px;
+     margin: 0 auto;
+ }
+
+ .footer-logo img {
+     max-height: 60px;
+     /* Tamaño reducido para las imágenes */
+     width: auto;
+     border-radius: 50%;
+     /* Imágenes redondas */
+ }
+
+ .footer-about {
+     flex: 1;
+     margin: 20px;
+ }
+
+ .footer-about h2 {
+     font-size: 24px;
+     margin-bottom: 10px;
+ }
+
+ .footer-about p {
+     font-size: 16px;
+     line-height: 1.6;
+ }
+
+ .footer-social {
+     flex: 1;
+     margin: 20px;
+ }
+
+ .footer-social h2 {
+     font-size: 24px;
+     margin-bottom: 10px;
+ }
+
+ .social-icons {
+     display: flex;
+     justify-content: center;
+     gap: 10px;
+ }
+
+ .social-icon img {
+     height: 40px;
+     /* Tamaño reducido para las imágenes sociales */
+     width: 40px;
+     /* Tamaño reducido para las imágenes sociales */
+     border-radius: 50%;
+     /* Imágenes redondas */
+ }
+
+ .footer-bottom {
+     margin-top: 20px;
+     border-top: 1px solid #002244;
+     /* Color de la línea superior */
+     padding-top: 10px;
+     font-size: 14px;
+ }
+
+ @media (max-width: 768px) {
+     .footer-container {
+         flex-direction: column;
+     }
+
+     .footer-logo,
+     .footer-about,
+     .footer-social {
+         margin-bottom: 20px;
+     }
+
+     .footer-logo img,
+     .social-icon img {
+         max-height: 50px;
+         /* Ajuste en el tamaño para pantallas pequeñas */
+     }
+ }

@@ -71,13 +71,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Ejecutar la consulta
     if ($stmt->execute()) {
-        // Aquí podrías enviar una notificación al dueño del autolavado para que revise la nueva cita
-        // Esto depende de cómo tengas configuradas las notificaciones o los correos electrónicos en tu aplicación
-        
-        echo "AGENDAMIENTO EXITOSO";
+        $_SESSION['success'] = "Cita Agendada";
         exit();
     } else {
-        echo "Error al agendar la cita. Por favor, inténtalo de nuevo.";
+        $_SESSION['error'] ="Error al agendar la cita. Por favor, inténtalo de nuevo.";
+        exit();
     }
 }
 ?>

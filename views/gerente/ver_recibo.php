@@ -4,6 +4,8 @@ session_start();
 
 if (!isset($_GET['reserva_id'])) {
     die('Reserva no especificada.');
+    header("Location: ver_recibo.php");
+    exit();
 }
 
 $reservaId = $_GET['reserva_id'];
@@ -33,81 +35,40 @@ if (!$reserva) {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Aquí puedes incluir el CSS necesario para el estilo de las alertas -->
+    <link rel="stylesheet" href="path/to/your/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/recibo.css">
     <title>Recibo de Reserva</title>
-    <style>
-        body, html {
-    background-image: url('../../img/fondo.jpg');
-    background-repeat: no-repeat;
-    background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
-    background-position: center; /* Centra la imagen de fondo */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-
-        .contenedor-recibo {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            width: 100%;
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        p {
-            font-size: 16px;
-            margin: 10px 0;
-        }
-
-        p strong {
-            color: #555;
-        }
-
-        h2 {
-            color: #ffb24d;
-            text-align: center;
-            margin-top: 30px;
-            font-size: 22px;
-        }
-
-        .boton-enviar {
-            background-color: #007bff; /* Azul */
-            color: #fff;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            display: block;
-            margin: 20px auto;
-            width: 100%;
-            transition: background-color 0.3s ease;
-        }
-
-        .boton-enviar:hover {
-            background-color: #28a745; /* Verde al pasar el mouse */
-        }
-    </style>
 </head>
+
 <body>
+    <?php
+        // Mostrar el mensaje de éxito
+        if (isset($_SESSION['success'])) {
+            echo '<div class="alert alert-success fade-out">' . $_SESSION['success'] . '</div>';
+            unset($_SESSION['success']); // Borra el mensaje después de mostrarlo
+        }
+
+        // Mostrar el mensaje de error
+        if (isset($_SESSION['error'])) {
+            echo '<div class="alert alert-danger fade-out">' . $_SESSION['error'] . '</div>';
+            unset($_SESSION['error']); // Borra el mensaje después de mostrarlo
+        }
+    ?>
     <div class="contenedor-recibo">
         <h1>Recibo de Reserva</h1>
-        <p><strong>Cliente:</strong> <?php echo htmlspecialchars($reserva['nombre_usuario']) . " " . htmlspecialchars($reserva['apellido_usuario']); ?></p>
+        <p><strong>Cliente:</strong>
+            <?php echo htmlspecialchars($reserva['nombre_usuario']) . " " . htmlspecialchars($reserva['apellido_usuario']); ?>
+        </p>
         <p><strong>Autolavado:</strong> <?php echo htmlspecialchars($reserva['nombre_autolavado']); ?></p>
-        <p><strong>Fecha de la cita:</strong> <?php echo htmlspecialchars($reserva['cita_fecha']) . " " . htmlspecialchars($reserva['cita_hora']); ?></p>
+        <p><strong>Fecha de la cita:</strong>
+            <?php echo htmlspecialchars($reserva['cita_fecha']) . " " . htmlspecialchars($reserva['cita_hora']); ?></p>
         <p><strong>Placa del vehículo:</strong> <?php echo htmlspecialchars($reserva['placa']); ?></p>
         <p><strong>Estado:</strong> <?php echo htmlspecialchars($reserva['estado']); ?></p>
 
@@ -118,12 +79,13 @@ if (!$reserva) {
 
         <form action="enviar_recibo.php" method="POST">
             <input type="hidden" name="reserva_id" value="<?php echo $reserva['id']; ?>">
-            <input type="hidden" name="nombre_usuario" value="<?php echo htmlspecialchars($reserva['nombre_usuario']); ?>">
-            <input type="hidden" name="apellido_usuario" value="<?php echo htmlspecialchars($reserva['apellido_usuario']); ?>">
+            <input type="hidden" name="nombre_usuario"
+                value="<?php echo htmlspecialchars($reserva['nombre_usuario']); ?>">
+            <input type="hidden" name="apellido_usuario"
+                value="<?php echo htmlspecialchars($reserva['apellido_usuario']); ?>">
             <button type="submit" class="boton-enviar">Enviar recibo</button>
         </form>
     </div>
 </body>
+
 </html>
-
-

@@ -1,29 +1,39 @@
 /* Estilos generales del html y body */
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-    background-image: url('../../img/fondo.jpg'); /* Ruta de tu imagen de fondo */
+    background-image: url('../../img/fondo.jpg');
+    /* Ruta de tu imagen de fondo */
     background-repeat: no-repeat;
-    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
-    background-attachment: fixed; /* Fija la imagen para que no se mueva al hacer scroll */
-    background-position: center; /* Centra la imagen de fondo */
+    background-size: cover;
+    /* Asegura que la imagen cubra toda la pantalla */
+    background-attachment: fixed;
+    /* Fija la imagen para que no se mueva al hacer scroll */
+    background-position: center;
+    /* Centra la imagen de fondo */
 }
 
 /* Estilos del navbar */
 .custom-navbar {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad del 50% */
-    backdrop-filter: blur(80px); /* Desenfoque del fondo */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo negro con opacidad del 50% */
+    backdrop-filter: blur(80px);
+    /* Desenfoque del fondo */
     box-shadow: 0px 1px 2px black;
     height: 90px;
     padding: 10px 20px;
-    position: fixed; /* Fija el navbar en la parte superior */
-    width: 100%; /* Asegura que ocupe todo el ancho */
+    position: fixed;
+    /* Fija el navbar en la parte superior */
+    width: 100%;
+    /* Asegura que ocupe todo el ancho */
     top: 0;
     left: 0;
-    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    z-index: 1000;
+    /* Asegura que esté encima de otros elementos */
 }
 
 .navbar-brand {
@@ -35,7 +45,7 @@ html, body {
     width: 70px;
     height: 60px;
     border-radius: 50%;
-    border: 3px solid #9faba7; 
+    border: 3px solid #9faba7;
 }
 
 .navbar-title {
@@ -54,7 +64,8 @@ html, body {
 
 .navbar-collapse {
     display: flex;
-    justify-content: center; /* Centra las opciones de navegación */
+    justify-content: center;
+    /* Centra las opciones de navegación */
 }
 
 .navbar-nav {
@@ -67,7 +78,8 @@ html, body {
 }
 
 .nav-item {
-    margin: 0 15px; /* Espaciado uniforme entre los elementos de navegación */
+    margin: 0 15px;
+    /* Espaciado uniforme entre los elementos de navegación */
 }
 
 .nav-link {
@@ -77,8 +89,10 @@ html, body {
     padding: 8px 10px;
     display: flex;
     align-items: center;
-    text-decoration: none; /* Evita el subrayado en los enlaces */
-    border-radius: 20px; /* Bordes redondeados para cada opción */
+    text-decoration: none;
+    /* Evita el subrayado en los enlaces */
+    border-radius: 20px;
+    /* Bordes redondeados para cada opción */
     background-color: #18282ecc;
 }
 
@@ -94,13 +108,16 @@ html, body {
 /* Estilos del wrapper (formulario) */
 .wrapper {
     max-width: 600px;
-    margin: 100px auto 0; /* Asegura un margen suficiente desde la parte superior para el navbar */
+    margin: 100px auto 0;
+    /* Asegura un margen suficiente desde la parte superior para el navbar */
     padding: 20px;
-    background: rgba(0, 0, 0, 0.7); /* Fondo negro transparente */
+    background: rgba(0, 0, 0, 0.7);
+    /* Fondo negro transparente */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     color: #fff;
-    position: relative; /* Asegura que el formulario esté posicionado correctamente sobre la imagen de fondo */
+    position: relative;
+    /* Asegura que el formulario esté posicionado correctamente sobre la imagen de fondo */
 }
 
 /* Estilos del encabezado */
@@ -113,7 +130,8 @@ html, body {
 
 /* Estilos de los campos del formulario */
 .input-box {
-    margin-bottom: 15px; /* Ajustado para un mejor espaciado */
+    margin-bottom: 15px;
+    /* Ajustado para un mejor espaciado */
 }
 
 .input-box label {
@@ -173,5 +191,97 @@ textarea.controls {
     .btn {
         padding: 12px;
         font-size: 14px;
+    }
+
+}
+
+.footer {
+    background-color: #003366;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    max-height: 60px;
+    /* Tamaño reducido para las imágenes */
+    width: auto;
+    border-radius: 50%;
+    /* Imágenes redondas */
+}
+
+.footer-about {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-about h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-about p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.footer-social {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-social h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icon img {
+    height: 40px;
+    /* Tamaño reducido para las imágenes sociales */
+    width: 40px;
+    /* Tamaño reducido para las imágenes sociales */
+    border-radius: 50%;
+    /* Imágenes redondas */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #002244;
+    /* Color de la línea superior */
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-logo,
+    .footer-about,
+    .footer-social {
+        margin-bottom: 20px;
+    }
+
+    .footer-logo img,
+    .social-icon img {
+        max-height: 50px;
+        /* Ajuste en el tamaño para pantallas pequeñas */
     }
 }
