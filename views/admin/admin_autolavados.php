@@ -30,16 +30,17 @@ $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
     <h1>Administrar Autolavados</h1>
     <div id="map" align="center"></div><br><br>
     <div class="form-dk">
-    <form id="updateForm" method="POST" action="procesar_autolavado.php">
-        <input type="hidden" name="id" id="autolavadoId">
-        <p>Nombre: <input type="text" name="nombre" id="nombre"></p><br>
-        <p>Dirección: <input type="text" name="direccion" id="direccion"></p><br>
-        <p>Localidad: <input type="text" name="localidad" id="localidad"></p><br>
-        <label>Latitud: <input type="text" name="latitud" id="latitud"></label><br><br>
-        <label>Longitud: <input type="text" name="longitud" id="longitud"></label><br><br>
-        <label>Aprobar: <input type="checkbox" name="aprobado" id="aprobado"></label><br>
-        <br> <input type="submit" name="guardar" value="Guardar">
-    </form>
+        <form id="updateForm" method="POST" action="procesar_autolavado.php">
+            <input type="hidden" name="id" id="autolavadoId">
+            <p>Nombre: <input type="text" name="nombre" id="nombre" readonly></p><br>
+            <!-- Estos campos han sido eliminados del formulario -->
+            <!-- <p>Dirección: <input type="text" name="direccion" id="direccion"></p><br>
+            <p>Localidad: <input type="text" name="localidad" id="localidad"></p><br> -->
+            <label>Latitud: <input type="text" name="latitud" id="latitud"></label><br><br>
+            <label>Longitud: <input type="text" name="longitud" id="longitud"></label><br><br>
+            <label>Aprobar: <input type="checkbox" name="aprobado" id="aprobado"></label><br>
+            <br> <input type="submit" name="guardar" value="Guardar">
+        </form>
     </div>
 
     <?php
@@ -51,7 +52,7 @@ $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
 
         if ($statement) {
             echo '<table border="2">
-                <tr >
+                <tr>
                     <th>ID</th>
                     <th>NOMBRE</th>
                     <th>DIRECCION</th>
@@ -113,7 +114,8 @@ $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
 
         var autolavados = <?php echo json_encode($autolavados); ?>;
         autolavados.forEach(function(autolavado) {
-            if (autolavado.latitud && autolavado.longitud) {
+            // Solo añadir al mapa los autolavados aprobados
+            if (autolavado.aprobado == 1 && autolavado.latitud && autolavado.longitud) {
                 var marker = L.marker([autolavado.latitud, autolavado.longitud]).addTo(map)
                     .bindPopup(autolavado.nombre + '<br>' + autolavado.direccion)
                     .on('click', function() {
@@ -121,9 +123,8 @@ $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
                         document.getElementById('latitud').value = autolavado.latitud;
                         document.getElementById('longitud').value = autolavado.longitud;
                         document.getElementById('aprobado').checked = autolavado.aprobado == 1;
-                        document.getElementById('nombre').textContent = autolavado.nombre;
-                        document.getElementById('direccion').textContent = autolavado.direccion;
-                        document.getElementById('localidad').textContent = autolavado.localidad_id;
+                        document.getElementById('nombre').value = autolavado.nombre; // Se ha cambiado textContent por value
+                        // Dirección y localidad no se deben modificar, así que no se actualizan
                     });
             }
         });
@@ -135,16 +136,14 @@ $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
 
         function editarAutolavado(autolavado) {
             document.getElementById('autolavadoId').value = autolavado.id;
-            document.getElementById('nombre').textContent = autolavado.nombre;
-            document.getElementById('direccion').textContent = autolavado.direccion;
-            document.getElementById('localidad').textContent = autolavado.localidad_id;
+            document.getElementById('nombre').value = autolavado.nombre; // Se ha cambiado textContent por value
             document.getElementById('latitud').value = autolavado.latitud;
             document.getElementById('longitud').value = autolavado.longitud;
             document.getElementById('aprobado').checked = autolavado.aprobado == 1;
         }
     </script>
     <form action="paginaInicio.php" method="post" style="display:inline;">
-                    <br>  <button type="submit" name="volverinicio">Volver</button>
-                </form>
+        <br>  <button type="submit" name="volverinicio">Volver</button>
+    </form>
 </body>
 </html>
