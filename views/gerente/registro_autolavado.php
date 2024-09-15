@@ -29,6 +29,16 @@ if ($result) {
     die("Error: Usuario no encontrado.");
 }
 ?>
+<?php
+// Consulta para obtener las localidades
+$sql = 'SELECT id, nombre FROM localidades';
+$stmt = $conn->query($sql);
+
+// Obtener los resultados en un array asociativo
+$localidades = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -39,6 +49,9 @@ if ($result) {
     <title>Registro Gerente</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/regist_autola.css">
+    <link rel="stylesheet" href="../styles/terminos.css">
+ 
 </head>
 
 <body>
@@ -52,6 +65,7 @@ if ($result) {
         </a>
     </div>
 </nav>
+
         <br>
 
         <?php 
@@ -66,23 +80,14 @@ if ($autolavado) {
     // El usuario ya tiene un autolavado registrado
     echo "<h1>Ya tienes un autolavado registrado.</h1>";
     ?>
-        <!DOCTYPE html>
-        <html lang="es">
-
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Términos y Condiciones - GLOWDRIVER</title>
-            <link rel="stylesheet" href="../styles/regist_auto.css">
-        </head>
-
-        <body>
+      <body>
             <div class="container">
             <center><h1>Ya tienes un autolavado registrado.</h1></center>
                 <!-- Logo de GLOWDRIVER -->
                 <div class="logo">
-                    <img src="../../img/logo.jpeg" alt="Logo de GLOWDRIVER">
+                    <img src="../../img/logo.jpeg" alt="Logo de GLOWDRIVER" class="logor">
                 </div>
+
                 <!-- Términos y condiciones -->
                 <div class="terminos-condiciones">
                     <h2>Términos y Condiciones para Gerentes Aceptados en GLOWDRIVER</h2>
@@ -174,47 +179,49 @@ if ($autolavado) {
 } else { // Permitir el registro del autolavado
 ?>
         <div class="wrapper">
-            <form action="registrar_autolavado.php" method="POST">
-                <img src="../../img/logo.jpeg" class="LogoRegistro" alt="Logo">
-                <h1>INGRESE DATOS PARA REGISTRO</h1>
+    <form action="regist_autol.php" method="POST">
+        <img src="../../img/logo.jpeg" class="LogoRegistro" alt="Logo">
+        <h1>INGRESE DATOS PARA REGISTRO</h1>
 
-                <!-- Campo oculto para ID del usuario -->
-                <input type="hidden" name="usuario_id" value="<?php echo htmlspecialchars($usuario_id); ?>">
+        <!-- Campo oculto para ID del usuario -->
+        <input type="hidden" name="usuario_id" value="<?php echo htmlspecialchars($userId); ?>">
 
-                <!-- Nombre -->
-                <label for="nombre">Nombre Autolavado:</label>
-                <input name="nombre" id="nombre" class="controls" placeholder="Ingrese nombre" required>
+        <!-- Nombre -->
+        <label for="nombre">Nombre Autolavado:</label>
+        <input name="nombre" id="nombre" class="controls" placeholder="Ingrese nombre" required>
 
-                <!-- Dirección -->
-                <label for="direccion">Dirección:</label>
-                <input name="direccion" id="direccion" class="controls" placeholder="Ingrese Dirección" required>
+        <!-- Dirección -->
+        <label for="direccion">Dirección:</label>
+        <input name="direccion" id="direccion" class="controls" placeholder="Ingrese Dirección" required>
 
-                <!-- Número Teléfono -->
-                <label for="telefono">Número de Teléfono:</label>
-                <input name="telefono" id="telefono" class="controls" placeholder="Número de Teléfono" required>
+        <!-- Número Teléfono -->
+        <label for="telefono">Número de Teléfono:</label>
+        <input name="telefono" id="telefono" class="controls" placeholder="Número de Teléfono" required>
 
-                <!-- Horarios -->
-                <label for="horario">Horarios:</label>
-                <input name="horario" class="controls" placeholder="Horarios" required>
+        <!-- Horarios -->
+        <label for="horario">Horarios:</label>
+        <input name="horario" class="controls" placeholder="Horarios: Ejemplo de 12am-11pm" required>
 
-                <!-- Datos personales -->
-                <label for="descripcion">Descripción</label>
-                <textarea class="controls" id="descripcion" name="descripcion" required
-                    placeholder="Descripción del Autolavado"></textarea>
+        <!-- Descripción -->
+        <label for="descripcion">Descripción</label>
+        <textarea class="controls" id="descripcion" name="descripcion" required placeholder="Descripción del Autolavado"></textarea>
 
-                <label for="dueño">Dueño:</label>
-                <input class="controls" type="text" id="dueño_id" name="dueño_id" required placeholder="Nombre Dueño">
+        <label for="localidad_id">Localidad:</label>
+        <select class="controls" id="localidad_id" name="localidad_id" required>
+            <option value="">Seleccione localidad</option>
+            <?php foreach ($localidades as $localidad): ?>
+            <option value="<?php echo htmlspecialchars($localidad['id']); ?>">
+                <?php echo htmlspecialchars($localidad['nombre']); ?>
+            </option>
+            <?php endforeach; ?>
+        </select>
 
-                <label for="placa">Localidad:</label>
-                <select class="controls" id="localidad_id" name="localidad_id" required>
-                    <option value="">Seleccione localidad</option>
-                    <!-- Opciones de localidad deberían ser añadidas aquí dinámicamente -->
-                </select>
+        <br>
+        <!-- Botón de envío -->
+        <br><button type="submit" class="btn">Registrar</button>
+    </form>
+</div>
 
-                <!-- Botón de envío -->
-                <button type="submit" class="btn">Registrar</button>
-            </form>
-        </div>
         <?php
 }
 ?>
@@ -230,7 +237,7 @@ if ($autolavado) {
         </div>
         <div class="footer-about">
             <h2>Sobre Nosotros</h2>
-            <p>GlowDrive es la aplicación líder en servicios de lavado de automóviles, conectando usuarios con los mejores lavados cercanos.</p>
+            <p><h6>GlowDrive es la aplicación líder en servicios de lavado de automóviles, conectando usuarios con los mejores lavados cercanos.</h6></p>
         </div>
         <div class="footer-social">
             <h2>Síguenos:</h2>
