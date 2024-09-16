@@ -33,7 +33,13 @@ $stmt->execute();
 $autolavado = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$autolavado) {
-    die('No se encontró un autolavado asociado a este usuario.');
+    die('<div style="color: #ff5c8d; text-align: center; font-size: 18px; margin-top: 20px;">
+        No se encontró un autolavado asociado a este usuario.
+        <br><br>
+        <a href="registro_autolavado.php" style="display: inline-block; background-color: #ff5c8d; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+            Registrar Autolavado
+        </a>
+    </div>');
 }
 
 $autolavadoId = $autolavado['id'];
