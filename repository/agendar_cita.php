@@ -1,36 +1,24 @@
 <?php
-include_once '../../config/db.php';
-include_once 'form_agendar_cita.php';
-// Conectar a la base de datos
-$database = new Database();
-$conn = $database->conectar();
+include_once '../config/db.php';
+
 // Iniciar la sesión y verificar el rol del usuario
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
+// Conectar a la base de datos
+$database = new Database();
+$conn = $database->conectar();
+
 if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 2) {
     header('Location: ../../useCase/logOut.php');
-    exit();
+    die();
 }
 
-// Obtener el ID del usuario logueado
-$query = "SELECT id FROM usuarios WHERE nombre = :nombre";
-$stmt = $conn->prepare($query);
-$stmt->bindParam(':nombre', $_SESSION['nombre'], PDO::PARAM_STR);
-$stmt->execute();
-$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-if ($result) {
-    $loggedUserId = $result['id'];
-} else {
-    // No se encontró ningún usuario con ese nombre de usuario
-    header('Location: ../../useCase/logOut.php');
-    exit();
-}
 
 // Verificar si el formulario ha sido enviado
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Recibir los datos del formulario
     $usuario_id = $_POST['usuario_id'];
     $autolavado_id = $_POST['autolavado_id'];
@@ -45,8 +33,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $comentarios = $_POST['comentarios'];
 
     // Verificar si el ID del usuario enviado es igual al ID del usuario logueado
-    if ($usuario_id != $loggedUserId) {
-        echo "No tiene permisos para realizar esta acción.";
+    if ($usuario_id != $_SESSION['id']) {
+        $_SESSION['error'] = "No tiene permisos para realizar esta acción.";
+        header("Location: ../views/cliente/form_agendar_cita.php");
         exit();
     }
 
@@ -72,9 +61,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Ejecutar la consulta
     if ($stmt->execute()) {
         $_SESSION['success'] = "Cita Agendada";
+        header("Location: ../views/cliente/form_agendar_cita.php");
         exit();
     } else {
-        $_SESSION['error'] ="Error al agendar la cita. Por favor, inténtalo de nuevo.";
+        $_SESSION['error'] = "Error al agendar la cita. Por favor, inténtalo de nuevo.";
+        header("Location: ../views/cliente/form_agendar_cita.php");
         exit();
     }
 }

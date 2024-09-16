@@ -6,20 +6,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $reservaId = $_POST['reserva_id'];
     $nombreUsuario = $_POST['nombre_usuario'];
     $apellidoUsuario = $_POST['apellido_usuario'];
-
+    
     $database = new Database();
     $conn = $database->conectar();
-
+    
     // Verificar si ya existe un recibo para esta reserva
     $queryCheck = "SELECT COUNT(*) as total FROM recibos WHERE reserva_id = :reserva_id";
     $stmtCheck = $conn->prepare($queryCheck);
     $stmtCheck->bindParam(':reserva_id', $reservaId, PDO::PARAM_INT);
     $stmtCheck->execute();
     $resultado = $stmtCheck->fetch(PDO::FETCH_ASSOC);
-
     if ($resultado['total'] > 0) {
         // Si ya existe un recibo, no permitas enviar otro
         $_SESSION['error'] = "Ya se ha enviado un recibo para esta reserva.";
+        header("Location: ver_recibo.php");
     } else {
         // Obtener los datos de la reserva, cita asociada y detalles del servicio
         $query = "SELECT reservas.*, usuarios.nombre AS nombre_usuario, usuarios.apellido AS apellido_usuario, 
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $reserva = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if (!$reserva) {
-            die('No se encontró la reserva.');
+            $_SESSION['error'] = 'No se encontró la reserva.';
         }
 
         // Crear el contenido del recibo
@@ -67,6 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmtInsert->execute();
 
         $_SESSION['success'] = "Recibo enviado y guardado en la base de datos.";
+        header("Location: citas_pendientes.php");
     }
 }
 ?>
