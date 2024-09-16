@@ -353,6 +353,187 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/Estilos12.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<<<<<<< HEAD
+=======
+    <style>
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+        background-image: url('../../img/fondo.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    .custom-navbar {
+        background-color: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(80px);
+        box-shadow: 0px 1px 2px black;
+        height: 90px;
+        padding: 10px 20px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        width: 70px;
+        height: 60px;
+        border-radius: 50%;
+        border: 3px solid #18282e;
+    }
+
+    .navbar-title {
+        border: 4px solid #18282e;
+        font-weight: bold;
+        background-color: #f2f0d9;
+        border-radius: 25px;
+        margin: 0 20px;
+        font-size: 1rem;
+        color: #18282e;
+        padding: 5px 10px;
+    }
+
+    /* Botón de Cerrar Sesión */
+    .logout-button {
+        background-color: #18282e;
+        color: #f2f0d9;
+        font-size: 1rem;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .logout-button:hover {
+        background-color: rgba(10, 73, 125, 0.8);
+        color: #fff;
+    }
+
+    .user-icon {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
+
+
+
+
+
+
+
+    .footer {
+        background-color: #003366 !important;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+    }
+
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-logo img {
+        width: 110px;
+        height: 110px;
+        width: auto;
+        border-radius: 50%;
+        /* Imágenes redondas */
+        border: 4px solid #9faba7;
+    }
+
+    .footer-about {
+        flex: 1;
+        margin: 20px;
+    }
+
+    .footer-about h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .footer-about p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .footer-social {
+        flex: 1;
+        margin: 20px;
+    }
+
+    .footer-social h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        color: #f2f0d9;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .social-icon img {
+        color: #f2f0d9;
+        height: 40px;
+        /* Tamaño reducido para las imágenes sociales */
+        width: 40px;
+        /* Tamaño reducido para las imágenes sociales */
+        border-radius: 50%;
+        /* Imágenes redondas */
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        border-top: 1px solid #002244;
+        /* Color de la línea superior */
+        padding-top: 10px;
+        font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+        }
+
+        .footer-logo,
+        .footer-about,
+        .footer-social {
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img,
+        .social-icon img {
+            max-height: 90px;
+            /* Ajuste en el tamaño para pantallas pequeñas */
+        }
+    }
+    </style>
+>>>>>>> 378d1458f6357351791eed2f4c8eab70a00d0266
 </head>
 <body>
 <<<<<<< HEAD
