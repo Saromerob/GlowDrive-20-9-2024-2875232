@@ -349,258 +349,36 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
 
 <head>
     <title>Administrador</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/Estilos12.css">
+    <link rel="stylesheet" href="../styles/estiloAdministrador.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<<<<<<< HEAD
-=======
     <style>
-    html,
-    body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Arial', sans-serif;
-        background-image: url('../../img/fondo.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
-    }
-
-    .custom-navbar {
-        background-color: rgba(0, 0, 0, 0.7);
-        backdrop-filter: blur(80px);
-        box-shadow: 0px 1px 2px black;
-        height: 90px;
-        padding: 10px 20px;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-    }
-
-    .navbar-brand {
-        display: flex;
-        align-items: center;
-    }
-
-    .logo {
-        width: 70px;
-        height: 60px;
-        border-radius: 50%;
-        border: 3px solid #18282e;
-    }
-
-    .navbar-title {
-        border: 4px solid #18282e;
-        font-weight: bold;
-        background-color: #f2f0d9;
-        border-radius: 25px;
-        margin: 0 20px;
-        font-size: 1rem;
-        color: #18282e;
-        padding: 5px 10px;
-    }
-
-    /* Botón de Cerrar Sesión */
-    .logout-button {
-        background-color: #18282e;
-        color: #f2f0d9;
-        font-size: 1rem;
-        padding: 10px 20px;
-        border-radius: 20px;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-    }
-
-    .logout-button:hover {
-        background-color: rgba(10, 73, 125, 0.8);
-        color: #fff;
-    }
-
-    .user-icon {
-        width: 25px;
-        height: 25px;
-        margin-right: 10px;
-    }
-
-
-
-
-
-
-
-    .footer {
-        background-color: #003366 !important;
-        color: #fff;
-        padding: 40px 20px;
-        text-align: center;
-        font-family: 'Arial', sans-serif;
-    }
-
-
-    .footer-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .footer-logo img {
-        width: 110px;
-        height: 110px;
-        width: auto;
-        border-radius: 50%;
-        /* Imágenes redondas */
-        border: 4px solid #9faba7;
-    }
-
-    .footer-about {
-        flex: 1;
-        margin: 20px;
-    }
-
-    .footer-about h2 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-
-    .footer-about p {
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
-    .footer-social {
-        flex: 1;
-        margin: 20px;
-    }
-
-    .footer-social h2 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-
-    .social-icons {
-        color: #f2f0d9;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .social-icon img {
-        color: #f2f0d9;
-        height: 40px;
-        /* Tamaño reducido para las imágenes sociales */
-        width: 40px;
-        /* Tamaño reducido para las imágenes sociales */
-        border-radius: 50%;
-        /* Imágenes redondas */
-    }
-
-    .footer-bottom {
-        margin-top: 20px;
-        border-top: 1px solid #002244;
-        /* Color de la línea superior */
-        padding-top: 10px;
-        font-size: 14px;
-    }
-
-    @media (max-width: 768px) {
-        .footer-container {
-            flex-direction: column;
-        }
-
-        .footer-logo,
-        .footer-about,
-        .footer-social {
-            margin-bottom: 20px;
-        }
-
-        .footer-logo img,
-        .social-icon img {
-            max-height: 90px;
-            /* Ajuste en el tamaño para pantallas pequeñas */
-        }
-    }
     </style>
->>>>>>> 378d1458f6357351791eed2f4c8eab70a00d0266
 </head>
-<body>
-<<<<<<< HEAD
-<div class="contenedor-principal">
-    <nav class="navbar navbar-expand-lg custom-navbar">
-    <div class="container-fluid">
-        <div class="titulo">
-            <a class="navbar-brand" href="index.php">
-                <img src="../../img/logo.jpeg" alt="Logo" class="logo">
-                <span class="navbar-title"><h3 class="glow">GLOW-DRIVE</h3></span>
-            </a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarContent">
-=======
-    <nav class="navbar navbar-expand-lg custom-navbar">
-        <div class="container-fluid">
-            <!-- Logo y Título -->
-            <a class="navbar-brand" href="paginaInicio.php">
-                <img src="../../img/logo.jpeg" alt="Logo" class="logo">
-                <span class="navbar-title">GLOW-DRIVE</span>
-            </a>
 
-            <!-- Contenido del menú -->
->>>>>>> 378d1458f6357351791eed2f4c8eab70a00d0266
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="../admin/paginaInicio.php">
-                    <i class='bx bx-home-alt'></i>VOLVER
-                    </a>
-            </ul>
-        </div>
-<<<<<<< HEAD
+<center><body>
+<nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+        <!-- Logo y Título -->
+        <a class="navbar-brand" href="">
+            <img src="../../img/logo.jpeg" alt="Logo" class="logo">
+            <span class="navbar-title">GLOW-DRIVE</span>
+        </a>
+
+        <ul class="navbar-nav ms-auto">
+    <li class="nav-item">
+        <a class="btn logout-button" href="paginaInicio.php" style="padding: 5px 10px; font-size: 12px;">
+            <img src="../../img/user.png" class="user-icon" style="width: 20px; height: 20px;"> Volver
+        </a>
+    </li>
+</ul>
     </div>
 </nav>
-        <div class="container">
-            <div class="welcome">
-                <?php
-                $db = new Database();
-                $conexion = $db->conectar();
-                $usuario = $_SESSION['nombre'];
-                echo "<h1>Bienvenid@ Administrador <br>" . $usuario,'</h1>';
-                ?>
-            </div>
-            
-            <div class="form-container">
-                <!-- Formulario de búsqueda -->
-                <form method="POST" action="#">
-                    <label for="buscarCorreo"><h3>Buscar por correo electrónico:</h3></label>
-                    <input type="email" name="buscarCorreo" placeholder="Ingrese el correo" class="correo">
-                    <input type="submit" name="buscar" value="Buscar" class="btn">
-                </form>
-                <br><br><br>
-            </div>
-            <?php
-            // Consulta para mostrar usuarios
-            $query = "SELECT * FROM usuarios";
-=======
-    </nav>
-
-
-
-    <br>
-    <br>
-    <br>
-    <br>
     <div class="container">
         <div class="welcome">
+        <br>
+    <br>
+    <br>
+    <br>
             <?php
             $db = new Database();
             $conexion = $db->conectar();
@@ -608,7 +386,7 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
             echo "Bienvenid@ Administrador <br>" . $usuario;
             ?>
         </div>
-
+        
         <div class="form-container">
             <!-- Formulario de búsqueda -->
             <form method="POST" action="#">
@@ -628,14 +406,14 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
 
         try {
             $statement = $conexion->prepare($query);
->>>>>>> 378d1458f6357351791eed2f4c8eab70a00d0266
             if (isset($_POST['buscar'])) {
-                $correoBusqueda = $_POST['buscarCorreo'];
-                $query .= " WHERE correo = :correo";
+                $statement->bindParam(':correo', $correoBusqueda);
             }
+            $statement->execute();
+        } catch (PDOException $e) {
+            die("Error en conexión a la base de datos: " . $e->getMessage());
+        }
 
-<<<<<<< HEAD
-=======
         if ($statement->rowCount() > 0) {
             echo '<table>
                     <tr>
@@ -673,17 +451,20 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
         // Formulario de inserción
         ?>
         <div class="form-container">
+            <style>
+                .Logoregistro{
+border-radius:50%;
+                }
+            </style>
             <form method="POST" action="#">
-                <center><img src="../../img/logo.jpeg" class="LogoRegistro"></center><br>
+            <center>
+                <img src="../../img/logo.jpeg" class="LogoRegistro" style="border-radius: 50%;width:100px; height:100px;">
+            </center><br>
                 IDROL <br><input type="number" name="idrol" required placeholder="Ingrese Rol" min="1" max="4"><br>
-                NOMBRE <br><input type="text" name="usuario" required placeholder="Ingrese Nombre"
-                    pattern="[a-zA-Z]{4,8}"><br>
-                APELLIDO <br><input type="text" name="apellido" required placeholder="Ingrese Apellido"
-                    pattern="[a-zA-Z]{4,8}"><br>
-                NUMERO DOCUMENTO <input type="number" name="numeroDoc" required
-                    placeholder="Ingrese numero de documento"><br>
-                TIPO DOCUMENTO <input type="number" name="documento" required
-                    placeholder="Ingrese tipo de documento"><br>
+                NOMBRE <br><input type="text" name="usuario" required placeholder="Ingrese Nombre" pattern="[a-zA-Z]{4,8}"><br>
+                APELLIDO <br><input type="text" name="apellido" required placeholder="Ingrese Apellido" pattern="[a-zA-Z]{4,8}"><br>
+                NUMERO DOCUMENTO <input type="number" name="numeroDoc" required placeholder="Ingrese numero de documento"><br>
+                TIPO DOCUMENTO <input type="number" name="documento" required placeholder="Ingrese tipo de documento"><br>
                 TELEFONO <input type="number" name="telefono" required placeholder="Ingrese Telefono"><br>
                 EMAIL<br><input type="email" name="email" required placeholder="Ingrese Email"><br>
                 CLAVE <br><input type="password" name="clave" required placeholder="Ingrese Contraseña"><br>
@@ -698,240 +479,104 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
         if (isset($_POST['insertar'])) {
             $query = "INSERT INTO usuarios (nombre, apellido, num_documento, tipo_documento_id, telefono, correo, contrasena, fecha_nacimiento, localidad_id, role_id) 
                       VALUES (:usuario, :apellido, :numeroDoc, :documento, :telefono, :email, :clave, :nacimiento, :localidad, :idrol)";
->>>>>>> 378d1458f6357351791eed2f4c8eab70a00d0266
             try {
-                $statement = $conexion->prepare($query);
-                if (isset($_POST['buscar'])) {
-                    $statement->bindParam(':correo', $correoBusqueda);
-                }
-                $statement->execute();
+                $stmt = $conexion->prepare($query);
+                $stmt->execute([
+                    ':usuario' => $_POST['usuario'],
+                    ':apellido' => $_POST['apellido'],
+                    ':numeroDoc' => $_POST['numeroDoc'],
+                    ':documento' => $_POST['documento'],
+                    ':telefono' => $_POST['telefono'],
+                    ':email' => $_POST['email'],
+                    ':clave' => password_hash($_POST['clave'], PASSWORD_BCRYPT),
+                    ':nacimiento' => $_POST['nacimiento'],
+                    ':localidad' => $_POST['localidad'],
+                    ':idrol' => $_POST['idrol']
+                ]);
+
+                echo "Registro insertado exitosamente.";
             } catch (PDOException $e) {
-                die("Error en conexión a la base de datos: " . $e->getMessage());
+                die("Error en la inserción: " . $e->getMessage());
             }
+        }
 
-            if ($statement->rowCount() > 0) {
-                echo '<table>
-                        <tr>
-                            <th>ID</th>
-                            <th>NOMBRE</th>
-                            <th>APELLIDO</th>
-                            <th>NUMERO DE DOCUMENTO</th>
-                            <th>TIPO DE DOCUMENTO</th>
-                            <th>TELEFONO</th>
-                            <th>EMAIL</th>
-                            <th>ROL</th>
-                            <th>EDITAR</th>
-                            <th>BORRAR</th>
-                        </tr>';
-
-                while ($fila = $statement->fetch(PDO::FETCH_ASSOC)) {
-                    echo '<tr>
-                            <td>' . $fila['id'] . '</td>
-                            <td>' . $fila['nombre'] . '</td>
-                            <td>' . $fila['apellido'] . '</td>
-                            <td>' . $fila['num_documento'] . '</td>
-                            <td>' . $fila['tipo_documento_id'] . '</td>
-                            <td>' . $fila['telefono'] . '</td>
-                            <td>' . $fila['correo'] . '</td>
-                            <td>' . $fila['role_id'] . '</td>
-                            <td><a class="btn" href="crearUsuario.php?editar=' . $fila['id'] . '">Editar</a></td>
-                            <td><a class="btn" href="crearUsuario.php?borrar=' . $fila['id'] . '">Borrar</a></td>
-                        </tr>';
-                }
-                echo '</table>';
-            } else {
-                echo 'No se encontraron resultados.';
-            }
-
-            // Formulario de inserción
+        // Edición de usuarios
+        if (isset($_GET['editar'])) {
+            $editar_id = $_GET['editar'];
+            $stmt = $conexion->prepare("SELECT * FROM usuarios WHERE id = :id");
+            $stmt->execute([':id' => $editar_id]);
+            $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
             ?>
-<<<<<<< HEAD
-                <div class="wrapper">
-                <form method="POST" action="#" class="wrapper2">
-                    <center><img src="../../img/logo.jpeg" class="LogoRegistro"></center><br>
-                    IDROL <br><input type="number" name="idrol" required placeholder="Ingrese Rol" min="1" max="4" class="requisito"><br>
-                    NOMBRE <br><input type="text" name="usuario" required placeholder="Ingrese Nombre" pattern="[a-zA-Z]{4,8}" class="requisito"><br>
-                    APELLIDO <br><input type="text" name="apellido" required placeholder="Ingrese Apellido" pattern="[a-zA-Z]{4,8}" class="requisito"><br>
-                    NUMERO DOCUMENTO <br><input type="number" name="numeroDoc" required placeholder="Ingrese numero de documento" class="requisito"><br>
-                    TIPO DOCUMENTO <br><input type="number" name="documento" required placeholder="Ingrese tipo de documento" class="requisito"><br>
-                    TELEFONO <br><input type="number" name="telefono" required placeholder="Ingrese Telefono" class="requisito"><br>
-                    EMAIL<br><input type="email" name="email" required placeholder="Ingrese Email" class="requisito"><br>
-                    CLAVE <br><input type="password" name="clave" required placeholder="Ingrese Contraseña" class="requisito"><br>
-                    LOCALIDAD <br><input type="number" name="localidad" required placeholder="Ingrese localidad" class="requisito"><br>
-                    FECHA NACIMIENTO <br><input type="date" name="nacimiento" required class="requisito"><br>
-                    <br><input type="submit" name="insertar" value="Insertar Datos" class="btn">
-                </form>
-                </div>
+            <table border="1" align="center" style="border-collapse: collapse; width: 60%; background-color: #f0f8ff;">
+    <tr>
+        <H1>EDITAR</H1>
+        <td style="padding: 20px; background-color: #18282e; border: 1px solid #7f8c8d;">
+            <form method="POST" action="#">
+                <label style="color: #f2f0d9; font-weight: bold;">NOMBRE</label>
+                <input type="text" name="usuario" value="<?php echo $usuario['nombre']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+
+                <label style="color: #f2f0d9; font-weight: bold;">APELLIDO</label>
+                <input type="text" name="apellido" value="<?php echo $usuario['apellido']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+
+                <label style="color: #f2f0d9; font-weight: bold;">NUMERO DOCUMENTO</label>
+                <input type="number" name="numdocumento" value="<?php echo $usuario['num_documento']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+
+                <label style="color: #f2f0d9; font-weight: bold;">TIPO DE DOCUMENTO</label>
+                <input type="number" name="tipdocument" value="<?php echo $usuario['tipo_documento_id']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+
+                <label style="color: #f2f0d9; font-weight: bold;">TELEFONO</label>
+                <input type="number" name="celular" value="<?php echo $usuario['telefono']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+
+                <label style="color: #f2f0d9; font-weight: bold;">EMAIL</label>
+                <input type="email" name="correo" value="<?php echo $usuario['correo']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+
+                <label style="color: #f2f0d9; font-weight: bold;">CLAVE</label>
+                <input type="password" name="clave" value="<?php echo $usuario['contrasena']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+
+                <label style="color: #f2f0d9; font-weight: bold;">FECHA NACIMIENTO</label>
+                <input type="date" name="fechnacimiento" value="<?php echo $usuario['fecha_nacimiento']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+
+                <label style="color: #f2f0d9; font-weight: bold;">LOCALIDAD</label>
+                <input type="number" name="localidad" value="<?php echo $usuario['localidad_id']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+
+                <label style="color: #f2f0d9; font-weight: bold;">ROL</label>
+                <input type="number" name="rol" value="<?php echo $usuario['role_id']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+
+                <input type="submit" name="actualizame" value="Actualizar Datos" style="background-color: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            </form>
+        </td>
+    </tr>
+</table>
 
             <?php
-            // Inserción de datos
-            if (isset($_POST['insertar'])) {
-                $query = "INSERT INTO usuarios (nombre, apellido, num_documento, tipo_documento_id, telefono, correo, contrasena, fecha_nacimiento, localidad_id, role_id) 
-                        VALUES (:usuario, :apellido, :numeroDoc, :documento, :telefono, :email, :clave, :nacimiento, :localidad, :idrol)";
-                try {
-                    $stmt = $conexion->prepare($query);
-                    $stmt->execute([
-                        ':usuario' => $_POST['usuario'],
-                        ':apellido' => $_POST['apellido'],
-                        ':numeroDoc' => $_POST['numeroDoc'],
-                        ':documento' => $_POST['documento'],
-                        ':telefono' => $_POST['telefono'],
-                        ':email' => $_POST['email'],
-                        ':clave' => password_hash($_POST['clave'], PASSWORD_BCRYPT),
-                        ':nacimiento' => $_POST['nacimiento'],
-                        ':localidad' => $_POST['localidad'],
-                        ':idrol' => $_POST['idrol']
-                    ]);
-=======
-        <table border="1" align="center" style="border-collapse: collapse; width: 60%; background-color: #f0f8ff;">
-            <tr>
-                <H1>EDITAR</H1>
-                <td style="padding: 20px; background-color: #18282e; border: 1px solid #7f8c8d;">
-                    <form method="POST" action="#">
-                        <label style="color: #f2f0d9; font-weight: bold;">NOMBRE</label>
-                        <input type="text" name="usuario" value="<?php echo $usuario['nombre']; ?>"
-                            style="margin-bottom: 10px; width: 100%;"><br>
-
-                        <label style="color: #f2f0d9; font-weight: bold;">APELLIDO</label>
-                        <input type="text" name="apellido" value="<?php echo $usuario['apellido']; ?>"
-                            style="margin-bottom: 10px; width: 100%;"><br>
-
-                        <label style="color: #f2f0d9; font-weight: bold;">NUMERO DOCUMENTO</label>
-                        <input type="number" name="numdocumento" value="<?php echo $usuario['num_documento']; ?>"
-                            style="margin-bottom: 10px; width: 100%;"><br>
-
-                        <label style="color: #f2f0d9; font-weight: bold;">TIPO DE DOCUMENTO</label>
-                        <input type="number" name="tipdocument" value="<?php echo $usuario['tipo_documento_id']; ?>"
-                            style="margin-bottom: 10px; width: 100%;"><br>
-
-                        <label style="color: #f2f0d9; font-weight: bold;">TELEFONO</label>
-                        <input type="number" name="celular" value="<?php echo $usuario['telefono']; ?>"
-                            style="margin-bottom: 10px; width: 100%;"><br>
-
-                        <label style="color: #f2f0d9; font-weight: bold;">EMAIL</label>
-                        <input type="email" name="correo" value="<?php echo $usuario['correo']; ?>"
-                            style="margin-bottom: 10px; width: 100%;"><br>
-
-                        <label style="color: #f2f0d9; font-weight: bold;">CLAVE</label>
-                        <input type="password" name="clave" value="<?php echo $usuario['contrasena']; ?>"
-                            style="margin-bottom: 10px; width: 100%;"><br>
-
-                        <label style="color: #f2f0d9; font-weight: bold;">FECHA NACIMIENTO</label>
-                        <input type="date" name="fechnacimiento" value="<?php echo $usuario['fecha_nacimiento']; ?>"
-                            style="margin-bottom: 10px; width: 100%;"><br>
-
-                        <label style="color: #f2f0d9; font-weight: bold;">LOCALIDAD</label>
-                        <input type="number" name="localidad" value="<?php echo $usuario['localidad_id']; ?>"
-                            style="margin-bottom: 10px; width: 100%;"><br>
-
-                        <label style="color: #f2f0d9; font-weight: bold;">ROL</label>
-                        <input type="number" name="rol" value="<?php echo $usuario['role_id']; ?>"
-                            style="margin-bottom: 10px; width: 100%;"><br>
-
-                        <input type="submit" name="actualizame" value="Actualizar Datos"
-                            style="background-color: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
-                    </form>
-                </td>
-            </tr>
-        </table>
-
-        <?php
         }
->>>>>>> 378d1458f6357351791eed2f4c8eab70a00d0266
 
-                    echo "Registro insertado exitosamente.";
-                } catch (PDOException $e) {
-                    die("Error en la inserción: " . $e->getMessage());
-                }
+        // Actualización de datos
+        if (isset($_POST['actualizame'])) {
+            $query = "UPDATE usuarios SET nombre = :usuario, apellido = :apellido, num_documento = :numdocumento, tipo_documento_id = :tipdocumento, telefono = :telefono, correo = :correo, contrasena = :clave, fecha_nacimiento = :fechnacimiento, localidad_id = :localidad, role_id = :rol WHERE id = :id";
+            try {
+                $stmt = $conexion->prepare($query);
+                $stmt->execute([
+                    ':usuario' => $_POST['usuario'],
+                    ':apellido' => $_POST['apellido'],
+                    ':numdocumento' => $_POST['numdocumento'],
+                    ':tipdocumento' => $_POST['tipdocument'],
+                    ':telefono' => $_POST['celular'],
+                    ':correo' => $_POST['correo'],
+                    ':clave' => password_hash($_POST['clave'], PASSWORD_BCRYPT),
+                    ':fechnacimiento' => $_POST['fechnacimiento'],
+                    ':localidad' => $_POST['localidad'],
+                    ':rol' => $_POST['rol'],
+                    ':id' => $_GET['editar']
+                ]);
+
+                echo '<p style="color: green; font-weight: bold; background: white; text-align: center;">Datos actualizados exitosamente.</p>';
+
+            } catch (PDOException $e) {
+                die("Error en la actualización: " . $e->getMessage());
             }
+        }
 
-<<<<<<< HEAD
-            // Edición de usuarios
-            if (isset($_GET['editar'])) {
-                $editar_id = $_GET['editar'];
-                $stmt = $conexion->prepare("SELECT * FROM usuarios WHERE id = :id");
-                $stmt->execute([':id' => $editar_id]);
-                $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
-                ?>
-        <tr>
-                <form method="POST" action="#">
-                    <label style="color: #f2f0d9; font-weight: bold;">NOMBRE</label>
-                    <input type="text" name="usuario" value="<?php echo $usuario['nombre']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
-
-                    <label style="color: #f2f0d9; font-weight: bold;">APELLIDO</label>
-                    <input type="text" name="apellido" value="<?php echo $usuario['apellido']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
-
-                    <label style="color: #f2f0d9; font-weight: bold;">NUMERO DOCUMENTO</label>
-                    <input type="number" name="numdocumento" value="<?php echo $usuario['num_documento']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
-
-                    <label style="color: #f2f0d9; font-weight: bold;">TIPO DE DOCUMENTO</label>
-                    <input type="number" name="tipdocument" value="<?php echo $usuario['tipo_documento_id']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
-
-                    <label style="color: #f2f0d9; font-weight: bold;">TELEFONO</label>
-                    <input type="number" name="celular" value="<?php echo $usuario['telefono']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
-
-                    <label style="color: #f2f0d9; font-weight: bold;">EMAIL</label>
-                    <input type="email" name="correo" value="<?php echo $usuario['correo']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
-
-                    <label style="color: #f2f0d9; font-weight: bold;">CLAVE</label>
-                    <input type="password" name="clave" value="<?php echo $usuario['contrasena']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
-
-                    <label style="color: #f2f0d9; font-weight: bold;">FECHA NACIMIENTO</label>
-                    <input type="date" name="fechnacimiento" value="<?php echo $usuario['fecha_nacimiento']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
-
-                    <label style="color: #f2f0d9; font-weight: bold;">LOCALIDAD</label>
-                    <input type="number" name="localidad" value="<?php echo $usuario['localidad_id']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
-
-                    <label style="color: #f2f0d9; font-weight: bold;">ROL</label>
-                    <input type="number" name="rol" value="<?php echo $usuario['role_id']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
-
-                    <input type="submit" name="actualizame" value="Actualizar Datos" style="background-color: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
-                </form>
-            </td>
-        </tr>
-    </table>
-
-                <?php
-            }
-
-            // Actualización de datos
-            if (isset($_POST['actualizame'])) {
-                $query = "UPDATE usuarios SET nombre = :usuario, apellido = :apellido, num_documento = :numdocumento, tipo_documento_id = :tipdocumento, telefono = :telefono, correo = :correo, contrasena = :clave, fecha_nacimiento = :fechnacimiento, localidad_id = :localidad, role_id = :rol WHERE id = :id";
-                try {
-                    $stmt = $conexion->prepare($query);
-                    $stmt->execute([
-                        ':usuario' => $_POST['usuario'],
-                        ':apellido' => $_POST['apellido'],
-                        ':numdocumento' => $_POST['numdocumento'],
-                        ':tipdocumento' => $_POST['tipdocument'],
-                        ':telefono' => $_POST['celular'],
-                        ':correo' => $_POST['correo'],
-                        ':clave' => password_hash($_POST['clave'], PASSWORD_BCRYPT),
-                        ':fechnacimiento' => $_POST['fechnacimiento'],
-                        ':localidad' => $_POST['localidad'],
-                        ':rol' => $_POST['rol'],
-                        ':id' => $_GET['editar']
-                    ]);
-
-                    echo '<p style="color: green; font-weight: bold; background: white; text-align: center;">Datos actualizados exitosamente.</p>';
-
-                } catch (PDOException $e) {
-                    die("Error en la actualización: " . $e->getMessage());
-                }
-            }
-
-            // Eliminación de usuarios
-            if (isset($_GET['borrar'])) {
-                $borrar_id = $_GET['borrar'];
-                $stmt = $conexion->prepare("DELETE FROM usuarios WHERE id = :id");
-                $stmt->execute([':id' => $borrar_id]);
-                echo "Registro borrado correctamente.";
-            }
-            ?>
-        </div>
-</div>
-        <!--ESTE ES EL PIE DE PAGINA DE PARA ARRIBA VA TODA INFORMACIÓN DE CUALQUIER TIPO EN LA PAGINA DE INICIO-->
-=======
         // Eliminación de usuarios
         if (isset($_GET['borrar'])) {
             $borrar_id = $_GET['borrar'];
@@ -942,68 +587,41 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
         ?>
     </div>
     <!--ESTE ES EL PIE DE PAGINA DE PARA ARRIBA VA TODA INFORMACIÓN DE CUALQUIER TIPO EN LA PAGINA DE INICIO-->
->>>>>>> 378d1458f6357351791eed2f4c8eab70a00d0266
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="../../img/logo.jpeg" alt="Logo AutoSplash">
-            </div>
-            <div class="footer-about">
-                <h2>Sobre Nosotros</h2>
-<<<<<<< HEAD
-                <p>GlowDrive es la aplicación líder en servicios de lavado de automóviles, conectando usuarios con los mejores lavados cercanos.</p>
-=======
-                <p>GlowDrive es la aplicación líder en servicios de lavado de automóviles, conectando usuarios con los
-                    mejores lavados cercanos.</p>
->>>>>>> 378d1458f6357351791eed2f4c8eab70a00d0266
-            </div>
-            <div class="footer-social">
-                <h2>Síguenos:</h2>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com" class="social-icon">
-<<<<<<< HEAD
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                            <path d="M8 0C5.829 0 5.556.01 4.703.048C3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7C.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297c.04.852.174 1.433.372 1.942c.205.526.478.972.923 1.417c.444.445.89.719 1.416.923c.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417c.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zM8 1.442h.718c2.136 0 2.389.007 3.232.046c.78.035 1.204.166 1.486.275c.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485c.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598c-.28.11-.704.24-1.485.276c-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598a2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485c-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486c.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276c.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92a.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217a4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334a2.667 2.667 0 0 1 0-5.334z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
-                            <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654l.666-2.433l-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931a6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646c-.182-.065-.315-.099-.445.099c-.133.197-.513.646-.627.775c-.114.133-.232.148-.43.05c-.197-.1-.836-.308-1.592-.985c-.59-.525-.985-1.175-1.103-1.372c-.114-.198-.011-.304.088-.403c.087-.088.197-.232.296-.346c.1-.114.133-.198.198-.33c.065-.134.034-.248-.015-.347c-.05-.099-.445-1.076-.612-1.47c-.16-.389-.323-.335-.445-.34c-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992c.47.205.84.326 1.129.418c.475.152.904.129 1.246.08c.38-.058 1.171-.48 1.338-.943c.164-.464.164-.862.114-.944c-.05-.084-.182-.133-.38-.232z"/>
-=======
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                            class="bi bi-instagram" viewBox="0 0 16 16">
-                            <path
-                                d="M8 0C5.829 0 5.556.01 4.703.048C3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7C.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297c.04.852.174 1.433.372 1.942c.205.526.478.972.923 1.417c.444.445.89.719 1.416.923c.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417c.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zM8 1.442h.718c2.136 0 2.389.007 3.232.046c.78.035 1.204.166 1.486.275c.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485c.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598c-.28.11-.704.24-1.485.276c-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598a2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485c-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486c.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276c.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92a.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217a4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334a2.667 2.667 0 0 1 0-5.334z" />
-                        </svg>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                            class="bi bi-tiktok" viewBox="0 0 16 16">
-                            <path
-                                d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
-                        </svg>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                            class="bi bi-whatsapp" viewBox="0 0 16 16">
-                            <path
-                                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654l.666-2.433l-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931a6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646c-.182-.065-.315-.099-.445.099c-.133.197-.513.646-.627.775c-.114.133-.232.148-.43.05c-.197-.1-.836-.308-1.592-.985c-.59-.525-.985-1.175-1.103-1.372c-.114-.198-.011-.304.088-.403c.087-.088.197-.232.296-.346c.1-.114.133-.198.198-.33c.065-.134.034-.248-.015-.347c-.05-.099-.445-1.076-.612-1.47c-.16-.389-.323-.335-.445-.34c-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992c.47.205.84.326 1.129.418c.475.152.904.129 1.246.08c.38-.058 1.171-.48 1.338-.943c.164-.464.164-.862.114-.944c-.05-.084-.182-.133-.38-.232z" />
->>>>>>> 378d1458f6357351791eed2f4c8eab70a00d0266
-                        </svg>
-                    </a>
-                </div>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="../../img/logo.jpeg" alt="Logo AutoSplash">
+        </div>
+        <div class="footer-about">
+            <h2>Sobre Nosotros</h2>
+            <p>GlowDrive es la aplicación líder en servicios de lavado de automóviles, conectando usuarios con los mejores lavados cercanos.</p>
+        </div>
+        <div class="footer-social">
+            <h2>Síguenos:</h2>
+            <div class="social-icons">
+                <a href="https://www.instagram.com" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048C3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7C.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297c.04.852.174 1.433.372 1.942c.205.526.478.972.923 1.417c.444.445.89.719 1.416.923c.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417c.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zM8 1.442h.718c2.136 0 2.389.007 3.232.046c.78.035 1.204.166 1.486.275c.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485c.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598c-.28.11-.704.24-1.485.276c-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598a2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485c-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486c.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276c.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92a.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217a4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334a2.667 2.667 0 0 1 0-5.334z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+                        <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654l.666-2.433l-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931a6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646c-.182-.065-.315-.099-.445.099c-.133.197-.513.646-.627.775c-.114.133-.232.148-.43.05c-.197-.1-.836-.308-1.592-.985c-.59-.525-.985-1.175-1.103-1.372c-.114-.198-.011-.304.088-.403c.087-.088.197-.232.296-.346c.1-.114.133-.198.198-.33c.065-.134.034-.248-.015-.347c-.05-.099-.445-1.076-.612-1.47c-.16-.389-.323-.335-.445-.34c-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992c.47.205.84.326 1.129.418c.475.152.904.129 1.246.08c.38-.058 1.171-.48 1.338-.943c.164-.464.164-.862.114-.944c-.05-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                </a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <small>&copy; 2024 <b>GlowDrive</b> - Todos los Derechos Reservados.</small>
-        </div>
-    </footer>
-</body>
+    </div>
+    <div class="footer-bottom">
+        <small>&copy; 2024 <b>GlowDrive</b> - Todos los Derechos Reservados.</small>
+    </div>
+</footer>
+</body></center>
 
 
 </html>

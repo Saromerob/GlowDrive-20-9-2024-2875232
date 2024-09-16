@@ -45,9 +45,14 @@ $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
             }
         });
     </script>
-    <form action="paginaInicio.php" method="post" style="display:inline;">
-                    <button type="submit" name="volverinicio">Volver al inicio</button>
-                </form>
+    <br>
+<form action="paginaInicio.php" method="post" style="display:inline;">
+    <button type="submit" name="volverinicio" style="padding:10px 20px; background-color:#18282e; color:white; border:none; border-radius:5px; font-size:16px; cursor:pointer;">
+        Volver al inicio
+    </button>
+</form>
+<br>
+
 
                 <footer class="footer">
     <div class="footer-container">

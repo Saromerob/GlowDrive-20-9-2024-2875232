@@ -51,20 +51,20 @@ $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
         $statement = $conexion->query($observar);
 
         if ($statement) {
-            echo '<table border="2">
-                <tr>
-                    <th>ID</th>
-                    <th>NOMBRE</th>
-                    <th>DIRECCION</th>
-                    <th>TELEFONO</th>
-                    <th>HORARIOS</th>
-                    <th>DESCRIPCION</th>
-                    <th>DUEÑO ID</th>
-                    <th>LOCALIDAD</th>
-                    <th>LONGITUD</th>
-                    <th>LATITUD</th>
-                    <th>APROBADO</th>
-                    <th>EDITAR</th>
+            echo '<table border="2" style="width:100%; border-collapse: collapse; text-align:center; font-family:Arial, sans-serif; color:#18282e; background-color:#f2f0d9;">
+                <tr style="background-color:#6c8487; color:white;">
+                    <th style="padding:10px;">ID</th>
+                    <th style="padding:10px;">NOMBRE</th>
+                    <th style="padding:10px;">DIRECCION</th>
+                    <th style="padding:10px;">TELEFONO</th>
+                    <th style="padding:10px;">HORARIOS</th>
+                    <th style="padding:10px;">DESCRIPCION</th>
+                    <th style="padding:10px;">DUEÑO ID</th>
+                    <th style="padding:10px;">LOCALIDAD</th>
+                    <th style="padding:10px;">LONGITUD</th>
+                    <th style="padding:10px;">LATITUD</th>
+                    <th style="padding:10px;">APROBADO</th>
+                    <th style="padding:10px;">EDITAR</th>
                 </tr>';
 
             while ($filas = $statement->fetch(PDO::FETCH_ASSOC)) {
@@ -80,20 +80,22 @@ $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
                 $lng = $filas['longitud'];
                 $aprobado = $filas['aprobado'];
 
-                echo '<tr>
-                        <td>' . $id . '</td>
-                        <td>' . $nautolavado . '</td>
-                        <td>' . $direccion . '</td>
-                        <td>' . $celular . '</td>
-                        <td>' . $horario . '</td>
-                        <td>' . $descripcion . '</td>
-                        <td>' . $dueno_id . '</td>
-                        <td>' . $local . '</td>
-                        <td>' . $lat . '</td>
-                        <td>' . $lng . '</td>
-                        <td>' . $aprobado . '</td>
-                        <td><button onclick="editarAutolavado(' . htmlspecialchars(json_encode($filas)) . ')">Editar</button></td>
-                    </tr>';
+                echo '<tr style="background-color:#9faba7; color:#18282e;">
+                    <td style="padding:10px;">' . $id . '</td>
+                    <td style="padding:10px;">' . $nautolavado . '</td>
+                    <td style="padding:10px;">' . $direccion . '</td>
+                    <td style="padding:10px;">' . $celular . '</td>
+                    <td style="padding:10px;">' . $horario . '</td>
+                    <td style="padding:10px;">' . $descripcion . '</td>
+                    <td style="padding:10px;">' . $dueno_id . '</td>
+                    <td style="padding:10px;">' . $local . '</td>
+                    <td style="padding:10px;">' . $lat . '</td>
+                    <td style="padding:10px;">' . $lng . '</td>
+                    <td style="padding:10px;">' . $aprobado . '</td>
+                    <td style="padding:10px;">
+                        <button onclick="editarAutolavado(' . htmlspecialchars(json_encode($filas)) . ')" style="padding:5px 10px; background-color:#18282e; color:white; border:none; border-radius:5px;">Editar</button>
+                    </td>
+                </tr>';
             }
             echo '</table>';
         } else {

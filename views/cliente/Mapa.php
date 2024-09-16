@@ -195,7 +195,7 @@ $reseñas = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 .bindPopup('<b>' + autolavado.nombre + '</b><br>' +
                     autolavado.direccion + '<br>' +
                     'Horario: ' + autolavado.horario + '<br>' +
-                    '<a href="agendar_cita.php?id=' + autolavado.id +
+                    '<a href="form_agendar_cita.php?id=' + autolavado.id +
                     '" class="btn btn-primary mt-2">Agendar Cita</a>');
         }
     });
