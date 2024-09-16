@@ -3,8 +3,8 @@ include_once '../../config/db.php';
 session_start();
 
 if (!isset($_GET['reserva_id'])) {
-    die('Reserva no especificada.');
-    header("Location: ver_recibo.php");
+    $_SESSION['error']= "Reserva no especificada.";
+    header("Location: citas_pendientes.php");
     exit();
 }
 
@@ -29,7 +29,9 @@ $stmt->execute();
 $reserva = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$reserva) {
-    die('No se encontró la reserva.');
+    $_SESSION['error'] = 'No se encontró la reserva.';
+    header("Location: citas_pendientes.php");
+    exit();
 }
 ?>
 
@@ -48,19 +50,6 @@ if (!$reserva) {
 </head>
 
 <body>
-    <?php
-        // Mostrar el mensaje de éxito
-        if (isset($_SESSION['success'])) {
-            echo '<div class="alert alert-success fade-out">' . $_SESSION['success'] . '</div>';
-            unset($_SESSION['success']); // Borra el mensaje después de mostrarlo
-        }
-
-        // Mostrar el mensaje de error
-        if (isset($_SESSION['error'])) {
-            echo '<div class="alert alert-danger fade-out">' . $_SESSION['error'] . '</div>';
-            unset($_SESSION['error']); // Borra el mensaje después de mostrarlo
-        }
-    ?>
     <div class="contenedor-recibo">
         <h1>Recibo de Reserva</h1>
         <p><strong>Cliente:</strong>

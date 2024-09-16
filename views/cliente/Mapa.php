@@ -52,33 +52,17 @@ $reseñas = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <!-- Incluye Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<<<<<<< HEAD
     <link rel="stylesheet" href="../styles/estilomapas.css">
-</head>
-
-<body>
-<nav class="navbar navbar-expand-lg custom-navbar">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="paginaInicio.php">
-            <img src="../../img/logo.jpeg" alt="Logo" class="logo">
-            <span class="navbar-title">GLOW-DRIVE</span>
-        </a>
-=======
-    <link rel="stylesheet" href="../styles/estilomapa.css">
     <link rel="stylesheet" href="../styles/mapa2.css">
 </head>
 
 <body>
-    <!-- Navegación -->
-    <!-- Navegación -->
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container-fluid">
-            <!-- Logo y Título -->
             <a class="navbar-brand" href="Mapa.php">
                 <img src="../../img/logo.jpeg" alt="Logo" class="logo">
                 <span class="navbar-title">GLOW-DRIVE</span>
             </a>
->>>>>>> fd5309f (Mensajes aun faltan pero ya casi termino)
 
             <!-- Botón de menú desplegable para dispositivos móviles -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
