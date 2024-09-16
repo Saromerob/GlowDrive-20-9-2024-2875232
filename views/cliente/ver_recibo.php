@@ -126,13 +126,13 @@ echo "El ID del autolavado es: " . $autolavadoId;
         <!-- Botón de cerrar -->
         <button class="button" onclick="window.close();">Cerrar</button>
         <ul class="navbar-nav ms-auto">
-    <li class="nav-item">
-        <div>
-            <button type="button" class="btn" style="background-color: orange; border-color: #007bff; color: white;" onclick="window.location.href='resena.php';">
-                reseñar
-            </button>
-        </div>
-    </li>
+        <li class="nav-item">
+    <div>
+        <button type="button" class="btn" style="background-color: orange; border: none; color: white; border-radius: 15px; padding: 10px 20px; cursor: pointer;" onclick="window.location.href='resena.php';">
+            Reseñar
+        </button>
+    </div>
+</li>
 </ul>
     </div>
 </body>
