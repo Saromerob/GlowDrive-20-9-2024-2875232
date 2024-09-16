@@ -34,9 +34,15 @@ $stmt->execute();
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if ($result) {
-    $autolavadoId = $result["id"];
+    $userId = $result["id"];
 } else {
-    echo "No se encontró un autolavado para el usuario actual.";
+    echo '<div style="color: #ff5c8d; text-align: center; font-size: 18px; margin-top: 20px;">
+        No se encontró un autolavado asociado a este usuario.
+        <br><br>
+        <button style="background-color: #ff5c8d; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;" onclick="window.location.href=\'registro_autolavado.php\';">
+            Registrar Autolavado
+        </button>
+    </div>';
     exit();
 }
 
