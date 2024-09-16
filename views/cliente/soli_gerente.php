@@ -54,7 +54,7 @@ $userId = $result['id'];
     }
     ?>
     <div class="contenedor-principal">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand">
             <div class="container-fluid">
                 <a class="navbar-brand">
                     <img src="../../img/logo.jpeg" alt="Logo" id="logo" class="logo">
@@ -69,7 +69,7 @@ $userId = $result['id'];
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <p class="ini">
-                                <button type="button" class="btn btn-outline-light"
+                                <button type="button" class="btn"
                                     onclick="window.location.href='paginaInicio.php';">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-box-arrow-left" viewBox="0 0 16 16">

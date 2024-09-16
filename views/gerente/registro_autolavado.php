@@ -59,7 +59,7 @@ $localidades = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <nav class="navbar navbar-expand-lg custom-navbar">
             <div class="container-fluid">
                 <!-- Logo y Título -->
-                <a class="navbar-brand" href="registro_autolavado.php">
+                <a class="navbar-brand" href="../gerente/paginaInicio.php">
                     <img src="../../img/logo.jpeg" alt="Logo" class="logot">
                     <span class="navbar-title">GLOW-DRIVE</span>
                 </a>

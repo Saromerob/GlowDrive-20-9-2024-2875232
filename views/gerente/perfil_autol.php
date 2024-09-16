@@ -86,6 +86,7 @@ echo "Nombre del autolavado: <h1>" . htmlspecialchars($autolavado['nombre']) . "
 
 <body>
     <h3>Editar Autolavado:</h3>
+    <a href="../gerente/paginaInicio.php"><button>VOLVER A INICIO</button></a>
     <form action="editar_autolavado.php" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="autolavado_id" value="<?php echo htmlspecialchars($autolavado['id']); ?>">
 
