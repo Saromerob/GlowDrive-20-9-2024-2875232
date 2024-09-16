@@ -1,0 +1,198 @@
+body,
+html {
+    background-image: url('../../img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* El cuerpo toma toda la altura disponible */
+}
+
+/* Colores */
+:root {
+    --blue-marine: #003366;
+    --gray-light: #f5f5f5;
+    --gray-dark: #333;
+    --white: #ffffff;
+}
+
+.container {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    /* El contenedor principal crece y empuja el footer hacia abajo */
+}
+
+h1 {
+    color: var(--blue-marine);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: var(--white);
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: var(--blue-marine);
+    color: var(--white);
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--gray-light);
+}
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody td:first-child {
+    font-weight: bold;
+}
+
+/* Estilo adicional para alerta */
+.alert {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.button {
+    font-size: 1rem;
+    /* Tamaño de fuente ajustado. Puedes cambiarlo según tus necesidades */
+    border-radius: 10px;
+    background-color: blue;
+    /* Color de fondo corregido */
+    color: white;
+    /* Color del texto corregido */
+    border: none;
+    /* Opcional: para quitar el borde del botón si es necesario */
+    padding: 0.5rem 1rem;
+    /* Opcional: añade espacio dentro del botón */
+    text-align: center;
+    /* Opcional: centra el texto dentro del botón */
+    cursor: pointer;
+    /* Opcional: cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease;
+    /* Opcional: agrega una transición suave para el color de fondo */
+}
+
+.button:hover {
+    background-color: darkblue;
+    /* Opcional: cambia el color de fondo cuando el ratón pasa sobre el botón */
+}
+
+
+.footer {
+    background-color: #003366;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    max-height: 60px;
+    /* Tamaño reducido para las imágenes */
+    width: auto;
+    border-radius: 50%;
+    /* Imágenes redondas */
+}
+
+.footer-about {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-about h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-about p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.footer-social {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-social h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icon img {
+    height: 40px;
+    /* Tamaño reducido para las imágenes sociales */
+    width: 40px;
+    /* Tamaño reducido para las imágenes sociales */
+    border-radius: 50%;
+    /* Imágenes redondas */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #002244;
+    /* Color de la línea superior */
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-logo,
+    .footer-about,
+    .footer-social {
+        margin-bottom: 20px;
+    }
+
+    .footer-logo img,
+    .social-icon img {
+        max-height: 50px;
+        /* Ajuste en el tamaño para pantallas pequeñas */
+    }
+}

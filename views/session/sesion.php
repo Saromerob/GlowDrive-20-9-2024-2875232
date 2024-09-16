@@ -73,23 +73,22 @@ if (isset($_SESSION['error'])) {
         }
     ?>
     <center>
-    <div class="wrapper">
-        <form action="../../repository/validar.php" method="POST">
-            <div class="logo-container">
-                <img src="../../img/logo.jpeg" class="LogoRegistro" alt="Logo">
-            </div>
-            <h1>INICIO DE SESIÓN</h1>
-            <div class="input-box">
-                <input type="email" placeholder="Correo electrónico" name="correo" required>
-                <i class='bx bxs-envelope'></i> <!-- Cambié el ícono al de correo -->
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="Contraseña" name="contraseña" id="contrasena" required>
-                <img id="imagenOjo" src="../../img/ojito.png" height="20px" width="20px" 
-                style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer;"
-                onmousedown="mostrarContrasena()" 
-                onmouseup="ocultarContrasena()">
-                <script>
+        <div class="wrapper">
+            <form action="../../repository/validar.php" method="POST">
+                <div class="logo-container">
+                    <img src="../../img/logo.jpeg" class="LogoRegistro" alt="Logo">
+                </div>
+                <h1>INICIO DE SESIÓN</h1>
+                <div class="input-box">
+                    <input type="email" placeholder="Correo electrónico" name="correo" required>
+                    <i class='bx bxs-envelope'></i> <!-- Cambié el ícono al de correo -->
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Contraseña" name="contraseña" id="contrasena" required>
+                    <img id="imagenOjo" src="../../img/ojito.png" height="20px" width="20px"
+                        style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer;"
+                        onmousedown="mostrarContrasena()" onmouseup="ocultarContrasena()">
+                    <script>
                     var contrasenaInput = document.getElementById("contrasena");
                     var imagenOjo = document.getElementById("imagenOjo");
 
@@ -102,27 +101,27 @@ if (isset($_SESSION['error'])) {
                         contrasenaInput.type = "password";
                         imagenOjo.src = "../../img/ojocerrado.png"; // Cambia la imagen al soltar
                     }
-                </script>
-            </div>
-            <?php
+                    </script>
+                </div>
+                <?php
             if (isset($_SESSION['error_message'])) {
                 echo '<h1 class="bad">' . $_SESSION['error_message'] . '</h1>';
                 unset($_SESSION['error_message']); 
             }
             ?>
-            <div class="Recuerdame">
-                <label>
-                    <input type="checkbox">Recuérdame la clave
-                </label>
-                <a href="../perfil/recuperarContra.php" class="link">¿Olvidé mi Contraseña?</a>
-            </div>
-            <button type="submit" class="btn">Ingresar</button>
-            <div class="register-link">
-                <p>¿No tienes una cuenta? <a href="Registro.php">Regístrate</a></p>
-            </div>
-        </form>
-    </div>
-</center>
+                <div class="Recuerdame">
+                    <label>
+                        <input type="checkbox">Recuérdame la clave
+                    </label>
+                    <a href="../perfil/recuperarContra.php" class="link">¿Olvidé mi Contraseña?</a>
+                </div>
+                <button type="submit" class="btn">Ingresar</button>
+                <div class="register-link">
+                    <p>¿No tienes una cuenta? <a href="Registro.php">Regístrate</a></p>
+                </div>
+            </form>
+        </div>
+    </center>
 
 
     <!--ESTE ES EL PIE DE PAGINA DE PARA ARRIBA VA TODA INFORMACIÓN DE CUALQUIER TIPO EN LA PAGINA DE INICIO-->
