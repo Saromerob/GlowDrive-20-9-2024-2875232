@@ -1,11 +1,3 @@
-pagina iniciophp gerente 
-
-
-pagina inicio gerente 
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -25,8 +17,87 @@ pagina inicio gerente
     }
     ?>
 </head>
+<style>
+            /* Contenedor principal centrado con fondo blanco */
+        .contenedor-principal {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
 
-<body>
+        /* Wrapper del contenido */
+        .content-wrapper {
+            text-align: center;
+        }
+
+        /* Título de la app */
+        .app-title {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* Descripción del aplicativo */
+        .app-description {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            padding: 0 15px;
+        }
+
+        /* Wrapper de la imagen */
+        .image-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        /* Imagen de la app */
+        .app-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .contenedor-principal {
+                padding: 20px;
+            }
+
+            .app-title {
+                font-size: 24px;
+            }
+
+            .app-description {
+                font-size: 14px;
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contenedor-principal {
+                padding: 15px;
+            }
+
+            .app-title {
+                font-size: 20px;
+            }
+
+            .app-description {
+                font-size: 13px;
+                padding: 0 5px;
+            }
+        }
+</style>
+
+<center><body>
     <div class="contenedor-principal">
         <nav class="navbar navbar-expand-lg custom-navbar">
             <div class="container-fluid">
@@ -117,6 +188,7 @@ pagina inicio gerente
                 </div>
             </div>
         </div>
+    </div>
         <!-- Ventana modal -->
         <div id="myModal" class="modal">
             <div class="modal-content">
@@ -211,3 +283,6 @@ pagina inicio gerente
             <p>&copy; 2024 GlowDrive. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    </body></center>
+</html>
