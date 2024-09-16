@@ -1,3 +1,9 @@
+pagina inicio gerente 
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 

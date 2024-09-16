@@ -1,3 +1,10 @@
+sesión
+
+
+
+
+
+
 <?php
    session_start();//Para poder utilizar las variables de "$_SESSION" debo iniciar la sesion. "session_start();"
    require '../../config/db.php';
