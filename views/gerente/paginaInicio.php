@@ -1,3 +1,12 @@
+pagina iniciophp gerente 
+
+
+pagina inicio gerente 
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -88,8 +97,26 @@
                     </ul>
                 </div>
             </div>
-        </nav>
-
+        </nav><br><br><br><br><br>
+        <div class="contenedor-principal">
+        <div class="app-description-container">
+            <div class="content-wrapper">
+                <h1 class="app-title">¿Qué es este aplicativo?</h1>
+                <p class="app-description">
+                    Como equipo de desarrollo del SENA, hemos diseñado una aplicación móvil
+                    que conecta a usuarios con servicios de lavado de automóviles cercanos.
+                    Hemos creado una solución escalable y eficiente que permite a los usuarios
+                    encontrar y reservar lavados de manera rápida y sencilla, a la vez que ofrece a
+                    los negocios una mayor visibilidad. A través de un proceso de desarrollo ágil,
+                    hemos priorizado la experiencia del usuario y la integración de funcionalidades como
+                    geolocalización y pagos en línea. Esta aplicación representa una solución innovadora para la
+                    industria del lavado de automóviles, facilitando la interacción entre usuarios y negocios locales.
+                </p>
+                <div class="image-wrapper">
+                    <img src="../../img/Carro.jpg" alt="Carro" class="app-image">
+                </div>
+            </div>
+        </div>
         <!-- Ventana modal -->
         <div id="myModal" class="modal">
             <div class="modal-content">
@@ -133,6 +160,7 @@
     </div>
     <br><br>
     <br><br>
+    </div>
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
