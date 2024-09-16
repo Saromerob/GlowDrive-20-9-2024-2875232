@@ -27,7 +27,13 @@ $stmt->execute();
 $reserva = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$reserva) {
-    die('No se encontró una reserva para este usuario.');
+    echo '<div style="color: #ff69b4; text-align: center; font-size: 18px; margin: 20px 0;">
+            <p>No se encontró una reserva para este usuario, para poder habilitar esta opción agenda una cita primero.</p>
+            <a href="form_agendar_cita.php" style="background-color: #ff69b4; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                Agendar cita
+            </a>
+          </div>';
+    exit();
 }
 
 // Obtener los valores necesarios

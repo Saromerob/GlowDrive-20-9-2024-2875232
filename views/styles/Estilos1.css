@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../../img/fondo.jpg'); /* Fondo de la página */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.wrapper {
+    background: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #1654c6; /* Color rosado */
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #78a4f5;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-box input:focus {
+    border-color: #0e2348;
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #102063;
+}
+
+.btn {
+    background-color: #132d55e3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #102063;
+}
+
+.btn-outline-light {
+    background: none;
+    color: #102063;
+    border: 2px solid #102063;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-light:hover {
+    background-color: #102063;
+    color: white;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 15px;
+        max-width: 350px;
+    }
+
+    .btn, .btn-outline-light {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
