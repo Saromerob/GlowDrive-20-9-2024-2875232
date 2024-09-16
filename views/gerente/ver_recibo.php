@@ -1,3 +1,4 @@
+ver recibo
 <?php
 include_once '../../config/db.php';
 session_start();
@@ -15,14 +16,14 @@ $conn = $database->conectar();
 
 // Obtener los datos de la reserva, cita asociada y detalles del servicio
 $query = "SELECT reservas.*, usuarios.nombre AS nombre_usuario, usuarios.apellido AS apellido_usuario, 
-                 autolavados.nombre AS nombre_autolavado, citas.fecha AS cita_fecha, citas.hora AS cita_hora,
-                 servicios.nombre AS nombre_servicio, servicios.descripcion AS descripcion_servicio, servicios.precio AS precio_servicio
-          FROM reservas 
-          JOIN usuarios ON reservas.usuario_id = usuarios.id
-          JOIN autolavados ON reservas.autolavado_id = autolavados.id
-          JOIN citas ON reservas.usuario_id = citas.usuario_id AND reservas.fecha = citas.fecha
-          JOIN servicios ON citas.servicio_id = servicios.id
-          WHERE reservas.id = :reserva_id";
+                autolavados.nombre AS nombre_autolavado, citas.fecha AS cita_fecha, citas.hora AS cita_hora,
+                servicios.nombre AS nombre_servicio, servicios.descripcion AS descripcion_servicio, servicios.precio AS precio_servicio
+        FROM reservas 
+        JOIN usuarios ON reservas.usuario_id = usuarios.id
+        JOIN autolavados ON reservas.autolavado_id = autolavados.id
+        JOIN citas ON reservas.usuario_id = citas.usuario_id AND reservas.fecha = citas.fecha
+        JOIN servicios ON citas.servicio_id = servicios.id
+        WHERE reservas.id = :reserva_id";
 $stmt = $conn->prepare($query);
 $stmt->bindParam(':reserva_id', $reservaId, PDO::PARAM_INT);
 $stmt->execute();

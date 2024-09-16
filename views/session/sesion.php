@@ -1,3 +1,13 @@
+sesión
+
+
+sesión
+
+
+
+
+
+
 <?php
    session_start();//Para poder utilizar las variables de "$_SESSION" debo iniciar la sesion. "session_start();"
    require '../../config/db.php';
@@ -83,8 +93,25 @@ if (isset($_SESSION['error'])) {
                     <i class='bx bxs-user'></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Contraseña" name="contraseña" required>
-                    <i class='bx bxs-lock-alt'></i>
+                    <input type="password" placeholder="Contraseña" name="contraseña" id="contrasena" required>
+                    <img id="imagenOjo" src="../../img/ojito.png" height="20px" width="20px" 
+                    style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer;"
+                    onmousedown="mostrarContrasena()" 
+                    onmouseup="ocultarContrasena()">
+                    <script>
+                        var contrasenaInput = document.getElementById("contrasena");
+                        var imagenOjo = document.getElementById("imagenOjo");
+
+                        function mostrarContrasena() {
+                            contrasenaInput.type = "text";
+                            imagenOjo.src = "../../img/ojito.png"; // Cambia la imagen al presionar
+                        }
+
+                        function ocultarContrasena() {
+                            contrasenaInput.type = "password";
+                            imagenOjo.src = "../../img/ojocerrado.png"; // Cambia la imagen al soltar
+                        }
+                    </script>
                 </div>
                 <?php
             if (isset($_SESSION['error_message'])) {
