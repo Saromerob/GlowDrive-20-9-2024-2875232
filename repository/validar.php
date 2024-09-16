@@ -1,25 +1,25 @@
 <?php
 include_once '../config/db.php';
-$db = new Database();//Llamada
+$db = new Database(); // Llamada
 $conn = $db->conectar();
 
 session_start();
-$usuario = $_POST['usuario'];
+$correo = $_POST['correo']; // Cambiar 'usuario' por 'correo'
 $contraseña = $_POST['contraseña'];
 
 if ($conn) {
-    //Arma el texto de la consulta.
-    $consulta = "SELECT * FROM usuarios WHERE nombre = :usuario AND contrasena = :contrasena";
-    //Manda la consulta a la base de datos y agrega los parametros (linea 15 y 16).
+    // Arma el texto de la consulta.
+    $consulta = "SELECT * FROM usuarios WHERE correo = :correo AND contrasena = :contrasena";
+    // Manda la consulta a la base de datos y agrega los parámetros (línea 15 y 16).
     $resultado = $conn->prepare($consulta);
-    $resultado->bindValue(':usuario', $usuario);
+    $resultado->bindValue(':correo', $correo); // Cambiar 'usuario' por 'correo'
     $resultado->bindValue(':contrasena', $contraseña);
-    //Se ejecuta la consulta.
+    // Se ejecuta la consulta.
     $resultado->execute();
-    //rowCount esta contando las filas.
+    // rowCount está contando las filas.
     $filas = $resultado->rowCount();
 
-    if($filas>0) {
+    if ($filas > 0) {
         // Obtener los datos del usuario
         $userData = $resultado->fetch(PDO::FETCH_ASSOC);
         // Guardar el rol en la sesión
@@ -39,12 +39,12 @@ if ($conn) {
                 exit();
                 break;
             default:
-                $_SESSION['error_message'] = 'ERROR EN LA AUTENTICACION';
+                $_SESSION['error_message'] = 'ERROR EN LA AUTENTICACIÓN';
                 header("Location: ../index.php");
                 exit();
         }
-    } else {$_SESSION['id'] = $userData['id'];
-        $_SESSION['error_message'] = 'Usuario o contraseña incorrectos';
+    } else {
+        $_SESSION['error_message'] = 'Correo o contraseña incorrectos';
         header("Location: ../views/session/sesion.php");
         exit();
     }

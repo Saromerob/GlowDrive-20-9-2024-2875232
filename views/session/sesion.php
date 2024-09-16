@@ -1,20 +1,10 @@
-sesión
-
-
-sesión
-
-
-
-
-
-
 <?php
-   session_start();//Para poder utilizar las variables de "$_SESSION" debo iniciar la sesion. "session_start();"
-   require '../../config/db.php';
-   include '../../repository/localidad.php';
-   include '../../repository/tipo_documento.php';
-   //mysqli_close($conn);
-   if (isset($_SESSION['nombre'])) {
+session_start(); // Para poder utilizar las variables de "$_SESSION" debo iniciar la sesión.
+require '../../config/db.php';
+include '../../repository/localidad.php';
+include '../../repository/tipo_documento.php';
+
+if (isset($_SESSION['correo'])) { // Cambié 'nombre' por 'correo'
     switch ($_SESSION['role_id']) {
         case 1:
             header("Location: ../gerente/paginaInicio.php");
@@ -28,9 +18,9 @@ sesión
             exit();
             break;
         default:
+            // Agregar un mensaje de error o redirección si es necesario
     }
-   }
-
+}
 
 // Mostrar el mensaje de éxito
 if (isset($_SESSION['success'])) {
@@ -44,6 +34,7 @@ if (isset($_SESSION['error'])) {
     unset($_SESSION['error']); // Borra el mensaje después de mostrarlo
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -82,56 +73,57 @@ if (isset($_SESSION['error'])) {
         }
     ?>
     <center>
-        <div class="wrapper">
-            <form action="../../repository/validar.php" method="POST">
-                <div class="logo-container">
-                    <img src="../../img/logo.jpeg" class="LogoRegistro" alt="Logo">
-                </div>
-                <h1>INICIO DE SESION</h1>
-                <div class="input-box">
-                    <input type="text" placeholder="Nombre de usuario" name="usuario" required>
-                    <i class='bx bxs-user'></i>
-                </div>
-                <div class="input-box">
-                    <input type="password" placeholder="Contraseña" name="contraseña" id="contrasena" required>
-                    <img id="imagenOjo" src="../../img/ojito.png" height="20px" width="20px" 
-                    style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer;"
-                    onmousedown="mostrarContrasena()" 
-                    onmouseup="ocultarContrasena()">
-                    <script>
-                        var contrasenaInput = document.getElementById("contrasena");
-                        var imagenOjo = document.getElementById("imagenOjo");
+    <div class="wrapper">
+        <form action="../../repository/validar.php" method="POST">
+            <div class="logo-container">
+                <img src="../../img/logo.jpeg" class="LogoRegistro" alt="Logo">
+            </div>
+            <h1>INICIO DE SESIÓN</h1>
+            <div class="input-box">
+                <input type="email" placeholder="Correo electrónico" name="correo" required>
+                <i class='bx bxs-envelope'></i> <!-- Cambié el ícono al de correo -->
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Contraseña" name="contraseña" id="contrasena" required>
+                <img id="imagenOjo" src="../../img/ojito.png" height="20px" width="20px" 
+                style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer;"
+                onmousedown="mostrarContrasena()" 
+                onmouseup="ocultarContrasena()">
+                <script>
+                    var contrasenaInput = document.getElementById("contrasena");
+                    var imagenOjo = document.getElementById("imagenOjo");
 
-                        function mostrarContrasena() {
-                            contrasenaInput.type = "text";
-                            imagenOjo.src = "../../img/ojito.png"; // Cambia la imagen al presionar
-                        }
+                    function mostrarContrasena() {
+                        contrasenaInput.type = "text";
+                        imagenOjo.src = "../../img/ojito.png"; // Cambia la imagen al presionar
+                    }
 
-                        function ocultarContrasena() {
-                            contrasenaInput.type = "password";
-                            imagenOjo.src = "../../img/ojocerrado.png"; // Cambia la imagen al soltar
-                        }
-                    </script>
-                </div>
-                <?php
+                    function ocultarContrasena() {
+                        contrasenaInput.type = "password";
+                        imagenOjo.src = "../../img/ojocerrado.png"; // Cambia la imagen al soltar
+                    }
+                </script>
+            </div>
+            <?php
             if (isset($_SESSION['error_message'])) {
                 echo '<h1 class="bad">' . $_SESSION['error_message'] . '</h1>';
                 unset($_SESSION['error_message']); 
             }
-        ?>
-                <div class="Recuerdame">
-                    <label>
-                        <input type="checkbox">Recuerdame la clave
-                    </label>
-                    <a href="../perfil/recuperarContra.php" class="link">¿Olvide mi Contraseña?</a>
-                </div>
-                <button type="submit" class="btn">Ingresar</button>
-                <div class="register-link">
-                    <p>¿No tienes una cuenta? <a href="Registro.php">Registrate</a></p>
-                </div>
-            </form>
-        </div>
-    </center>
+            ?>
+            <div class="Recuerdame">
+                <label>
+                    <input type="checkbox">Recuérdame la clave
+                </label>
+                <a href="../perfil/recuperarContra.php" class="link">¿Olvidé mi Contraseña?</a>
+            </div>
+            <button type="submit" class="btn">Ingresar</button>
+            <div class="register-link">
+                <p>¿No tienes una cuenta? <a href="Registro.php">Regístrate</a></p>
+            </div>
+        </form>
+    </div>
+</center>
+
 
     <!--ESTE ES EL PIE DE PAGINA DE PARA ARRIBA VA TODA INFORMACIÓN DE CUALQUIER TIPO EN LA PAGINA DE INICIO-->
     <footer class="footer">
