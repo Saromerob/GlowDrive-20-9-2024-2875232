@@ -128,7 +128,7 @@ if ($result) {
 
                 <!-- Nombre -->
                 <label for="nombre">Nombre Servicio:</label>
-                <input name="nombre" id="nombre" class="controls" placeholder="Ingrese Servicio" required>
+                <input name="nombre" id="nombre" class="controls" placeholder="Ingrese Servicio" required autocomplete="off">
 
                 <!-- Descripción -->
                 <label for="descripcion">Descripción:</label>
