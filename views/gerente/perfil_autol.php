@@ -67,6 +67,7 @@ $autolavado = $stmt_autolavado->fetch(PDO::FETCH_ASSOC);
             ?>
 
             <?php if ($servicios): ?>
+                <a href="../gerente/paginaInicio.php"><button>VOLVER A INICIO</button></a>
                 <h3>Servicios del Autolavado:</h3>
                 <?php foreach ($servicios as $servicio): ?>
                     <div>
