@@ -39,6 +39,39 @@ $localidades = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 ?>
+<?php
+// Conexión a la base de datos
+try {
+    // Crear una instancia de la base de datos
+    $database = new Database();
+    $conn = $database->conectar();
+
+    // Preparar la consulta de inserción
+    $sql = 'INSERT INTO autolavados (nombre, direccion, telefono, horario, descripcion, dueno_id, localidad_id, fecha_creacion, fecha_actualizacion)
+            VALUES (:nombre, :direccion, :telefono, :horario, :descripcion, :dueno_id, :localidad_id, NOW(), NOW())';
+
+    $stmt = $conn->prepare($sql);
+
+    // Bind de los parámetros
+    $stmt->bindParam(':nombre', $_POST['nombre']);
+    $stmt->bindParam(':direccion', $_POST['direccion']);
+    $stmt->bindParam(':telefono', $_POST['telefono']);
+    $stmt->bindParam(':horario', $_POST['horario']);
+    $stmt->bindParam(':descripcion', $_POST['descripcion']);
+    $stmt->bindParam(':dueno_id', $_POST['usuario_id']);
+    $stmt->bindParam(':localidad_id', $_POST['localidad_id']);
+
+    // Ejecutar la consulta
+    $stmt->execute();
+
+    // Mostrar el mensaje de éxito en lugar de redirigir
+    $mensajeExito = 'El autolavado ha sido registrado correctamente.';
+} catch (PDOException $e) {
+    // Manejo de errores
+    error_log('Error: ' . $e->getMessage()); // Registra el error en el archivo de log
+    $mensajeError = 'Error al insertar datos en la base de datos. Por favor, intenta nuevamente más tarde.';
+}
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -51,7 +84,39 @@ $localidades = $stmt->fetchAll(PDO::FETCH_ASSOC);
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/regist_autola.css">
     <link rel="stylesheet" href="../styles/terminos.css">
-
+    <style>
+        <style>
+        .mensaje-exito {
+            color: green;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .mensaje-error {
+            color: red;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .boton-agregar-servicios {
+            background-color: #ff69b4; /* Color rosa */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            width: 50%;
+            margin: 0 auto;
+        }
+        .boton-agregar-servicios:hover {
+            background-color: #ff1493; /* Un tono más oscuro de rosa */
+        }
+    </style>
+    </style>
 </head>
 
 <body>
@@ -158,6 +223,18 @@ if ($autolavado) {
                 </div>
             </div>
             <center>
+            <?php if (isset($mensajeExito)): ?>
+        <div class="mensaje-exito">
+            <p><?php echo $mensajeExito; ?></p>
+            <a href="agrega_servicios.php">
+                <button class="boton-agregar-servicios">Ahora agrega servicios para tus clientes</button>
+            </a>
+        </div>
+    <?php elseif (isset($mensajeError)): ?>
+        <div class="mensaje-error">
+            <p><?php echo $mensajeError; ?></p>
+        </div>
+    <?php endif; ?>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <div>
@@ -195,25 +272,26 @@ if ($autolavado) {
 
         <!-- Nombre -->
         <label for="nombre">Nombre Autolavado:</label>
-        <input name="nombre" id="nombre" class="controls" placeholder="Ingrese nombre" required>
+        <input name="nombre" id="nombre" class="controls" placeholder="Ingrese nombre" required autocomplete="off">
 
         <!-- Dirección -->
         <label for="direccion">Dirección:</label>
-        <input name="direccion" id="direccion" class="controls" placeholder="Ingrese Dirección" required>
+        <input name="direccion" id="direccion" class="controls" placeholder="Ingrese Dirección" required autocomplete="off">
 
         <!-- Número Teléfono -->
         <label for="telefono">Número de Teléfono:</label>
-        <input name="telefono" id="telefono" class="controls" placeholder="Número de Teléfono" required>
+        <input name="telefono" type="number" id="telefono" class="controls" placeholder="Número de Teléfono" required autocomplete="off">
 
         <!-- Horarios -->
         <label for="horario">Horarios:</label>
-        <input name="horario" class="controls" placeholder="Horarios: Ejemplo de 12am-11pm" required>
+        <input name="horario" class="controls" placeholder="Horarios: Ejemplo de 12am-11pm" required autocomplete="off">
 
         <!-- Descripción -->
         <label for="descripcion">Descripción</label>
         <textarea class="controls" id="descripcion" name="descripcion" required
-            placeholder="Descripción del Autolavado"></textarea>
+            placeholder="Descripción del Autolavado" autocomplete="off"></textarea>
 
+        <!-- Localidad -->
         <label for="localidad_id">Localidad:</label>
         <select class="controls" id="localidad_id" name="localidad_id" required>
             <option value="">Seleccione localidad</option>
@@ -229,6 +307,7 @@ if ($autolavado) {
         <br><button type="submit" class="btn">Registrar</button>
     </form>
 </div>
+
 
 <?php
 }
