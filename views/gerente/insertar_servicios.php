@@ -19,11 +19,12 @@ $conn = $database->conectar();
 // Verificar si el formulario fue enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $usuario_id = filter_var($_POST['usuario_id'], FILTER_SANITIZE_NUMBER_INT);
+
     $nombre = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);
     $descripcion = filter_var($_POST['descripcion'], FILTER_SANITIZE_STRING);
     $precio = filter_var($_POST['precio'], FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
     $autolavado_id = filter_var($_POST['autolavado_id'], FILTER_SANITIZE_NUMBER_INT);
+    $usuario_id = filter_var($_POST['usuario_id'], FILTER_SANITIZE_NUMBER_INT);
 
     // Validar los datos
     if (!empty($autolavado_id) && !empty($nombre) && !empty($descripcion) && !empty($precio)) {
