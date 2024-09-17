@@ -1,4 +1,4 @@
-soli gerete 
+
 <?php
 include_once '../../config/db.php';
 
