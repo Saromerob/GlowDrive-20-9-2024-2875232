@@ -84,7 +84,7 @@ if (isset($_SESSION['error'])) {
                     <i class='bx bxs-envelope'></i> <!-- Cambié el ícono al de correo -->
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Contraseña" name="contraseña" id="contrasena" required>
+                    <input type="password" placeholder="Contraseña" name="contrasena" id="contrasena" required>
                     <img id="imagenOjo" src="../../img/ojito.png" height="20px" width="20px"
                         style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer;"
                         onmousedown="mostrarContrasena()" onmouseup="ocultarContrasena()">
@@ -104,11 +104,11 @@ if (isset($_SESSION['error'])) {
                     </script>
                 </div>
                 <?php
-            if (isset($_SESSION['error_message'])) {
-                echo '<h1 class="bad">' . $_SESSION['error_message'] . '</h1>';
-                unset($_SESSION['error_message']); 
-            }
-            ?>
+                    if (isset($_SESSION['error_message'])) {
+                        echo '<h1 class="bad">' . $_SESSION['error_message'] . '</h1>';
+                        unset($_SESSION['error_message']); 
+                    }
+                ?>
                 <div class="Recuerdame">
                     <label>
                         <input type="checkbox">Recuérdame la clave
