@@ -1,5 +1,5 @@
-
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ html, body {
     background-position: center;
 }
 
-        
+
 /* Estilo para el título */
 h1 {
     text-align: center;
@@ -29,7 +29,8 @@ table {
     background-color: #f2f0d9;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #9faba7;
     padding: 10px;
     text-align: center;
@@ -80,13 +81,20 @@ button:hover {
 
 /* Responsividad */
 @media (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
         display: block;
         width: 100%;
     }
 
     thead {
-        display: none; /* Ocultamos los encabezados en pantallas pequeñas */
+        display: none;
+        /* Ocultamos los encabezados en pantallas pequeñas */
     }
 
     tr {
@@ -103,7 +111,8 @@ button:hover {
     }
 
     td::before {
-        content: attr(data-label); /* Usamos el valor de data-label como título */
+        content: attr(data-label);
+        /* Usamos el valor de data-label como título */
         font-weight: bold;
         color: #18282e;
         padding-right: 10px;
@@ -129,12 +138,14 @@ button:hover {
 .main-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Hace que el contenedor principal tenga al menos la altura de la ventana */
+    min-height: 100vh;
+    /* Hace que el contenedor principal tenga al menos la altura de la ventana */
 }
 
 /* El contenido principal se expande para ocupar el espacio disponible */
-.main-container > *:not(footer) {
-    flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+.main-container>*:not(footer) {
+    flex: 1;
+    /* Hace que el contenido principal ocupe el espacio restante */
 }
 
 /* Footer estilo */
@@ -145,8 +156,10 @@ button:hover {
     text-align: center;
     font-family: 'Arial', sans-serif;
     position: relative;
-    bottom: 0; /* Asegura que el footer esté en la parte inferior */
-    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    bottom: 0;
+    /* Asegura que el footer esté en la parte inferior */
+    width: 100%;
+    /* Asegura que el footer ocupe todo el ancho */
 }
 
 .footer-container {
@@ -165,17 +178,20 @@ button:hover {
     border: 4px solid #9faba7;
 }
 
-.footer-about, .footer-social {
+.footer-about,
+.footer-social {
     flex: 1;
     margin: 20px;
 }
 
-.footer-about h2, .footer-social h2 {
+.footer-about h2,
+.footer-social h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.footer-about p, .footer-bottom small {
+.footer-about p,
+.footer-bottom small {
     font-size: 16px;
     line-height: 1.6;
 }
@@ -205,11 +221,14 @@ button:hover {
         flex-direction: column;
     }
 
-    .footer-logo, .footer-about, .footer-social {
+    .footer-logo,
+    .footer-about,
+    .footer-social {
         margin-bottom: 20px;
     }
 
-    .footer-logo img, .social-icon img {
+    .footer-logo img,
+    .social-icon img {
         max-height: 90px;
     }
 }

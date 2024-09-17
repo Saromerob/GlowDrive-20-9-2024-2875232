@@ -1,23 +1,42 @@
-#map { height: 500px; width: 50%; }
-        body{
-            color: #000000;
-            background: url('../../img/fondo.jpg');
-            background-size: cover;
-            font-family: 'calibri';
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            align-items: center;
-        }
-        h1{
-            text-align: center;
-        }
-        button{
-            background-color: #1f4068;
-            color: white;
-        }
-        .footer {
-    background-color: #003366; 
+#map {
+    height: 500px;
+    width: 50%;
+}
+
+html,
+body {
+    height: 100%;
+    /* Asegura que el body ocupe toda la altura de la ventana */
+}
+
+body {
+    color: #000000;
+    background: url('../../img/fondo.jpg');
+    background-size: cover;
+    font-family: 'calibri';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+.contenedor-principal {
+    flex: 1;
+    /* Esto empuja el footer hacia abajo */
+}
+
+button {
+    background-color: #1f4068;
+    color: white;
+}
+
+.footer {
+    background-color: #003366;
     color: #fff;
     padding: 40px 20px;
     text-align: center;
@@ -34,9 +53,11 @@
 }
 
 .footer-logo img {
-    max-height: 60px; /* Tamaño reducido para las imágenes */
+    max-height: 60px;
+    /* Tamaño reducido para las imágenes */
     width: auto;
-    border-radius: 50%; /* Imágenes redondas */
+    border-radius: 50%;
+    /* Imágenes redondas */
 }
 
 .footer-about {
@@ -71,14 +92,18 @@
 }
 
 .social-icon img {
-    height: 40px; /* Tamaño reducido para las imágenes sociales */
-    width: 40px; /* Tamaño reducido para las imágenes sociales */
-    border-radius: 50%; /* Imágenes redondas */
+    height: 40px;
+    /* Tamaño reducido para las imágenes sociales */
+    width: 40px;
+    /* Tamaño reducido para las imágenes sociales */
+    border-radius: 50%;
+    /* Imágenes redondas */
 }
 
 .footer-bottom {
     margin-top: 20px;
-    border-top: 1px solid #002244; /* Color de la línea superior */
+    border-top: 1px solid #002244;
+    /* Color de la línea superior */
     padding-top: 10px;
     font-size: 14px;
 }
@@ -88,11 +113,15 @@
         flex-direction: column;
     }
 
-    .footer-logo, .footer-about, .footer-social {
+    .footer-logo,
+    .footer-about,
+    .footer-social {
         margin-bottom: 20px;
     }
 
-    .footer-logo img, .social-icon img {
-        max-height: 50px; /* Ajuste en el tamaño para pantallas pequeñas */
+    .footer-logo img,
+    .social-icon img {
+        max-height: 50px;
+        /* Ajuste en el tamaño para pantallas pequeñas */
     }
 }
