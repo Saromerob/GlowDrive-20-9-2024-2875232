@@ -5,6 +5,12 @@
     font-family: "Poppins", sans-serif;
 }
 
+html,
+body {
+    height: 100%;
+    /* Asegura que el body ocupe toda la altura de la ventana */
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -49,10 +55,12 @@ body {
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
 }
+
 .wrapper {
     width: 90%;
     max-width: 420px;
@@ -64,7 +72,8 @@ body {
 }
 
 .wrapper h1 {
-    font-size: 2rem; /* Ajusta el tamaño de fuente para que sea proporcional */
+    font-size: 2rem;
+    /* Ajusta el tamaño de fuente para que sea proporcional */
     text-align: center;
     margin-bottom: 20px;
 }
@@ -150,11 +159,13 @@ body {
     border-radius: 50%;
     border: 3px solid #18282e;
     display: block;
-    margin: 0 auto; /* Asegura que la imagen esté centrada */
+    margin: 0 auto;
+    /* Asegura que la imagen esté centrada */
 }
 
 .contenedor-principal {
-    flex: 1; /* Permite que el contenedor principal expanda para empujar el footer hacia abajo */
+    flex: 1;
+    /* Permite que el contenedor principal expanda para empujar el footer hacia abajo */
 }
 
 /* Media Query para pantallas pequeñas */
@@ -170,7 +181,8 @@ body {
     }
 
     .input-box {
-        height: auto; /* Permite que el contenedor del input se ajuste automáticamente */
+        height: auto;
+        /* Permite que el contenedor del input se ajuste automáticamente */
     }
 
     .input-box input {
@@ -211,6 +223,7 @@ body {
     padding: 40px 20px;
     text-align: center;
     font-family: 'Arial', sans-serif;
+    margin-top: 170px;
 }
 
 .footer-container {
@@ -229,12 +242,14 @@ body {
     border: 4px solid #9faba7;
 }
 
-.footer-about, .footer-social {
+.footer-about,
+.footer-social {
     flex: 1;
     margin: 20px;
 }
 
-.footer-about h2, .footer-social h2 {
+.footer-about h2,
+.footer-social h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
@@ -288,15 +303,19 @@ body {
         align-items: center;
     }
 
-    .footer-logo, .footer-about, .footer-social {
+    .footer-logo,
+    .footer-about,
+    .footer-social {
         margin-bottom: 20px;
     }
 
-    .footer-logo img, .social-icon img {
+    .footer-logo img,
+    .social-icon img {
         max-height: 90px;
     }
 
-    .footer-about h2, .footer-social h2 {
+    .footer-about h2,
+    .footer-social h2 {
         font-size: 1.25rem;
     }
 
@@ -304,4 +323,3 @@ body {
         font-size: 0.875rem;
     }
 }
-

@@ -57,20 +57,24 @@ if (!$usuario) {
 
             <button onclick="location.href='../perfil/cambiarcontraperfil.php'">Cambiar Contraseña</button>
 
-            <button onclick="location.href='../../useCase/logOut.php'">Cerrar Sesión</button>
-            <form action="fto_admin.php" method="post" enctype="multipart/form-data" style="display: flex; flex-direction: column; align-items: center; margin-top: 20px;">
-    <label for="foto" style="font-size: 16px; color: #0277bd; margin-bottom: 10px;">Subir nueva foto de perfil:</label>
-    
-    <!-- Contenedor personalizado -->
-    <div style="position: relative; overflow: hidden; display: inline-block;">
-        <button class="boton" style="background-color: #0288d1; color: #ffffff; border: none; border-radius: 5px; padding: 10px 20px; cursor: pointer; transition: background-color 0.3s ease;">
-            Seleccionar Archivo
-        </button>
-        <input type="file" name="foto" id="foto" style="position: absolute; left: 0; top: 0; opacity: 0; height: 100%; cursor: pointer;">
-    </div>
+            <form action="fto_admin.php" method="post" enctype="multipart/form-data"
+                style="display: flex; flex-direction: column; align-items: center; margin-top: 20px;">
+                <label for="foto" style="font-size: 16px; color: #0277bd; margin-bottom: 10px;">Subir nueva foto de
+                    perfil:</label>
 
-    <input type="submit" value="Subir Foto" style="background-color: #0288d1; color: #ffffff; border: none; border-radius: 5px; padding: 10px 20px; cursor: pointer; transition: background-color 0.3s ease; margin-top: 10px;">
-</form>
+                <!-- Contenedor personalizado -->
+                <div style="position: relative; overflow: hidden; display: inline-block;">
+                    <button class="boton"
+                        style="background-color: #0288d1; color: #ffffff; border: none; border-radius: 5px; padding: 10px 20px; cursor: pointer; transition: background-color 0.3s ease;">
+                        Seleccionar Archivo
+                    </button>
+                    <input type="file" name="foto" id="foto"
+                        style="position: absolute; left: 0; top: 0; opacity: 0; height: 100%; cursor: pointer;">
+                </div>
+
+                <input type="submit" value="Subir Foto"
+                    style="background-color: #0288d1; color: #ffffff; border: none; border-radius: 5px; padding: 10px 20px; cursor: pointer; transition: background-color 0.3s ease; margin-top: 10px;">
+            </form>
 
 
         </div>
