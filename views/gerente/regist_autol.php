@@ -13,11 +13,11 @@ try {
     $conn = $database->conectar();
 
     // Validar datos del formulario
-    $nombre = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);
-    $direccion = filter_var($_POST['direccion'], FILTER_SANITIZE_STRING);
+    $nombre = filter_var($_POST['nombre']);
+    $direccion = filter_var($_POST['direccion']);
     $telefono = filter_var($_POST['telefono'], FILTER_SANITIZE_NUMBER_INT);
-    $horario = filter_var($_POST['horario'], FILTER_SANITIZE_STRING);
-    $descripcion = filter_var($_POST['descripcion'], FILTER_SANITIZE_STRING);
+    $horario = filter_var($_POST['horario']);
+    $descripcion = filter_var($_POST['descripcion']);
     $dueno_id = filter_var($_POST['usuario_id'], FILTER_SANITIZE_NUMBER_INT);
     $localidad_id = filter_var($_POST['localidad_id'], FILTER_SANITIZE_NUMBER_INT);
 

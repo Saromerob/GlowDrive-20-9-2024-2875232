@@ -39,39 +39,6 @@ $localidades = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 ?>
-<?php
-// Conexión a la base de datos
-try {
-    // Crear una instancia de la base de datos
-    $database = new Database();
-    $conn = $database->conectar();
-
-    // Preparar la consulta de inserción
-    $sql = 'INSERT INTO autolavados (nombre, direccion, telefono, horario, descripcion, dueno_id, localidad_id, fecha_creacion, fecha_actualizacion)
-            VALUES (:nombre, :direccion, :telefono, :horario, :descripcion, :dueno_id, :localidad_id, NOW(), NOW())';
-
-    $stmt = $conn->prepare($sql);
-
-    // Bind de los parámetros
-    $stmt->bindParam(':nombre', $_POST['nombre']);
-    $stmt->bindParam(':direccion', $_POST['direccion']);
-    $stmt->bindParam(':telefono', $_POST['telefono']);
-    $stmt->bindParam(':horario', $_POST['horario']);
-    $stmt->bindParam(':descripcion', $_POST['descripcion']);
-    $stmt->bindParam(':dueno_id', $_POST['usuario_id']);
-    $stmt->bindParam(':localidad_id', $_POST['localidad_id']);
-
-    // Ejecutar la consulta
-    $stmt->execute();
-
-    // Mostrar el mensaje de éxito en lugar de redirigir
-    $mensajeExito = 'El autolavado ha sido registrado correctamente.';
-} catch (PDOException $e) {
-    // Manejo de errores
-    error_log('Error: ' . $e->getMessage()); // Registra el error en el archivo de log
-    $mensajeError = 'Error al insertar datos en la base de datos. Por favor, intenta nuevamente más tarde.';
-}
-?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -85,7 +52,7 @@ try {
     <link rel="stylesheet" href="../styles/regist_autola.css">
     <link rel="stylesheet" href="../styles/terminos.css">
     <style>
-        <style>
+      
         .mensaje-exito {
             color: green;
             font-size: 18px;
@@ -115,7 +82,6 @@ try {
         .boton-agregar-servicios:hover {
             background-color: #ff1493; /* Un tono más oscuro de rosa */
         }
-    </style>
     </style>
 </head>
 
