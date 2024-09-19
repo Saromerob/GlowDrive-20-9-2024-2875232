@@ -40,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Ejecutar la consulta
         if ($stmt->execute()) {
+            header ('Location: agg_servicios.php');
             echo "Servicio agregado exitosamente.";
         } else {
             echo "Error al agregar el servicio.";

@@ -1,4 +1,4 @@
-soli gerete 
+
 <?php
 include_once '../../config/db.php';
 
@@ -145,16 +145,16 @@ $userId = $result['id'];
             <h1>Estás a punto de solicitar el cambio de rol a gerente. Confirma si deseas proceder.</h1>
 
             <label for="email">Ingrese su correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required autocomplete="off">
 
             <label for="nombres">Nombres:</label>
-            <input type="text" id="nombres" name="nombres" required>
+            <input type="text" id="nombres" name="nombres" required autocomplete="off">
 
             <label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" required>
+            <input type="text" id="apellidos" name="apellidos" required autocomplete="off">
 
             <label for="direccion">Dirección del autolavado:</label>
-            <input type="text" id="direccion" name="direccion" required>
+            <input type="text" id="direccion" name="direccion" required autocomplete="off">
 
             <!-- Checkbox para los términos y condiciones -->
             <div>
