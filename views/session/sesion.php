@@ -80,11 +80,11 @@ if (isset($_SESSION['error'])) {
                 </div>
                 <h1>INICIO DE SESIÓN</h1>
                 <div class="input-box">
-                    <input type="email" placeholder="Correo electrónico" name="correo" required>
+                    <input type="email" placeholder="Correo electrónico" name="correo" required autocomplete="off">
                     <i class='bx bxs-envelope'></i> <!-- Cambié el ícono al de correo -->
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Contraseña" name="contrasena" id="contrasena" required>
+                    <input type="password" placeholder="Contraseña" name="contrasena" id="contrasena" required autocomplete="off">
                     <img id="imagenOjo" src="../../img/ojito.png" height="20px" width="20px"
                         style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); cursor: pointer;"
                         onmousedown="mostrarContrasena()" onmouseup="ocultarContrasena()">
