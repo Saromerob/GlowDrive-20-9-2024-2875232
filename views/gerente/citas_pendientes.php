@@ -70,8 +70,11 @@ $stmt->execute();
 $citas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 if (!$citas) {
-    
-?>
+
+            echo "<br><h1>¡No hay citas pendientes.!</h1>";
+            exit();
+}
+?>    
 
 
 <!DOCTYPE html>
@@ -162,9 +165,7 @@ if (!$citas) {
             });
         }
         </script>
-        <?php 
-            echo "<br><h1>¡No hay citas pendientes.!</h1>";
-            exit();?>
+        
 
         <footer class="footer">
             <div class="footer-container">
@@ -209,7 +210,5 @@ if (!$citas) {
         </footer>
     </body>
    </center>
-   <?php
-}
-?>
+
 </html>
