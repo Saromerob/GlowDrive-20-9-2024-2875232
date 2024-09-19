@@ -1,2 +1,2 @@
-# app-autosplash
-app-autosplash, app para autolavados.
+# app-glowdrive
+app-glowdrive, app para autolavados.
