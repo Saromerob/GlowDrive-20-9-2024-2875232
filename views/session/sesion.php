@@ -4,7 +4,7 @@ require '../../config/db.php';
 include '../../repository/localidad.php';
 include '../../repository/tipo_documento.php';
 
-if (isset($_SESSION['correo'])) { // Cambié 'nombre' por 'correo'
+if (isset($_SESSION['id'])) {
     switch ($_SESSION['role_id']) {
         case 1:
             header("Location: ../gerente/paginaInicio.php");
@@ -12,25 +12,26 @@ if (isset($_SESSION['correo'])) { // Cambié 'nombre' por 'correo'
             break;
         case 2:
             header("Location: ../cliente/paginaInicio.php");
+            exit();
             break;
         case 3:
             header("Location: ../admin/paginaInicio.php");
             exit();
             break;
         default:
-            // Agregar un mensaje de error o redirección si es necesario
+            break;
     }
 }
 
 // Mostrar el mensaje de éxito
 if (isset($_SESSION['success'])) {
-    echo '<div class="alert alert-success fade-out">' . $_SESSION['success'] . '</div>';
+    echo '<div class="alert alert-success fade-out">' . htmlspecialchars($_SESSION['success']) . '</div>';
     unset($_SESSION['success']); // Borra el mensaje después de mostrarlo
 }
 
 // Mostrar el mensaje de error
 if (isset($_SESSION['error'])) {
-    echo '<div class="alert alert-danger fade-out">' . $_SESSION['error'] . '</div>';
+    echo '<div class="alert alert-danger fade-out">' . htmlspecialchars($_SESSION['error']) . '</div>';
     unset($_SESSION['error']); // Borra el mensaje después de mostrarlo
 }
 ?>
@@ -65,14 +66,14 @@ if (isset($_SESSION['error'])) {
         if (isset($_SESSION['success'])) {
             echo '<script>
                         document.addEventListener("DOMContentLoaded", function() {
-                        document.getElementById("successMessage").innerText = "' . $_SESSION['success'] . '";
+                        document.getElementById("successMessage").innerText = "' . addslashes(htmlspecialchars($_SESSION['success'])) . '";
                         $("#successModal").modal("show");
                     });
                 </script>';
             unset($_SESSION['success']); 
         }
     ?>
-    <center>
+    <div style="text-align: center;">
         <div class="wrapper">
             <form action="../../repository/validar.php" method="POST">
                 <div class="logo-container">
@@ -105,7 +106,7 @@ if (isset($_SESSION['error'])) {
                 </div>
                 <?php
                     if (isset($_SESSION['error_message'])) {
-                        echo '<h1 class="bad">' . $_SESSION['error_message'] . '</h1>';
+                        echo '<h1 class="bad">' . htmlspecialchars($_SESSION['error_message']) . '</h1>';
                         unset($_SESSION['error_message']); 
                     }
                 ?>
@@ -121,7 +122,7 @@ if (isset($_SESSION['error'])) {
                 </div>
             </form>
         </div>
-    </center>
+    </div>
 
 
     <!--ESTE ES EL PIE DE PAGINA DE PARA ARRIBA VA TODA INFORMACIÓN DE CUALQUIER TIPO EN LA PAGINA DE INICIO-->

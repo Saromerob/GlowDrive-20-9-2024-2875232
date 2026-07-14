@@ -96,11 +96,11 @@ $reseñas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <!-- Contenedor principal -->
     <div class="container mt-4">
-        <center>
+        <div style="text-align: center;">
             <h1 class="display-4">Autolavados</h1>
             <p class="lead">En este espacio se ubicarán todos los puntos de Autolavados que estén vinculados a nosotros.
             </p>
-        </center>
+        </div>
 
         <!-- Mapa Leaflet -->
         <div id="map"></div>

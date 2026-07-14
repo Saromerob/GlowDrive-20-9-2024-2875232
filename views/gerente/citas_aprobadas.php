@@ -201,9 +201,9 @@ if (!$citas) {
             </tbody>
         </table>
     </div>
-    <center><form action="citas_pendientes.php">
+    <div style="text-align: center;"><form action="citas_pendientes.php">
                 <button type="submit" class="btn btn-primary mt-3">Volver</button>
-    </form></center>
+    </form></div>
         <!--ESTE ES EL PIE DE PAGINA DE PARA ARRIBA VA TODA INFORMACIÓN DE CUALQUIER TIPO EN LA PAGINA DE INICIO-->
         <footer class="footer">
         <div class="footer-container">

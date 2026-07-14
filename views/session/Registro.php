@@ -22,7 +22,7 @@
         }
     ?>
     <section class="registro">
-        <center><img src="../../img/logo.jpeg" class="logo-registro"></center> <br>
+        <div style="text-align: center;"><img src="../../img/logo.jpeg" class="logo-registro"></div> <br>
         <h2>Registro de Cliente</h2>
         <form action="../../repository/registro_usuario.php" method="post">
             Nombres: <input class="entrada-control" type="text" name="nombre" pattern="[A-Za-z\s]+"

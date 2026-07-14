@@ -17,7 +17,7 @@
 <body>
     <div class="wrapper">
         <form action="../../repository/contraseñacambiada.php" method="POST">
-            <center><img src="../../img/logo.jpeg" class="LogoRegistro" alt="Logo" style="width: 150px; border-radius: 50%;"></center>
+            <div style="text-align: center;"><img src="../../img/logo.jpeg" class="LogoRegistro" alt="Logo" style="width: 150px; border-radius: 50%;"></div>
             <h1>CAMBIAR CONTRASEÑA</h1>
             <div class="input-box">
                 <input type="password" placeholder="Contraseña Nueva" name="contrasena" required>

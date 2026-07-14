@@ -13,21 +13,11 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
 $database = new Database();
 $conn = $database->conectar();
 
-// Consultar en la base de datos el ID del usuario que está en SESIÓN
-$query = "SELECT id FROM usuarios WHERE nombre = :nombre";
-$stmt = $conn->prepare($query);
-$stmt->bindParam(':nombre', $_SESSION['nombre'], PDO::PARAM_STR);
-$stmt->execute();
-$result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-if ($result) {
-    $userId = $result["id"];
-    $_SESSION['id'] = $userId; // Asignar el ID del usuario a la sesión
-} else {
-    // No se encontró ningún usuario con ese nombre
-    // Aquí podrías redirigir a una página de error o mostrar un mensaje
-    die("Error: Usuario no encontrado.");
+// Obtener el ID del usuario directamente de la sesión
+if (!isset($_SESSION['id'])) {
+    die("Error: Usuario no autenticado.");
 }
+$userId = $_SESSION['id'];
 ?>
 <?php
 // Consulta para obtener las localidades
@@ -113,9 +103,9 @@ if ($autolavado) {
 
         <body>
             <div class="container">
-                <center>
+                <div style="text-align: center;">
                     <h1>Ya tienes un autolavado registrado.</h1>
-                </center>
+                </div>
                 <!-- Logo de GLOWDRIVER -->
                 <div class="logo">
                     <img src="../../img/logo.jpeg" alt="Logo de GLOWDRIVER" class="logor">
@@ -188,7 +178,7 @@ if ($autolavado) {
                     </p>
                 </div>
             </div>
-            <center>
+            <div style="text-align: center;">
             <?php if (isset($mensajeExito)): ?>
         <div class="mensaje-exito">
             <p><?php echo $mensajeExito; ?></p>
@@ -220,7 +210,7 @@ if ($autolavado) {
                         </div>
                     </li>
                 </ul>
-            </center>
+            </div>
         </body>
 
 </html>

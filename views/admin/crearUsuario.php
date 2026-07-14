@@ -317,7 +317,7 @@ if(isset($_GET['borrar']))
 	unset($_POST['borrar']);
 ?>
     <div align="center">
-        <form action="../../../app-autosplash/index.php" method="POST">
+        <form action="../../index.php" method="POST">
             <button style="background: red; height:40px; width: 150px" name="cerrar_sesion">
                 Cerrar Sesion
             </button>
@@ -355,7 +355,8 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
     </style>
 </head>
 
-<center><body>
+<body>
+<div style="text-align: center;">
 <nav class="navbar navbar-expand-lg custom-navbar">
     <div class="container-fluid">
         <!-- Logo y Título -->
@@ -431,14 +432,14 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
 
             while ($fila = $statement->fetch(PDO::FETCH_ASSOC)) {
                 echo '<tr>
-                        <td>' . $fila['id'] . '</td>
-                        <td>' . $fila['nombre'] . '</td>
-                        <td>' . $fila['apellido'] . '</td>
-                        <td>' . $fila['num_documento'] . '</td>
-                        <td>' . $fila['tipo_documento_id'] . '</td>
-                        <td>' . $fila['telefono'] . '</td>
-                        <td>' . $fila['correo'] . '</td>
-                        <td>' . $fila['role_id'] . '</td>
+                        <td>' . htmlspecialchars($fila['id']) . '</td>
+                        <td>' . htmlspecialchars($fila['nombre']) . '</td>
+                        <td>' . htmlspecialchars($fila['apellido']) . '</td>
+                        <td>' . htmlspecialchars($fila['num_documento']) . '</td>
+                        <td>' . htmlspecialchars($fila['tipo_documento_id']) . '</td>
+                        <td>' . htmlspecialchars($fila['telefono']) . '</td>
+                        <td>' . htmlspecialchars($fila['correo']) . '</td>
+                        <td>' . htmlspecialchars($fila['role_id']) . '</td>
                         <td><a class="btn" href="crearUsuario.php?editar=' . $fila['id'] . '">Editar</a></td>
                         <td><a class="btn" href="crearUsuario.php?borrar=' . $fila['id'] . '">Borrar</a></td>
                     </tr>';
@@ -457,9 +458,9 @@ border-radius:50%;
                 }
             </style>
             <form method="POST" action="#">
-            <center>
+            <div style="text-align: center;">
                 <img src="../../img/logo.jpeg" class="LogoRegistro" style="border-radius: 50%;width:100px; height:100px;">
-            </center><br>
+            </div><br>
                 IDROL <br><input type="number" name="idrol" required placeholder="Ingrese Rol" min="1" max="4"><br>
                 NOMBRE <br><input type="text" name="usuario" required placeholder="Ingrese Nombre" pattern="[a-zA-Z]{4,8}"><br>
                 APELLIDO <br><input type="text" name="apellido" required placeholder="Ingrese Apellido" pattern="[a-zA-Z]{4,8}"><br>
@@ -513,34 +514,34 @@ border-radius:50%;
         <td style="padding: 20px; background-color: #18282e; border: 1px solid #7f8c8d;">
             <form method="POST" action="#">
                 <label style="color: #f2f0d9; font-weight: bold;">NOMBRE</label>
-                <input type="text" name="usuario" value="<?php echo $usuario['nombre']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+                <input type="text" name="usuario" value="<?php echo htmlspecialchars($usuario['nombre']); ?>" style="margin-bottom: 10px; width: 100%;"><br>
 
                 <label style="color: #f2f0d9; font-weight: bold;">APELLIDO</label>
-                <input type="text" name="apellido" value="<?php echo $usuario['apellido']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+                <input type="text" name="apellido" value="<?php echo htmlspecialchars($usuario['apellido']); ?>" style="margin-bottom: 10px; width: 100%;"><br>
 
                 <label style="color: #f2f0d9; font-weight: bold;">NUMERO DOCUMENTO</label>
-                <input type="number" name="numdocumento" value="<?php echo $usuario['num_documento']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+                <input type="number" name="numdocumento" value="<?php echo htmlspecialchars($usuario['num_documento']); ?>" style="margin-bottom: 10px; width: 100%;"><br>
 
                 <label style="color: #f2f0d9; font-weight: bold;">TIPO DE DOCUMENTO</label>
-                <input type="number" name="tipdocument" value="<?php echo $usuario['tipo_documento_id']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+                <input type="number" name="tipdocument" value="<?php echo htmlspecialchars($usuario['tipo_documento_id']); ?>" style="margin-bottom: 10px; width: 100%;"><br>
 
                 <label style="color: #f2f0d9; font-weight: bold;">TELEFONO</label>
-                <input type="number" name="celular" value="<?php echo $usuario['telefono']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+                <input type="number" name="celular" value="<?php echo htmlspecialchars($usuario['telefono']); ?>" style="margin-bottom: 10px; width: 100%;"><br>
 
                 <label style="color: #f2f0d9; font-weight: bold;">EMAIL</label>
-                <input type="email" name="correo" value="<?php echo $usuario['correo']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+                <input type="email" name="correo" value="<?php echo htmlspecialchars($usuario['correo']); ?>" style="margin-bottom: 10px; width: 100%;"><br>
 
                 <label style="color: #f2f0d9; font-weight: bold;">CLAVE</label>
-                <input type="password" name="clave" value="<?php echo $usuario['contrasena']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+                <input type="password" name="clave" value="" placeholder="Ingrese nueva contraseña" style="margin-bottom: 10px; width: 100%;"><br>
 
                 <label style="color: #f2f0d9; font-weight: bold;">FECHA NACIMIENTO</label>
-                <input type="date" name="fechnacimiento" value="<?php echo $usuario['fecha_nacimiento']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+                <input type="date" name="fechnacimiento" value="<?php echo htmlspecialchars($usuario['fecha_nacimiento']); ?>" style="margin-bottom: 10px; width: 100%;"><br>
 
                 <label style="color: #f2f0d9; font-weight: bold;">LOCALIDAD</label>
-                <input type="number" name="localidad" value="<?php echo $usuario['localidad_id']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+                <input type="number" name="localidad" value="<?php echo htmlspecialchars($usuario['localidad_id']); ?>" style="margin-bottom: 10px; width: 100%;"><br>
 
                 <label style="color: #f2f0d9; font-weight: bold;">ROL</label>
-                <input type="number" name="rol" value="<?php echo $usuario['role_id']; ?>" style="margin-bottom: 10px; width: 100%;"><br>
+                <input type="number" name="rol" value="<?php echo htmlspecialchars($usuario['role_id']); ?>" style="margin-bottom: 10px; width: 100%;"><br>
 
                 <input type="submit" name="actualizame" value="Actualizar Datos" style="background-color: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
             </form>
@@ -621,7 +622,8 @@ border-radius:50%;
         <small>&copy; 2024 <b>GlowDrive</b> - Todos los Derechos Reservados.</small>
     </div>
 </footer>
-</body></center>
+</div>
+</body>
 
 
 </html>

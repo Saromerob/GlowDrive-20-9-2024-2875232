@@ -97,7 +97,8 @@
         }
 </style>
 
-<center><body>
+<body>
+<div style="text-align: center;">
     <div class="contenedor-principal">
         <nav class="navbar navbar-expand-lg custom-navbar">
             <div class="container-fluid">
@@ -284,5 +285,6 @@
         </div>
     </footer>
 
-    </body></center>
+    </div>
+    </body>
 </html>
