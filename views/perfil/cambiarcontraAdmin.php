@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="../styles/cambiarContra.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<center>
+<div style="text-align: center;">
 
     <body>
         <div class="wrapper">
             <form action="../../repository/contraseñacambiada.php" method="POST">
-                <center><img src="../../img/logo.jpeg" class="LogoRegistro">
-                </center>
+                <div style="text-align: center;"><img src="../../img/logo.jpeg" class="LogoRegistro">
+                </div>
                 <h1>CAMBIAR CONTRASEÑA</h1>
                 <div class="input-box">
                     <input type="text" placeholder="Contraseña Nueva" name="contrasena" required>
@@ -97,6 +97,6 @@
             </div>
         </footer>
     </body>
-</center>
+</div>
 
 </html>

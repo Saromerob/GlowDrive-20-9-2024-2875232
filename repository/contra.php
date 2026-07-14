@@ -32,13 +32,13 @@ if (!empty($correo)) {
 
             // Guardar el rol en la sesión
             $nombreUsuario = $userData['nombre'];
-            $numeroRandom = random_int(1,1000);
             
-            //Contraseña random
-            $haseada = $nombreUsuario.$numeroRandom;
+            //Generar contraseña temporal segura
+            $tempPassword = bin2hex(random_bytes(8));
+            $tempPasswordHashed = password_hash($tempPassword, PASSWORD_BCRYPT);
             $arreglo = "UPDATE usuarios SET contrasena = :contrasena WHERE correo = :correo";
             $statement = $conn->prepare($arreglo);
-            $statement->bindValue(':contrasena', $haseada);
+            $statement->bindValue(':contrasena', $tempPasswordHashed);
             $statement->bindValue(':correo', $correo);
             $statement->execute();
 
@@ -52,8 +52,8 @@ if (!empty($correo)) {
                 $mail->isSMTP();
                 $mail->Host       = 'smtp.gmail.com';
                 $mail->SMTPAuth   = true;
-                $mail->Username   = 'glowdrivesoporte@gmail.com';  // Coloca tu correo de Gmail colocar gmail de empresa
-                $mail->Password   = 'o w s u j j a s j m a e a y n g';        // Coloca tu contraseña de Gmail
+                $mail->Username   = getenv('SMTP_USERNAME') ?: 'tu_correo@gmail.com';
+                $mail->Password   = getenv('SMTP_PASSWORD') ?: ''; 
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port       = 587;
 
@@ -64,7 +64,7 @@ if (!empty($correo)) {
                 // Contenido
                 $mail->isHTML(false);
                 $mail->Subject = 'Recuperación de contraseña';
-                $mail->Body    = 'Hola ' . $nombreUsuario . ',  Tu nueva contraseña es: ' . $haseada . ' Por favor, cámbiala una vez inicies sesión.';
+                $mail->Body    = 'Hola ' . $nombreUsuario . ',  Tu nueva contraseña temporal es: ' . $tempPassword . ' Por favor, cámbiala una vez inicies sesión.';
                 //pendiente....
                 //$mail->SMTPDebug = 4; // Puedes aumentar el nivel a 3 o 4 para más detalle.
                 //pendiente....

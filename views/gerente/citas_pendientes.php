@@ -12,18 +12,11 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 1) {
 $database = new Database();
 $conn = $database->conectar();
 
-// Obtener el ID del usuario en sesión
-$query = "SELECT id FROM usuarios WHERE nombre = :nombre";
-$stmt = $conn->prepare($query);
-$stmt->bindParam(':nombre', $_SESSION['nombre'], PDO::PARAM_STR);
-$stmt->execute();
-$result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-if (!$result) {
-    die('No se encontró el usuario con ese nombre.');
+// Obtener el ID del usuario directamente de la sesión
+if (!isset($_SESSION['id'])) {
+    die('Error: Usuario no autenticado.');
 }
-
-$userId = $result['id'];
+$userId = $_SESSION['id'];
 
 // Obtener el autolavado asociado al usuario logueado
 $query = "SELECT id FROM autolavados WHERE dueno_id = :dueno_id";
@@ -89,7 +82,7 @@ if (!$citas) {
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<center>
+<div style="text-align: center;">
 
     <body>
         <div class="container">
@@ -209,6 +202,6 @@ if (!$citas) {
             </div>
         </footer>
     </body>
-   </center>
+   </div>
 
 </html>

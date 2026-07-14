@@ -1,1 +1,12 @@
-.vscode
+.vscode/
+node_modules/
+vendor/
+*.env
+.env
+recibos/
+views/gerente/uploads/
+views/cliente/uploads/
+.idea/
+*.swp
+*.swo
+*~

@@ -27,7 +27,7 @@ $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/publicMap.css">
 </head>
-<center>
+<div style="text-align: center;">
 
     <body>
         <h1>AUTOLAVADOS DISPONIBLES</h1>
@@ -100,6 +100,6 @@ $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
             </div>
         </footer>
     </body>
-</center>
+</div>
 
 </html>

@@ -43,7 +43,7 @@ $autolavado = $stmt_autolavado->fetch(PDO::FETCH_ASSOC);
     <div class="container">
         <?php if ($autolavado): ?>
             <!-- Mostrar información del autolavado -->
-            <center>
+            <div style="text-align: center;">
                 <img src="<?php echo htmlspecialchars($autolavado['foto']); ?>" alt="Foto del autolavado" style="
                     width: 100px; 
                     height: 100px; 
@@ -55,7 +55,7 @@ $autolavado = $stmt_autolavado->fetch(PDO::FETCH_ASSOC);
                 <br><br>
                 <h1><?php echo htmlspecialchars($autolavado['nombre']); ?></h1>
                 <p>Horarios: <?php echo htmlspecialchars($autolavado['horario']); ?></p>
-            </center>
+            </div>
 
             <!-- Mostrar servicios del autolavado -->
             <?php

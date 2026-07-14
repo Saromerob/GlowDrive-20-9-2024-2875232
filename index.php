@@ -29,17 +29,17 @@
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="../app-autosplash/views/session/sesion.php">
+                    <a class="nav-link" aria-current="page" href="views/session/sesion.php">
                         <i class='bx bxs-car'></i> Agendar Citas
                     </a>
                 </li>
                 <li class="nav-item marcos">
-                    <a class="nav-link" href="../app-autosplash/views/session/sesion.php">
+                    <a class="nav-link" href="views/session/sesion.php">
                         <i class='bx bxs-location-plus'></i> Ubicaciones
                     </a>
                 </li>
                 <li class="nav-item marcos">
-                    <a class="nav-link" href="../app-autosplash/views/session/sesion.php">
+                    <a class="nav-link" href="views/session/sesion.php">
                         <i class='bx bxs-user'></i> Iniciar Sesión
                     </a>
                 </li>
@@ -67,7 +67,7 @@
                     industria del lavado de automóviles, facilitando la interacción entre usuarios y negocios locales.
                 </p>
                 <div class="image-wrapper">
-                    <img src="../app-autosplash/img/Carro.jpg" alt="Carro" class="app-image">
+                    <img src="img/Carro.jpg" alt="Carro" class="app-image">
                 </div>
             </div>
         </div>
@@ -80,7 +80,7 @@
         <div class="footer-container">
             <div class="footer-logo">
                 <a href="index.php">
-                    <img src="../app-autosplash/img/logo.jpeg" alt="Logo AutoSplash">
+                    <img src="img/logo.jpeg" alt="Logo AutoSplash">
                 </a>
             </div>
             <div class="footer-about">

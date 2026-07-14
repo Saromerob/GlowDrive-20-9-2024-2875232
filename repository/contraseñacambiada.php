@@ -16,7 +16,7 @@ if(!isset($_POST['contrasena'])) {
 }
 
 $usuario_id = isset($_SESSION['id']) ? $_SESSION['id'] :'';
-$contrasena = isset($_POST['contrasena']) ? $_POST['contrasena'] :'';
+$contrasena = isset($_POST['contrasena']) ? password_hash($_POST['contrasena'], PASSWORD_BCRYPT) :'';
 
 if (isset($_SESSION['nombre'])) {
     if ($contrasena && $usuario_id) {

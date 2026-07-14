@@ -20,8 +20,8 @@
     <div class="contenedor">
         <div class="wrapper">
             <form action="../../repository/contra.php" method="POST">
-                <center><img src="../../img/logo.jpeg" class="LogoRegistro">
-                </center>
+                <div style="text-align: center;"><img src="../../img/logo.jpeg" class="LogoRegistro">
+                </div>
                 <h1>RECUPERAR CONTRASEÑA</h1>
                 <div class="input-box">
                     <input class="entrada-control" type="text" placeholder="Email" name="correo" required>

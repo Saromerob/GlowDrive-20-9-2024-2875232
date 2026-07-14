@@ -44,7 +44,7 @@
             <div class="BOX">
                 <h2> Siguenos: </h2>
                 <div class="red-social">
-                    <center>
+                    <div style="text-align: center;">
                         <a href="#" class="instagram">
                             <img src="../img/instagram.jpg" height="50px" class="insta">
                         </a>
@@ -54,7 +54,7 @@
                         <a href="#" class="whatsapp">
                             <img src="../img/whatsapp.png" height="50px" class="wha">
                         </a>
-                    </center>
+                    </div>
                 </div>
             </div>
             <div class="grupo-2">

@@ -29,7 +29,7 @@ $requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="../styles/aprobados.css" >
 </head>
 <body>
-    <center><h1>ESTÁS VIENDO TODOS LOS APROBADOS</h1>
+    <div style="text-align: center;"><h1>ESTÁS VIENDO TODOS LOS APROBADOS</h1>
     <table border="1">
         <tr>
             <th>ID solicitud</th>
@@ -162,5 +162,6 @@ $requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <small>&copy; 2024 <b>GlowDrive</b> - Todos los Derechos Reservados.</small>
         </div>
     </footer>
-</body></center>
+</div>
+</body>
 </html>

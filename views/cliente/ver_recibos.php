@@ -48,7 +48,7 @@ $recibos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-    <center>
+    <div style="text-align: center;">
         <br>
         <li class="nav-item ubi">
             <h1>Recibos de Usuario</h1>
@@ -85,7 +85,7 @@ $recibos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </div>
             </li>
 
-    </center>
+    </div>
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-logo">
