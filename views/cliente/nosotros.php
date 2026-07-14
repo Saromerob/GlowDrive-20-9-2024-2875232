@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
     <main class="main-container">
         <section class="about">
             <div class="container">
-                <a href="pag_inicio.html">
+                <a href="paginaInicio.php">
                     <img src="../../img/logo.jpeg" class="logo">
                 </a>
                 <div class="about-text">
@@ -21,7 +21,7 @@
                     <p> Somos un grupo de aprendices del SENA que se encuentran estudiando programación de Software y se
                         nos ocurrió la idea
                         de hacer un aplicativo sencillo para aquellas personas </p>
-                    <button class="btn"><a href="/../app-autosplash/index.php">Volver a inicio</a></button><br><br><br>
+                    <button class="btn"><a href="../../index.php">Volver a inicio</a></button><br><br><br>
                 </div>
             </div>
         </section>
@@ -30,11 +30,11 @@
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="BOX">
-                <FIGUre>
-                    <a href="pag_inicioCliente.html">
+                <figure>
+                    <a href="paginaInicio.php">
                         <img src="../img/logo.jpeg" alt="Logo AutoSplash">
                     </a>
-                </FIGUre>
+                </figure>
             </div>
             <div class="BOX">
                 <h2>SOBRE NOSOTROS</h2>
@@ -63,7 +63,6 @@
             </div>
     </footer>
 
-    </section>
 </body>
 
 </html>

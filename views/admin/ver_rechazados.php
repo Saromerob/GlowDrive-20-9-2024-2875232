@@ -34,7 +34,7 @@ if (isset($_GET['restablecer'])) {
             echo "Error al actualizar el estado.";
         }
     } catch (PDOException $e) {
-        die("Error al actualizar el estado: " . $e->getMessage());
+        die("Error en la base de datos.");
     }
 }
 
@@ -53,7 +53,7 @@ if (isset($_GET['borrar'])) {
             echo "Error al eliminar la solicitud.";
         }
     } catch (PDOException $e) {
-        die("Error al eliminar la solicitud: " . $e->getMessage());
+        die("Error en la base de datos.");
     }
 }
 ?>

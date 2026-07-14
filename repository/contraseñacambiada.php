@@ -13,6 +13,7 @@ if (!isset($_SESSION['id'])) {
 if(!isset($_POST['contrasena'])) {
     $_SESSION['error_message'] = 'No puedo colocar una contraseña vacia';
     header("Location: ../views/cliente/paginaInicio.php");
+    exit();
 }
 
 $usuario_id = isset($_SESSION['id']) ? $_SESSION['id'] :'';
@@ -26,44 +27,36 @@ if (isset($_SESSION['nombre'])) {
         $stmt->bindValue(':id', $usuario_id);
         switch ($_SESSION['role_id']) {
             case 1:
-                // Ejecutar la consulta.
                 if ($stmt->execute()) {
                     $_SESSION['success'] = 'Contraseña Cambiada Exitosamente';
                     header("Location: ../views/gerente/paginaInicio.php");
-                    exit();
                 } else {
-                    echo "Error: No se pudo cambiar la contraseña";
+                    $_SESSION['error_message'] = 'No se pudo cambiar la contraseña';
                     header("Location: ../views/gerente/paginaInicio.php");
-                    exit();
                 }
                 exit();
-                break;
             case 2:
-                // Ejecutar la consulta.
                 if ($stmt->execute()) {
                     $_SESSION['success'] = 'Contraseña Cambiada Exitosamente';
                     header("Location: ../views/cliente/paginaInicio.php");
-                    exit();
                 } else {
-                    echo "Error: No se pudo cambiar la contraseña";
+                    $_SESSION['error_message'] = 'No se pudo cambiar la contraseña';
                     header("Location: ../views/cliente/paginaInicio.php");
-                    exit();
-                }
-                break;
-            case 3:
-                // Ejecutar la consulta.
-                if ($stmt->execute()) {
-                    $_SESSION['success'] = 'Contraseña Cambiada Exitosamente';
-                    header("Location: ../views/admin/paginaInicio.php");
-                    exit();
-                } else {
-                    echo "Error: No se pudo cambiar la contraseña";
-                    header("Location: ../views/admin/paginaInicio.php");
-                    exit();
                 }
                 exit();
-                break;
+            case 3:
+                if ($stmt->execute()) {
+                    $_SESSION['success'] = 'Contraseña Cambiada Exitosamente';
+                    header("Location: ../views/admin/paginaInicio.php");
+                } else {
+                    $_SESSION['error_message'] = 'No se pudo cambiar la contraseña';
+                    header("Location: ../views/admin/paginaInicio.php");
+                }
+                exit();
             default:
+                $_SESSION['error_message'] = 'Rol no válido';
+                header("Location: ../views/session/sesion.php");
+                exit();
         }
     }
 }

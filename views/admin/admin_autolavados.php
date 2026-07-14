@@ -102,7 +102,7 @@ $autolavados = $query->fetchAll(PDO::FETCH_ASSOC);
             echo 'Error en la consulta.';
         }
     } catch (PDOException $e) {
-        die("Error en conexión a la base de datos: " . $e->getMessage());
+        die("Error en la base de datos.");
     }
     ?>
 
