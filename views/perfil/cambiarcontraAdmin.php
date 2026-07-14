@@ -14,22 +14,21 @@
     <link rel="stylesheet" href="../styles/cambiarContra.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<div style="text-align: center;">
-
-    <body>
+<body>
+    <div style="text-align: center;">
         <div class="wrapper">
             <form action="../../repository/contraseñacambiada.php" method="POST">
                 <div style="text-align: center;"><img src="../../img/logo.jpeg" class="LogoRegistro">
                 </div>
                 <h1>CAMBIAR CONTRASEÑA</h1>
                 <div class="input-box">
-                    <input type="text" placeholder="Contraseña Nueva" name="contrasena" required>
+                    <input type="password" placeholder="Contraseña Nueva" name="contrasena" required>
 
                     <i class='bx bxs-user'></i>
                 </div>
                 <?php
                 if (isset($_SESSION['error_message'])) {
-                    echo '<h1 class="bad">' . $_SESSION['error_message'] . '</h1>';
+                    echo '<h1 class="bad">' . htmlspecialchars($_SESSION['error_message']) . '</h1>';
                     unset($_SESSION['error_message']); 
                 }
             ?>
@@ -96,7 +95,7 @@
                 <small>&copy; 2024 <b>GlowDrive</b> - Todos los Derechos Reservados.</small>
             </div>
         </footer>
-    </body>
-</div>
+    </div>
+</body>
 
 </html>

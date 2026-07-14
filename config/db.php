@@ -22,7 +22,7 @@ class Database {
                 $conn = new PDO($urlConexion, $this->username, $this->password, $opciones);
                 return $conn;
             } catch(PDOException $error) {
-                echo 'Error en la conexion:  '.$error->getMessage();
+                echo 'Error en la conexion a la base de datos.';
             }
         }
 }

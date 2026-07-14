@@ -1,8 +1,6 @@
 <?php
-session_start(); // Para poder utilizar las variables de "$_SESSION" debo iniciar la sesión.
+session_start();
 require '../../config/db.php';
-include '../../repository/localidad.php';
-include '../../repository/tipo_documento.php';
 
 if (isset($_SESSION['id'])) {
     switch ($_SESSION['role_id']) {

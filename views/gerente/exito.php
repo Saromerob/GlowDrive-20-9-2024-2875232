@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro Exitoso</title>
-    <link rel="stylesheet" href="../../css/estilos.css"> <!-- Asegúrate de tener este archivo o incluir el CSS -->
+    <link rel="stylesheet" href="../styles/estilos.css">
     <style>
         body {
             font-family: Arial, sans-serif;

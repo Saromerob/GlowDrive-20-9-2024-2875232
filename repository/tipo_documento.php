@@ -1,13 +1,16 @@
 <?php
-//include_once '../config/db.php';
-$db = new Database();//Llamada
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+$db = new Database();
 $conn = $db->conectar();
 
 if ($conn) {
     $consulta = "SELECT * FROM tipo_documento";
     $resultado = $conn->query($consulta);
     if (!$resultado) {
-        die("Error en la consulta: ".$conn->errorInfo()[2]);
+        $_SESSION['error_message'] = 'Error al cargar tipos de documento.';
+        return;
     }
 
     $typeDocument = array();

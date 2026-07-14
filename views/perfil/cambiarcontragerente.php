@@ -22,12 +22,12 @@
             </div>
             <h1>CAMBIAR CONTRASEÑA</h1>
             <div class="input-box">
-                <input type="text" placeholder="Contraseña Nueva" name="contrasena" required>
+                <input type="password" placeholder="Contraseña Nueva" name="contrasena" required>
                 <i class='bx bxs-user'></i>
             </div>
             <?php
                 if (isset($_SESSION['error_message'])) {
-                    echo '<h1 class="bad">' . $_SESSION['error_message'] . '</h1>';
+                    echo '<h1 class="bad">' . htmlspecialchars($_SESSION['error_message']) . '</h1>';
                     unset($_SESSION['error_message']); 
                 }
             ?>

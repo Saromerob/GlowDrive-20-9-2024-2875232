@@ -412,7 +412,7 @@ if (!isset($_SESSION['role_id']) || $_SESSION['role_id'] != 3) {
             }
             $statement->execute();
         } catch (PDOException $e) {
-            die("Error en conexión a la base de datos: " . $e->getMessage());
+            die("Error en la base de datos.");
         }
 
         if ($statement->rowCount() > 0) {
@@ -497,7 +497,7 @@ border-radius:50%;
 
                 echo "Registro insertado exitosamente.";
             } catch (PDOException $e) {
-                die("Error en la inserción: " . $e->getMessage());
+                die("Error en la base de datos.");
             }
         }
 
@@ -574,7 +574,7 @@ border-radius:50%;
                 echo '<p style="color: green; font-weight: bold; background: white; text-align: center;">Datos actualizados exitosamente.</p>';
 
             } catch (PDOException $e) {
-                die("Error en la actualización: " . $e->getMessage());
+                die("Error en la base de datos.");
             }
         }
 

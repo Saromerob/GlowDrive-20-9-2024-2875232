@@ -21,7 +21,7 @@ $requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -115,7 +115,7 @@ $requests = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 echo "Error al actualizar los datos.";
             }
         } catch (PDOException $e) {
-            die("Error en conexión a la base de datos: " . $e->getMessage());
+            die("Error en la base de datos.");
         }
     }
     ?>
